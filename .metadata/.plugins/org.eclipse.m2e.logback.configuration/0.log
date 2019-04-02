@@ -5564,3 +5564,25 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: TEXT must b
 2019-04-02 09:47:47,741 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kiranmai.adams\Documents\StayBeta\src\main\resources
 2019-04-02 09:47:47,747 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-04-02 09:47:47,754 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kiranmai.adams\Documents\StayBeta\src\test\resources
+2019-04-02 09:52:37,904 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-04-02 09:53:26,994 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-04-02 09:53:27,608 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: CBE:StayBeta:0.0.1-SNAPSHOT @ C:\Users\Kiranmai.adams\Documents\StayBeta\pom.xml.
+2019-04-02 09:53:28,378 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /StayBeta/src/main/java
+2019-04-02 09:53:28,379 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /StayBeta/src/test/java
+2019-04-02 09:53:29,116 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2019-04-02 09:53:31,391 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-02 09:53:31,391 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kiranmai.adams\Documents\StayBeta\src\main\resources
+2019-04-02 09:53:31,394 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-02 09:53:31,394 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kiranmai.adams\Documents\StayBeta\src\test\resources
+2019-04-02 09:53:33,645 [Worker-13: Launching Executing clean in C__Users_Kiranmai.adams_Documents_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Kiranmai.adams\Documents\StayBeta
+2019-04-02 09:53:33,646 [Worker-13: Launching Executing clean in C__Users_Kiranmai.adams_Documents_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2019-04-02 09:53:36,342 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-02 09:53:36,342 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kiranmai.adams\Documents\StayBeta\src\main\resources
+2019-04-02 09:53:36,344 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-02 09:53:36,345 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kiranmai.adams\Documents\StayBeta\src\test\resources
+2019-04-02 09:53:47,492 [Worker-10: Launching Executing install in C__Users_Kiranmai.adams_Documents_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Kiranmai.adams\Documents\StayBeta
+2019-04-02 09:53:47,492 [Worker-10: Launching Executing install in C__Users_Kiranmai.adams_Documents_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2019-04-02 09:56:19,125 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-02 09:56:19,126 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kiranmai.adams\Documents\StayBeta\src\main\resources
+2019-04-02 09:56:19,131 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-02 09:56:19,135 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kiranmai.adams\Documents\StayBeta\src\test\resources
