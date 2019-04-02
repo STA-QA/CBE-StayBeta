@@ -1,0 +1,7 @@
+package stayBetaInterfaces;
+
+public interface HotelCancel {
+
+	public void TakeSSofCancellationChargesFromLB();
+	
+}

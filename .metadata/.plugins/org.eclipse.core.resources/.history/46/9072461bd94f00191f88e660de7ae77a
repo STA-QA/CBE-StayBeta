@@ -1,0 +1,11 @@
+Feature: To test new data source in hotel searches 
+
+Scenario Outline: test for loop <Guests
+
+Given User enter guests <Guests>
+
+Examples:
+
+|Guests|
+|3|
+|6|

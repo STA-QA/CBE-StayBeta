@@ -1,0 +1,7 @@
+package CBE.StayBeta;
+
+import stayBetaInterfaces.RandomDataGeneration;
+
+public class RandomDataGenerationImpl implements RandomDataGeneration{
+
+}

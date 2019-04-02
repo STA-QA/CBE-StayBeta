@@ -1,0 +1,8 @@
+package stayBetaInterfaces;
+
+public interface HotelSearch {
+    
+	public void VerifySearchResultsOfDS(String DataSource);
+	
+	public void AddRandomHotelToCartFromTSRes() throws InterruptedException;
+}

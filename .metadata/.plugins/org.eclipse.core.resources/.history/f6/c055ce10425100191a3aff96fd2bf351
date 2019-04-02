@@ -1,0 +1,66 @@
+package stepDefinitions;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import CBE.StayBeta.HomePageImpl;
+import CBE.StayBeta.HotelImpl;
+import assertions.HomePageAssertions;
+import assertions.HotelSearchPageAssertions;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import utilities.Login;
+
+public class TestClass {
+	Login login = new Login();
+	HomePageImpl Home = new HomePageImpl();
+	HotelImpl Hotel = new HotelImpl();
+	HotelSearchPageAssertions HS = new HotelSearchPageAssertions();
+	HomePageAssertions Homepage = new HomePageAssertions();
+	
+	String a="10";
+
+    @Given("^User enters a$")
+    public void user_enters_a() throws Throwable {
+        System.out.println(a);
+        a="20";
+    }
+
+    @And("^tries to call a$")
+    public void tries_to_call_a() throws Throwable {
+    	 System.out.println(a);
+         
+    }
+
+    @And("^verify if the if value of a is still the same$")
+    public void verify_if_the_if_value_of_a_is_still_the_same() throws Throwable {
+    	 System.out.println(a);
+         //a="20";
+    }
+	 
+
+	 @Given("^User Writes the text to java$")
+	    public void User_Writes_the_text_to_java() throws Throwable {
+		 
+		 try {
+	            FileWriter writer = new FileWriter("the-file-name.txt", true);
+	            BufferedWriter bufferedWriter = new BufferedWriter(writer);
+	 
+	            bufferedWriter.write("Hello World");
+	            bufferedWriter.newLine();
+	            bufferedWriter.write("See You Again!");
+	 
+	            bufferedWriter.close();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+		 
+		 
+		 
+		 
+	    }
+	  
+}

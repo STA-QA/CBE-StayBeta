@@ -1,0 +1,28 @@
+package stepDefinitions;
+
+import org.openqa.selenium.By;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+
+public class HotelSearchDefinitions {
+
+	 @Then("^Verify if Reviews are present for each hotel$")
+	    public void verify_if_reviews_are_present_for_each_hotel() throws Throwable {
+	        
+	    }
+
+	    @And("^Verify if Ratings are present for each hotel$")
+	    public void verify_if_ratings_are_present_for_each_hotel() throws Throwable {
+	        
+	    }
+	
+	    @And("^Select a Random room and add to cart$")
+	    public void select_a_random_room_and_add_to_cart() throws Throwable {
+	    	String OLBAddToCartXpath = "//*[contains(@class,'btn-add-to-cart')]";
+	    	HotelSearch.SelectSameTypeRoomsFromListsInLB(2);
+	        Thread.sleep(2000);
+	        CBEDriver.findElement(By.xpath(OLBAddToCartXpath)).click();
+	    }
+	    
+}

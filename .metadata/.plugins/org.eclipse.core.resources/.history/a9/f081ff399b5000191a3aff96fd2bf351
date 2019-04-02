@@ -1,0 +1,5 @@
+package stayBetaInterfaces;
+
+public interface HotelSearch {
+
+}

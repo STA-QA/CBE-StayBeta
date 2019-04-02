@@ -1,0 +1,11 @@
+package stayBetaInterfaces;
+
+public interface RandomDataGeneration {
+
+	public void GenerateFirstName();
+	public void GenerateLastName();
+	public void GenerateBirthDate();
+	public void GenerateBirthMonth();
+	public void GenerateBirthYear();
+	
+}

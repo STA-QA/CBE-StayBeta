@@ -1,0 +1,37 @@
+package CBE.StayBeta;
+
+import stayBetaInterfaces.RandomDataGeneration;
+
+public class RandomDataGenerationImpl implements RandomDataGeneration{
+
+	@Override
+	public void GenerateFirstName() {
+		 
+		
+	}
+
+	@Override
+	public void GenerateLastName() {
+		 
+		
+	}
+
+	@Override
+	public void GenerateBirthDate() {
+		 
+		
+	}
+
+	@Override
+	public void GenerateBirthMonth() {
+		 
+		
+	}
+
+	@Override
+	public void GenerateBirthYear() {
+		 
+		
+	}
+
+}

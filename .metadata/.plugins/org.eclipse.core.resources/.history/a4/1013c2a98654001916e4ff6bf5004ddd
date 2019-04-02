@@ -1,0 +1,11 @@
+Feature: New Hotel Booking through Different Data Sources through LB
+
+Scenario Outline: 
+Given user <alphabet>
+
+Examples:
+|alphabet|
+|A|
+|B|
+|C|
+

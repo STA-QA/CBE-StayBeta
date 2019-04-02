@@ -1,0 +1,33 @@
+package assertions;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+
+import utilities.TestBase;
+
+public class HomePageAssertions extends TestBase {
+
+	String LogoutId = "";
+	String HomeTabLT = "";
+	String DestinationsTabLT = "";
+	String AboutUsTabLT = "";
+	String OffersTabLT = "";
+	String LoggedUserDetailsId = "m_cphHeader_T_CustToolbar_cbeNav_liLoggedInAs";
+	
+	public void HompePageAssertions() {
+		 try {
+			 Assert.assertTrue(CBEDriver.findElement(By.id(LogoutId)).isDisplayed(), "Verifying Logout link Presence");
+			 Assert.assertTrue(CBEDriver.findElement(By.id(LoggedUserDetailsId)).isDisplayed(), "Verifying     Presence");
+			 Assert.assertTrue(CBEDriver.findElement(By.linkText(HomeTabLT)).isDisplayed(), "Verifying     Presence");
+			 Assert.assertTrue(CBEDriver.findElement(By.linkText(DestinationsTabLT)).isDisplayed(), "Verifying     Presence");
+			 Assert.assertTrue(CBEDriver.findElement(By.linkText(AboutUsTabLT)).isDisplayed(), "Verifying     Presence");
+			 Assert.assertTrue(CBEDriver.findElement(By.linkText(OffersTabLT)).isDisplayed(), "Verifying     Presence");
+		 }
+		 catch(AssertionError e) {
+			 
+		 }
+		 catch(Throwable t) {
+			 
+		 }
+}
+}

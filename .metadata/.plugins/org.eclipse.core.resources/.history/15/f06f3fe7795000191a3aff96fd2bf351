@@ -1,0 +1,8 @@
+Feature: Cancel 
+
+Scenario: Amend Booking 
+
+	Given User launches the application 
+	And User login with valid credentials 
+	And Verify Testing Purpose
+	

@@ -1,0 +1,13 @@
+package cucumberOptions;
+
+import cucumber.api.CucumberOptions;
+
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+
+//@RunWith(Cucumber.class)
+@CucumberOptions(features = "src/test/java/testResources/TestLogic.feature", glue = "stepDefinitions", plugin = {
+		"pretty", "html:target/cucumber-reports" }, monochrome = true)
+
+public class TestRunner extends AbstractTestNGCucumberTests {
+
+}

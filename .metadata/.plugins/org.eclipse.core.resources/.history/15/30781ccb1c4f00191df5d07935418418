@@ -1,0 +1,43 @@
+Feature: To test new or a particular Data Source End to End 
+
+Scenario: Login into Application 
+
+	Given User launches the application 
+	And User enters Valid Credentials 
+	Then User logged into application 
+	
+Scenario Outline: 
+	Verify if the data source is available in the list and checked by default 
+
+	Given User Selects any agency 
+	And Click on Hotel Menu 
+	And Expand Show Extra options 
+	Then <Data Source> should be displayed in the Data source list 
+	And <Data Source Value> Should be selected by default 
+	
+	Examples: 
+	
+		|Data Source|Data Source Value|
+		|Tourico|Tourico|
+		|AOT NZ and Pacific - New|ecco|
+		
+Scenario Outline: 
+	Verify if hotels are displayed for a new or particular data source
+	
+	Given User Deselects SelectAll option 
+	And Select Particular <Data Source> 
+	And Search for a <Country> with particular <CountrySearchString> 
+	And Select the <Start Day> and <Duration Of Stay> 
+	And Select Exclude dorm beds 
+	And Select Rooms And Number of guests 
+	And Click Search Button 
+	
+	
+	Examples: 
+	
+		|Data Source||Country|CountrySearchString|Start Day||Duration Of Stay|
+			|Tourico||Buenos Aires (BUE), Argentina (AR)|BUE|2||1|
+		
+		
+		
+		

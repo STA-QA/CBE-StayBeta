@@ -1,0 +1,15 @@
+package assertions;
+
+public class HomePageAssertions {
+
+	String LogoutId = "";
+	String HomeTab = "";
+	String DestinationsTab = "";
+	String AboutUsTab = "";
+	String OffersTab = "";
+	
+	
+	public void HompePageAssertions() {
+		
+	}
+}

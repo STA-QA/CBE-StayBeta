@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="StayBeta"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+<mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
+<listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+<listEntry value="stayBetaInterfaces.HotelSearch"/>
+<listEntry value="stayBetaInterfaces.RandomDataGeneration"/>
+<listEntry value="stepDefinitions.TestClass"/>
+<listEntry value="CBE.StayBeta.AppTest"/>
+<listEntry value="cucumberOptions.TestRunner"/>
+<listEntry value="CBE.StayBeta.HotelImpl"/>
+<listEntry value="assertions.LightBoxAssertions"/>
+<listEntry value="CBE.StayBeta.RandomDataGenerationImpl"/>
+<listEntry value="stayBetaInterfaces.Hotel"/>
+<listEntry value="stepDefinitions.HotelBookingDefinitions"/>
+<listEntry value="assertions.HotelSearchPageAssertions"/>
+<listEntry value="stepDefinitions.LoginDefinitions"/>
+<listEntry value="utilities.Login"/>
+<listEntry value="CBE.StayBeta.HomePageImpl"/>
+<listEntry value="stepDefinitions.HomePageDefinitions"/>
+<listEntry value="stayBetaInterfaces.HomePage"/>
+<listEntry value="CBE.StayBeta.HotelSearchImpl"/>
+<listEntry value="CBE.StayBeta.HotelCancelImpl"/>
+<listEntry value="stepDefinitions.CancelBooking"/>
+<listEntry value="assertions.HomePageAssertions"/>
+<listEntry value="stepDefinitions.TestCase616"/>
+<listEntry value="assertions.HotelAmendmentPageAssertions"/>
+<listEntry value="stayBetaInterfaces.HotelCancel"/>
+<listEntry value="utilities.TestBase"/>
+<listEntry value="stepDefinitions.HotelSearchDefinitions"/>
+</listAttribute>
+<listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+<listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+<stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+<intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+</launchConfiguration>
