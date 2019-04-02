@@ -10,6 +10,4 @@ Scenario Outline: Login into Application
 	
 Examples:
 |Username|password|
-|gbzq1|1srzq1|
-|gbzq3|1srzq3|
 |gbzq4|1srzq4|
