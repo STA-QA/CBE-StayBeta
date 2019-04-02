@@ -1,0 +1,16 @@
+CBE\StayBeta\HotelImpl.class
+stayBetaInterfaces\HotelCancel.class
+assertions\HomePageAssertions.class
+CBE\StayBeta\RandomDataGenerationImpl.class
+CBE\StayBeta\HotelSearchImpl.class
+stayBetaInterfaces\Hotel.class
+assertions\HotelAmendmentPageAssertions.class
+assertions\HotelSearchPageAssertions.class
+utilities\Login.class
+stayBetaInterfaces\HomePage.class
+CBE\StayBeta\HomePageImpl.class
+assertions\LightBoxAssertions.class
+stayBetaInterfaces\HotelSearch.class
+stayBetaInterfaces\RandomDataGeneration.class
+utilities\TestBase.class
+CBE\StayBeta\HotelCancelImpl.class
