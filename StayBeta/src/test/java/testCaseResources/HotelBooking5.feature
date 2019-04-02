@@ -38,3 +38,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 		|Country                                         |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source|Guests|
 		|Buenos Aires (BUE), Argentina (AR)|	BUE                        |2            |1                      |2        |Tourico        |2		|
 		
+		
+Scenario: User Logs out of application and closes Browser 
+
+	Given User clicks On Logout 
+	Then User should be logged out and driver is closed	

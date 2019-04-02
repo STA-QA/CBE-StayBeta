@@ -1,5 +1,5 @@
 Feature: New Hotel Booking through Different Data Sources by selecting Multiple rooms with same room type 
-	          from the expanded room list randomly from Table Source
+	from the expanded room list randomly from Table Source
 
 Scenario: Login into Application 
 
@@ -22,9 +22,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Number of <Rooms> 
 	And Select Hotel <Data Source> 
 	And Click Search Button 
-	And Select a Random Hotel 
 	And Click on Room Selection in LB 
-	And Select multiple rooms with same room type from the list and add to cart
+	And Select multiple rooms with same room type from the list and add to cart 
 	And Verify if Quote is selected by default 
 	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
@@ -38,3 +37,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 		|Country                                         |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source|Guests|
 		|Buenos Aires (BUE), Argentina (AR)|	BUE                        |2            |1                      |2        |Tourico        |2		|
 		
+		
+Scenario: User Logs out of application and closes Browser 
+
+	Given User clicks On Logout 
+	Then User should be logged out and driver is closed	

@@ -21,19 +21,24 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Exclude dorm beds 
 	And Select Number of <Rooms> 
 	And Select Hotel <Data Source> 
-	And Click Search Button
-	And Expand room list of any hotel
-	And Select a room from the list and add to cart
-	And Verify if Quote is selected by default
+	And Click Search Button 
+	And Expand room list of any hotel 
+	And Select a room from the list and add to cart 
+	And Verify if Quote is selected by default 
 	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
-	And Provides the <Guests> Details
+	And Provides the <Guests> Details 
 	And Click on Book Button 
-	Then Booking has been done successfully and Booking reference Text is stored in a file
+	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	
 	
 	Examples: 
 		|Country                                         |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source|Guests|
 		|Buenos Aires (BUE), Argentina (AR)|	BUE                        |2            |1                      |1        |Tourico        |1|
 		
+		
+Scenario: User Logs out of application and closes Browser 
+
+	Given User clicks On Logout 
+	Then User should be logged out and driver is closed	
