@@ -29,4 +29,6 @@ public interface HotelSearch {
 	public void SelectMultipleRoomsSameTypeFromListInSearchResults() throws InterruptedException;
 	
 	public void SelectMultipleRoomsDifferentTypeFromListInSearchResults() throws InterruptedException;
+	
+	public void VerifySuccessWithInfo();
 }

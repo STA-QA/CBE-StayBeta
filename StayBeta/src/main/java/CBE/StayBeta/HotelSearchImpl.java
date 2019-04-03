@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.apache.log4j.helpers.LogLog;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -289,6 +290,15 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Room2Xpath)));
 
 		actions.moveToElement(listings1.get(randomValue1)).click().perform();
+		
+	}
+
+	@Override
+	public void VerifySuccessWithInfo() {
+		String SWinfo = "//a[@id='m_c_C000_m_m_m_c_c5_SearchResultBriefSummaries_rptSearchResultBriefs_0_lnkBriefToggleMoreInformation']/span";
+		CBEDriver.findElement(By.xpath(SWinfo)).click();
+		String text = CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_m_m_c_c5_SearchResultBriefSummaries_rptSearchResultBriefs_0_rptSummaries_ctl01_Div1']/p")).getText();
+		Assert.assertTrue(text.contains("Search not possible:"));
 		
 	}
 

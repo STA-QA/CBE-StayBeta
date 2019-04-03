@@ -73,4 +73,11 @@ public class HotelSearchDefinitions extends TestBase {
 		HotelSearch.ClickAddSelectionToCart();
 	}
 
+	 @Then("^Verify the SuccessWithInfo Message$")
+	    public void verify_the_successwithinfo_message() throws Throwable {
+	       Thread.sleep(3000);
+	       HotelSearch.VerifySuccessWithInfo();
+	    }
+
+	
 }

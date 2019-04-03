@@ -21,8 +21,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Exclude dorm beds 
 	And Select Number of <Rooms> 
 	And Select Hotel <Data Source> 
-	And Click Search Button 
-	And Click on Room Selection in LB 
+	And Click Search Button
+	And Expand room list of any hotel
 	And Select multiple rooms with same room type from the list and add to cart 
 	And Verify if Quote is selected by default 
 	And Clicks On Book Radio Button 

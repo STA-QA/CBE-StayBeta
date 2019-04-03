@@ -5,7 +5,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/testCaseResources", 
+@CucumberOptions(features = "src/test/java/testCaseResources/HotelSearchSuccessWithInfo.feature", 
 glue = "stepDefinitions", format = {"pretty", "html:test-output", "json:target/cucumber.json"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
