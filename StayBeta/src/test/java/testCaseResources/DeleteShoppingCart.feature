@@ -21,7 +21,6 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Number of <Rooms> 
 	And Select Hotel <Data Source> 
 	And Click Search Button
-	When User verify the Search Results of <Data Source>
 	And Select a Random Hotel
 	And Clicks on Add to cart
 	And Click on Delete button
