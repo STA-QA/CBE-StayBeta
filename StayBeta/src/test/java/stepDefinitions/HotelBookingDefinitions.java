@@ -118,6 +118,7 @@ public class HotelBookingDefinitions extends TestBase {
 	
 	@Then("^Product should be deleted from cart$")
 	public void product_should_be_deleted_from_cart() throws Throwable {
+		Thread.sleep(2000);
 		HotelCancel.ProductDeleteVerification();
 	}
 

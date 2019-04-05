@@ -381,3 +381,48 @@ formatter.result({
 formatter.match({
   "location": "HotelBookingDefinitions.click_on_delete_button()"
 });
+formatter.result({
+  "duration": 4530749659,
+  "status": "passed"
+});
+formatter.match({
+  "location": "HotelBookingDefinitions.product_should_be_deleted_from_cart()"
+});
+formatter.result({
+  "duration": 134334454,
+  "error_message": "java.lang.AssertionError: expected [(1 item)] but found [(0 item)]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat CBE.StayBeta.HotelCancelImpl.ProductDeleteVerification(HotelCancelImpl.java:58)\r\n\tat stepDefinitions.HotelBookingDefinitions.product_should_be_deleted_from_cart(HotelBookingDefinitions.java:121)\r\n\tat ✽.Then Product should be deleted from cart(src/test/java/testCaseResources/DeleteShoppingCart.feature:28)\r\n",
+  "status": "failed"
+});
+formatter.scenario({
+  "line": 36,
+  "name": "User Logs out of application and closes Browser",
+  "description": "",
+  "id": "delete-the-product-from-the-shopping-cart;user-logs-out-of-application-and-closes-browser",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 38,
+  "name": "User clicks On Logout",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 39,
+  "name": "User should be logged out and driver is closed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginDefinitions.user_clicks_on_logout()"
+});
+formatter.result({
+  "duration": 2250736181,
+  "error_message": "org.openqa.selenium.WebDriverException: unknown error: Element \u003ca onclick\u003d\"return drConfirm(\u0027\u0027, \u0027Are you sure you want to logout?\u0027, event);if (!this.disabled) { focus();onfocus(); };\" id\u003d\"m_cphHeader_T_CustToolbar_cbeNav_btnLogOut\" onfocus\u003d\"GetFocus(this.id);\" href\u003d\"javascript:__doPostBack(\u0027m$cphHeader$T_CustToolbar$cbeNav$btnLogOut\u0027,\u0027\u0027)\" style\u003d\"\" tabindex\u003d\"-1\"\u003e...\u003c/a\u003e is not clickable at point (788, 146). Other element would receive the click: \u003cdiv unselectable\u003d\"on\" class\u003d\"TelerikModalOverlay\" style\u003d\"position: absolute; left: 0px; top: 0px; z-index: 3000; background-color: rgb(170, 170, 170); opacity: 0.5; width: 1263px; height: 2941px;\"\u003e\u003c/div\u003e\n  (Session info: chrome\u003d73.0.3683.86)\n  (Driver info: chromedriver\u003d2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform\u003dWindows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027UKLF3GWKC2\u0027, ip: \u002710.44.253.139\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\\Users\\KIRANM~1.ADA\\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64019}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}\nSession ID: 9e5af697c2277a706c6e03aeb2ca6c30\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat utilities.Login.ClickOnLogout(Login.java:24)\r\n\tat stepDefinitions.LoginDefinitions.user_clicks_on_logout(LoginDefinitions.java:40)\r\n\tat ✽.Given User clicks On Logout(src/test/java/testCaseResources/DeleteShoppingCart.feature:38)\r\n",
+  "status": "failed"
+});
+formatter.match({
+  "location": "LoginDefinitions.user_should_be_logged_out_and_driver_is_closed()"
+});
+formatter.result({
+  "status": "skipped"
+});
+});
