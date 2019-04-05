@@ -83,7 +83,6 @@ INDEX VERSION 1.131+C:\CBE-Automation\.metadata\.plugins\org.eclipse.jdt.core
 2735735323.index
 1767700325.index
 1212087997.index
-2288815313.index
 1499704131.index
 566351324.index
 720414515.index
