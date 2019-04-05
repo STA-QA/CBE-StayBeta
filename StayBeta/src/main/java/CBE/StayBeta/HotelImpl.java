@@ -295,7 +295,7 @@ public class HotelImpl extends TestBase implements Hotel {
 		CBEDriver.findElement(By.xpath(SearchOptionInCart)).click();
 		Thread.sleep(2000);
 		CBEDriver.findElement(By.xpath(AmendThisItem)).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 
 	@Override

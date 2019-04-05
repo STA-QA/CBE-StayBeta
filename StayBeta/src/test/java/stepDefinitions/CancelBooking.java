@@ -49,6 +49,7 @@ public class CancelBooking {
 	public void select_amend_this_item_option() throws Throwable {
 		Thread.sleep(1000);
 		Hotel.SelectAmendThisItem();
+		Thread.sleep(2000);
 		Hotel.AcceptThePopup();
 		AmendAssert.VerifyDisabledAssertions();
 	}
