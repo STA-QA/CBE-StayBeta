@@ -33,21 +33,22 @@ formatter.match({
   "location": "LoginDefinitions.User_launches_the_application()"
 });
 formatter.result({
-  "duration": 19020455161,
-  "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d73.0.3683.86)\n  (Driver info: chromedriver\u003d2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform\u003dWindows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:25:53\u0027\nSystem info: host: \u0027UKLF3GWKC2\u0027, ip: \u002710.44.253.139\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\\Users\\KIRANM~1.ADA\\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64093}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}\nSession ID: 1a1b03b736dffec7be82031dfb19e6b7\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)\r\n\tat utilities.TestBase.openUrl(TestBase.java:29)\r\n\tat stepDefinitions.LoginDefinitions.User_launches_the_application(LoginDefinitions.java:18)\r\n\tat ✽.Given User launches the application(src/test/java/testCaseResources/DeleteShoppingCart.feature:5)\r\n",
-  "status": "failed"
+  "duration": 7425439055,
+  "status": "passed"
 });
 formatter.match({
   "location": "LoginDefinitions.user_enters_valid_credentials()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 215462953,
+  "status": "passed"
 });
 formatter.match({
   "location": "LoginDefinitions.user_logged_into_application()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 604761590,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 10,
@@ -71,15 +72,15 @@ formatter.match({
   "location": "TestCase616.User_Selects_any_agency()"
 });
 formatter.result({
-  "duration": 6383134958,
-  "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d73.0.3683.86)\n  (Driver info: chromedriver\u003d2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform\u003dWindows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:25:53\u0027\nSystem info: host: \u0027UKLF3GWKC2\u0027, ip: \u002710.44.253.139\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\\Users\\KIRANM~1.ADA\\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64093}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}\nSession ID: 1a1b03b736dffec7be82031dfb19e6b7\n*** Element info: {Using\u003dxpath, value\u003d//td[2]/a/span}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat CBE.StayBeta.HomePageImpl.UserSelectsAgency(HomePageImpl.java:22)\r\n\tat stepDefinitions.TestCase616.User_Selects_any_agency(TestCase616.java:25)\r\n\tat ✽.Given User Selects any agency(src/test/java/testCaseResources/DeleteShoppingCart.feature:12)\r\n",
-  "status": "failed"
+  "duration": 4295346462,
+  "status": "passed"
 });
 formatter.match({
   "location": "HomePageDefinitions.Click_on_Hotel_Menu()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 3563571200,
+  "status": "passed"
 });
 formatter.scenarioOutline({
   "line": 15,
@@ -258,4 +259,143 @@ formatter.step({
 });
 formatter.match({
   "location": "HotelBookingDefinitions.user_is_in_the_hotel_search_page()"
+});
+formatter.result({
+  "duration": 895128826,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Buenos Aires (BUE), Argentina (AR)",
+      "offset": 13
+    },
+    {
+      "val": "BUE",
+      "offset": 64
+    }
+  ],
+  "location": "TestCase616.search_for_a_with_particular(String,String)"
+});
+formatter.result({
+  "duration": 869222553,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 11
+    },
+    {
+      "val": "1",
+      "offset": 17
+    }
+  ],
+  "location": "TestCase616.select_the_and(int,int)"
+});
+formatter.result({
+  "duration": 274316942,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TestCase616.Select_Exclude_dorm_beds()"
+});
+formatter.result({
+  "duration": 53960826,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 17
+    }
+  ],
+  "location": "TestCase616.select_number_of(String)"
+});
+formatter.result({
+  "duration": 4100222340,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Tourico",
+      "offset": 13
+    }
+  ],
+  "location": "TestCase616.select_hotel(String)"
+});
+formatter.result({
+  "duration": 268714128,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TestCase616.Click_Search_Button()"
+});
+formatter.result({
+  "duration": 10093882889,
+  "status": "passed"
+});
+formatter.match({
+  "location": "HotelBookingDefinitions.select_a_random_hotel()"
+});
+formatter.result({
+  "duration": 11194766379,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TestCase616.clicks_on_add_to_cart()"
+});
+formatter.result({
+  "duration": 6121441853,
+  "status": "passed"
+});
+formatter.match({
+  "location": "HotelBookingDefinitions.click_on_delete_button()"
+});
+formatter.result({
+  "duration": 4168448391,
+  "status": "passed"
+});
+formatter.match({
+  "location": "HotelBookingDefinitions.product_should_be_deleted_from_cart()"
+});
+formatter.result({
+  "duration": 2034436672,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 35,
+  "name": "User Logs out of application and closes Browser",
+  "description": "",
+  "id": "delete-the-product-from-the-shopping-cart;user-logs-out-of-application-and-closes-browser",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 37,
+  "name": "User clicks On Logout",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 38,
+  "name": "User should be logged out and driver is closed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginDefinitions.user_clicks_on_logout()"
+});
+formatter.result({
+  "duration": 8347448192,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginDefinitions.user_should_be_logged_out_and_driver_is_closed()"
+});
+formatter.result({
+  "duration": 2078599136,
+  "status": "passed"
+});
 });

@@ -6346,3 +6346,275 @@ org.eclipse.core.runtime.CoreException: Launch configuration TestRunner referenc
 2019-04-05 15:06:14,015 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
 2019-04-05 15:06:14,020 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-04-05 15:06:14,025 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:11:52,854 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:11:52,854 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:11:52,861 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:11:52,865 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:11:53,929 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:11:53,929 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:11:53,936 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:11:53,942 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:12:36,752 [Worker-88: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: CBE:StayBeta:0.0.1-SNAPSHOT @ C:\CBE-Automation\StayBeta\pom.xml.
+2019-04-05 15:12:37,148 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/uncommons/reportng/1.1.4/reportng-1.1.4.pom
+2019-04-05 15:12:37,192 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/uncommons/reportng/1.1.4/reportng-1.1.4.pom
+2019-04-05 15:12:37,235 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/maven-metadata.xml
+2019-04-05 15:12:37,269 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/maven-metadata.xml
+2019-04-05 15:12:37,298 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.0/testng-5.0.pom
+2019-04-05 15:12:37,332 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.0/testng-5.0.pom
+2019-04-05 15:12:37,362 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/ant/ant/1.6.5/ant-1.6.5.pom
+2019-04-05 15:12:37,615 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/ant/ant/1.6.5/ant-1.6.5.pom
+2019-04-05 15:12:37,641 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.0.1/testng-5.0.1.pom
+2019-04-05 15:12:37,670 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.0.1/testng-5.0.1.pom
+2019-04-05 15:12:37,698 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.0.2/testng-5.0.2.pom
+2019-04-05 15:12:37,726 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.0.2/testng-5.0.2.pom
+2019-04-05 15:12:37,754 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.1/testng-5.1.pom
+2019-04-05 15:12:37,783 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.1/testng-5.1.pom
+2019-04-05 15:12:37,813 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.5/testng-5.5.pom
+2019-04-05 15:12:37,841 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.5/testng-5.5.pom
+2019-04-05 15:12:37,869 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.6/testng-5.6.pom
+2019-04-05 15:12:37,912 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.6/testng-5.6.pom
+2019-04-05 15:12:37,944 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.8/testng-5.8.pom
+2019-04-05 15:12:37,968 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.8/testng-5.8.pom
+2019-04-05 15:12:37,995 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.9/testng-5.9.pom
+2019-04-05 15:12:38,023 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.9/testng-5.9.pom
+2019-04-05 15:12:38,049 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.10/testng-5.10.pom
+2019-04-05 15:12:38,079 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.10/testng-5.10.pom
+2019-04-05 15:12:38,107 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.11/testng-5.11.pom
+2019-04-05 15:12:38,136 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.11/testng-5.11.pom
+2019-04-05 15:12:38,161 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.12.1/testng-5.12.1.pom
+2019-04-05 15:12:38,190 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.12.1/testng-5.12.1.pom
+2019-04-05 15:12:38,216 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.13/testng-5.13.pom
+2019-04-05 15:12:38,245 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.13/testng-5.13.pom
+2019-04-05 15:12:38,274 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/inject/guice/2.0/guice-2.0.pom
+2019-04-05 15:12:38,298 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/inject/guice/2.0/guice-2.0.pom
+2019-04-05 15:12:38,326 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/2.0/guice-parent-2.0.pom
+2019-04-05 15:12:38,352 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/2.0/guice-parent-2.0.pom
+2019-04-05 15:12:38,379 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom
+2019-04-05 15:12:38,404 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom
+2019-04-05 15:12:38,431 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/beust/jcommander/1.3/jcommander-1.3.pom
+2019-04-05 15:12:38,465 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/beust/jcommander/1.3/jcommander-1.3.pom
+2019-04-05 15:12:38,501 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.13.1/testng-5.13.1.pom
+2019-04-05 15:12:38,530 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.13.1/testng-5.13.1.pom
+2019-04-05 15:12:38,558 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14/testng-5.14.pom
+2019-04-05 15:12:38,587 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14/testng-5.14.pom
+2019-04-05 15:12:38,617 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/beust/jcommander/1.5/jcommander-1.5.pom
+2019-04-05 15:12:38,655 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/beust/jcommander/1.5/jcommander-1.5.pom
+2019-04-05 15:12:38,691 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.1/testng-5.14.1.pom
+2019-04-05 15:12:38,730 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.1/testng-5.14.1.pom
+2019-04-05 15:12:38,777 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/beust/jcommander/1.7/jcommander-1.7.pom
+2019-04-05 15:12:38,825 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/beust/jcommander/1.7/jcommander-1.7.pom
+2019-04-05 15:12:38,863 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.2/testng-5.14.2.pom
+2019-04-05 15:12:38,899 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.2/testng-5.14.2.pom
+2019-04-05 15:12:38,935 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/beust/jcommander/1.10/jcommander-1.10.pom
+2019-04-05 15:12:38,963 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/beust/jcommander/1.10/jcommander-1.10.pom
+2019-04-05 15:12:38,991 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.3/testng-5.14.3.pom
+2019-04-05 15:12:39,023 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.3/testng-5.14.3.pom
+2019-04-05 15:12:39,038 [Worker-88: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.3 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:39,061 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.4/testng-5.14.4.pom
+2019-04-05 15:12:39,089 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.4/testng-5.14.4.pom
+2019-04-05 15:12:39,101 [Worker-88: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.4 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:39,164 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.5/testng-5.14.5.pom
+2019-04-05 15:12:39,202 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.5/testng-5.14.5.pom
+2019-04-05 15:12:39,221 [Worker-88: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:39,249 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.6/testng-5.14.6.pom
+2019-04-05 15:12:39,281 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.6/testng-5.14.6.pom
+2019-04-05 15:12:39,308 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/beust/jcommander/1.12/jcommander-1.12.pom
+2019-04-05 15:12:39,336 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/beust/jcommander/1.12/jcommander-1.12.pom
+2019-04-05 15:12:39,364 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.7/testng-5.14.7.pom
+2019-04-05 15:12:39,392 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.7/testng-5.14.7.pom
+2019-04-05 15:12:39,419 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.6/snakeyaml-1.6.pom
+2019-04-05 15:12:39,451 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.6/snakeyaml-1.6.pom
+2019-04-05 15:12:39,485 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.9/testng-5.14.9.pom
+2019-04-05 15:12:39,512 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.9/testng-5.14.9.pom
+2019-04-05 15:12:39,541 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/5.14.10/testng-5.14.10.pom
+2019-04-05 15:12:39,568 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/5.14.10/testng-5.14.10.pom
+2019-04-05 15:12:39,599 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.0/testng-6.0.pom
+2019-04-05 15:12:39,627 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.0/testng-6.0.pom
+2019-04-05 15:12:39,656 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.0.1/testng-6.0.1.pom
+2019-04-05 15:12:39,683 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.0.1/testng-6.0.1.pom
+2019-04-05 15:12:39,717 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.1/testng-6.1.pom
+2019-04-05 15:12:39,744 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.1/testng-6.1.pom
+2019-04-05 15:12:39,774 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.1.1/testng-6.1.1.pom
+2019-04-05 15:12:39,799 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.1.1/testng-6.1.1.pom
+2019-04-05 15:12:39,829 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.2/testng-6.2.pom
+2019-04-05 15:12:39,857 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.2/testng-6.2.pom
+2019-04-05 15:12:39,887 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.2.1/testng-6.2.1.pom
+2019-04-05 15:12:39,923 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.2.1/testng-6.2.1.pom
+2019-04-05 15:12:39,956 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.3/testng-6.3.pom
+2019-04-05 15:12:39,981 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.3/testng-6.3.pom
+2019-04-05 15:12:40,014 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.3.1/testng-6.3.1.pom
+2019-04-05 15:12:40,267 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.3.1/testng-6.3.1.pom
+2019-04-05 15:12:40,296 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.4/testng-6.4.pom
+2019-04-05 15:12:40,321 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.4/testng-6.4.pom
+2019-04-05 15:12:40,351 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.5.1/testng-6.5.1.pom
+2019-04-05 15:12:40,383 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.5.1/testng-6.5.1.pom
+2019-04-05 15:12:40,457 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.5.2/testng-6.5.2.pom
+2019-04-05 15:12:40,492 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.5.2/testng-6.5.2.pom
+2019-04-05 15:12:40,525 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.6/testng-6.6.pom
+2019-04-05 15:12:40,559 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.6/testng-6.6.pom
+2019-04-05 15:12:40,595 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.7/testng-6.7.pom
+2019-04-05 15:12:40,874 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.7/testng-6.7.pom
+2019-04-05 15:12:40,904 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8/testng-6.8.pom
+2019-04-05 15:12:40,943 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8/testng-6.8.pom
+2019-04-05 15:12:40,989 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.1/testng-6.8.1.pom
+2019-04-05 15:12:41,027 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.1/testng-6.8.1.pom
+2019-04-05 15:12:41,059 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.3/testng-6.8.3.pom
+2019-04-05 15:12:41,099 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.3/testng-6.8.3.pom
+2019-04-05 15:12:41,127 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.5/testng-6.8.5.pom
+2019-04-05 15:12:41,157 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.5/testng-6.8.5.pom
+2019-04-05 15:12:41,210 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.8/testng-6.8.8.pom
+2019-04-05 15:12:41,238 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.8/testng-6.8.8.pom
+2019-04-05 15:12:41,271 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.13/testng-6.8.13.pom
+2019-04-05 15:12:41,301 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.13/testng-6.8.13.pom
+2019-04-05 15:12:41,334 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.14/testng-6.8.14.pom
+2019-04-05 15:12:41,366 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.14/testng-6.8.14.pom
+2019-04-05 15:12:41,399 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.15/testng-6.8.15.pom
+2019-04-05 15:12:41,441 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.15/testng-6.8.15.pom
+2019-04-05 15:12:41,472 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.17/testng-6.8.17.pom
+2019-04-05 15:12:41,504 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.17/testng-6.8.17.pom
+2019-04-05 15:12:41,539 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.8.21/testng-6.8.21.pom
+2019-04-05 15:12:41,573 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.8.21/testng-6.8.21.pom
+2019-04-05 15:12:41,600 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.4/testng-6.9.4.pom
+2019-04-05 15:12:41,656 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.4/testng-6.9.4.pom
+2019-04-05 15:12:41,687 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.5/testng-6.9.5.pom
+2019-04-05 15:12:41,724 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.5/testng-6.9.5.pom
+2019-04-05 15:12:41,758 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.7.0/ant-1.7.0.pom
+2019-04-05 15:12:41,812 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.7.0/ant-1.7.0.pom
+2019-04-05 15:12:41,850 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant-parent/1.7.0/ant-parent-1.7.0.pom
+2019-04-05 15:12:41,887 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant-parent/1.7.0/ant-parent-1.7.0.pom
+2019-04-05 15:12:41,924 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.pom
+2019-04-05 15:12:41,982 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.pom
+2019-04-05 15:12:42,020 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/inject/guice/4.0/guice-4.0.pom
+2019-04-05 15:12:42,081 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/inject/guice/4.0/guice-4.0.pom
+2019-04-05 15:12:42,109 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/4.0/guice-parent-4.0.pom
+2019-04-05 15:12:42,147 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/4.0/guice-parent-4.0.pom
+2019-04-05 15:12:42,186 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/google/5/google-5.pom
+2019-04-05 15:12:42,220 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/google/5/google-5.pom
+2019-04-05 15:12:42,260 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava/16.0.1/guava-16.0.1.pom
+2019-04-05 15:12:42,296 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/guava/guava/16.0.1/guava-16.0.1.pom
+2019-04-05 15:12:42,336 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/16.0.1/guava-parent-16.0.1.pom
+2019-04-05 15:12:42,375 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/16.0.1/guava-parent-16.0.1.pom
+2019-04-05 15:12:42,499 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.15/snakeyaml-1.15.pom
+2019-04-05 15:12:42,528 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.15/snakeyaml-1.15.pom
+2019-04-05 15:12:42,559 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.6/testng-6.9.6.pom
+2019-04-05 15:12:42,585 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.6/testng-6.9.6.pom
+2019-04-05 15:12:42,612 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.7/testng-6.9.7.pom
+2019-04-05 15:12:42,637 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.7/testng-6.9.7.pom
+2019-04-05 15:12:42,664 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.8/testng-6.9.8.pom
+2019-04-05 15:12:42,697 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.8/testng-6.9.8.pom
+2019-04-05 15:12:42,726 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.9/testng-6.9.9.pom
+2019-04-05 15:12:42,752 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.9/testng-6.9.9.pom
+2019-04-05 15:12:42,786 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.13.3/testng-6.9.13.3.pom
+2019-04-05 15:12:42,812 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.13.3/testng-6.9.13.3.pom
+2019-04-05 15:12:42,843 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/inject/guice/4.1.0/guice-4.1.0.pom
+2019-04-05 15:12:42,880 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/inject/guice/4.1.0/guice-4.1.0.pom
+2019-04-05 15:12:42,906 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/4.1.0/guice-parent-4.1.0.pom
+2019-04-05 15:12:42,947 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/4.1.0/guice-parent-4.1.0.pom
+2019-04-05 15:12:42,973 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0.pom
+2019-04-05 15:12:42,997 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0.pom
+2019-04-05 15:12:43,026 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/19.0/guava-parent-19.0.pom
+2019-04-05 15:12:43,053 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/19.0/guava-parent-19.0.pom
+2019-04-05 15:12:43,078 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.9.7/ant-1.9.7.pom
+2019-04-05 15:12:43,105 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.9.7/ant-1.9.7.pom
+2019-04-05 15:12:43,131 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant-parent/1.9.7/ant-parent-1.9.7.pom
+2019-04-05 15:12:43,156 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant-parent/1.9.7/ant-parent-1.9.7.pom
+2019-04-05 15:12:43,184 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.9.7/ant-launcher-1.9.7.pom
+2019-04-05 15:12:43,212 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.9.7/ant-launcher-1.9.7.pom
+2019-04-05 15:12:43,246 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.17/snakeyaml-1.17.pom
+2019-04-05 15:12:43,311 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.17/snakeyaml-1.17.pom
+2019-04-05 15:12:43,358 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.13.4/testng-6.9.13.4.pom
+2019-04-05 15:12:43,400 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.13.4/testng-6.9.13.4.pom
+2019-04-05 15:12:43,444 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.13.5/testng-6.9.13.5.pom
+2019-04-05 15:12:43,480 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.13.5/testng-6.9.13.5.pom
+2019-04-05 15:12:43,518 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.9.13.6/testng-6.9.13.6.pom
+2019-04-05 15:12:43,552 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.9.13.6/testng-6.9.13.6.pom
+2019-04-05 15:12:43,594 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.10/testng-6.10.pom
+2019-04-05 15:12:43,620 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.10/testng-6.10.pom
+2019-04-05 15:12:43,646 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.11/testng-6.11.pom
+2019-04-05 15:12:43,672 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.11/testng-6.11.pom
+2019-04-05 15:12:43,699 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/beust/jcommander/1.64/jcommander-1.64.pom
+2019-04-05 15:12:43,726 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/beust/jcommander/1.64/jcommander-1.64.pom
+2019-04-05 15:12:43,756 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.13/testng-6.13.pom
+2019-04-05 15:12:43,789 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.13/testng-6.13.pom
+2019-04-05 15:12:43,818 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/beust/jcommander/1.66/jcommander-1.66.pom
+2019-04-05 15:12:43,823 [Worker-88: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.beust:jcommander:jar:1.66 is missing, no dependency information available
+2019-04-05 15:12:43,842 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.13.1/testng-6.13.1.pom
+2019-04-05 15:12:43,867 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.13.1/testng-6.13.1.pom
+2019-04-05 15:12:43,892 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/6.14.2/testng-6.14.2.pom
+2019-04-05 15:12:43,916 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/6.14.2/testng-6.14.2.pom
+2019-04-05 15:12:43,942 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/7.0.0-beta1/testng-7.0.0-beta1.pom
+2019-04-05 15:12:43,967 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/7.0.0-beta1/testng-7.0.0-beta1.pom
+2019-04-05 15:12:43,996 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/7.0.0-beta2/testng-7.0.0-beta2.pom
+2019-04-05 15:12:44,020 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/7.0.0-beta2/testng-7.0.0-beta2.pom
+2019-04-05 15:12:44,059 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/testng/testng/7.0.0-beta4/testng-7.0.0-beta4.pom
+2019-04-05 15:12:44,084 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/testng/testng/7.0.0-beta4/testng-7.0.0-beta4.pom
+2019-04-05 15:12:44,112 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/velocity/velocity/1.4/velocity-1.4.pom
+2019-04-05 15:12:44,138 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/velocity/velocity/1.4/velocity-1.4.pom
+2019-04-05 15:12:44,167 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/velocity/velocity-dep/1.4/velocity-dep-1.4.pom
+2019-04-05 15:12:44,196 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/velocity/velocity-dep/1.4/velocity-dep-1.4.pom
+2019-04-05 15:12:44,275 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/uncommons/reportng/1.1.4/reportng-1.1.4.jar
+2019-04-05 15:12:44,462 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/uncommons/reportng/1.1.4/reportng-1.1.4.jar
+2019-04-05 15:12:44,479 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/velocity/velocity/1.4/velocity-1.4.jar
+2019-04-05 15:12:45,305 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/velocity/velocity/1.4/velocity-1.4.jar
+2019-04-05 15:12:45,324 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/velocity/velocity-dep/1.4/velocity-dep-1.4.jar
+2019-04-05 15:12:45,646 [Worker-88: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/velocity/velocity-dep/1.4/velocity-dep-1.4.jar
+2019-04-05 15:12:46,268 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:12:46,268 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:12:46,277 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:12:46,277 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:12:47,325 [Worker-88: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.3 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:47,333 [Worker-88: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.4 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:47,345 [Worker-88: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:47,475 [Worker-88: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.beust:jcommander:jar:1.66 is missing, no dependency information available
+2019-04-05 15:12:47,705 [Worker-88: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/uncommons/reportng/1.1.4/reportng-1.1.4-sources.jar
+2019-04-05 15:12:47,816 [Worker-88: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/uncommons/reportng/1.1.4/reportng-1.1.4-sources.jar
+2019-04-05 15:12:47,926 [Worker-88: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.uncommons:reportng:1.1.4
+2019-04-05 15:12:47,949 [Worker-88: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/velocity/velocity/1.4/velocity-1.4-sources.jar
+2019-04-05 15:12:47,986 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:12:47,987 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:12:48,003 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:12:48,003 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:12:48,089 [Worker-88: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/velocity/velocity/1.4/velocity-1.4-sources.jar
+2019-04-05 15:12:48,158 [Worker-88: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for velocity:velocity:1.4
+2019-04-05 15:12:48,187 [Worker-88: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/velocity/velocity-dep/1.4/velocity-dep-1.4-sources.jar
+2019-04-05 15:12:48,319 [Worker-88: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/velocity/velocity-dep/1.4/velocity-dep-1.4-sources.jar
+2019-04-05 15:12:48,398 [Worker-88: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for velocity:velocity-dep:1.4
+2019-04-05 15:12:49,099 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:12:49,156 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:12:49,166 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:12:49,174 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:12:57,859 [Worker-82: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-04-05 15:12:58,199 [Worker-82: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: CBE:StayBeta:0.0.1-SNAPSHOT @ C:\CBE-Automation\StayBeta\pom.xml.
+2019-04-05 15:12:58,334 [Worker-82: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.3 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:58,357 [Worker-82: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.4 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:58,373 [Worker-82: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:12:58,480 [Worker-82: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.beust:jcommander:jar:1.66 is missing, no dependency information available
+2019-04-05 15:12:58,688 [Worker-82: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /StayBeta/src/main/java
+2019-04-05 15:12:58,689 [Worker-82: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /StayBeta/src/test/java
+2019-04-05 15:12:58,882 [Worker-82: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2019-04-05 15:13:00,249 [Worker-92: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.3 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:13:00,291 [Worker-92: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.4 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:13:00,303 [Worker-92: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-05 15:13:00,511 [Worker-92: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.beust:jcommander:jar:1.66 is missing, no dependency information available
+2019-04-05 15:13:00,724 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:13:00,739 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:13:00,747 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:13:00,747 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:13:09,541 [Worker-94: Launching Executing install in C__CBE-Automation_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\CBE-Automation\StayBeta
+2019-04-05 15:13:09,541 [Worker-94: Launching Executing install in C__CBE-Automation_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2019-04-05 15:14:27,425 [Worker-89: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:14:27,425 [Worker-89: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:14:27,438 [Worker-89: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:14:27,443 [Worker-89: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:18:26,971 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:18:26,971 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:18:26,976 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:18:26,980 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:19:44,501 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:19:44,501 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:19:44,520 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:19:44,527 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-05 15:19:45,541 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:19:45,541 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-05 15:19:45,546 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-05 15:19:45,550 [Worker-92: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
