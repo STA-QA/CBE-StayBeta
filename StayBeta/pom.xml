@@ -6,48 +6,49 @@
 	<groupId>CBE</groupId>
 	<artifactId>StayBeta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
 
 
 
-	
+
+
 
 	<name>StayBeta</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 
- 
- <build>
- 
- <plugins>
- <plugin>
-    <groupId>com.trivago.rta</groupId>
-    <artifactId>cluecumber-report-plugin</artifactId>
-    <version>1.8.1</version>
-    <executions>
-        <execution>
-            <id>report</id>
-            <phase>post-integration-test</phase>
-            <goals>
-                <goal>reporting</goal>
-            </goals>
-        </execution>
-    </executions>
-    <configuration>
-     <skip>false</skip>
-     
-        <sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
-        <generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
-    </configuration>    
-</plugin>
- </plugins>
- </build>
- 
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>com.trivago.rta</groupId>
+				<artifactId>cluecumber-report-plugin</artifactId>
+				<version>1.8.1</version>
+				<executions>
+					<execution>
+						<id>report</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>reporting</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<skip>false</skip>
+
+					<sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
+					<generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
