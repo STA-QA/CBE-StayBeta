@@ -3,11 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-
-
 	<groupId>CBE</groupId>
 	<artifactId>StayBeta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+
+
+
 
 
 	<name>StayBeta</name>
@@ -24,7 +26,6 @@
 	<build>
 
 		<plugins>
-		
 			<plugin>
 				<groupId>com.trivago.rta</groupId>
 				<artifactId>cluecumber-report-plugin</artifactId>
@@ -38,18 +39,13 @@
 						</goals>
 					</execution>
 				</executions>
-				
 				<configuration>
-				<testFailureIgnore>true</testFailureIgnore>
-				
 					<skip>false</skip>
-					
+
 					<sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
 					<generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
 				</configuration>
 			</plugin>
-			
-			
 		</plugins>
 	</build>
 
@@ -116,14 +112,6 @@
     <artifactId>reportng</artifactId>
     <version>1.1.4</version>
     <scope>test</scope>
-</dependency>
-
-
-<dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-failsafe-plugin</artifactId>
-  <version>3.0.0-M3</version>
-  <type>maven-plugin</type>
 </dependency>
 
 
