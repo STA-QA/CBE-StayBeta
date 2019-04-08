@@ -113,6 +113,7 @@ public class HotelBookingDefinitions extends TestBase {
 
 	@And("^Click on Delete button$")
 	public void click_on_delete_button() throws Throwable {
+		Thread.sleep(2000);
 		HotelCancel.DeleteProductFromShoppingCart();
 	}
 	
