@@ -6872,3 +6872,7 @@ org.eclipse.core.runtime.CoreException: Launch configuration TestRunner referenc
 2019-04-08 12:18:43,840 [Worker-195: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
 2019-04-08 12:18:43,841 [Worker-195: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-04-08 12:18:43,841 [Worker-195: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-08 12:28:06,574 [Worker-196: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 12:28:06,574 [Worker-196: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-08 12:28:06,580 [Worker-196: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 12:28:06,580 [Worker-196: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
