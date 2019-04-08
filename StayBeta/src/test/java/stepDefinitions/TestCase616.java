@@ -132,7 +132,9 @@ public class TestCase616 extends TestBase {
 
 	@And("^Click on Book Button$")
 	public void click_on_book_button() throws Throwable {
+		Thread.sleep(2000);
 		Hotel.ClickOnBook();	
+		Thread.sleep(2000);
 	}
 
 	@Then("^Booking has been done successfully$")

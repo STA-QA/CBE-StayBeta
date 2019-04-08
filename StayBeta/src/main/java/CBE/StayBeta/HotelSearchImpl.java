@@ -259,10 +259,9 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
 
 		actions.moveToElement(listings.get(randomValue)).click().perform();
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(CBEDriver, 15);
+		WebDriverWait wait = new WebDriverWait(CBEDriver, 30);
 		List<WebElement> listings1 = CBEDriver.findElements(By.xpath(Room2Xpath));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Room2Xpath)));
-
 		actions.moveToElement(listings1.get(randomValue)).click().perform();
 
 	}
@@ -285,7 +284,7 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
 
 		actions.moveToElement(listings.get(randomValue)).click().perform();
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(CBEDriver, 15);
+		WebDriverWait wait = new WebDriverWait(CBEDriver, 30);
 		List<WebElement> listings1 = CBEDriver.findElements(By.xpath(Room2Xpath));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Room2Xpath)));
 
