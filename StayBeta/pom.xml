@@ -6,6 +6,8 @@
 	<groupId>CBE</groupId>
 	<artifactId>StayBeta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+
 
 
 	
@@ -21,6 +23,7 @@
 
  
  <build>
+ 
  <plugins>
  <plugin>
     <groupId>com.trivago.rta</groupId>
