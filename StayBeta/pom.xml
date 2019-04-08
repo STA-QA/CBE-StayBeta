@@ -8,10 +8,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 
-
-
-
-
 	<name>StayBeta</name>
 	<url>http://maven.apache.org</url>
 
@@ -41,7 +37,7 @@
 				</executions>
 				<configuration>
 					<skip>false</skip>
-
+					
 					<sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
 					<generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
 				</configuration>
