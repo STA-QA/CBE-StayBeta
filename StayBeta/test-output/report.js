@@ -33,21 +33,21 @@ formatter.match({
   "location": "LoginDefinitions.User_launches_the_application()"
 });
 formatter.result({
-  "duration": 8014931115,
+  "duration": 7548752403,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginDefinitions.user_enters_valid_credentials()"
 });
 formatter.result({
-  "duration": 239956488,
+  "duration": 268819153,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginDefinitions.user_logged_into_application()"
 });
 formatter.result({
-  "duration": 648249777,
+  "duration": 502117831,
   "status": "passed"
 });
 formatter.scenario({
@@ -72,14 +72,14 @@ formatter.match({
   "location": "TestCase616.User_Selects_any_agency()"
 });
 formatter.result({
-  "duration": 4274893853,
+  "duration": 5811381621,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageDefinitions.Click_on_Hotel_Menu()"
 });
 formatter.result({
-  "duration": 4338216894,
+  "duration": 1072598829,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -261,7 +261,7 @@ formatter.match({
   "location": "HotelBookingDefinitions.user_is_in_the_hotel_search_page()"
 });
 formatter.result({
-  "duration": 1215536617,
+  "duration": 1233059088,
   "status": "passed"
 });
 formatter.match({
@@ -278,7 +278,7 @@ formatter.match({
   "location": "TestCase616.search_for_a_with_particular(String,String)"
 });
 formatter.result({
-  "duration": 935760539,
+  "duration": 1534128707,
   "status": "passed"
 });
 formatter.match({
@@ -295,14 +295,14 @@ formatter.match({
   "location": "TestCase616.select_the_and(int,int)"
 });
 formatter.result({
-  "duration": 243809243,
+  "duration": 286435345,
   "status": "passed"
 });
 formatter.match({
   "location": "TestCase616.Select_Exclude_dorm_beds()"
 });
 formatter.result({
-  "duration": 56310770,
+  "duration": 75452020,
   "status": "passed"
 });
 formatter.match({
@@ -315,7 +315,7 @@ formatter.match({
   "location": "TestCase616.select_number_of(String)"
 });
 formatter.result({
-  "duration": 4126174927,
+  "duration": 4244633401,
   "status": "passed"
 });
 formatter.match({
@@ -328,42 +328,42 @@ formatter.match({
   "location": "TestCase616.select_hotel(String)"
 });
 formatter.result({
-  "duration": 281718683,
+  "duration": 485800963,
   "status": "passed"
 });
 formatter.match({
   "location": "TestCase616.Click_Search_Button()"
 });
 formatter.result({
-  "duration": 10128268871,
+  "duration": 10116391881,
   "status": "passed"
 });
 formatter.match({
   "location": "HotelBookingDefinitions.select_a_random_hotel()"
 });
 formatter.result({
-  "duration": 6153182143,
+  "duration": 6300011341,
   "status": "passed"
 });
 formatter.match({
   "location": "TestCase616.clicks_on_add_to_cart()"
 });
 formatter.result({
-  "duration": 6141811681,
+  "duration": 6378954727,
   "status": "passed"
 });
 formatter.match({
   "location": "HotelBookingDefinitions.click_on_delete_button()"
 });
 formatter.result({
-  "duration": 4325375347,
+  "duration": 4376043554,
   "status": "passed"
 });
 formatter.match({
   "location": "HotelBookingDefinitions.product_should_be_deleted_from_cart()"
 });
 formatter.result({
-  "duration": 2035282345,
+  "duration": 2080889273,
   "status": "passed"
 });
 formatter.scenario({
@@ -388,14 +388,14 @@ formatter.match({
   "location": "LoginDefinitions.user_clicks_on_logout()"
 });
 formatter.result({
-  "duration": 8338785782,
+  "duration": 8715450007,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginDefinitions.user_should_be_logged_out_and_driver_is_closed()"
 });
 formatter.result({
-  "duration": 2124052537,
+  "duration": 261829492,
   "status": "passed"
 });
 });
