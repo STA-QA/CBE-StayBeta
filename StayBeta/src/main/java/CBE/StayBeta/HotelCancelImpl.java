@@ -55,7 +55,7 @@ String ShoppingCartCount = "	//div/span[contains(@class,'items')]";
 		
 		System.out.println("The deleted related text is :" +text);
 		
-		assertEquals("(0 item)", text);
+		assertEquals("(0 itm)", text);
 		
 	}
 	
