@@ -9,9 +9,6 @@
 
 
 
-
-
-
 	<name>StayBeta</name>
 	<url>http://maven.apache.org</url>
 
@@ -26,6 +23,14 @@
 	<build>
 
 		<plugins>
+		<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.19.1</version>
+    <configuration>
+        <testFailureIgnore>true</testFailureIgnore>
+    </configuration>
+</plugin>
 			<plugin>
 				<groupId>com.trivago.rta</groupId>
 				<artifactId>cluecumber-report-plugin</artifactId>
@@ -41,7 +46,7 @@
 				</executions>
 				<configuration>
 					<skip>false</skip>
-
+					<buildSuccessOnTestFailure>true</buildSuccessOnTestFailure>
 					<sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
 					<generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
 				</configuration>
@@ -98,28 +103,28 @@
 		</dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-server</artifactId>
-    <version>3.141.59</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.141.59</version>
+		</dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
-<dependency>
-    <groupId>org.uncommons</groupId>
-    <artifactId>reportng</artifactId>
-    <version>1.1.4</version>
-    <scope>test</scope>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+		</dependency>
 
 
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>jetty-repacked</artifactId>
-  <version>9.4.1.v20170120</version>
-</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>jetty-repacked</artifactId>
+			<version>9.4.1.v20170120</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
