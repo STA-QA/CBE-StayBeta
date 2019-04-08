@@ -6862,3 +6862,13 @@ org.eclipse.core.runtime.CoreException: Launch configuration TestRunner referenc
 2019-04-08 11:45:53,972 [Worker-187: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
 2019-04-08 11:45:53,977 [Worker-187: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-04-08 11:45:53,982 [Worker-187: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-08 12:07:01,782 [Worker-194: Launching Executing clean in C__CBE-Automation_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\CBE-Automation\StayBeta
+2019-04-08 12:07:01,782 [Worker-194: Launching Executing clean in C__CBE-Automation_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2019-04-08 12:07:04,892 [Worker-187: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 12:07:04,902 [Worker-187: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-08 12:07:04,909 [Worker-187: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 12:07:04,909 [Worker-187: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-08 12:18:43,840 [Worker-195: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 12:18:43,840 [Worker-195: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-08 12:18:43,841 [Worker-195: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 12:18:43,841 [Worker-195: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources

@@ -21,7 +21,7 @@ public class TestBase {
 		options.setExperimentalOption("useAutomationExtension", false);
 		CBEDriver = new ChromeDriver(options);
 		CBEDriver.manage().window().maximize();
-		CBEDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
 
 	// This method is used to Launch the application
