@@ -37,6 +37,7 @@
 				</executions>
 				<configuration>
 				<testFailureIgnore>true</testFailureIgnore>
+				<checkBuildResult>false</checkBuildResult>
 					<skip>false</skip>
 					
 					<sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
