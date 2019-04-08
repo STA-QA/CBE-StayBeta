@@ -6797,3 +6797,22 @@ org.eclipse.core.runtime.CoreException: Launch configuration TestRunner referenc
 2019-04-08 10:16:57,271 [Worker-170: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
 2019-04-08 10:16:57,272 [Worker-170: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-04-08 10:16:57,282 [Worker-170: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-08 10:18:51,082 [Worker-169: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: CBE:StayBeta:0.0.1-SNAPSHOT @ C:\CBE-Automation\StayBeta\pom.xml.
+2019-04-08 10:18:51,218 [Worker-169: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.3 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-08 10:18:51,235 [Worker-169: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.4 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-08 10:18:51,251 [Worker-169: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-08 10:18:51,373 [Worker-169: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.beust:jcommander:jar:1.66 is missing, no dependency information available
+2019-04-08 10:18:51,676 [Worker-169: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 10:18:51,676 [Worker-169: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-08 10:18:51,682 [Worker-169: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 10:18:51,682 [Worker-169: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
+2019-04-08 10:19:21,597 [Worker-169: Launching Executing clean in C__CBE-Automation_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\CBE-Automation\StayBeta
+2019-04-08 10:19:21,597 [Worker-169: Launching Executing clean in C__CBE-Automation_StayBeta] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2019-04-08 10:19:24,361 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.3 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-08 10:19:24,373 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.4 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-08 10:19:24,385 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:5.14.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-04-08 10:19:24,495 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.beust:jcommander:jar:1.66 is missing, no dependency information available
+2019-04-08 10:19:24,545 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 10:19:24,545 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\main\resources
+2019-04-08 10:19:24,555 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-08 10:19:24,555 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CBE-Automation\StayBeta\src\test\resources
