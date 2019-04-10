@@ -1,11 +1,9 @@
 package cucumberOptions;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.testng.annotations.BeforeSuite;
+
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //@RunWith(Cucumber.class)
