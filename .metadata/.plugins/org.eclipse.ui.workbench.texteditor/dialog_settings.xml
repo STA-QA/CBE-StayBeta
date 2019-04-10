@@ -8,6 +8,10 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="2.12.4"/>
+			<item value="surefire"/>
+			<item value="src"/>
+			<item value="packaging"/>
 			<item value=" throw new PendingException();"/>
 			<item value="throw new PendingException();"/>
 			<item value="#"/>

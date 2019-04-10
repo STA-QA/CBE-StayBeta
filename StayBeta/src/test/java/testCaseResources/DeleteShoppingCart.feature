@@ -5,14 +5,11 @@ Scenario: Login into Application
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
-	
-	
-Scenario: User Navigates to Hotel Page 
-
 	Given User Selects any agency 
 	Then Click on Hotel Menu 
-	
-Scenario Outline: User Book a hotel through <Data Source> 
+
+@mainTest
+Scenario Outline: User try to Book a hotel through <Data Source> and delete it in the cart 
 
 	Given User is in the Hotel Search Page 
 	And Search for a <Country> with particular <CountrySearchString> 

@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import CBE.StayBeta.HomePageImpl;
+import CBE.StayBeta.HotelCancelImpl;
 import CBE.StayBeta.HotelImpl;
 import assertions.HotelAmendmentPageAssertions;
 import cucumber.api.java.en.And;
@@ -14,10 +15,10 @@ public class CancelBooking {
 	HomePageImpl Home = new HomePageImpl();
 	HotelImpl Hotel = new HotelImpl();
 	HotelAmendmentPageAssertions AmendAssert = new HotelAmendmentPageAssertions();
-
+	HotelCancelImpl HotelCancel = new HotelCancelImpl();
+	
 	@Given("^User Clicks on My Bookings$")
 	public void user_clicks_on_my_bookings() throws Throwable {
-		//a
 		Thread.sleep(2000);
 		Hotel.ClickMyBookings();
 	}
@@ -67,9 +68,31 @@ public class CancelBooking {
 		Hotel.ClickUpdateButton();
 	}
 
+	@And("^Clicks on Retrieve latest booking$")
+	public void clicks_on_retrieve_latest_booking() throws Throwable {
+		HotelCancel.ClickRetrieveLatestBooking();
+		Hotel.AcceptThePopup();
+	}
+
+	
+	@And("^Fetch the From date and move it few days further$")
+    public void fetch_the_from_date_and_move_it_few_days_further() throws Throwable {
+		Thread.sleep(4000);
+        HotelCancel.ChangeFromDateForHotelAmend();
+        Thread.sleep(2000);
+    }
+
+    @And("^Click on Add to Cart$")
+    public void click_on_add_to_cart() throws Throwable {
+    	Thread.sleep(2000);
+        HotelCancel.AddToCartInAmend();
+        Thread.sleep(2000);
+    }
+	
 	@Then("^Booking is Cancelled$")
 	public void booking_is_cancelled() throws Throwable {
-
+		Thread.sleep(3000);
+		HotelCancel.VerifyBookingCancellation();
 	}
 
 }

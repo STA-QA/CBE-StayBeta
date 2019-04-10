@@ -111,6 +111,7 @@ public class TestCase616 extends TestBase {
 
 	@And("^Clicks on Complete Booking$")
 	public void clicks_on_complete_booking() throws Throwable {
+		Thread.sleep(2000);
 		Hotel.ClickOnCompleteBooking();
 	}
 
@@ -126,7 +127,7 @@ public class TestCase616 extends TestBase {
 
 	@And("^Accepts the Terms and Conditions$")
 	public void accepts_the_terms_and_conditions() throws Throwable {
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		Hotel.AcceptTermsAndConditions();
 	}
 

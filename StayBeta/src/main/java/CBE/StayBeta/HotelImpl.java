@@ -194,7 +194,7 @@ public class HotelImpl extends TestBase implements Hotel {
 		Thread.sleep(3000);
 	//	CBEDriver.findElement(By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']/span[2]")).click();
 		//CBEDriver.findElement(By.xpath("//*/span[contains(.,'Complete booking')]")).click();
-		WebElement element = CBEDriver.findElement(By.xpath("//a[@id='m_c_T000_uscItinSumm_btnContinue_btnContinue1']/span"));
+		WebElement element = CBEDriver.findElement(By.xpath("//span[contains(text(),'Complete booking')]"));
 		Actions actions = new Actions(CBEDriver);
 		actions.moveToElement(element).click().perform();
 		
@@ -291,7 +291,7 @@ public class HotelImpl extends TestBase implements Hotel {
 
 	@Override
 	public void SelectAmendThisItem() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		CBEDriver.findElement(By.xpath(SearchOptionInCart)).click();
 		Thread.sleep(2000);
 		CBEDriver.findElement(By.xpath(AmendThisItem)).click();

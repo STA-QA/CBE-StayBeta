@@ -26,7 +26,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Clicks on Add to cart 
 	And Verify if Quote is selected by default
 	And Clicks On Book Radio Button 
-	And Clicks on Complete Booking 
+	And Clicks on Complete Booking
 	And Accepts the Terms and Conditions 
 	And Provides the <Guests> Details
 	And Click on Book Button 
