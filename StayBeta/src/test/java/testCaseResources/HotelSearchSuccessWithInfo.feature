@@ -19,7 +19,8 @@ Scenario Outline: User Searches for hotel through <Data Source>
 	And Select the <Start Day> and <Duration Of Stay> 
 	And Select Exclude dorm beds 
 	And Select Number of <Rooms> 
-	And Select Hotel <Data Source> 
+	And Select Hotel <Data Source>
+	And Verify the Extra Search Options
 	And Click Search Button
 	Then Verify the SuccessWithInfo Message
 	

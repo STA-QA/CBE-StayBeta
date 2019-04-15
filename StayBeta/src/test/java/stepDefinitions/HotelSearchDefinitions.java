@@ -3,6 +3,7 @@ package stepDefinitions;
 import org.openqa.selenium.By;
 
 import CBE.StayBeta.HotelSearchImpl;
+import assertions.HotelSearchPageAssertions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import utilities.TestBase;
@@ -10,7 +11,10 @@ import utilities.TestBase;
 public class HotelSearchDefinitions extends TestBase {
 
 	HotelSearchImpl HotelSearch = new HotelSearchImpl();
-
+	HotelSearchPageAssertions SearchAssert = new HotelSearchPageAssertions();
+	
+	
+	
 	@Then("^Verify if Reviews are present for each hotel$")
 	public void verify_if_reviews_are_present_for_each_hotel() throws Throwable {
 		Thread.sleep(2000);
@@ -73,6 +77,11 @@ public class HotelSearchDefinitions extends TestBase {
 		HotelSearch.ClickAddSelectionToCart();
 	}
 
+	@And("^Verify the Extra Search Options$")
+    public void verify_the_extra_search_options() throws Throwable {
+        SearchAssert.ExtraSearchOptionsAssertions();
+    }
+	
 	 @Then("^Verify the SuccessWithInfo Message$")
 	    public void verify_the_successwithinfo_message() throws Throwable {
 	       Thread.sleep(3000);

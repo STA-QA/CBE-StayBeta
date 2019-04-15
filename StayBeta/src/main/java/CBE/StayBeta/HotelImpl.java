@@ -1,16 +1,22 @@
 package CBE.StayBeta;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Random;
 
 import org.apache.log4j.helpers.LogLog;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import com.github.javafaker.Faker;
+import com.google.common.io.Files;
 
 import stayBetaInterfaces.Hotel;
 import utilities.TestBase;
@@ -186,6 +192,57 @@ public class HotelImpl extends TestBase implements Hotel {
 		Thread.sleep(2000);
 		CBEDriver.switchTo().frame(0);
 		Thread.sleep(4000);
+		try {
+			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Overview')]")).isDisplayed());
+		}catch(AssertionError e) {
+			LogLog.error("Overview Tab is not displayed");
+		}
+		
+		try {
+			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Photos')]")).isDisplayed());
+		}catch(AssertionError e) {
+			LogLog.error("Photos Tab is not displayed");
+		}
+		
+		try {
+			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Map')]")).isDisplayed());
+		}catch(AssertionError e) {
+			LogLog.error("Map Tab is not displayed");
+		}
+		
+		try {
+			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Room selection')]")).isDisplayed());
+		}catch(AssertionError e) {
+			LogLog.error("Room selection Tab is not displayed");
+		}
+		
+		try {
+			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Rate/Room info')]")).isDisplayed());
+		}catch(AssertionError e) {
+			LogLog.error("Rate/Room info Tab is not displayed");
+		}
+		
+		try {
+			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).isDisplayed());
+			CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
+			Thread.sleep(2000);
+			File src= ((TakesScreenshot)CBEDriver).getScreenshotAs(OutputType.FILE);
+			try {
+			 // now copy the  screenshot to desired location using copyFile //method
+			Files.copy(src, new File("C:\\CBE-Automation\\StayBeta\\Screenshots\\Cancellations.png"));
+			}
+			 
+			catch (IOException e)
+			 {
+			  System.out.println(e.getMessage());
+			 
+			 }
+			CBEDriver.getPageSource().contains("split commission");
+		}catch(AssertionError e) {
+			LogLog.error("Error with Cancellation tab or the split commission in the tab");
+		}
+		
+		
 		CBEDriver.findElement(By.xpath(OLBAddToCartXpath)).click();
 	}
 
@@ -347,11 +404,10 @@ public class HotelImpl extends TestBase implements Hotel {
 	public void SelectRandomHotel() throws InterruptedException {
 		Thread.sleep(2000);
 		String TestXpath = "//*/tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[3]/a";
-		/* int count = CBEDriver.findElements(By.xpath(TestXpath)).size();
-		  System.out.println("The count is  " + count);*/
 		java.util.List<WebElement> listings = CBEDriver.findElements(By.xpath(TestXpath));
 		Random r = new Random();
-		int randomValue = r.nextInt(listings.size()); // Getting a random value that is between 0 and (list's size)-1
+		int randomValue = r.nextInt(listings.size());
+		
 		listings.get(randomValue).click();
 
 	}

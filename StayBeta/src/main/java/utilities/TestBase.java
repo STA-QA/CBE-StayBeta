@@ -19,7 +19,7 @@ public class TestBase {
 		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
-		options.addArguments("--headless");
+	//	options.addArguments("--headless");
 		CBEDriver = new ChromeDriver(options);
 		CBEDriver.manage().window().maximize();
 		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);

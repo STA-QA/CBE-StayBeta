@@ -1,4 +1,4 @@
-Feature: Amend a Hotel Booking through Searching Booking from the list 
+Feature: Amend a Hotel Booking By Retrieving latest Booking 
 
 Scenario: Login into Application 
 

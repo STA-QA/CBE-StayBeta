@@ -1,5 +1,6 @@
 package CBE.StayBeta;
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.Random;
 
 import org.apache.log4j.helpers.LogLog;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -45,47 +47,97 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
 	@Override
 	public void AddRandomHotelToCartFromTSRes() throws InterruptedException {
 		Thread.sleep(2000);
-		String AddToCartXpath = "//*/tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[12]/div/a";
+		String AddToCartXpath = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[12]/div/a";
 		List<WebElement> listings = CBEDriver.findElements(By.xpath(AddToCartXpath));
 		Random r = new Random();
-		int randomValue = r.nextInt(listings.size()); // Getting a random value that is between 0 and (list's size)-1
-		listings.get(randomValue).click();
+		int randomValue = r.nextInt(listings.size()); 
+		
+		WebElement parent=listings.get(randomValue).findElement(By.xpath("./../../.."));
+		String id = parent.getAttribute("id");
+      	String HotelNamepath = "//*[@id='"+id+"']/td[3]";
+		String HotelName = CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
+		
+		String ExpandXpath = "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Expand price breakdown']";
+		CBEDriver.findElement(By.xpath(ExpandXpath)).click();
+		Thread.sleep(1000);
+		String SplComm = CBEDriver.findElement(By.xpath(
+				"//*[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes')]/td/table/tbody/tr[4]/td[3]")).getText();
+		System.out.println(SplComm);
+		String intValue = SplComm.replaceAll("[^0-9]", "");
+		float f = Float.parseFloat(intValue);
+		
+		try {
+			Assert.assertTrue(f>0);
+		}catch(AssertionError E) {
+			LogLog.error("Split Commission is not displayed properly for : " + HotelName);
+		}
+		
+		String CollapseXpath = "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Collapse price breakdown']";
+		
+		System.out.println(HotelName);
+		
+		Thread.sleep(2000);
+		CBEDriver.findElement(By.xpath(CollapseXpath)).click();
+		Thread.sleep(5000);
+		List<WebElement> listing = CBEDriver.findElements(By.xpath(AddToCartXpath));
+		 WebDriverWait wait = new WebDriverWait(CBEDriver, 50);
+         wait.until(ExpectedConditions.elementToBeClickable(listing.get(randomValue)));
+     //    CBEDriver.WaitUntilVisible(listings.get(randomValue));
+		//wait.until(ExpectedConditions.presenceOfElementLocated(listings.get(randomValue)));
+		listing.get(randomValue).click();
 	}
+
+	
 
 	@Override
 	public void VerifyReviewsForHotel() throws InterruptedException {
+		Thread.sleep(4000);
+		CBEDriver.findElement(By.name("m$c$C000$m$m$m$c$pagingControl$ddlNumResultsPerPage")).sendKeys("100");
+		Thread.sleep(4000);
+		String Pages = "//*[@id='m_c_C000_m_m_m_c_ul']/li";
 
-		// String Pages = "//*[@id='m_c_C000_m_m_m_c_ul']/li";
+		int pageCount = CBEDriver.findElements(By.xpath(Pages)).size();
+		System.out.println(pageCount + "  is the page count");
 
-		// int pageCount = CBEDriver.findElements(By.xpath(Pages)).size();
+		for (int i = 1; i <= pageCount; i++) {
+			Thread.sleep(2000);
+			String pageXpath = "//*[@id='m_c_C000_m_m_m_c_ul']/li[" + i + "]";
 
-		// for (int i = 1; i <= pageCount; i++) {
-		// Thread.sleep(2000);
-		// String pageXpath = "//*[@id='m_c_C000_m_m_m_c_ul']/li[" + i + "]";
-		// CBEDriver.findElement(By.xpath(pageXpath)).click();
-
-		String ReviewsXpath = "//*/tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[contains(@class,'external-user-review')]";
-		// String RatingsXpath =
-		// "//*/tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[contains(@class,'//star
-		// cell-code')]";
-		// star cell-code
-		int count = CBEDriver.findElements(By.xpath(ReviewsXpath)).size();
-		// int count1 = CBEDriver.findElements(By.xpath(RatingsXpath)).size();
-		System.out.println("The Reviews count is  " + count);
-		// System.out.println("The Ratings count is " + count);
-
-		List<WebElement> elementList = CBEDriver.findElements(By.xpath(ReviewsXpath));
-		for (WebElement we : elementList) {
-			try {
-				System.out.println("Review :  " + we.getText());
-				// assertTrue(we.getText().equalsIgnoreCase(""));
-			} catch (AssertionError e) {
-				System.out.println(we.getText());
-				LogLog.error("Other Data Sources Hotels are displayed in the search");
+			WebDriverWait wait = new WebDriverWait(CBEDriver, 25);
+			if(i>1) {
+				wait.until(ExpectedConditions.elementToBeClickable(CBEDriver.findElement(By.xpath(pageXpath))));
+			CBEDriver.findElement(By.xpath(pageXpath)).click();
+			Thread.sleep(6000);
 			}
+			String RXP = "external-user-review";
+			String ReviewsXpath = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[contains(@class,'external-user-review')]";
+			int count = CBEDriver.findElements(By.className(RXP)).size();
+			System.out.println("The Reviews count is  " + count);
 
+			List<WebElement> elementList = CBEDriver.findElements(By.xpath(ReviewsXpath));
+			//List<WebElement> elementList = CBEDriver.findElements(By.className(RXP));
+
+			for (WebElement we : elementList) {
+				try {
+					Thread.sleep(800);
+					assertFalse(we.getText().isEmpty());
+				} catch (AssertionError ae) {
+					LogLog.error("Review is not present for the below Hotel");
+					WebElement parent = we.findElement(By.xpath("./.."));
+					String id = parent.getAttribute("id");
+					String HotelName = "//*[@id='"+id+"']/td[3]";
+					System.out.println(CBEDriver.findElement(By.xpath(HotelName)).getText());
+					
+					
+					//System.out.println(we.getCssValue(propertyName));
+				} catch (StaleElementReferenceException e) {
+
+					System.out.println("Stale element error, trying ::  ");
+				}
+
+			}
 		}
-
+		
 	}
 
 	@Override
@@ -230,6 +282,8 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
 		Random ran = new Random();
 		int randomValue = ran.nextInt(RoomOptions.size());
 		Actions actions = new Actions(CBEDriver);
+				
+		
 		actions.moveToElement(RoomOptions.get(randomValue)).click().perform();
 
 	}
