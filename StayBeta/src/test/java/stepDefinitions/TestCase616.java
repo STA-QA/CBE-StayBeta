@@ -26,8 +26,6 @@ public class TestCase616 extends TestBase {
 		CBEDriver.navigate().refresh();
 	}
 
-	
-
 	@And("^Search for a particular Country")
 	public void Search_for_a_particular_Country() throws Throwable {
 		Hotel.SearchCountry("BUE", "Buenos Aires (BUE), Argentina (AR)");
@@ -73,16 +71,34 @@ public class TestCase616 extends TestBase {
 
 	}
 
-	@And("^Select Number of (.+)$")
-	public void select_number_of(String rooms) throws Throwable {
+	@And("^Select Number of Rooms (.+)$")
+	public void select_number_of_rooms(String rooms) throws Throwable {
 		Thread.sleep(2000);
 		Hotel.SelectNumberOfRooms(rooms);
 		Thread.sleep(2000);
 	}
+	
+
+    @And("^Select Number of Adults (.+)$")
+    public void select_number_of_adults(String guests) throws Throwable {
+    	Thread.sleep(2000);
+		Hotel.SelectNumberOfAdults(guests, 1);
+		Thread.sleep(2000);
+    }
+
+    @And("^Select Number of Children (.+)$")
+    public void select_number_of_children(String children) throws Throwable {
+    	Thread.sleep(2000);
+		Hotel.SelectNumberOfChildren(children);
+		Thread.sleep(2000);
+		
+    }
+	
 
 	@And("^Select Hotel (.+)$")
 	public void select_hotel(String datasource) throws Throwable {
 		Hotel.ExpandExtraSearch();
+		Thread.sleep(2000);
 		Hotel.DeselectAll();
 		Hotel.SelectHotelDataSource(datasource);
 	}
@@ -91,7 +107,7 @@ public class TestCase616 extends TestBase {
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
 		Thread.sleep(10000);
-		}
+	}
 
 	@When("^User Searches and Selects a particular Hotel")
 	public void User_Searches_and_Selects_a_particular_Hotel() throws Throwable {
@@ -134,7 +150,7 @@ public class TestCase616 extends TestBase {
 	@And("^Click on Book Button$")
 	public void click_on_book_button() throws Throwable {
 		Thread.sleep(2000);
-		Hotel.ClickOnBook();	
+		Hotel.ClickOnBook();
 		Thread.sleep(2000);
 	}
 

@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class TestBase {
 
 	static String applicationURL = "http://staybeta.bluee.net/login?username=staycbegbcbg&password=cbeuser";
+	
+	static String applicationURL_au = "http://staybeta.bluee.net/login?username=staycbeauauu&password=cbeuser";
 
 	public static WebDriver CBEDriver = null;
 
@@ -22,13 +24,19 @@ public class TestBase {
 	//	options.addArguments("--headless");
 		CBEDriver = new ChromeDriver(options);
 		CBEDriver.manage().window().maximize();
-		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		CBEDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	// This method is used to Launch the application
 	public void openUrl() {
 		CBEDriver.navigate().to(applicationURL);
 	}
+	
+	
+	// This method is used to Launch the application
+		public void openUrl_au() {
+			CBEDriver.navigate().to(applicationURL_au);
+		}
 
 	// This method is used to close the driver
 	public void quitDriver() {

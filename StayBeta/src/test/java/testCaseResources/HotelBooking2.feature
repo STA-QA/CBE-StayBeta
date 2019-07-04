@@ -24,6 +24,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	When User verify the Search Results of <Data Source> 
 	And Clicks on Add to cart on a hotel from search results 
 	And Verify if Quote is selected by default 
+	And Get the Cancellation Conditions from Shopping Cart Page
 	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
@@ -34,7 +35,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Examples: 
 		|Country                                         |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source|Guests|
 		|Buenos Aires (BUE), Argentina (AR)|	BUE                        |4            |1                      |2        |Tourico        |2        |
-		|Buenos Aires (BUE), Argentina (AR)|	BUE                        |2            |1                      |1        |Tourico        |1        |
+#		|Buenos Aires (BUE), Argentina (AR)|	BUE                        |2            |1                      |1        |Tourico        |1        |
 		
 		
 Scenario: User Logs out of application and closes Browser 

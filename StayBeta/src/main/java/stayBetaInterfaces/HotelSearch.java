@@ -31,4 +31,8 @@ public interface HotelSearch {
 	public void SelectMultipleRoomsDifferentTypeFromListInSearchResults() throws InterruptedException;
 	
 	public void VerifySuccessWithInfo();
+	
+	public void CancellationCondition_Within() throws InterruptedException;
+	
+	public void CancellationCondition_Outside() throws InterruptedException;
 }

@@ -12,7 +12,9 @@ public interface Hotel {
 
 	public void SelectNumberOfRooms(String NoOfRooms);
 
-	public void SelectNumberOfAdults(String NoOfAdults, int RoomNumber);
+	public void SelectNumberOfAdults(String NoOfAdults, int RoomNumber) throws InterruptedException;
+	
+	public void SelectNumberOfChildren(String NoOfChildren) throws InterruptedException;
 
 	public void ExpandExtraSearch();
 
@@ -60,7 +62,7 @@ public interface Hotel {
 	
 	public void SelectRandomHotel() throws InterruptedException;
 	
-	public void EnterGuestDetails(int Guests);
+	public void EnterGuestDetails(int Guests) throws InterruptedException;
 	
 	public void ClickOnCancelItem();
 	

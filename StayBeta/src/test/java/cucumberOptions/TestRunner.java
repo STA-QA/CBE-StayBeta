@@ -7,8 +7,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/testCaseResources/HotelBooking1.feature", 
-glue = "stepDefinitions",  plugin = {"pretty","json:target/cucumber-report/cucumber.json"})
+@CucumberOptions(features = "src/test/java/TestCasesRecent/2-TestCase.feature", 
+glue = "stepDefinitions",  plugin = {"pretty","json:target/cucumber-report/cucumber.json"}, monochrome = true)
 
 
 public class TestRunner extends AbstractTestNGCucumberTests {

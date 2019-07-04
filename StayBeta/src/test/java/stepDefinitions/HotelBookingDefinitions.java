@@ -74,6 +74,9 @@ public class HotelBookingDefinitions extends TestBase {
 		Home.ClickOnHome();
 		Home.ClickOnMenuItem("Hotel");
 	}
+	
+	
+	
 
 	@And("^Select a Random Hotel$")
 	public void select_a_random_hotel() throws Throwable {
@@ -94,6 +97,33 @@ public class HotelBookingDefinitions extends TestBase {
 		HotelSearch.AddRandomHotelToCartFromTSRes();
 	}
 
+	@And("^Check for Cancellation Condition (.+)$")
+	public void check_for_cancellation_condition(String condition) throws Throwable {
+		if (condition.equalsIgnoreCase("Outside")) {
+			if(CBEDriver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()>0) {
+			HotelSearch.CancellationCondition_Outside();
+			}
+			else {
+				System.out.println("Proper Hotel is selected in first go" );
+			}
+		}
+
+		if (condition.equalsIgnoreCase("Inside")) {
+			if(CBEDriver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()<1) {
+			HotelSearch.CancellationCondition_Within();
+			}
+			else {
+				System.out.println("Proper Hotel is selected in first go" );
+			}
+		}
+		
+		if (condition.equalsIgnoreCase("Ignore")) {
+			
+		}
+		
+	}
+
+	
 	@And("^Click on Room Selection in LB$")
 	public void click_on_room_selection_in_lb() throws Throwable {
 		Thread.sleep(2000);
@@ -101,9 +131,12 @@ public class HotelBookingDefinitions extends TestBase {
 		Thread.sleep(2000);
 	}
 
-	@And("^Provides the (.+) Details$")
-	public void provides_the_details(int guests) throws Throwable {
-		Hotel.EnterGuestDetails(guests);
+	@And("^Provides the (.+) and (.+) Details$")
+	public void provides_the_and_details(int guests, int children) throws Throwable {
+		int total = guests + children;
+		Hotel.EnterGuestDetails(total);
+		
+
 	}
 
 	@Then("^Booking has been done successfully and Booking reference Text is stored in a file$")
@@ -116,7 +149,7 @@ public class HotelBookingDefinitions extends TestBase {
 		Thread.sleep(2000);
 		HotelCancel.DeleteProductFromShoppingCart();
 	}
-	
+
 	@Then("^Product should be deleted from cart$")
 	public void product_should_be_deleted_from_cart() throws Throwable {
 		Thread.sleep(2000);

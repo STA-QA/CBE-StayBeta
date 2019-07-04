@@ -16,7 +16,7 @@ public class CancelBooking {
 	HotelImpl Hotel = new HotelImpl();
 	HotelAmendmentPageAssertions AmendAssert = new HotelAmendmentPageAssertions();
 	HotelCancelImpl HotelCancel = new HotelCancelImpl();
-	
+
 	@Given("^User Clicks on My Bookings$")
 	public void user_clicks_on_my_bookings() throws Throwable {
 		Thread.sleep(2000);
@@ -74,25 +74,40 @@ public class CancelBooking {
 		Hotel.AcceptThePopup();
 	}
 
-	
 	@And("^Fetch the From date and move it few days further$")
-    public void fetch_the_from_date_and_move_it_few_days_further() throws Throwable {
+	public void fetch_the_from_date_and_move_it_few_days_further() throws Throwable {
 		Thread.sleep(4000);
-        HotelCancel.ChangeFromDateForHotelAmend();
-        Thread.sleep(2000);
-    }
-
-    @And("^Click on Add to Cart$")
-    public void click_on_add_to_cart() throws Throwable {
-    	Thread.sleep(2000);
-        HotelCancel.AddToCartInAmend();
-        Thread.sleep(2000);
+		HotelCancel.ChangeFromDateForHotelAmend();
+		Thread.sleep(2000);
+	}
+	
+	
+	@And("^Fetch the From date and Reduce by (.+) Nights$")
+    public void fetch_the_from_date_and_reduce_by_nights(int noofnights) throws Throwable {
+		Thread.sleep(4000);
+		HotelCancel.ReduceFromDateForHotelAmend(noofnights);
+		Thread.sleep(2000);
     }
 	
+
+	@And("^Click on Add to Cart$")
+	public void click_on_add_to_cart() throws Throwable {
+		Thread.sleep(2000);
+		HotelCancel.AddToCartInAmend();
+		Thread.sleep(2000);
+	}
+
 	@Then("^Booking is Cancelled$")
 	public void booking_is_cancelled() throws Throwable {
 		Thread.sleep(3000);
 		HotelCancel.VerifyBookingCancellation();
+	}
+
+	@And("^Get the Cancellation Conditions from Shopping Cart Page$")
+	public void get_the_cancellation_conditions_from_shopping_cart_page() throws Throwable {
+		Thread.sleep(3000);
+		HotelCancel.ClickOnCancellationConditionsLink();
+		HotelCancel.GetTheCancellationChargesDetails();
 	}
 
 }

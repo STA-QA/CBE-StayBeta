@@ -16,6 +16,13 @@ public class Login extends TestBase {
 		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq3");
 	}
 	
+	public void EnterAULoginCredentials() {
+		CBEDriver.findElement(By.id(Username)).clear();
+		CBEDriver.findElement(By.id(Username)).sendKeys("auzq3");
+		CBEDriver.findElement(By.id(Password)).clear();
+		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq3");
+	}
+	
 	public void ClickOnLogin() {
 		CBEDriver.findElement(By.id(LoginButton)).click();
 	}

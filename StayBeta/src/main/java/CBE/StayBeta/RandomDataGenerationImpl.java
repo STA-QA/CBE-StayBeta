@@ -22,7 +22,8 @@ public class RandomDataGenerationImpl extends TestBase implements RandomDataGene
 	public void storeBookingDetails() throws FileNotFoundException, UnsupportedEncodingException {
 		
 		 try {
-	            FileWriter writer = new FileWriter("Booking-Details.txt", true);
+	           // FileWriter writer = new FileWriter("Booking-Details.txt", true);
+	            FileWriter writer = new FileWriter("BookingDetails.docx", true);
 	            BufferedWriter bufferedWriter = new BufferedWriter(writer);
 	            bufferedWriter.newLine();
 	            String text = CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_up']/div/div/h4")).getText();

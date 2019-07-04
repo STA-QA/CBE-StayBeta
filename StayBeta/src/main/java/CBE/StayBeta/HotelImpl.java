@@ -124,12 +124,28 @@ public class HotelImpl extends TestBase implements Hotel {
 	}
 
 	@Override
-	public void SelectNumberOfAdults(String NoOfAdults, int RoomNumber) {
+	public void SelectNumberOfAdults(String NoOfAdults, int RoomNumber) throws InterruptedException {
 		String NoOfAdultsId = AdultId1 + (RoomNumber - 1) + AdultId2;
 		CBEDriver.findElement(By.id(NoOfAdultsId)).sendKeys("0");
+		Thread.sleep(2000);
 		CBEDriver.findElement(By.id(NoOfAdultsId)).sendKeys(NoOfAdults);
 	}
 
+	@Override
+	public void SelectNumberOfChildren(String NoOfChildren) throws InterruptedException {
+		CBEDriver.findElement(By.id(Children)).sendKeys("0");
+		Thread.sleep(2000);
+		CBEDriver.findElement(By.id(Children)).sendKeys(NoOfChildren);
+		Thread.sleep(2000);
+		int child=Integer.parseInt(NoOfChildren);
+		if(child>=2) {
+			CBEDriver.findElement(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_0_AgePassengerItem2_txtAge\"]")).sendKeys("3");
+			Thread.sleep(2000);
+			CBEDriver.findElement(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_1_AgePassengerItem2_txtAge\"]")).sendKeys("5");
+		}
+	}
+
+	
 	@Override
 	public void ExpandExtraSearch() {
 		CBEDriver.findElement(By.id(ShowExtraSearchOptions)).click();
@@ -365,7 +381,7 @@ public class HotelImpl extends TestBase implements Hotel {
 	}
 
 	@Override
-	public void EnterGuestDetails(int Guests) {
+	public void EnterGuestDetails(int Guests) throws InterruptedException {
 		// String Common = "";
 		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
 		String Title1 = "_paxItmUsc_namePrefixDdl";
@@ -395,7 +411,29 @@ public class HotelImpl extends TestBase implements Hotel {
 			// Random rand = new Random();
 			int list1 = rand.nextInt(options.size());
 			options.get(list1).click();
+			Thread.sleep(1000);
+		if(i==2) {
+			CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
+			Thread.sleep(1000);
+			CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
+			Thread.sleep(1000);
+			CBEDriver.findElement(By.id(BirthYear)).sendKeys("2016");
+		}
+		
+		if(i==3) {
+			CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
+			Thread.sleep(1000);
+			CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
+			Thread.sleep(1000);
+			CBEDriver.findElement(By.id(BirthYear)).sendKeys("2014");
+		}
+		if(i<2) {
+			CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
+			Thread.sleep(1000);
+			CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
+			Thread.sleep(1000);
 			CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
+		}
 		}
 
 	}
@@ -436,4 +474,5 @@ public class HotelImpl extends TestBase implements Hotel {
 		}
 	}
 
+	
 }

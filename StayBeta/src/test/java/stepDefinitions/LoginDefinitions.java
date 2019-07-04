@@ -18,16 +18,27 @@ public class LoginDefinitions extends TestBase {
 		openUrl();
 	}
 
+	@Given("^User launches the au application$")
+    public void user_launches_the_au_application() throws Throwable {
+		main();
+		openUrl_au();
+    }
+	
 	@And("^User login with valid credentials")
 	public void User_login_with_valid_credentials() throws Throwable {
 		
 		//CBEDriver.navigate().refresh();
 	}
-
+	
 	@And("^User enters Valid Credentials$")
     public void user_enters_valid_credentials() throws Throwable {
         login.EnterLoginCredentials();
     }
+	
+	   @And("^User enters Valid AU Credentials$")
+	    public void user_enters_valid_au_credentials() throws Throwable {
+	        login.EnterAULoginCredentials();
+	    }
 	
 	@Then("^User logged into application$")
     public void user_logged_into_application() throws Throwable {
