@@ -36,12 +36,34 @@ public class ActAndDayTripsSearchImpl extends TestBase implements ActAndDayTrips
 	@Override
 	public void ClickOnRandomCheckAvailability() {
 		//span[contains(.,'Check availability')]
-		List<WebElement> AvailableOptions = CBEDriver.findElements(By.xpath("span[contains(.,'Check availability')]"));
+		List<WebElement> AvailableOptions = CBEDriver.findElements(By.xpath("//span[contains(text(),'Check availability')]"));
 		int size = AvailableOptions.size();
 		System.out.println("Rooms available are : " + size);
 		Random r = new Random();
 		int randomValue = r.nextInt(AvailableOptions.size());
+		WebElement parent=AvailableOptions.get(randomValue).findElement(By.xpath("./../../../../.."));
+		
+		String id = parent.getAttribute("id");
+		
+		String newStr = id.substring(0, id.length()-1);	
+		
+		
+		System.out.println("The id is : " + id);
+		
+		System.out.println("The new id is : " + newStr);
+		
 		AvailableOptions.get(randomValue).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		String Finalxpath= "//*[@id=\"" + newStr+"1_btnAdd\""+"]/div/span[1]";
+		CBEDriver.findElement(By.xpath(Finalxpath)).click();
+	
 	}
 
 	

@@ -437,7 +437,7 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
     		CBEDriver.findElement(By.id(DeleteButton)).click();
        		Thread.sleep(2000);
      		 Random r1 = new Random();
-    	     String AddToCartXpath1 = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[12]/div/a";
+    	     String AddToCartXpath1 = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[11]/div/a";
     	     List<WebElement> listing1 = CBEDriver.findElements(By.xpath(AddToCartXpath1));
     		WebDriverWait wait1 = new WebDriverWait(CBEDriver, 50);
     		int randomValue1 = r1.nextInt(listing1.size()); 

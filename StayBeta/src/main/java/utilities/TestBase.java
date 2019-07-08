@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 
 	static String applicationURL = "http://staybeta.bluee.net/login?username=staycbegbcbg&password=cbeuser";
@@ -17,8 +19,10 @@ public class TestBase {
 
 	// This method is used to initialise the Chrome Browser
 	public static void main() {
-		File file = new File("C:\\Automation\\Drivers\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+		//File file = new File("WebDrivers\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+		
+		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
 	//	options.addArguments("--headless");

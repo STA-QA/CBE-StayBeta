@@ -32,8 +32,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Examples: 
 		|Country                                       |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source      |Guests|Children|Condition|
 	#	|Sydney (SYD), Australia (AU)	|SYD                      |20            |2                      |1        |AOT AU - New   |2        |0           | Outside |
-	#	|Bangkok (BKK), Thailand (TH)		|BKK						 |2			  |5						|1		  |Diethelm Travel		  |1			|0			|Inside		|
-		|Anchorage, United States (US)|ANC					 |31			  |2                       |1       |Qantas             |2			|0         |Outside    |
+		|Bangkok (BKK), Thailand (TH)		|BKK						 |2			  |5						|1		  |Diethelm Travel		  |1			|0			|Inside		|
+	#	|Anchorage, United States (US)|ANC					 |31			  |2                       |1       |Qantas             |2			|0         |Outside    |
 		
 		
 		
