@@ -1,0 +1,77 @@
+package pages;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Random;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+
+import Base.BaseUtil;
+
+public class Trips extends BaseUtil {
+
+
+
+	public Trips(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+
+
+
+	public void EnterStartDates(int MinStart, int MaxStart) {
+		//driver.findElement(By.id("")).sendKeys("");
+	//	driver.findElement(By.id("")).sendKeys("");
+
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat format1 = new SimpleDateFormat("ddMMMyy");
+		cal.add(Calendar.DATE, MinStart);
+		String StartDate = format1.format(cal.getTime());
+
+		driver.findElement(By.id("m_c_C000_m_m_m_c_c3_c3_uscSrchParms_datesAndLastingBetweenSelector_dttMinStartDatetbx")).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), StartDate);
+
+		cal.add(Calendar.DATE, MaxStart);
+		String EndDate = format1.format(cal.getTime());
+
+		driver.findElement(By.id("m_c_C000_m_m_m_c_c3_c3_uscSrchParms_datesAndLastingBetweenSelector_dttMaxStartDatetbx")).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), EndDate);
+
+	}
+
+
+	public void ClickOnRandomCheckAvailability() {
+		//span[contains(.,'Check availability')]
+		List<WebElement> AvailableOptions = driver.findElements(By.xpath("//span[contains(text(),'Check availability')]"));
+		int size = AvailableOptions.size();
+		System.out.println("Rooms available are : " + size);
+		Random r = new Random();
+		int randomValue = r.nextInt(AvailableOptions.size());
+		WebElement parent=AvailableOptions.get(randomValue).findElement(By.xpath("./../../../../.."));
+
+		String id = parent.getAttribute("id");
+
+		String newStr = id.substring(0, id.length()-1);
+
+
+		System.out.println("The id is : " + id);
+
+		System.out.println("The new id is : " + newStr);
+
+		AvailableOptions.get(randomValue).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+		String Finalxpath= "//*[@id=\"" + newStr+"1_btnAdd\""+"]/div/span[1]";
+		driver.findElement(By.xpath(Finalxpath)).click();
+
+	}
+
+}

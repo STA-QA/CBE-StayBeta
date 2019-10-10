@@ -9,66 +9,93 @@
 
 
 
-	<name>StayBeta</name>
-	<url>http://maven.apache.org</url>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
-	</properties>
-
-
 	<build>
-
 		<plugins>
-		<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>2.19.1</version>
-    <configuration>
-        <testFailureIgnore>true</testFailureIgnore>
-    </configuration>
-</plugin>
 			<plugin>
-				<groupId>com.trivago.rta</groupId>
-				<artifactId>cluecumber-report-plugin</artifactId>
-				<version>1.8.1</version>
-				<executions>
-					<execution>
-						<id>report</id>
-						<phase>post-integration-test</phase>
-						<goals>
-							<goal>reporting</goal>
-						</goals>
-					</execution>
-				</executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
 				<configuration>
-					<skip>false</skip>
-					<buildSuccessOnTestFailure>true</buildSuccessOnTestFailure>
-					<sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
-					<generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/java/testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>STAX-BDD</projectName>
+							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+							<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 
 
+
+
+
+
 	<dependencies>
+
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>1.2.5</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>1.2.5</version>
-			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+
 
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
 		<dependency>
@@ -82,86 +109,148 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
+			<version>6.9.10</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/com.trivago.rta/cluecumber-report-plugin -->
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
+			<artifactId>selenium-chrome-driver</artifactId>
 			<version>3.141.59</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-support</artifactId>
-			<version>3.141.59</version>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.9</version>
 		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-server</artifactId>
-			<version>3.141.59</version>
+			<groupId>com.vimalselvam</groupId>
+			<artifactId>cucumber-extentsreport</artifactId>
+			<version>3.0.2</version>
 		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
-		<dependency>
-			<groupId>org.uncommons</groupId>
-			<artifactId>reportng</artifactId>
-			<version>1.1.4</version>
-			<scope>test</scope>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>jetty-repacked</artifactId>
-			<version>9.4.1.v20170120</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.5.2</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.github.javafaker</groupId>
-			<artifactId>javafaker</artifactId>
-			<version>0.12</version>
-		</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.apache.directory.studio/org.apache.commons.io -->
+<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
 <dependency>
-    <groupId>org.apache.directory.studio</groupId>
-    <artifactId>org.apache.commons.io</artifactId>
-    <version>2.4</version>
+    <groupId>com.thoughtworks.xstream</groupId>
+    <artifactId>xstream</artifactId>
+    <version>1.3.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+<dependency>
+    <groupId>com.google.inject</groupId>
+    <artifactId>guice</artifactId>
+    <version>4.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/velocity/velocity-dep -->
+<dependency>
+    <groupId>velocity</groupId>
+    <artifactId>velocity-dep</artifactId>
+    <version>1.4</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>3.141.59</version>
+</dependency>
+
+   <dependency>
+     <groupId>java2word-3.3</groupId>
+     <artifactId>java2word-3.3</artifactId>
+     <scope>system</scope>
+     <version>1.0</version>
+     <systemPath>${basedir}\src\lib\java2word-3.3.jar</systemPath>
+   </dependency>
+ 
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
+<dependency>
+    <groupId>org.uncommons</groupId>
+    <artifactId>reportng</artifactId>
+    <version>1.1.3</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/jetty-repacked -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>jetty-repacked</artifactId>
+    <version>9.2.13.v20150730</version>
 </dependency>
 
 
-<dependency>
-        <groupId>io.github.bonigarcia</groupId>
-        <artifactId>webdrivermanager</artifactId>
-        <version>3.6.0</version>
-    </dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.11.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports-cucumber4-adapter</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.codearte.jfairy</groupId>
+			<artifactId>jfairy</artifactId>
+			<version>0.5.9</version>
+		</dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<!-- javax.mail " mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.temyers</groupId>
+			<artifactId>cucumber-jvm-parallel-plugin</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 <dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>4.1.0</version>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
 </dependency>
 
-
+<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+<dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.1</version>
+</dependency>
 
 
 	</dependencies>

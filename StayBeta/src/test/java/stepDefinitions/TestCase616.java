@@ -2,28 +2,34 @@ package stepDefinitions;
 
 import org.junit.runner.RunWith;
 
-import CBE.StayBeta.HomePageImpl;
-import CBE.StayBeta.HotelImpl;
+import Base.BaseUtil;
 import CBE.StayBeta.RandomDataGenerationImpl;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
-import utilities.Login;
-import utilities.TestBase;
+import pages.HomePage;
+import pages.Hotel;
+import pages.Login;
+
+
 
 @RunWith(Cucumber.class)
-public class TestCase616 extends TestBase {
-	Login login = new Login();
-	HomePageImpl Home = new HomePageImpl();
-	HotelImpl Hotel = new HotelImpl();
+public class TestCase616 extends BaseUtil {
+	Login login = new Login(driver);
+	HomePage Home = new HomePage(driver);
+	Hotel Hotel = new Hotel(driver);
+
+	//Login login = new Login();
+	//HomePageImpl Home = new HomePageImpl();
+	//HotelImpl Hotel = new HotelImpl();
 	RandomDataGenerationImpl rd = new RandomDataGenerationImpl();
 
 	@Given("^User Selects any agency")
 	public void User_Selects_any_agency() throws Throwable {
 		Home.UserSelectsAgency();
-		CBEDriver.navigate().refresh();
+		//CBEDriver.navigate().refresh();
 	}
 
 	@And("^Search for a particular Country")
@@ -77,7 +83,7 @@ public class TestCase616 extends TestBase {
 		Hotel.SelectNumberOfRooms(rooms);
 		Thread.sleep(2000);
 	}
-	
+
 
     @And("^Select Number of Adults (.+)$")
     public void select_number_of_adults(String guests) throws Throwable {
@@ -91,9 +97,9 @@ public class TestCase616 extends TestBase {
     	Thread.sleep(2000);
 		Hotel.SelectNumberOfChildren(children);
 		Thread.sleep(2000);
-		
+
     }
-	
+
 
 	@And("^Select Hotel (.+)$")
 	public void select_hotel(String datasource) throws Throwable {
@@ -106,7 +112,8 @@ public class TestCase616 extends TestBase {
 	@And("^Click Search Button")
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
-		Thread.sleep(10000);
+		Thread.sleep(60000);
+		System.out.println("Wait is Done!!");
 	}
 
 	@When("^User Searches and Selects a particular Hotel")

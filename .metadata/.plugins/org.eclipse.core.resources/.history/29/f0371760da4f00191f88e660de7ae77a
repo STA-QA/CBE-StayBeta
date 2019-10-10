@@ -1,9 +1,0 @@
-package stayBetaInterfaces;
-
-import java.io.IOException;
-
-public interface RandomDataGeneration {
-
- public void storeBookingDetails() ;
-	
-}

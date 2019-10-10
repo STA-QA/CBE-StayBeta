@@ -1,32 +1,29 @@
 package stepDefinitions;
 
-import java.util.Random;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import CBE.StayBeta.HomePageImpl;
-import CBE.StayBeta.HotelCancelImpl;
-import CBE.StayBeta.HotelImpl;
-import CBE.StayBeta.HotelSearchImpl;
+import Base.BaseUtil;
 import CBE.StayBeta.RandomDataGenerationImpl;
-import assertions.HotelSearchPageAssertions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import utilities.TestBase;
+import pages.HomePage;
+import pages.Hotel;
+
 
 @Test
-public class HotelBookingDefinitions extends TestBase {
+public class HotelBookingDefinitions extends BaseUtil {
 
-	HomePageImpl Home = new HomePageImpl();
-	HotelImpl Hotel = new HotelImpl();
-	HotelSearchImpl HotelSearch = new HotelSearchImpl();
-	HotelSearchPageAssertions HSA = new HotelSearchPageAssertions();
+	//HomePageImpl Home = new HomePageImpl();
+	//HotelImpl Hotel = new HotelImpl();
+	//HotelSearchImpl HotelSearch = new HotelSearchImpl();
+	//HotelSearchPageAssertions HSA = new HotelSearchPageAssertions();
 	RandomDataGenerationImpl rd = new RandomDataGenerationImpl();
-	HotelCancelImpl HotelCancel = new HotelCancelImpl();
+	//HotelCancelImpl HotelCancel = new HotelCancelImpl();
+	HomePage Home = new HomePage(driver);
+	Hotel Hotel = new Hotel(driver);
 
 	String HotelName = "";
 
@@ -37,12 +34,12 @@ public class HotelBookingDefinitions extends TestBase {
 
 	@Then("^(.+) should be displayed in the Data source list$")
 	public void should_be_displayed_in_the_data_source_list(String datasource) throws Throwable {
-		HSA.DataSourceDisplayAssertion(datasource);
+		Hotel.DataSourceDisplayAssertion(datasource);
 	}
 
 	@And("^(.+) Should be selected by default$")
 	public void should_be_selected_by_default(String datasourcevalue) throws Throwable {
-		HSA.DataSourceSelectedByDefault(datasourcevalue);
+		Hotel.DataSourceSelectedByDefault(datasourcevalue);
 	}
 
 	@Given("^User Deselects SelectAll option$")
@@ -60,7 +57,7 @@ public class HotelBookingDefinitions extends TestBase {
 	@When("^User verify the Search Results of (.+)$")
 	public void user_verify_the_search_results_of(String datasource) throws Throwable {
 		Thread.sleep(2000);
-		HotelSearch.VerifySearchResultsOfDS(datasource);
+		Hotel.VerifySearchResultsOfDS(datasource);
 
 	}
 
@@ -74,9 +71,9 @@ public class HotelBookingDefinitions extends TestBase {
 		Home.ClickOnHome();
 		Home.ClickOnMenuItem("Hotel");
 	}
-	
-	
-	
+
+
+
 
 	@And("^Select a Random Hotel$")
 	public void select_a_random_hotel() throws Throwable {
@@ -94,14 +91,14 @@ public class HotelBookingDefinitions extends TestBase {
 	@And("^Clicks on Add to cart on a hotel from search results$")
 	public void clicks_on_add_to_cart_on_a_hotel_from_search_results() throws Throwable {
 		Thread.sleep(3000);
-		HotelSearch.AddRandomHotelToCartFromTSRes();
+		Hotel.AddRandomHotelToCartFromTSRes();
 	}
 
 	@And("^Check for Cancellation Condition (.+)$")
 	public void check_for_cancellation_condition(String condition) throws Throwable {
 		if (condition.equalsIgnoreCase("Outside")) {
-			if(CBEDriver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()>0) {
-			HotelSearch.CancellationCondition_Outside();
+			if(driver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()>0) {
+				Hotel.CancellationCondition_Outside();
 			}
 			else {
 				System.out.println("Proper Hotel is selected in first go" );
@@ -109,25 +106,25 @@ public class HotelBookingDefinitions extends TestBase {
 		}
 
 		if (condition.equalsIgnoreCase("Inside")) {
-			if(CBEDriver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()<1) {
-			HotelSearch.CancellationCondition_Within();
+			if(driver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()<1) {
+				Hotel.CancellationCondition_Within();
 			}
 			else {
 				System.out.println("Proper Hotel is selected in first go" );
 			}
 		}
-		
+
 		if (condition.equalsIgnoreCase("Ignore")) {
-			
+
 		}
-		
+
 	}
 
-	
+
 	@And("^Click on Room Selection in LB$")
 	public void click_on_room_selection_in_lb() throws Throwable {
 		Thread.sleep(2000);
-		HotelSearch.SelectRoomSelectionTabFromLB();
+		Hotel.SelectRoomSelectionTabFromLB();
 		Thread.sleep(2000);
 	}
 
@@ -135,7 +132,7 @@ public class HotelBookingDefinitions extends TestBase {
 	public void provides_the_and_details(int guests, int children) throws Throwable {
 		int total = guests + children;
 		Hotel.EnterGuestDetails(total);
-		
+
 
 	}
 
@@ -147,13 +144,13 @@ public class HotelBookingDefinitions extends TestBase {
 	@And("^Click on Delete button$")
 	public void click_on_delete_button() throws Throwable {
 		Thread.sleep(2000);
-		HotelCancel.DeleteProductFromShoppingCart();
+		Hotel.DeleteProductFromShoppingCart();
 	}
 
 	@Then("^Product should be deleted from cart$")
 	public void product_should_be_deleted_from_cart() throws Throwable {
 		Thread.sleep(2000);
-		HotelCancel.ProductDeleteVerification();
+		Hotel.ProductDeleteVerification();
 	}
 
 }

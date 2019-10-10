@@ -1,13 +1,12 @@
 package stepDefinitions;
 
-import CBE.StayBeta.HomePageImpl;
-import assertions.HomePageAssertions;
+import Base.BaseUtil;
 import cucumber.api.java.en.And;
-import utilities.TestBase;
+import pages.HomePage;
 
-public class HomePageDefinitions extends TestBase {
-	HomePageAssertions HomeAssert = new HomePageAssertions();
-	HomePageImpl Home = new HomePageImpl();
+public class HomePageDefinitions extends BaseUtil {
+	//HomePageAssertions HomeAssert = new HomePageAssertions();
+	HomePage Home = new HomePage(driver);
 
 	@And("^Click on Hotel Menu")
 	public void Click_on_Hotel_Menu() throws Throwable {
@@ -16,8 +15,8 @@ public class HomePageDefinitions extends TestBase {
 
 	@And("^Verify Home Page Assertions$")
 	public void verify_home_page_assertions() throws Throwable {
-		HomeAssert.verifyCountriesSortOrder();
-		HomeAssert.UserRelatedAssertions();
-		HomeAssert.HomePageMainTabsAssertions();
+		Home.verifyCountriesSortOrder();
+		Home.UserRelatedAssertions();
+		Home.HomePageMainTabsAssertions();
 	}
 }

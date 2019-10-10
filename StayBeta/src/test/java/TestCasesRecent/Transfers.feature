@@ -1,5 +1,5 @@
 Feature: Transfers - gb 
-
+@smoke
 Scenario: Login into Application 
 
 	Given User launches the application 

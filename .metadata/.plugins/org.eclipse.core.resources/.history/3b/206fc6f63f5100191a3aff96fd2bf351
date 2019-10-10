@@ -1,6 +1,0 @@
-Feature: To test new data source in hotel searches 
-
-Scenario: test for write in java
-
-Given User Writes the text to java
-
