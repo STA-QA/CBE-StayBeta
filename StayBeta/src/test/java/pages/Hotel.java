@@ -11,10 +11,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.helpers.LogLog;
 import org.openqa.selenium.By;
@@ -26,6 +30,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -92,6 +98,35 @@ public class Hotel extends BaseUtil {
 	public String AmendThisItem = "//a[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_btnAmend']/span";
 	public String PopupOK = "//*[contains(@id,'confirm')]/div/div[2]/a[1]/span/span";
 	public String PopupCancel = "//*[contains(@id,'confirm')]/div/div[2]/a[2]/span/span";
+	String cancelationExpectedText = "This item is being booked within a cancellation charge period";
+
+	@FindBy(how = How.XPATH, using = " //div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_actionsUpd2']")
+	public WebElement Removefromcart;
+	@FindBy(how = How.XPATH, using = "//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning']")
+	public WebElement CancelationTermsText;
+
+	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_astLocation_astLocationtbx")
+	public WebElement Country;
+	@FindBy(how = How.XPATH, using = "//div[@class='asmMenuItem']")
+	public List<WebElement> CountryName;
+
+	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckIntbx")
+	public WebElement Startdate;
+
+	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckOuttbx")
+	public WebElement Enddate;
+
+	@FindBy(how = How.XPATH, using = "//select[@name='m$c$C000$m$m$m$c$c3$c3$uscSrchParms$ctDatesSelector$dateAndDurationSelector$ddlNights']")
+	public WebElement Nights;
+
+	@FindBy(how = How.XPATH, using = "//a[@class='primary-button cart-button']")
+	public List<WebElement> Addtocart;
+
+	@FindBy(how = How.XPATH, using = "//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_lblCanxPeriodWarning']")
+	public List<WebElement> cancellationChargePeriod;
+
+	@FindBy(how = How.XPATH, using = "//a[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_dtsItineraryItemCancellationCondtions_cancellationConditionsBtn']")
+	public WebElement cancelConditionLink;
 
 	public void SearchCountry(String SearchText, String Country) {
 		driver.findElement(By.id(CityTextBox)).sendKeys(SearchText);
@@ -694,12 +729,7 @@ public class Hotel extends BaseUtil {
 
 	}
 
-
-
-
-
 	Actions actions = new Actions(driver);
-
 
 	public void VerifySearchResultsOfDS(String DataSource) {
 
@@ -719,15 +749,14 @@ public class Hotel extends BaseUtil {
 
 	}
 
-
 	public void AddRandomHotelToCartFromTSRes() throws InterruptedException {
 		Thread.sleep(20000);
 
 		/*
 		 * if(driver.findElements(By.id("pnlSearchResultsPagination")).size()>0) {
 		 * System.out.println("In Pagination"); List<WebElement> Pages =
-		 * driver.findElements(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_ul\"]/li"));
-		 * Random r = new Random(); System.out.println("The total page numbers is : " +
+		 * driver.findElements(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_ul\"]/li")); Random
+		 * r = new Random(); System.out.println("The total page numbers is : " +
 		 * Pages.size()); int rValue = r.nextInt(Pages.size());
 		 * System.out.println("The page number is : " + rValue);
 		 * Pages.get(rValue).click(); Thread.sleep(2000); }
@@ -741,37 +770,37 @@ public class Hotel extends BaseUtil {
 		Random r = new Random();
 		int randomValue = r.nextInt(listings.size());
 
+		WebElement parent = listings.get(randomValue).findElement(By.xpath("./../../../.."));
 
-		  WebElement
-		  parent=listings.get(randomValue).findElement(By.xpath("./../../../.."));
+		String id = parent.getAttribute("id");
 
-		  String id = parent.getAttribute("id");
+		System.out.println(id);
 
-		  System.out.println(id);
+		String HotelNamepath = "//*[@id='" + id + "']/td[3]";
+		String HotelName = driver.findElement(By.xpath(HotelNamepath)).getText();
 
-		  String HotelNamepath = "//*[@id='"+id+"']/td[3]";
-		  String HotelName =  driver.findElement(By.xpath(HotelNamepath)).getText();
+		String ExpandXpath = "//*[@id='" + id + "']/td[11]//div/div/a/span[@title='Expand price breakdown']";
+		driver.findElement(By.xpath(ExpandXpath)).click();
+		Thread.sleep(1000);
+		String SplComm = driver
+				.findElement(By.xpath(
+						"//*[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes')]/td/table/tbody/tr[2]/td[3]"))
+				.getText();
+		System.out.println("Special Commission is: " + SplComm);
+		String intValue = SplComm.replaceAll("[^0-9]", "");
+		float f = Float.parseFloat(intValue);
 
-		  String ExpandXpath =
-		  "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Expand price breakdown']";
-		  driver.findElement(By.xpath(ExpandXpath)).click(); Thread.sleep(1000);
-		  String SplComm = driver.findElement(By.xpath(
-		  "//*[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes')]/td/table/tbody/tr[2]/td[3]"
-		  )).getText(); System.out.println("Special Commission is: " +SplComm); String
-		  intValue = SplComm.replaceAll("[^0-9]", ""); float f =
-		  Float.parseFloat(intValue);
+		try {
+			Assert.assertTrue(f > 0);
+		} catch (AssertionError E) {
+			LogLog.error("Split Commission is not displayed properly for : " + HotelName);
+		} catch (Exception E) {
+			LogLog.error("Split Commission is not displayed properly for : " + HotelName);
+		}
 
-		  try { Assert.assertTrue(f>0); }catch(AssertionError E) {
-		  LogLog.error("Split Commission is not displayed properly for : " +
-		  HotelName); } catch(Exception E) {
-		  LogLog.error("Split Commission is not displayed properly for : " +
-		  HotelName); }
+		String CollapseXpath = "//*[@id='" + id + "']/td[11]//div/div/a/span[@title='Collapse price breakdown']";
 
-		  String CollapseXpath =
-		  "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Collapse price breakdown']"
-		  ;
-
-		  System.out.println("The Hotel Name is:  "+HotelName);
+		System.out.println("The Hotel Name is:  " + HotelName);
 
 		/*
 		 * String RoomTypeXpath1 = "//*[@id='"+id+"']/td[6]/span";
@@ -782,18 +811,19 @@ public class Hotel extends BaseUtil {
 		 * String RoomType2 = driver.findElement(By.xpath(RoomTypeXpath2)).getText();
 		 */
 
-		  // System.out.println("Room Type is:  " +RoomType1);
+		// System.out.println("Room Type is: " +RoomType1);
 
-		  //System.out.println("Room Type 2 is:  " +RoomType2);
+		// System.out.println("Room Type 2 is: " +RoomType2);
 
-		  try { FileWriter writer = new FileWriter("BookingDetails.docx", true);
-		  BufferedWriter bufferedWriter = new BufferedWriter(writer);
-		  bufferedWriter.newLine(); bufferedWriter.write(
-		  "****************************************************************");
-		  bufferedWriter.newLine();
-		  bufferedWriter.write("The Booking Details through Automation are : ");
-		  bufferedWriter.newLine(); bufferedWriter.write("The Hotel Name is: " +
-		  HotelName);
+		try {
+			FileWriter writer = new FileWriter("BookingDetails.docx", true);
+			BufferedWriter bufferedWriter = new BufferedWriter(writer);
+			bufferedWriter.newLine();
+			bufferedWriter.write("****************************************************************");
+			bufferedWriter.newLine();
+			bufferedWriter.write("The Booking Details through Automation are : ");
+			bufferedWriter.newLine();
+			bufferedWriter.write("The Hotel Name is: " + HotelName);
 
 			/*
 			 * bufferedWriter.newLine(); bufferedWriter.write("Room Type 1 is:  "
@@ -804,14 +834,16 @@ public class Hotel extends BaseUtil {
 			 * +RoomType2);
 			 */
 
-		  bufferedWriter.newLine(); bufferedWriter.write("Split Commission is:  "
-		  +SplComm); bufferedWriter.close(); } catch (IOException e) {
-		  e.printStackTrace(); }
+			bufferedWriter.newLine();
+			bufferedWriter.write("Split Commission is:  " + SplComm);
+			bufferedWriter.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-
-
-		  Thread.sleep(2000); driver.findElement(By.xpath(CollapseXpath)).click();
-		  Thread.sleep(5000);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(CollapseXpath)).click();
+		Thread.sleep(5000);
 
 		List<WebElement> listing = driver.findElements(By.xpath(AddToCartXpath));
 		WebDriverWait wait = new WebDriverWait(driver, 50);
@@ -819,7 +851,6 @@ public class Hotel extends BaseUtil {
 		listing.get(randomValue).click();
 
 	}
-
 
 	public void VerifyReviewsForHotel() throws InterruptedException {
 		Thread.sleep(4000);
@@ -870,12 +901,10 @@ public class Hotel extends BaseUtil {
 
 	}
 
-
 	public void VerifyRatingsForHotel() {
 		// TODO Auto-generated method stub
 
 	}
-
 
 	public void SelectRoomSelectionTabFromLB() throws InterruptedException {
 		Thread.sleep(2000);
@@ -883,7 +912,6 @@ public class Hotel extends BaseUtil {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*/span[contains(.,'Room selection')]")).click();
 	}
-
 
 	public void SelectRoomFromSelectionInLB() {
 
@@ -900,7 +928,6 @@ public class Hotel extends BaseUtil {
 		}
 
 	}
-
 
 	public void SelectSameTypeRoomsFromListsInLB(int NoOfRooms) throws InterruptedException {
 
@@ -942,7 +969,6 @@ public class Hotel extends BaseUtil {
 
 	}
 
-
 	public void SelectDiffTypeRoomsFromListsInLB(int NoOfRooms) throws InterruptedException {
 		String ChangeIcon1 = "(//*[contains(@title,'Click to see other rooms')])[1]";
 		driver.findElement(By.xpath(ChangeIcon1)).click();
@@ -983,14 +1009,12 @@ public class Hotel extends BaseUtil {
 
 	}
 
-
 	public void AddToCartFromLBWithoutSwitchingFrame() throws InterruptedException {
 		Thread.sleep(2000);
 		String OLBAddToCartXpath = "//*[contains(@class,'btn-add-to-cart')]";
 		driver.findElement(By.xpath(OLBAddToCartXpath)).click();
 
 	}
-
 
 	public void ExpandRandomHotelRoomtypeOptionsInTable() {
 		String ExpandXpath = "//*/span[contains(@title,'Expand alternate room options')]";
@@ -1002,7 +1026,6 @@ public class Hotel extends BaseUtil {
 		ExpandOptions.get(randomValue).click();
 
 	}
-
 
 	public void SelectARoomFromListInSearchResults() {
 		String RoomXpath = "//*/td[contains(@class,'cell-check-btn')]";
@@ -1017,14 +1040,12 @@ public class Hotel extends BaseUtil {
 
 	}
 
-
 	public void ClickAddSelectionToCart() {
 
 		String AddSelectionToCartXpath = "//*/span[contains(.,'Add selection to cart')]";
 		actions.moveToElement(driver.findElement(By.xpath(AddSelectionToCartXpath))).click().perform();
 
 	}
-
 
 	public void SelectMultipleRoomsSameTypeFromListInSearchResults() throws InterruptedException {
 		String Room1Xpath = "//*/td[contains(@class,'cell-check-btn')]/*[contains(@id,'_1_rbnChooseProduct')]";
@@ -1048,7 +1069,6 @@ public class Hotel extends BaseUtil {
 		actions.moveToElement(listings1.get(randomValue)).click().perform();
 
 	}
-
 
 	public void SelectMultipleRoomsDifferentTypeFromListInSearchResults() throws InterruptedException {
 		String Room1Xpath = "//*/td[contains(@class,'cell-check-btn')]/*[contains(@id,'_1_rbnChooseProduct')]";
@@ -1075,7 +1095,6 @@ public class Hotel extends BaseUtil {
 
 	}
 
-
 	public void VerifySuccessWithInfo() {
 		String SWinfo = "//a[@id='m_c_C000_m_m_m_c_c5_SearchResultBriefSummaries_rptSearchResultBriefs_0_lnkBriefToggleMoreInformation']/span";
 		driver.findElement(By.xpath(SWinfo)).click();
@@ -1085,7 +1104,6 @@ public class Hotel extends BaseUtil {
 		Assert.assertTrue(text.contains("Search not possible:"));
 
 	}
-
 
 	public void CancellationCondition_Within() throws InterruptedException {
 		Thread.sleep(5000);
@@ -1111,8 +1129,7 @@ public class Hotel extends BaseUtil {
 			b--;
 		}
 
-		if (driver
-				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
+		if (driver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
 				.size() < 1) {
 			LogLog.error("Couldn't find hotel withi cancellation period in 5 trials");
 			driver.findElement(By.id("DeleteButton")).click();
@@ -1120,7 +1137,6 @@ public class Hotel extends BaseUtil {
 			System.out.println("Proper Hotel is selected while in loop");
 		}
 	}
-
 
 	public void CancellationCondition_Outside() throws InterruptedException {
 		Thread.sleep(2000);
@@ -1145,13 +1161,82 @@ public class Hotel extends BaseUtil {
 			i++;
 			b--;
 		}
-		if (driver
-				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
+		if (driver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
 				.size() > 0) {
 			LogLog.error("Couldn't find hotel outside cancellation period in 5 trials");
 			driver.findElement(By.id("DeleteButton")).click();
 		} else {
 			System.out.println("Proper Hotel is selected in while loop");
+		}
+
+	}
+
+	public void selectCountry(String cn) throws InterruptedException {
+		String countryname = cn;
+		Country.sendKeys(countryname);
+		String capscountry = countryname.toUpperCase();
+		List<WebElement> contrydropdownbox = driver.findElements(By.xpath("//div[@class='asmMenuItem']"));
+		for (WebElement e : contrydropdownbox) {
+			if (e.getAttribute("innerHTML").contains(capscountry)) {
+				e.click();
+				System.out.println("Clicked element is- " + e.getAttribute("innerHTML") + "|" + e);
+				Thread.sleep(3000);
+				break;
+			}
+
+		}
+	}
+
+	// Start date and End date
+	public void selectdays(int numberofday) throws InterruptedException {
+
+		LocalDate futureDate = LocalDate.now().plusDays(numberofday);
+
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMMyyyy");
+		String formattedString = futureDate.format(formatter);
+		Startdate.sendKeys(Keys.chord(Keys.CONTROL, "a"), formattedString);
+
+		Thread.sleep(3000);
+		LocalDate futureEndDate = LocalDate.now().plusDays(numberofday + 1);
+
+		DateTimeFormatter fort = DateTimeFormatter.ofPattern("ddMMMyyyy");
+		String formattedString1 = futureDate.format(fort);
+
+		Enddate.sendKeys(Keys.chord(Keys.CONTROL, "a"), formattedString1);
+
+	}
+// Below method would add to cart and validate Cancellation charges
+
+	public void addToCart_RebundableHotelRooms() throws InterruptedException {
+
+		List<WebElement> roomNames = driver.findElements(By.xpath("//span[@title='Expand alternate room options']"));
+		for (int i = 0; i < roomNames.size(); i++) {
+			String names = roomNames.get(i).getAttribute("innerText");
+			Matcher m = Pattern.compile("(?m)^(?!.*\\bNon\\b).*").matcher(names);
+
+			while (m.find()) {
+
+				System.out.println(i);
+				System.out.println(m.group());
+				try {
+					Addtocart.get(i).click();
+				} catch (Exception e) {
+
+				}
+			}
+
+		}
+
+		if (cancellationChargePeriod.size() > 1) {
+			Actions actions = new Actions(driver);
+			actions.moveToElement(cancelConditionLink).click().build().perform();
+			System.out.println("click on Cancellation Terms");
+			Thread.sleep(7000);
+			WebElement iFrame = driver.findElement(By.tagName("iframe"));
+			driver.switchTo().frame(iFrame);
+			WebElement cancellationCharges = driver.findElement(By.xpath("//div[@class='machine-readable']//ul/li[1]"));
+			System.out.println(cancellationCharges.getText());
+
 		}
 
 	}

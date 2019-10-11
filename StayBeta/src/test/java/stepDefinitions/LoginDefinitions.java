@@ -1,7 +1,5 @@
 package stepDefinitions;
 
-
-
 import org.testng.annotations.Test;
 
 import Base.BaseUtil;
@@ -19,47 +17,46 @@ public class LoginDefinitions extends BaseUtil {
 	public void User_launches_the_application() throws Throwable {
 
 		driver.navigate().to(login.applicationURL);
-		//openUrl();
+		// openUrl();
 	}
 
 	@Given("^User launches the au application$")
-    public void user_launches_the_au_application() throws Throwable {
-		//main();
-		//openUrl_au();
-    }
+	public void user_launches_the_au_application() throws Throwable {
+		// main();
+		// openUrl_au();
+	}
 
 	@And("^User login with valid credentials")
 	public void User_login_with_valid_credentials() throws Throwable {
 
-		//driver.navigate().refresh();
+		// driver.navigate().refresh();
 	}
 
 	@And("^User enters Valid Credentials$")
-    public void user_enters_valid_credentials() throws Throwable {
-        login.EnterLoginCredentials();
-    }
+	public void user_enters_valid_credentials() throws Throwable {
+		login.EnterLoginCredentials();
+	}
 
-	   @And("^User enters Valid AU Credentials$")
-	    public void user_enters_valid_au_credentials() throws Throwable {
-	        login.EnterAULoginCredentials();
-	    }
+	@And("^User enters Valid AU Credentials$")
+	public void user_enters_valid_au_credentials() throws Throwable {
+		login.EnterAULoginCredentials();
+	}
 
 	@Then("^User logged into application$")
-    public void user_logged_into_application() throws Throwable {
-        login.ClickOnLogin();
-    }
+	public void user_logged_into_application() throws Throwable {
+		login.ClickOnLogin();
+	}
 
 	@Given("^User clicks On Logout$")
-    public void user_clicks_on_logout() throws Throwable {
+	public void user_clicks_on_logout() throws Throwable {
 		Thread.sleep(2000);
-       login.ClickOnLogout();
-    }
+		login.ClickOnLogout();
+	}
 
-    @Then("^User should be logged out and driver is closed$")
-    public void user_should_be_logged_out_and_driver_is_closed() throws Throwable {
-       driver.close();
+	@Then("^User should be logged out and driver is closed$")
+	public void user_should_be_logged_out_and_driver_is_closed() throws Throwable {
+		driver.close();
 
-    }
-
+	}
 
 }

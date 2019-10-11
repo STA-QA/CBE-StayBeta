@@ -153,4 +153,19 @@ public class HotelBookingDefinitions extends BaseUtil {
 		Hotel.ProductDeleteVerification();
 	}
 
+
+	@And("^User enters (.+) with startdate (.+)$")
+	public void User_enters_country(String country, String numdays) throws Throwable {
+		Thread.sleep(2000);
+		Hotel.selectCountry(country);
+		Thread.sleep(2000);
+		int nu = Integer.parseInt(numdays);
+		Hotel.selectdays(nu);
+	}
+
+	@Then("^User add rooms to cart$")
+	public void User_add_rooms_to_cart() throws InterruptedException {
+		Hotel.addToCart_RebundableHotelRooms();
+	}
+
 }
