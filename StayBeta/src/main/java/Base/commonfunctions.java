@@ -1,18 +1,27 @@
 package Base;
 
-import org.testng.annotations.Test;
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 public class commonfunctions {
 
-	@Test
-	public void selectdate() {
-		int i =0;
-		while (i++ < 10) {
-		    if (i > 1) break;
-		    System.out.println(i); //prints 5
-		  }
+	public static String screenshot(WebDriver driver, long ms) throws IOException {
 
-		}
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String dest = System.getProperty("user.dir") + "\\screenshot\\" + ms + ".png";
+		File destination = new File(dest);
+		FileUtils.copyFile(source, destination);
+		System.out.println("ScreenShot Taken");
+
+		return dest;
+
+	}
 	}
 
 

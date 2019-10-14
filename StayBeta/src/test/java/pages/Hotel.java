@@ -39,16 +39,21 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.cucumber.listener.Reporter;
 import com.github.javafaker.Faker;
 import com.google.common.io.Files;
 
 import Base.BaseUtil;
+import Base.commonfunctions;
 
 public class Hotel extends BaseUtil {
 
 	public Hotel(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+
+
+	commonfunctions commonfun = new commonfunctions();
 
 	Faker faker = new Faker();
 	public String RoomSelXpath = "//button[@id='Pivot3-Tab3']/div/span/span";
@@ -106,7 +111,7 @@ public class Hotel extends BaseUtil {
 
 
 
-	@FindBy(how = How.XPATH, using = " ///div/h4/span[@id='lblFoldNo']")
+	@FindBy(how = How.XPATH, using = "//div/h4/span[@id='lblFoldNo']")
 	public WebElement Bookingref;
 	@FindBy(how = How.XPATH, using = " //div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']")
 	public WebElement Price;
@@ -1291,7 +1296,7 @@ public class Hotel extends BaseUtil {
 	}
 
 
-	public void quotebooking() throws InterruptedException {
+	public void quotebooking() throws InterruptedException, IOException {
 
 		WebElement element = driver.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
 
@@ -1299,8 +1304,8 @@ public class Hotel extends BaseUtil {
 		executor.executeScript("arguments[0].click();", element);
 
 		Dropdown(Titledropdown, "Mr");
-		firstname.sendKeys("Testing Booking");
-		lastname.sendKeys("Testing Booking");
+		firstname.sendKeys("Test Booking");
+		lastname.sendKeys("Test Booking");
 		Dropdown(DOBday, "4");
 		Dropdown(DOBmonth, "Apr");
 		Dropdown(DOByear, "1990");
@@ -1309,7 +1314,8 @@ public class Hotel extends BaseUtil {
 		waitandclick(Price, 30);
 	String bookingrefnumber=Bookingref.getText();
 	System.out.println(bookingrefnumber);
-
+	String screenShotPath = commonfun.screenshot(driver, System.currentTimeMillis());
+	Reporter.addScreenCaptureFromPath(screenShotPath);
 	}
 
 
@@ -1332,8 +1338,8 @@ public class Hotel extends BaseUtil {
 
 	public void waitandclick (WebElement element , int waitTime) {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-		WebDriverWait wait = new WebDriverWait(driver, waitTime);
-		wait.until(ExpectedConditions.visibilityOfElementLocated((By) element));
+		//WebDriverWait wait = new WebDriverWait(driver, waitTime);
+		//wait.until(ExpectedConditions.visibilityOfElementLocated((By) element));
 		element.click();
 
 

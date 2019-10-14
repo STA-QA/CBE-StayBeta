@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -169,7 +171,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 	}
 
 	@And("^User clicks (.+) radio button and complete booking$")
-	public void User_clicks_radio_button_and_complete_booking(String process) throws InterruptedException {
+	public void User_clicks_radio_button_and_complete_booking(String process) throws InterruptedException, IOException {
 
 		if (process.equalsIgnoreCase("Book")) {
 

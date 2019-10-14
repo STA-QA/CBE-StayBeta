@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\gururaj.subash\AppData\Local\Temp\testng-eclipse--158300304\testng-customsuite.xml</span>
+                    <span>C:\Users\gururaj.subash\AppData\Local\Temp\testng-eclipse-833000566\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -129,7 +129,16 @@
                   </a> <!-- feature(Hotel Booking through Expedia) -->
                   <span class="method-name">feature</span>
                   <span class="parameters">(Hotel Booking through Expedia)</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.ClassCastException: com.sun.proxy.$Proxy23 cannot be cast to org.openqa.selenium.By
+                  <div class="stack-trace">cucumber.runtime.CucumberException: org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression  ///div/h4/span[@id=&apos;lblFoldNo&apos;] because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos; ///div/h4/span[@id=&apos;lblFoldNo&apos;]&apos; is not a valid XPath expression.
+  (Session info: chrome=77.0.3865.90)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;UKL60YBN32&apos;, ip: &apos;10.44.253.159&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_192&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\GURURA~1.SUB\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:60999}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9540e171ee6d33fc064b9494d3815687
+*** Element info: {Using=xpath, value= ///div/h4/span[@id=&apos;lblFoldNo&apos;]}
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -157,9 +166,34 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.ClassCastException: com.sun.proxy.$Proxy23 cannot be cast to org.openqa.selenium.By
-	at pages.Hotel.waitandclick(Hotel.java:1336)
-	at pages.Hotel.quotebooking(Hotel.java:1307)
+Caused by: org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression  ///div/h4/span[@id=&apos;lblFoldNo&apos;] because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos; ///div/h4/span[@id=&apos;lblFoldNo&apos;]&apos; is not a valid XPath expression.
+  (Session info: chrome=77.0.3865.90)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;UKL60YBN32&apos;, ip: &apos;10.44.253.159&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_192&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\GURURA~1.SUB\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:60999}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9540e171ee6d33fc064b9494d3815687
+*** Element info: {Using=xpath, value= ///div/h4/span[@id=&apos;lblFoldNo&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy23.getText(Unknown Source)
+	at pages.Hotel.quotebooking(Hotel.java:1310)
 	at stepDefinitions.HotelBookingDefinitions.User_clicks_radio_button_and_complete_booking(HotelBookingDefinitions.java:177)
 	at ✽.And User clicks Quote radio button and complete booking(src/test/java/TestCasesRecent/ExpediaHotelBooking.feature:17)
 
@@ -173,7 +207,7 @@ Caused by: java.lang.ClassCastException: com.sun.proxy.$Proxy23 cannot be cast t
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\gururaj.subash\AppData\Local\Temp\testng-eclipse--158300304\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\gururaj.subash\AppData\Local\Temp\testng-eclipse-833000566\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -234,7 +268,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'cucumberOptions.TestRunner')
-data.setCell(0, 3, 198731);
+data.setCell(0, 3, 199768);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -274,11 +308,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">feature(Hotel Booking through Expedia)</span>
-                <span class="method-start">1118 ms</span>
+                <span class="method-start">693 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">199853 ms</span>
+                <span class="method-start">200465 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
