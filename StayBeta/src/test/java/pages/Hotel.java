@@ -22,6 +22,7 @@ import java.util.regex.Pattern;
 
 import org.apache.log4j.helpers.LogLog;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -34,6 +35,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -100,6 +102,33 @@ public class Hotel extends BaseUtil {
 	public String PopupCancel = "//*[contains(@id,'confirm')]/div/div[2]/a[2]/span/span";
 	String cancelationExpectedText = "This item is being booked within a cancellation charge period";
 
+
+
+
+
+	@FindBy(how = How.XPATH, using = " ///div/h4/span[@id='lblFoldNo']")
+	public WebElement Bookingref;
+	@FindBy(how = How.XPATH, using = " //div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']")
+	public WebElement Price;
+	@FindBy(how = How.XPATH, using = " //div/a[@id='m_c_C000_m_c_continueBtn']")
+	public WebElement Savebutton;
+	@FindBy(how = How.XPATH, using = " //div/input[@id='m_c_C000_m_c_cbxAcceptedConditions']")
+	public WebElement TermsandconditionsBooking;
+	@FindBy(how = How.XPATH, using = " //div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_birthDateBdbyears']")
+	public WebElement DOByear;
+	@FindBy(how = How.XPATH, using = " //div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_birthDateBdbdays']")
+	public WebElement DOBday;
+	@FindBy(how = How.XPATH, using = " //div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_birthDateBdbmonths']")
+	public WebElement DOBmonth;
+	@FindBy(how = How.XPATH, using = " //div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_surnameTbx']")
+	public WebElement lastname;
+	@FindBy(how = How.XPATH, using = " //div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_givenNameTbx']")
+	public WebElement firstname;
+	@FindBy(how = How.XPATH, using = " //select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_namePrefixDdl']")
+	public WebElement Titledropdown;
+
+
+
 	@FindBy(how = How.XPATH, using = " //div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_actionsUpd2']")
 	public WebElement Removefromcart;
 	@FindBy(how = How.XPATH, using = "//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning']")
@@ -125,7 +154,7 @@ public class Hotel extends BaseUtil {
 	@FindBy(how = How.XPATH, using = "//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_lblCanxPeriodWarning']")
 	public List<WebElement> cancellationChargePeriod;
 
-	@FindBy(how = How.XPATH, using = "//a[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_dtsItineraryItemCancellationCondtions_cancellationConditionsBtn']")
+	@FindBy(how = How.XPATH, using = "//div/a[@class='lightbox-link lightbox-new cboxElement']")
 	public WebElement cancelConditionLink;
 
 	public void SearchCountry(String SearchText, String Country) {
@@ -1227,17 +1256,86 @@ public class Hotel extends BaseUtil {
 
 		}
 
-		if (cancellationChargePeriod.size() > 1) {
+		System.out.println(" "+cancellationChargePeriod.size());
+
+		if (cancellationChargePeriod.size() <= 0) {
 			Actions actions = new Actions(driver);
 			actions.moveToElement(cancelConditionLink).click().build().perform();
+
 			System.out.println("click on Cancellation Terms");
-			Thread.sleep(7000);
+			Thread.sleep(4000);
+
 			WebElement iFrame = driver.findElement(By.tagName("iframe"));
 			driver.switchTo().frame(iFrame);
+
 			WebElement cancellationCharges = driver.findElement(By.xpath("//div[@class='machine-readable']//ul/li[1]"));
 			System.out.println(cancellationCharges.getText());
+			String ActualCancellationCharges = cancellationCharges.getText();
+			String ExpectedCallationCharges  = "no charge";
+
+			if ( ActualCancellationCharges.toLowerCase().indexOf(ExpectedCallationCharges.toLowerCase()) != -1 ) {
+
+			   System.out.println("No Charge if cancelled displayed");
+
+			} else {
+
+			   System.out.println("Hotel would charge if cancelled");
+
+			}
+
+			driver.findElement(By.xpath("//div/a[@class='close']")).click();
+			driver.switchTo().defaultContent();
 
 		}
+
+	}
+
+
+	public void quotebooking() throws InterruptedException {
+
+		WebElement element = driver.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
+
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element);
+
+		Dropdown(Titledropdown, "Mr");
+		firstname.sendKeys("Testing Booking");
+		lastname.sendKeys("Testing Booking");
+		Dropdown(DOBday, "4");
+		Dropdown(DOBmonth, "Apr");
+		Dropdown(DOByear, "1990");
+		waitandclick(TermsandconditionsBooking, 30);
+		waitandclick(Savebutton, 30);
+		waitandclick(Price, 30);
+	String bookingrefnumber=Bookingref.getText();
+	System.out.println(bookingrefnumber);
+
+	}
+
+
+
+	public void Dropdown(WebElement ele, String text) throws InterruptedException {
+		ele.click();
+		Thread.sleep(4000);
+		Select dropdown = new Select(ele);
+		dropdown.selectByVisibleText(text);
+
+
+	}
+
+
+	public void clickbyJS(WebElement element) {
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element);
+	}
+
+
+	public void waitandclick (WebElement element , int waitTime) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		WebDriverWait wait = new WebDriverWait(driver, waitTime);
+		wait.until(ExpectedConditions.visibilityOfElementLocated((By) element));
+		element.click();
+
 
 	}
 

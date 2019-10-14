@@ -43,7 +43,7 @@ public class Hook extends BaseUtil {
 
 
 		  driver.manage().window().maximize();
-		  driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
+		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}
 

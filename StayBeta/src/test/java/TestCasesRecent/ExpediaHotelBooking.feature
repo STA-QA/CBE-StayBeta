@@ -12,10 +12,11 @@ Scenario Outline: User Book a hotel through
 	And Select Number of Adults <Guests> 
 	And Select Number of Children <Children> 
 	And Select Hotel <Data Source> 
-	And Click Search Button
-	Then User add rooms to cart
+	And Click Search Button 
+	Then User add rooms to cart 
+	And User clicks <pendingprocess> radio button and complete booking 
 	
 	
 	Examples: 
-		|country| |numberofdaysfromtoday| |Rooms| |Guests| |Children| |Data Source|
-		|lon    | |94         |            |1|     |2|      |0|        |Expedia Affiliate - Package Rate|
+		|country| |numberofdaysfromtoday| |Rooms| |Guests| |Children| |Data Source|                       |pendingprocess |
+		|lon    | |94         |            |1|     |2|      |0|        |Expedia Affiliate - Package Rate| |Quote|

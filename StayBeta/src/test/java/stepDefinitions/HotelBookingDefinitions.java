@@ -168,4 +168,15 @@ public class HotelBookingDefinitions extends BaseUtil {
 		Hotel.addToCart_RebundableHotelRooms();
 	}
 
+	@And("^User clicks (.+) radio button and complete booking$")
+	public void User_clicks_radio_button_and_complete_booking(String process) throws InterruptedException {
+
+		if (process.equalsIgnoreCase("Book")) {
+
+		}else {
+			Hotel.quotebooking();
+		}
+
+	}
+
 }
