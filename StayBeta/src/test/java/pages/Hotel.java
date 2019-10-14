@@ -52,7 +52,6 @@ public class Hotel extends BaseUtil {
 		PageFactory.initElements(driver, this);
 	}
 
-
 	commonfunctions commonfun = new commonfunctions();
 
 	Faker faker = new Faker();
@@ -107,9 +106,10 @@ public class Hotel extends BaseUtil {
 	public String PopupCancel = "//*[contains(@id,'confirm')]/div/div[2]/a[2]/span/span";
 	String cancelationExpectedText = "This item is being booked within a cancellation charge period";
 
-
-
-
+	@FindBy(how = How.XPATH, using = "//input[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl00_rbnProcess']")
+	public WebElement bookingprocessRadiobutton;
+	@FindBy(how = How.XPATH, using = "//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']")
+	public WebElement CompleteBookingButton;
 
 	@FindBy(how = How.XPATH, using = "//div/h4/span[@id='lblFoldNo']")
 	public WebElement Bookingref;
@@ -131,8 +131,6 @@ public class Hotel extends BaseUtil {
 	public WebElement firstname;
 	@FindBy(how = How.XPATH, using = " //select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_namePrefixDdl']")
 	public WebElement Titledropdown;
-
-
 
 	@FindBy(how = How.XPATH, using = " //div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_actionsUpd2']")
 	public WebElement Removefromcart;
@@ -1260,8 +1258,9 @@ public class Hotel extends BaseUtil {
 			}
 
 		}
+		Thread.sleep(4000);
 
-		System.out.println(" "+cancellationChargePeriod.size());
+		System.out.println(" " + cancellationChargePeriod.size());
 
 		if (cancellationChargePeriod.size() <= 0) {
 			Actions actions = new Actions(driver);
@@ -1276,15 +1275,15 @@ public class Hotel extends BaseUtil {
 			WebElement cancellationCharges = driver.findElement(By.xpath("//div[@class='machine-readable']//ul/li[1]"));
 			System.out.println(cancellationCharges.getText());
 			String ActualCancellationCharges = cancellationCharges.getText();
-			String ExpectedCallationCharges  = "no charge";
+			String ExpectedCallationCharges = "no charge";
 
-			if ( ActualCancellationCharges.toLowerCase().indexOf(ExpectedCallationCharges.toLowerCase()) != -1 ) {
+			if (ActualCancellationCharges.toLowerCase().indexOf(ExpectedCallationCharges.toLowerCase()) != -1) {
 
-			   System.out.println("No Charge if cancelled displayed");
+				System.out.println("No Charge if cancelled displayed");
 
 			} else {
 
-			   System.out.println("Hotel would charge if cancelled");
+				System.out.println("Hotel would charge if cancelled");
 
 			}
 
@@ -1295,54 +1294,68 @@ public class Hotel extends BaseUtil {
 
 	}
 
+	// Make booking through Book pending process option
+	public void bookprocessbooking() throws InterruptedException, IOException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(bookingprocessRadiobutton).click().build().perform();
+		waitandclick(CompleteBookingButton);
+		CBEbook();
 
+	}
+
+	// Make booking through Quote
 	public void quotebooking() throws InterruptedException, IOException {
 
-		WebElement element = driver.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
+		waitandclick(CompleteBookingButton);
+		Thread.sleep(3000);
+		CBEbook();
 
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].click();", element);
+	}
 
+	public void CBEbook() throws InterruptedException, IOException {
 		Dropdown(Titledropdown, "Mr");
 		firstname.sendKeys("Test Booking");
 		lastname.sendKeys("Test Booking");
 		Dropdown(DOBday, "4");
 		Dropdown(DOBmonth, "Apr");
 		Dropdown(DOByear, "1990");
-		waitandclick(TermsandconditionsBooking, 30);
-		waitandclick(Savebutton, 30);
-		waitandclick(Price, 30);
-	String bookingrefnumber=Bookingref.getText();
-	System.out.println(bookingrefnumber);
-	String screenShotPath = commonfun.screenshot(driver, System.currentTimeMillis());
-	Reporter.addScreenCaptureFromPath(screenShotPath);
+		waitandclick(TermsandconditionsBooking);
+		waitandclick(Savebutton);
+		waitandclick(Price);
+		String bookingrefnumber = Bookingref.getText();
+		Reporter.addStepLog("------------------------");
+		Reporter.addStepLog(bookingrefnumber);
+
+		String screenShotPath = commonfun.screenshot(driver, System.currentTimeMillis());
+		Reporter.addScreenCaptureFromPath(screenShotPath);
 	}
-
-
 
 	public void Dropdown(WebElement ele, String text) throws InterruptedException {
 		ele.click();
-		Thread.sleep(4000);
 		Select dropdown = new Select(ele);
 		dropdown.selectByVisibleText(text);
 
-
 	}
 
-
 	public void clickbyJS(WebElement element) {
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", element);
 	}
 
-
-	public void waitandclick (WebElement element , int waitTime) {
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-		//WebDriverWait wait = new WebDriverWait(driver, waitTime);
-		//wait.until(ExpectedConditions.visibilityOfElementLocated((By) element));
-		element.click();
+	public void waitandclick(WebElement element) throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		new WebDriverWait(driver, 60)
+        .until(ExpectedConditions.visibilityOf(element));
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+		js.executeScript("arguments[0].click();", element);
 
 
 	}
+
+
+
+
+
 
 }

@@ -8,7 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-public class commonfunctions {
+public class commonfunctions extends BaseUtil {
 
 	public static String screenshot(WebDriver driver, long ms) throws IOException {
 
@@ -22,6 +22,8 @@ public class commonfunctions {
 		return dest;
 
 	}
+
+
 	}
 
 

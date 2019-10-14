@@ -174,7 +174,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 	public void User_clicks_radio_button_and_complete_booking(String process) throws InterruptedException, IOException {
 
 		if (process.equalsIgnoreCase("Book")) {
-
+			Hotel.bookprocessbooking();
 		}else {
 			Hotel.quotebooking();
 		}
