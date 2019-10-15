@@ -142,6 +142,15 @@ public class Hotel extends BaseUtil {
 	@FindBy(how = How.XPATH, using = "//div[@class='asmMenuItem']")
 	public List<WebElement> CountryName;
 
+	@FindBy(how = How.XPATH, using = "//div/a[@class='close']")
+	public WebElement popupclose;
+
+	@FindBy(how = How.XPATH, using = " //div[contains(text(), 'Add to cart')]")
+	public WebElement popupAddtocart;
+
+	@FindBy(how = How.XPATH, using = "//a[@title='View hotel details']")
+	public List<WebElement> hotelDetails;
+
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckIntbx")
 	public WebElement Startdate;
 
@@ -178,8 +187,6 @@ public class Hotel extends BaseUtil {
 
 		cal.add(Calendar.DATE, NumberOfDays);
 		String EndDate = format1.format(cal.getTime());
-
-		driver.findElement(By.id(To)).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), EndDate);
 
 	}
 
@@ -1267,7 +1274,8 @@ public class Hotel extends BaseUtil {
 			actions.moveToElement(cancelConditionLink).click().build().perform();
 
 			System.out.println("click on Cancellation Terms");
-			Thread.sleep(4000);
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			wait.until(ExpectedConditions.visibilityOfElementLocated((By.tagName("iframe"))));
 
 			WebElement iFrame = driver.findElement(By.tagName("iframe"));
 			driver.switchTo().frame(iFrame);
@@ -1287,7 +1295,7 @@ public class Hotel extends BaseUtil {
 
 			}
 
-			driver.findElement(By.xpath("//div/a[@class='close']")).click();
+			popupclose.click();
 			driver.switchTo().defaultContent();
 
 		}
@@ -1322,12 +1330,39 @@ public class Hotel extends BaseUtil {
 		waitandclick(TermsandconditionsBooking);
 		waitandclick(Savebutton);
 		waitandclick(Price);
-		String bookingrefnumber = Bookingref.getText();
-		Reporter.addStepLog("------------------------");
+		String bookingrefnumber = Bookingref.getAttribute("innerHTML");
+
 		Reporter.addStepLog(bookingrefnumber);
 
 		String screenShotPath = commonfun.screenshot(driver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
+	}
+
+	public void verifyLightboxLoadingTime(int number) throws InterruptedException {
+		for (int i = 0; i < number; i++) {
+			System.out.println("Clicking on hotel name");
+			System.out.println(hotelDetails.get(i).getText());
+			Reporter.addStepLog(hotelDetails.get(i).getText());
+			hotelDetails.get(i).click();
+			Thread.sleep(4000);
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			wait.until(ExpectedConditions.visibilityOfElementLocated((By.tagName("iframe"))));
+			List<WebElement> elements = driver.findElements(By.tagName("iframe"));
+			driver.switchTo().frame(elements.get(0));
+			System.out.println("Total Iframes " + elements.size());
+			long timerstart = System.currentTimeMillis();
+			assertTrue(popupAddtocart.isDisplayed(), "Add to cart is not displayed on Popup");
+			System.out.println(popupAddtocart.getText());
+			long timerfinish = System.currentTimeMillis();
+			long totalTime = timerfinish - timerstart;
+			int seconds = (int) ((totalTime / 1000) % 60);
+			Reporter.addStepLog("Total Time in Millisecs for AddtoCart to load on popup  - " + totalTime);
+
+			popupclose.click();
+			driver.switchTo().defaultContent();
+
+		}
+
 	}
 
 	public void Dropdown(WebElement ele, String text) throws InterruptedException {
@@ -1345,17 +1380,10 @@ public class Hotel extends BaseUtil {
 	public void waitandclick(WebElement element) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
-		new WebDriverWait(driver, 60)
-        .until(ExpectedConditions.visibilityOf(element));
+		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(element));
 		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
 		js.executeScript("arguments[0].click();", element);
 
-
 	}
-
-
-
-
-
 
 }
