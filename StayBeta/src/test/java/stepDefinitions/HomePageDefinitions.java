@@ -1,11 +1,12 @@
 package stepDefinitions;
 
+import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
 import assertions.HomePageAssertions;
 import cucumber.api.java.en.And;
-import utilities.TestBase;
 
-public class HomePageDefinitions extends TestBase {
+
+public class HomePageDefinitions extends BaseUtil {
 	HomePageAssertions HomeAssert = new HomePageAssertions();
 	HomePageImpl Home = new HomePageImpl();
 

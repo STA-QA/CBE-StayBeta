@@ -7,21 +7,23 @@ import java.util.Calendar;
 import java.util.Random;
 
 import org.apache.log4j.helpers.LogLog;
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 import com.github.javafaker.Faker;
 import com.google.common.io.Files;
 
+import Base.BaseUtil;
 import stayBetaInterfaces.Hotel;
-import utilities.TestBase;
 
-public class HotelImpl extends TestBase implements Hotel {
+
+public class HotelImpl extends BaseUtil implements Hotel {
 	
 	Faker faker = new Faker();
 

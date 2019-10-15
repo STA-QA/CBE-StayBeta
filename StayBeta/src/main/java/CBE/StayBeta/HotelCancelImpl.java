@@ -21,10 +21,11 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 
+import Base.BaseUtil;
 import stayBetaInterfaces.HotelCancel;
-import utilities.TestBase;
 
-public class HotelCancelImpl extends TestBase implements HotelCancel {
+
+public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 
 	@Override
 	public void TakeSSofCancellationChargesFromLB() {

@@ -1,13 +1,14 @@
 package stepDefinitions;
 
+import Base.BaseUtil;
 import CBE.StayBeta.ActAndDayTripsSearchImpl;
 import CBE.StayBeta.HomePageImpl;
 import CBE.StayBeta.HotelImpl;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import utilities.TestBase;
 
-public class ActivitiesDayTripsDefinitions extends TestBase {
+
+public class ActivitiesDayTripsDefinitions extends BaseUtil {
 	
 	ActAndDayTripsSearchImpl DayTrip = new ActAndDayTripsSearchImpl();
 	HomePageImpl Home = new HomePageImpl();

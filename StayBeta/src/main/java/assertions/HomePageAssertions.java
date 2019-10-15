@@ -9,9 +9,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import utilities.TestBase;
+import Base.BaseUtil;
 
-public class HomePageAssertions extends TestBase {
+
+public class HomePageAssertions extends BaseUtil {
 
 	String LogoutId = "m_cphHeader_T_CustToolbar_cbeNav_liLogOut";
 	String HomeTabLT = "Home";

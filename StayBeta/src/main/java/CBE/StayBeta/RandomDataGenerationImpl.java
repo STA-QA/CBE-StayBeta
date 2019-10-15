@@ -13,10 +13,11 @@ import java.util.Calendar;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import Base.BaseUtil;
 import stayBetaInterfaces.RandomDataGeneration;
-import utilities.TestBase;
 
-public class RandomDataGenerationImpl extends TestBase implements RandomDataGeneration{
+
+public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGeneration{
 
 	@Override
 	public void storeBookingDetails() throws FileNotFoundException, UnsupportedEncodingException {

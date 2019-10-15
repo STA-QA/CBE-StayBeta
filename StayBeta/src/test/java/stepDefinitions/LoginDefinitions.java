@@ -2,26 +2,27 @@ package stepDefinitions;
 
 import org.testng.annotations.AfterSuite;
 
+import Base.BaseUtil;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import utilities.TestBase;
+
 import utilities.Login;
 
-public class LoginDefinitions extends TestBase {
+public class LoginDefinitions extends BaseUtil {
 
 	Login login = new Login();
 
 	@Given("^User launches the application")
 	public void User_launches_the_application() throws Throwable {
-		main();
+		//main();
 		openUrl();
 	}
 
 	@Given("^User launches the au application$")
     public void user_launches_the_au_application() throws Throwable {
-		main();
-		openUrl_au();
+		//main();
+		//openUrl_au();
     }
 	
 	@And("^User login with valid credentials")

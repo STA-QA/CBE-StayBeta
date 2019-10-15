@@ -9,10 +9,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import Base.BaseUtil;
 import stayBetaInterfaces.ActAndDayTripsSearch;
-import utilities.TestBase;
 
-public class ActAndDayTripsSearchImpl extends TestBase implements ActAndDayTripsSearch {
+
+public class ActAndDayTripsSearchImpl extends BaseUtil implements ActAndDayTripsSearch {
 
 	@Override
 	public void EnterStartDates(int MinStart, int MaxStart) {

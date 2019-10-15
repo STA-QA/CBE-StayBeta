@@ -2,7 +2,9 @@ package utilities;
 
 import org.openqa.selenium.By;
 
-public class Login extends TestBase {
+import Base.BaseUtil;
+
+public class Login extends BaseUtil {
 
 	String Username = "txtLoginUserID";
 	String Password = "txtLoginPassword";

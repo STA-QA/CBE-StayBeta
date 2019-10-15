@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
 import CBE.StayBeta.HotelCancelImpl;
 import CBE.StayBeta.HotelImpl;
@@ -16,10 +17,10 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import utilities.TestBase;
+
 
 @Test
-public class HotelBookingDefinitions extends TestBase {
+public class HotelBookingDefinitions extends BaseUtil {
 
 	HomePageImpl Home = new HomePageImpl();
 	HotelImpl Hotel = new HotelImpl();

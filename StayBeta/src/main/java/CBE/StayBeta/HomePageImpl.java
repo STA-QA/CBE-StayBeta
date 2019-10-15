@@ -2,10 +2,11 @@ package CBE.StayBeta;
 
 import org.openqa.selenium.By;
 
+import Base.BaseUtil;
 import stayBetaInterfaces.HomePage;
-import utilities.TestBase;
 
-public class HomePageImpl extends TestBase implements HomePage {
+
+public class HomePageImpl extends BaseUtil implements HomePage {
 
 	String menu1 = "//span[contains(.,'";
 	String menu2 = "')]";

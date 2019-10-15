@@ -8,10 +8,10 @@ import org.openqa.selenium.By;
 import org.seleniumhq.jetty9.util.log.Log;
 import org.testng.asserts.Assertion;
 
+import Base.BaseUtil;
 
-import utilities.TestBase;
 
-public class HotelAmendmentPageAssertions extends TestBase {
+public class HotelAmendmentPageAssertions extends BaseUtil{
 	
 	String SelectAllCheckBox = "";
 	String Location = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_astLocation_astLocationtbx";

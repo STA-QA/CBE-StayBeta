@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import org.junit.runner.RunWith;
 
+import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
 import CBE.StayBeta.HotelImpl;
 import CBE.StayBeta.RandomDataGenerationImpl;
@@ -11,10 +12,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
 import utilities.Login;
-import utilities.TestBase;
+
 
 @RunWith(Cucumber.class)
-public class TestCase616 extends TestBase {
+public class TestCase616 extends BaseUtil {
 	Login login = new Login();
 	HomePageImpl Home = new HomePageImpl();
 	HotelImpl Hotel = new HotelImpl();
@@ -23,7 +24,7 @@ public class TestCase616 extends TestBase {
 	@Given("^User Selects any agency")
 	public void User_Selects_any_agency() throws Throwable {
 		Home.UserSelectsAgency();
-		CBEDriver.navigate().refresh();
+		//CBEDriver.navigate().refresh();
 	}
 
 	@And("^Search for a particular Country")
@@ -106,7 +107,8 @@ public class TestCase616 extends TestBase {
 	@And("^Click Search Button")
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
-		Thread.sleep(10000);
+		Thread.sleep(60000);
+		System.out.println("Wait is Done!!");
 	}
 
 	@When("^User Searches and Selects a particular Hotel")

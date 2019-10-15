@@ -27,10 +27,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import Base.BaseUtil;
 import stayBetaInterfaces.HotelSearch;
-import utilities.TestBase;
 
-public class HotelSearchImpl extends TestBase implements HotelSearch {
+
+public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 
 	String RoomSelXpath = "//button[@id='Pivot3-Tab3']/div/span/span";
 	Actions actions = new Actions(CBEDriver);
@@ -56,8 +57,8 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
 
 	@Override
 	public void AddRandomHotelToCartFromTSRes() throws InterruptedException {
-	    Thread.sleep(2000);
-	    
+		Thread.sleep(20000);
+
 		/*
 		 * if(CBEDriver.findElements(By.id("pnlSearchResultsPagination")).size()>0) {
 		 * System.out.println("In Pagination"); List<WebElement> Pages =
@@ -67,93 +68,92 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
 		 * System.out.println("The page number is : " + rValue);
 		 * Pages.get(rValue).click(); Thread.sleep(2000); }
 		 */
-	    
-	    
-	    
-		String AddToCartXpath = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[12]/div/a";
-		
-		
+
+		// String AddToCartXpath =
+		// "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[12]/div/a";
+		String AddToCartXpath = "//span[contains(.,'Add to cart')]";
+
 		List<WebElement> listings = CBEDriver.findElements(By.xpath(AddToCartXpath));
 		Random r = new Random();
-		int randomValue = r.nextInt(listings.size()); 
+		int randomValue = r.nextInt(listings.size());
+
 		
-		WebElement parent=listings.get(randomValue).findElement(By.xpath("./../../.."));
-	
-		String id = parent.getAttribute("id");
-		
-      	String HotelNamepath = "//*[@id='"+id+"']/td[3]";
-		String HotelName = CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
-		
-		String ExpandXpath = "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Expand price breakdown']";
-		CBEDriver.findElement(By.xpath(ExpandXpath)).click();
-		Thread.sleep(1000);
-		String SplComm = CBEDriver.findElement(By.xpath(
-				"//*[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes')]/td/table/tbody/tr[2]/td[3]")).getText();
-		System.out.println("Special Commission is: " +SplComm);
-		String intValue = SplComm.replaceAll("[^0-9]", "");
-		float f = Float.parseFloat(intValue);
-		
-		try {
-			Assert.assertTrue(f>0);
-		}catch(AssertionError E) {
-			LogLog.error("Split Commission is not displayed properly for : " + HotelName);
-		}
-		catch(Exception E) {
-			LogLog.error("Split Commission is not displayed properly for : " + HotelName);
-		}
-		
-		String CollapseXpath = "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Collapse price breakdown']";
-		
-		System.out.println("The Hotel Name is:  "+HotelName);
-		
-	//	String RoomTypeXpath1 = "//*[@id='"+id+"']/td[6]/span";
-		
-		
-		//String RoomType1 = CBEDriver.findElement(By.xpath(RoomTypeXpath1)).getText();
-		
-	//	String RoomType2 = CBEDriver.findElement(By.xpath(RoomTypeXpath2)).getText();
-		
-	//	System.out.println("Room Type is:  " +RoomType1);
-		
-		//System.out.println("Room Type 2 is:  " +RoomType2);
-		
-		try {
-			 FileWriter writer = new FileWriter("BookingDetails.docx", true);
-	         BufferedWriter bufferedWriter = new BufferedWriter(writer);
-	         bufferedWriter.newLine();            	
-	         bufferedWriter.write("****************************************************************");
-	         bufferedWriter.newLine();            	
-	         bufferedWriter.write("The Booking Details through Automation are : ");
-	         bufferedWriter.newLine();            	
-	         bufferedWriter.write("The Hotel Name is: " + HotelName);
+		  WebElement
+		  parent=listings.get(randomValue).findElement(By.xpath("./../../../.."));
+		  
+		  String id = parent.getAttribute("id");
+		  
+		  System.out.println(id);
+		  
+		  String HotelNamepath = "//*[@id='"+id+"']/td[3]"; 
+		  String HotelName =  CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
+		  
+		  String ExpandXpath =
+		  "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Expand price breakdown']";
+		  CBEDriver.findElement(By.xpath(ExpandXpath)).click(); Thread.sleep(1000);
+		  String SplComm = CBEDriver.findElement(By.xpath(
+		  "//*[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes')]/td/table/tbody/tr[2]/td[3]"
+		  )).getText(); System.out.println("Special Commission is: " +SplComm); String
+		  intValue = SplComm.replaceAll("[^0-9]", ""); float f =
+		  Float.parseFloat(intValue);
+		  
+		  try { Assert.assertTrue(f>0); }catch(AssertionError E) {
+		  LogLog.error("Split Commission is not displayed properly for : " +
+		  HotelName); } catch(Exception E) {
+		  LogLog.error("Split Commission is not displayed properly for : " +
+		  HotelName); }
+		  
+		  String CollapseXpath =
+		  "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Collapse price breakdown']"
+		  ;
+		  
+		  System.out.println("The Hotel Name is:  "+HotelName);
+		  
+		/*
+		 * String RoomTypeXpath1 = "//*[@id='"+id+"']/td[6]/span";
+		 * 
+		 * String RoomTypeXpath2 = "//*[@id='"+id+"']/td[6]/span"; String RoomType1 =
+		 * CBEDriver.findElement(By.xpath(RoomTypeXpath1)).getText();
+		 * 
+		 * String RoomType2 = CBEDriver.findElement(By.xpath(RoomTypeXpath2)).getText();
+		 */
+		  
+		  // System.out.println("Room Type is:  " +RoomType1);
+		  
+		  //System.out.println("Room Type 2 is:  " +RoomType2);
+		  
+		  try { FileWriter writer = new FileWriter("BookingDetails.docx", true);
+		  BufferedWriter bufferedWriter = new BufferedWriter(writer);
+		  bufferedWriter.newLine(); bufferedWriter.write(
+		  "****************************************************************");
+		  bufferedWriter.newLine();
+		  bufferedWriter.write("The Booking Details through Automation are : ");
+		  bufferedWriter.newLine(); bufferedWriter.write("The Hotel Name is: " +
+		  HotelName);
+		  
 			/*
 			 * bufferedWriter.newLine(); bufferedWriter.write("Room Type 1 is:  "
 			 * +RoomType1);
-			 */
-			/*
+			 * 
+			 * 
 			 * bufferedWriter.newLine(); bufferedWriter.write("Room Type 2 is:  "
 			 * +RoomType2);
 			 */
-	          bufferedWriter.newLine();
-	          bufferedWriter.write("Split Commission is:  " +SplComm);
-	          bufferedWriter.close();
-	      } 
-		 catch (IOException e) {
-	          e.printStackTrace();
-	      }
-			
-		
-		
-		Thread.sleep(2000);
-		CBEDriver.findElement(By.xpath(CollapseXpath)).click();
-		Thread.sleep(5000);
+		  
+		  bufferedWriter.newLine(); bufferedWriter.write("Split Commission is:  "
+		  +SplComm); bufferedWriter.close(); } catch (IOException e) {
+		  e.printStackTrace(); }
+		  
+		  
+		  
+		  Thread.sleep(2000); CBEDriver.findElement(By.xpath(CollapseXpath)).click();
+		  Thread.sleep(5000);
+		 
 		List<WebElement> listing = CBEDriver.findElements(By.xpath(AddToCartXpath));
-		 WebDriverWait wait = new WebDriverWait(CBEDriver, 50);
-         wait.until(ExpectedConditions.elementToBeClickable(listing.get(randomValue)));
-     	listing.get(randomValue).click();
-     	
-     	
-     	
+		WebDriverWait wait = new WebDriverWait(CBEDriver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(listing.get(randomValue)));
+		listing.get(randomValue).click();
+
 	}
 
 	@Override
@@ -422,74 +422,74 @@ public class HotelSearchImpl extends TestBase implements HotelSearch {
 
 	}
 
-	
-
 	@Override
-	public void CancellationCondition_Within() throws InterruptedException{
+	public void CancellationCondition_Within() throws InterruptedException {
 		Thread.sleep(5000);
-		int b=5;
-				
-		while(CBEDriver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()<1 && b>0) {
-			int i=1;
-			System.out.println("In the loop for " +i+ " time" );
-			
-     		String DeleteButton = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_btnRemove";
-    		CBEDriver.findElement(By.id(DeleteButton)).click();
-       		Thread.sleep(2000);
-     		 Random r1 = new Random();
-    	     String AddToCartXpath1 = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[11]/div/a";
-    	     List<WebElement> listing1 = CBEDriver.findElements(By.xpath(AddToCartXpath1));
-    		WebDriverWait wait1 = new WebDriverWait(CBEDriver, 50);
-    		int randomValue1 = r1.nextInt(listing1.size()); 
-            wait1.until(ExpectedConditions.elementToBeClickable(listing1.get(randomValue1)));
-         	listing1.get(randomValue1).click();
-         	i++;
-         	b--;
-     	}
-		
-		if(CBEDriver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()<1) {
+		int b = 5;
+
+		while (CBEDriver
+				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
+				.size() < 1 && b > 0) {
+			int i = 1;
+			System.out.println("In the loop for " + i + " time");
+
+			String DeleteButton = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_btnRemove";
+			CBEDriver.findElement(By.id(DeleteButton)).click();
+			Thread.sleep(2000);
+			Random r1 = new Random();
+			String AddToCartXpath1 = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[11]/div/a";
+			List<WebElement> listing1 = CBEDriver.findElements(By.xpath(AddToCartXpath1));
+			WebDriverWait wait1 = new WebDriverWait(CBEDriver, 50);
+			int randomValue1 = r1.nextInt(listing1.size());
+			wait1.until(ExpectedConditions.elementToBeClickable(listing1.get(randomValue1)));
+			listing1.get(randomValue1).click();
+			i++;
+			b--;
+		}
+
+		if (CBEDriver
+				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
+				.size() < 1) {
 			LogLog.error("Couldn't find hotel withi cancellation period in 5 trials");
 			CBEDriver.findElement(By.id("DeleteButton")).click();
-		}
-		else {
-			System.out.println("Proper Hotel is selected while in loop" );
+		} else {
+			System.out.println("Proper Hotel is selected while in loop");
 		}
 	}
 
 	@Override
 	public void CancellationCondition_Outside() throws InterruptedException {
 		Thread.sleep(2000);
-		int b=5;
-		int i=1;
-		while(CBEDriver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()>0 && b>0) {
-			
-			System.out.println("In the loop for " +i+ " time" );
-			
-     		String DeleteButton = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_btnRemove";
-    		CBEDriver.findElement(By.id(DeleteButton)).click();
-       		Thread.sleep(2000);
-     		 Random r1 = new Random();
-    	     String AddToCartXpath1 = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[12]/div/a";
-    	     List<WebElement> listing1 = CBEDriver.findElements(By.xpath(AddToCartXpath1));
-    		WebDriverWait wait1 = new WebDriverWait(CBEDriver, 50);
-    		int randomValue1 = r1.nextInt(listing1.size()); 
-            wait1.until(ExpectedConditions.elementToBeClickable(listing1.get(randomValue1)));
-         	listing1.get(randomValue1).click();
-         	i++;
-         	b--;
+		int b = 5;
+		int i = 1;
+		while (CBEDriver
+				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
+				.size() > 0 && b > 0) {
+
+			System.out.println("In the loop for " + i + " time");
+
+			String DeleteButton = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_btnRemove";
+			CBEDriver.findElement(By.id(DeleteButton)).click();
+			Thread.sleep(2000);
+			Random r1 = new Random();
+			String AddToCartXpath1 = "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[12]/div/a";
+			List<WebElement> listing1 = CBEDriver.findElements(By.xpath(AddToCartXpath1));
+			WebDriverWait wait1 = new WebDriverWait(CBEDriver, 50);
+			int randomValue1 = r1.nextInt(listing1.size());
+			wait1.until(ExpectedConditions.elementToBeClickable(listing1.get(randomValue1)));
+			listing1.get(randomValue1).click();
+			i++;
+			b--;
 		}
-		if(CBEDriver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()>0) {
+		if (CBEDriver
+				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
+				.size() > 0) {
 			LogLog.error("Couldn't find hotel outside cancellation period in 5 trials");
 			CBEDriver.findElement(By.id("DeleteButton")).click();
+		} else {
+			System.out.println("Proper Hotel is selected in while loop");
 		}
-		else {
-			System.out.println("Proper Hotel is selected in while loop" );
-		}
-		
-		}
-		
-		
-		
+
 	}
 
-
+}

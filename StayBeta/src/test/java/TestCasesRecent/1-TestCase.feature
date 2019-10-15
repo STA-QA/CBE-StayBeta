@@ -23,10 +23,10 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
 	And Provides the <Guests> and <Children> Details
-	And Click on Book Button 
-	Then Booking has been done successfully and Booking reference Text is stored in a file
-	Given User clicks On Logout
-	Then User should be logged out and driver is closed	
+#	And Click on Book Button 
+	#Then Booking has been done successfully and Booking reference Text is stored in a file
+	#Given User clicks On Logout
+	#Then User should be logged out and driver is closed	
 	
 	Examples: 
 		|Country                                           |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source           |Guests|Children|Condition|

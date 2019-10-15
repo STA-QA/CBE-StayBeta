@@ -2,13 +2,14 @@ package stepDefinitions;
 
 import org.openqa.selenium.By;
 
+import Base.BaseUtil;
 import CBE.StayBeta.HotelSearchImpl;
 import assertions.HotelSearchPageAssertions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import utilities.TestBase;
 
-public class HotelSearchDefinitions extends TestBase {
+
+public class HotelSearchDefinitions extends BaseUtil {
 
 	HotelSearchImpl HotelSearch = new HotelSearchImpl();
 	HotelSearchPageAssertions SearchAssert = new HotelSearchPageAssertions();

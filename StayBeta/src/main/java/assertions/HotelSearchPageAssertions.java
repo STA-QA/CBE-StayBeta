@@ -13,12 +13,13 @@ import org.testng.Assert;
 import org.testng.asserts.Assertion;
 import org.testng.asserts.SoftAssert;
 
-import utilities.TestBase;
+import Base.BaseUtil;
 
 
 
 
-public class HotelSearchPageAssertions extends TestBase {
+
+public class HotelSearchPageAssertions extends BaseUtil {
 	String DataSourceSelectAll = "";
 	String ParticularDataSource = "";
 	String DataSourceXpath1 = "//label[contains(.,'";
