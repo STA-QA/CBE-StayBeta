@@ -3,6 +3,7 @@ package stepDefinitions;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import Base.BaseUtil;
@@ -14,16 +15,15 @@ import cucumber.api.java.en.When;
 import pages.HomePage;
 import pages.Hotel;
 
-
 @Test
 public class HotelBookingDefinitions extends BaseUtil {
 
-	//HomePageImpl Home = new HomePageImpl();
-	//HotelImpl Hotel = new HotelImpl();
-	//HotelSearchImpl HotelSearch = new HotelSearchImpl();
-	//HotelSearchPageAssertions HSA = new HotelSearchPageAssertions();
+	// HomePageImpl Home = new HomePageImpl();
+	// HotelImpl Hotel = new HotelImpl();
+	// HotelSearchImpl HotelSearch = new HotelSearchImpl();
+	// HotelSearchPageAssertions HSA = new HotelSearchPageAssertions();
 	RandomDataGenerationImpl rd = new RandomDataGenerationImpl();
-	//HotelCancelImpl HotelCancel = new HotelCancelImpl();
+	// HotelCancelImpl HotelCancel = new HotelCancelImpl();
 	HomePage Home = new HomePage(driver);
 	Hotel Hotel = new Hotel(driver);
 
@@ -74,9 +74,6 @@ public class HotelBookingDefinitions extends BaseUtil {
 		Home.ClickOnMenuItem("Hotel");
 	}
 
-
-
-
 	@And("^Select a Random Hotel$")
 	public void select_a_random_hotel() throws Throwable {
 		Thread.sleep(2000);
@@ -99,20 +96,24 @@ public class HotelBookingDefinitions extends BaseUtil {
 	@And("^Check for Cancellation Condition (.+)$")
 	public void check_for_cancellation_condition(String condition) throws Throwable {
 		if (condition.equalsIgnoreCase("Outside")) {
-			if(driver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()>0) {
+			if (driver
+					.findElements(
+							By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
+					.size() > 0) {
 				Hotel.CancellationCondition_Outside();
-			}
-			else {
-				System.out.println("Proper Hotel is selected in first go" );
+			} else {
+				System.out.println("Proper Hotel is selected in first go");
 			}
 		}
 
 		if (condition.equalsIgnoreCase("Inside")) {
-			if(driver.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning")).size()<1) {
+			if (driver
+					.findElements(
+							By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
+					.size() < 1) {
 				Hotel.CancellationCondition_Within();
-			}
-			else {
-				System.out.println("Proper Hotel is selected in first go" );
+			} else {
+				System.out.println("Proper Hotel is selected in first go");
 			}
 		}
 
@@ -121,7 +122,6 @@ public class HotelBookingDefinitions extends BaseUtil {
 		}
 
 	}
-
 
 	@And("^Click on Room Selection in LB$")
 	public void click_on_room_selection_in_lb() throws Throwable {
@@ -134,7 +134,6 @@ public class HotelBookingDefinitions extends BaseUtil {
 	public void provides_the_and_details(int guests, int children) throws Throwable {
 		int total = guests + children;
 		Hotel.EnterGuestDetails(total);
-
 
 	}
 
@@ -155,7 +154,6 @@ public class HotelBookingDefinitions extends BaseUtil {
 		Hotel.ProductDeleteVerification();
 	}
 
-
 	@And("^User enters (.+) with startdate (.+)$")
 	public void User_enters_country(String country, String numdays) throws Throwable {
 		Thread.sleep(2000);
@@ -170,15 +168,83 @@ public class HotelBookingDefinitions extends BaseUtil {
 		Hotel.addToCart_RebundableHotelRooms();
 	}
 
-	@And("^User clicks (.+) radio button and complete booking$")
-	public void User_clicks_radio_button_and_complete_booking(String process) throws InterruptedException, IOException {
+	@And("^User clicks (.+) radio button$")
+
+	public void User_clicks_radio_button(String process) throws InterruptedException, IOException {
 
 		if (process.equalsIgnoreCase("Book")) {
 			Hotel.bookprocessbooking();
-		}else {
+		} else {
 			Hotel.quotebooking();
 		}
 
 	}
 
+	@Then("^User enters Adult details for(.+)$")
+	public void User_enters_Adult_details_for_Guests(String Guests) throws InterruptedException, IOException {
+		// int tottalguest = Integer.parseInt(Guests);
+		Hotel.adultDetails(Guests);
+	}
+
+	@And("^User enters DOB details for (.+) and (.+)$")
+	public void User_enters_DOB_details_for(String Guests, String Children) throws Throwable {
+
+		String numberofguest = Guests.replaceAll("\\s+", "");
+
+		String text = numberofguest.replaceAll("\\uFEFF", "");
+
+		int tottalguest = Integer.parseInt(text);
+
+		String Titledropdown = "//select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String FirtsNamedropdown = "//div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String LastNamedropdown = "//div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String Day = "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String month = "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String year = "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+
+		// int childcount = Integer.parseInt(Children);
+		String numberofchildguest = Children.replaceAll("\\s+", "");
+
+		String text1 = numberofchildguest.replaceAll("\\uFEFF", "");
+
+		int tottalnumberchildren = Integer.parseInt(text1);
+
+		int children = tottalguest + tottalnumberchildren;
+
+		//2+2
+
+		for (int i = tottalguest; i < children; i++) {
+			// Enter Title
+			String titledropdown = Titledropdown + i + "_paxItmUsc_namePrefixDdl']";
+			System.out.println(titledropdown);
+			WebElement FinalTitledropdown = driver.findElement(By.xpath(titledropdown));
+			Hotel.Dropdown(FinalTitledropdown, "Mr");
+
+			// Enter First Name
+			String Firtsname = FirtsNamedropdown + i + "_paxItmUsc_givenNameTbx']";
+			WebElement Finalfirstname = driver.findElement(By.xpath(Firtsname));
+			Finalfirstname.sendKeys("Test Booking");
+
+			// Enter Last Name
+			String Lastname = LastNamedropdown + i + "_paxItmUsc_surnameTbx']";
+			WebElement Finallastname = driver.findElement(By.xpath(Lastname));
+			Finallastname.sendKeys("Test Booking");
+
+			// Enter DOB
+			String DobDay = Day + i + "_paxItmUsc_birthDateBdbdays']";
+			WebElement FinalDobday = driver.findElement(By.xpath(DobDay));
+			Hotel.Dropdown(FinalDobday, "14");
+
+			String DobMonth = month + i + "_paxItmUsc_birthDateBdbmonths']";
+			WebElement FinalDobMonth = driver.findElement(By.xpath(DobMonth));
+			Hotel.Dropdown(FinalDobMonth, "Apr");
+
+			String Dobyear = year + i + "_paxItmUsc_birthDateBdbyears']";
+			WebElement FinalDobyear = driver.findElement(By.xpath(Dobyear));
+			Hotel.Dropdown(FinalDobyear, "2013");
+		}
+
+		System.out.println("Child Details added to the Form");
+
+	}
 }

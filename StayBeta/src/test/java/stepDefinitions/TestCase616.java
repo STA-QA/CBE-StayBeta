@@ -1,9 +1,16 @@
 package stepDefinitions;
 
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
 
 import Base.BaseUtil;
 import CBE.StayBeta.RandomDataGenerationImpl;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,17 +20,15 @@ import pages.HomePage;
 import pages.Hotel;
 import pages.Login;
 
-
-
 @RunWith(Cucumber.class)
 public class TestCase616 extends BaseUtil {
 	Login login = new Login(driver);
 	HomePage Home = new HomePage(driver);
 	Hotel Hotel = new Hotel(driver);
 
-	//Login login = new Login();
-	//HomePageImpl Home = new HomePageImpl();
-	//HotelImpl Hotel = new HotelImpl();
+	// Login login = new Login();
+	// HomePageImpl Home = new HomePageImpl();
+	// HotelImpl Hotel = new HotelImpl();
 	RandomDataGenerationImpl rd = new RandomDataGenerationImpl();
 
 	@Given("^User Selects any agency")
@@ -84,22 +89,44 @@ public class TestCase616 extends BaseUtil {
 		Thread.sleep(2000);
 	}
 
-
-    @And("^Select Number of Adults (.+)$")
-    public void select_number_of_adults(String guests) throws Throwable {
-    	Thread.sleep(2000);
+	@And("^Select Number of Adults (.+)$")
+	public void select_number_of_adults(String guests) throws Throwable {
+		Thread.sleep(2000);
 		Hotel.SelectNumberOfAdults(guests, 1);
 		Thread.sleep(2000);
-    }
+	}
 
-    @And("^Select Number of Children (.+)$")
-    public void select_number_of_children(String children) throws Throwable {
-    	Thread.sleep(2000);
-		Hotel.SelectNumberOfChildren(children);
+	@And("^Select Number of Children (.+)$")
+	public void select_number_of_children(String Children) throws Throwable {
+		Thread.sleep(2000);
+		Hotel.SelectNumberOfChildren(Children);
 		Thread.sleep(2000);
 
-    }
+	}
 
+	@And("^Add Child childage$")
+	public void Add_Child_childage(DataTable age) throws Throwable {
+		String path = System.getProperty("user.dir");
+		   String testdatapath = path + "\\src\\Testdata\\user_details.csv";
+		FileWriter writer = new FileWriter(testdatapath);
+		List<String> childage = age.asList(String.class);
+		List<String> listOfage = new ArrayList<String>();
+		String childageid = "//input[@id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_";
+		for (int i = 0; i < childage.size(); i++) {
+			String childageids = childageid+i+"_AgePassengerItem2_txtAge']";
+
+			listOfage.add(childage.get(i));
+			String collect = listOfage.stream().collect(Collectors.joining(","));
+		    System.out.println(collect);
+
+		    writer.write(collect);
+
+			driver.findElement(By.xpath(childageids)).sendKeys(childage.get(i));
+
+		}
+		writer.close();
+
+	}
 
 	@And("^Select Hotel (.+)$")
 	public void select_hotel(String datasource) throws Throwable {

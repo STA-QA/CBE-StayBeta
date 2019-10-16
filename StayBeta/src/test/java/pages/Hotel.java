@@ -119,23 +119,14 @@ public class Hotel extends BaseUtil {
 	public WebElement Savebutton;
 	@FindBy(how = How.XPATH, using = " //div/input[@id='m_c_C000_m_c_cbxAcceptedConditions']")
 	public WebElement TermsandconditionsBooking;
-	@FindBy(how = How.XPATH, using = " //div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_birthDateBdbyears']")
-	public WebElement DOByear;
-	@FindBy(how = How.XPATH, using = " //div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_birthDateBdbdays']")
-	public WebElement DOBday;
-	@FindBy(how = How.XPATH, using = " //div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_birthDateBdbmonths']")
-	public WebElement DOBmonth;
-	@FindBy(how = How.XPATH, using = " //div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_surnameTbx']")
-	public WebElement lastname;
-	@FindBy(how = How.XPATH, using = " //div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_givenNameTbx']")
-	public WebElement firstname;
-	@FindBy(how = How.XPATH, using = " //select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_namePrefixDdl']")
-	public WebElement Titledropdown;
 
 	@FindBy(how = How.XPATH, using = " //div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_actionsUpd2']")
 	public WebElement Removefromcart;
 	@FindBy(how = How.XPATH, using = "//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning']")
 	public WebElement CancelationTermsText;
+
+	@FindBy(how = How.XPATH, using = "//select[@id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_ddlChildren']")
+	public WebElement numberofchildren;
 
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_astLocation_astLocationtbx")
 	public WebElement Country;
@@ -224,21 +215,24 @@ public class Hotel extends BaseUtil {
 		driver.findElement(By.id(NoOfAdultsId)).sendKeys(NoOfAdults);
 	}
 
-	public void SelectNumberOfChildren(String NoOfChildren) throws InterruptedException {
-		driver.findElement(By.id(Children)).sendKeys("0");
-		Thread.sleep(2000);
-		driver.findElement(By.id(Children)).sendKeys(NoOfChildren);
-		Thread.sleep(2000);
-		int child = Integer.parseInt(NoOfChildren);
-		if (child >= 2) {
-			driver.findElement(By.xpath(
-					"//*[@id=\"m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_0_AgePassengerItem2_txtAge\"]"))
-					.sendKeys("3");
-			Thread.sleep(2000);
-			driver.findElement(By.xpath(
-					"//*[@id=\"m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_1_AgePassengerItem2_txtAge\"]"))
-					.sendKeys("5");
-		}
+	public void SelectNumberOfChildren(String Children) throws InterruptedException {
+
+		System.out.println("Number of Children" + Children);
+
+		Dropdown(numberofchildren, Children);
+
+		/*
+		 * driver.findElement(By.id(Children)).sendKeys("0"); Thread.sleep(2000);
+		 * driver.findElement(By.id(Children)).sendKeys(NoOfChildren);
+		 * Thread.sleep(2000);
+		 *
+		 * int child = Integer.parseInt(NoOfChildren); if (child >= 2) {
+		 * driver.findElement(By.xpath(
+		 * "//*[@id=\"m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_0_AgePassengerItem2_txtAge\"]"
+		 * )) .sendKeys("3"); Thread.sleep(2000); driver.findElement(By.xpath(
+		 * "//*[@id=\"m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_1_AgePassengerItem2_txtAge\"]"
+		 * )) .sendKeys("5"); }
+		 */
 	}
 
 	public void ExpandExtraSearch() {
@@ -1247,26 +1241,30 @@ public class Hotel extends BaseUtil {
 // Below method would add to cart and validate Cancellation charges
 
 	public void addToCart_RebundableHotelRooms() throws InterruptedException {
-
+		Thread.sleep(4000);
 		List<WebElement> roomNames = driver.findElements(By.xpath("//span[@title='Expand alternate room options']"));
 		for (int i = 0; i < roomNames.size(); i++) {
+
 			String names = roomNames.get(i).getAttribute("innerText");
-			Matcher m = Pattern.compile("(?m)^(?!.*\\bNon\\b).*").matcher(names);
+			Matcher m = Pattern.compile("(?m)^(?!.*\\bNon Refundable\\b).*").matcher(names);
 
 			while (m.find()) {
 
 				System.out.println(i);
 				System.out.println(m.group());
 				try {
+
 					Addtocart.get(i).click();
+
+
 				} catch (Exception e) {
 
 				}
 			}
 
 		}
-		Thread.sleep(4000);
-
+		Thread.sleep(7000);
+		System.out.println("Hotel added to cart is "+driver.findElement(By.xpath("//span[@class='product-details-label']")).getText());
 		System.out.println(" " + cancellationChargePeriod.size());
 
 		if (cancellationChargePeriod.size() <= 0) {
@@ -1307,33 +1305,117 @@ public class Hotel extends BaseUtil {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(bookingprocessRadiobutton).click().build().perform();
 		waitandclick(CompleteBookingButton);
-		CBEbook();
+	}
 
+	public void enterAdultdeatils(String Guests) throws InterruptedException, IOException {
+		adultDetails(Guests);
 	}
 
 	// Make booking through Quote
 	public void quotebooking() throws InterruptedException, IOException {
-
 		waitandclick(CompleteBookingButton);
 		Thread.sleep(3000);
-		CBEbook();
 
 	}
 
-	public void CBEbook() throws InterruptedException, IOException {
-		Dropdown(Titledropdown, "Mr");
-		firstname.sendKeys("Test Booking");
-		lastname.sendKeys("Test Booking");
-		Dropdown(DOBday, "4");
-		Dropdown(DOBmonth, "Apr");
-		Dropdown(DOByear, "1990");
+	public void adultDetails(String Guests) throws InterruptedException, IOException {
+
+		String numberofguest=Guests.replaceAll("\\s+","");
+
+		String text = numberofguest.replaceAll("\\uFEFF", "");
+
+		int tottalguest = Integer.parseInt(text);
+
+		String Titledropdown = "//select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String FirtsNamedropdown = "//div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String LastNamedropdown = "//div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String Day = "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String month = "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String year = "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+
+		for (int i = 0; i < tottalguest; i++) {
+			// Enter Title
+			String titledropdown = Titledropdown + i + "_paxItmUsc_namePrefixDdl']";
+			WebElement FinalTitledropdown = driver.findElement(By.xpath(titledropdown));
+			Dropdown(FinalTitledropdown, "Mr");
+
+			// Enter First Name
+			String Firtsname = FirtsNamedropdown + i + "_paxItmUsc_givenNameTbx']";
+			WebElement Finalfirstname = driver.findElement(By.xpath(Firtsname));
+			Finalfirstname.sendKeys("Test Booking");
+
+			// Enter Last Name
+			String Lastname = LastNamedropdown + i + "_paxItmUsc_surnameTbx']";
+			WebElement Finallastname = driver.findElement(By.xpath(Lastname));
+			Finallastname.sendKeys("Test Booking");
+
+			// Enter DOB
+			String DobDay = Day + i + "_paxItmUsc_birthDateBdbdays']";
+			WebElement FinalDobday = driver.findElement(By.xpath(DobDay));
+			Dropdown(FinalDobday, "4");
+
+			String DobMonth = month + i + "_paxItmUsc_birthDateBdbmonths']";
+			WebElement FinalDobMonth = driver.findElement(By.xpath(DobMonth));
+			Dropdown(FinalDobMonth, "Apr");
+
+			String Dobyear = year + i + "_paxItmUsc_birthDateBdbyears']";
+			WebElement FinalDobyear = driver.findElement(By.xpath(Dobyear));
+			Dropdown(FinalDobyear, "1990");
+		}
+
+		System.out.println("Adult Details added to the Form");
+
+	}
+
+
+	/*
+	 * public void ChildrenDetails(int Guests) throws InterruptedException,
+	 * IOException { String Titledropdown =
+	 * "//select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_"; String FirtsNamedropdown =
+	 * "//div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_"; String LastNamedropdown =
+	 * "//div/input[@id='m_c_C000_m_c_paxItmsUsc_bclPax_"; String Day =
+	 * "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_"; String month =
+	 * "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_"; String year =
+	 * "//div/select[@id='m_c_C000_m_c_paxItmsUsc_bclPax_";
+	 *
+	 * for (int i = 0; i < Guests; i++) { // Enter Title String titledropdown =
+	 * Titledropdown + i + "_paxItmUsc_namePrefixDdl']"; WebElement
+	 * FinalTitledropdown = driver.findElement(By.xpath(titledropdown));
+	 * Dropdown(FinalTitledropdown, "Mr");
+	 *
+	 * // Enter First Name String Firtsname = FirtsNamedropdown + i +
+	 * "_paxItmUsc_givenNameTbx']"; WebElement Finalfirstname =
+	 * driver.findElement(By.xpath(Firtsname));
+	 * Finalfirstname.sendKeys("Test Booking");
+	 *
+	 * // Enter Last Name String Lastname = LastNamedropdown + i +
+	 * "_paxItmUsc_surnameTbx']"; WebElement Finallastname =
+	 * driver.findElement(By.xpath(Lastname));
+	 * Finallastname.sendKeys("Test Booking");
+	 *
+	 * // Enter DOB String DobDay = Day + i + "_paxItmUsc_birthDateBdbdays']";
+	 * WebElement FinalDobday = driver.findElement(By.xpath(DobDay));
+	 * Dropdown(FinalDobday, "4");
+	 *
+	 * String DobMonth = month + i + "_paxItmUsc_birthDateBdbmonths']"; WebElement
+	 * FinalDobMonth = driver.findElement(By.xpath(DobMonth));
+	 * Dropdown(FinalDobMonth, "Apr");
+	 *
+	 * String Dobyear = year + i + "_paxItmUsc_birthDateBdbyears']"; WebElement
+	 * FinalDobyear = driver.findElement(By.xpath(Dobyear)); Dropdown(FinalDobyear,
+	 * "1990"); }
+	 *
+	 * System.out.println("Adult Details added to the Form");
+
+	}*/
+
+
+	public void confirmBooking() throws InterruptedException, IOException {
 		waitandclick(TermsandconditionsBooking);
 		waitandclick(Savebutton);
 		waitandclick(Price);
 		String bookingrefnumber = Bookingref.getAttribute("innerHTML");
-
 		Reporter.addStepLog(bookingrefnumber);
-
 		String screenShotPath = commonfun.screenshot(driver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 	}
@@ -1362,7 +1444,6 @@ public class Hotel extends BaseUtil {
 			driver.switchTo().defaultContent();
 
 		}
-
 	}
 
 	public void Dropdown(WebElement ele, String text) throws InterruptedException {

@@ -183,6 +183,12 @@
     <version>9.2.13.v20150730</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/au.com.bytecode/opencsv -->
+<dependency>
+    <groupId>au.com.bytecode</groupId>
+    <artifactId>opencsv</artifactId>
+    <version>2.4</version>
+</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
 		<dependency>
@@ -252,6 +258,12 @@
     <version>1.0.1</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.9</version>
+</dependency>
 
 	</dependencies>
 </project>
