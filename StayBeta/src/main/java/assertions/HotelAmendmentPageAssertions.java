@@ -5,7 +5,7 @@ package assertions;
 import org.apache.log4j.helpers.LogLog;
 
 import org.openqa.selenium.By;
-import org.seleniumhq.jetty9.util.log.Log;
+//import org.seleniumhq.jetty9.util.log.Log;
 import org.testng.asserts.Assertion;
 
 import Base.BaseUtil;

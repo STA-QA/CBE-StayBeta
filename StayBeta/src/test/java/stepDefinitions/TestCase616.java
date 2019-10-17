@@ -1,6 +1,10 @@
 package stepDefinitions;
 
+import java.util.List;
+
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
@@ -13,7 +17,6 @@ import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
 import utilities.Login;
 
-
 @RunWith(Cucumber.class)
 public class TestCase616 extends BaseUtil {
 	Login login = new Login();
@@ -24,7 +27,7 @@ public class TestCase616 extends BaseUtil {
 	@Given("^User Selects any agency")
 	public void User_Selects_any_agency() throws Throwable {
 		Home.UserSelectsAgency();
-		//CBEDriver.navigate().refresh();
+		// CBEDriver.navigate().refresh();
 	}
 
 	@And("^Search for a particular Country")
@@ -78,23 +81,47 @@ public class TestCase616 extends BaseUtil {
 		Hotel.SelectNumberOfRooms(rooms);
 		Thread.sleep(2000);
 	}
-	
 
-    @And("^Select Number of Adults (.+)$")
-    public void select_number_of_adults(String guests) throws Throwable {
-    	Thread.sleep(2000);
-		Hotel.SelectNumberOfAdults(guests, 1);
+	@And("^Select Number of Adults (.+)$")
+	public void select_number_of_adults(String Adults) throws Throwable {
 		Thread.sleep(2000);
-    }
+		Hotel.SelectNumberOfAdults(Adults, 1);
+		Thread.sleep(2000);
+	}
 
-    @And("^Select Number of Children (.+)$")
-    public void select_number_of_children(String children) throws Throwable {
-    	Thread.sleep(2000);
-		Hotel.SelectNumberOfChildren(children);
-		Thread.sleep(2000);
+	@And("^Select Number of Adult Guests (.+) into (.+) in automatic order$")
+	public void select_number_of_adult_guests_into_in_automatic_order(List<Integer> Adults, int rooms)
+			throws Throwable {
+		for (int j = 0; j < rooms; j++) {
+			Hotel.SelectNumberOfAdults(Integer.toString(Adults.get(j)), j);
+		}
+	}
+
+	@And("^Select Number of Child Guests (.+) into (.+) in automatic order$")
+	public void select_number_of_child_guests_into_in_automatic_order(List<Integer> children, int rooms) throws Throwable {
+		for (int j = 0; j < rooms; j++) {
+			Hotel.SelectNumberOfChildren(Integer.toString(children.get(j)), j);
+			Thread.sleep(2000);
+		}
+	}
+
+	@And("^Enter the ChildrenAge (.+)$")
+	public void enter_the_childrenage(List<Integer> childrenage) throws Throwable {
+				
+		for (int j = 0; j < childrenage.size(); j++) {
+			Hotel.EnterChildrenAge(childrenage.get(j), j);			
+			Thread.sleep(2000);
+		}
 		
-    }
-	
+	}
+
+	@And("^Select Number of Children (.+)$")
+	public void select_number_of_children(String children) throws Throwable {
+		Thread.sleep(2000);
+		// Hotel.SelectNumberOfChildren(children);
+		Thread.sleep(2000);
+
+	}
 
 	@And("^Select Hotel (.+)$")
 	public void select_hotel(String datasource) throws Throwable {
@@ -107,7 +134,7 @@ public class TestCase616 extends BaseUtil {
 	@And("^Click Search Button")
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
-		Thread.sleep(60000);
+		Thread.sleep(20000);
 		System.out.println("Wait is Done!!");
 	}
 

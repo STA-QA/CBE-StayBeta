@@ -1,5 +1,7 @@
 package stayBetaInterfaces;
 
+import java.util.List;
+
 public interface Hotel {
 
 	public void SearchCountry(String SearchText, String Country);
@@ -14,7 +16,9 @@ public interface Hotel {
 
 	public void SelectNumberOfAdults(String NoOfAdults, int RoomNumber) throws InterruptedException;
 	
-	public void SelectNumberOfChildren(String NoOfChildren) throws InterruptedException;
+	public void SelectNumberOfChildren(String NoOfChildren, int RoomNumber) throws InterruptedException;
+	
+	public void EnterChildrenAge(int age, int box);
 
 	public void ExpandExtraSearch();
 
@@ -63,6 +67,10 @@ public interface Hotel {
 	public void SelectRandomHotel() throws InterruptedException;
 	
 	public void EnterGuestDetails(int Guests) throws InterruptedException;
+	
+	public void EnterAdultDetails(int Guests) throws InterruptedException;
+	
+	public void EnterChildrenDetails(int children, int total, List<Integer> ChildrenAge) throws InterruptedException;	
 	
 	public void ClickOnCancelItem();
 	

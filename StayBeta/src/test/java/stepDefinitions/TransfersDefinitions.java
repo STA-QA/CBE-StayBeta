@@ -10,7 +10,7 @@ public class TransfersDefinitions {
 	@Given("^User is in the Transfers Page$")
     public void user_is_in_the_transfers_page() throws Throwable {
 		Home.ClickOnHome();
-		Home.ClickOnMenuItem("Activities & Day Trips"); 
+		Home.ClickOnMenuItem("Transfers"); 
     }
 	
 }

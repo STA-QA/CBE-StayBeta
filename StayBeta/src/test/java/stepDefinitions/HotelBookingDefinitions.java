@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
@@ -136,9 +137,27 @@ public class HotelBookingDefinitions extends BaseUtil {
 	public void provides_the_and_details(int guests, int children) throws Throwable {
 		int total = guests + children;
 		Hotel.EnterGuestDetails(total);
-		
-
 	}
+	
+	@And("^Provides the Adults (.+) Details and (.+) details with (.+)$")
+    public void provides_the_adults_details_and_details_with(List<Integer> adults, List<Integer> children, List<Integer> childrenage) throws Throwable {
+		int TotalAdults=0;
+        for(int i=0; i<adults.size();i++) {
+        	TotalAdults+=adults.get(i);
+        }
+        System.out.println("total adults are : " + TotalAdults);
+        
+        int TotalChildren=0;
+        for(int j=0; j<children.size();j++) {
+        	TotalChildren+=children.get(j);
+        }
+        System.out.println("total adults are : " + TotalChildren);
+        int TotalGuests = TotalAdults+TotalChildren;
+        
+        Hotel.EnterAdultDetails(TotalAdults);
+        Hotel.EnterChildrenDetails(TotalAdults, TotalGuests, childrenage);
+        
+    }
 
 	@Then("^Booking has been done successfully and Booking reference Text is stored in a file$")
 	public void booking_has_been_done_successfully_and_booking_reference_text_is_stored_in_a_file() throws Throwable {
