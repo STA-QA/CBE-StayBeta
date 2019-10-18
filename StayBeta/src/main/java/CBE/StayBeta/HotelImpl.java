@@ -183,8 +183,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			System.out.println("Select all is already deselected");
 		}
 	}
-	
-	
+		
 	
 	@Override
 	public void SelectHotelDataSource(String HotelProvider) {

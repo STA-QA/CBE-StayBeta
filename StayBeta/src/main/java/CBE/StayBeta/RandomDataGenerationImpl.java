@@ -49,6 +49,10 @@ public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGene
 		
 	}
 	
+	public void AddScreenshotToReport() throws IOException {
+		String screenShotPath = screenshot(CBEDriver, System.currentTimeMillis());
+		Reporter.addScreenCaptureFromPath(screenShotPath);
+	}
 	
 	
 

@@ -25,10 +25,7 @@ public class ActivitiesDayTripsDefinitions extends BaseUtil {
     public void select_minimum_and_maximum(int minstartdate, int maxstartdate) throws Throwable {
 		Thread.sleep(2000);
         DayTrip.EnterStartDates(minstartdate, maxstartdate);
-        Hotel.ExpandExtraSearch();
-		Thread.sleep(2000);
-		Hotel.DeselectAll();
-		Hotel.SelectHotelDataSource("Viator");
+       
         
     }
 	
@@ -36,6 +33,7 @@ public class ActivitiesDayTripsDefinitions extends BaseUtil {
     public void click_check_availability_for_any_random_record() throws Throwable {
 		Thread.sleep(5000);
         DayTrip.ClickOnRandomCheckAvailability();
+        Thread.sleep(5000);
     }
 	
 }
