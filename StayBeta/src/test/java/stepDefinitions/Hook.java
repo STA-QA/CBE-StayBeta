@@ -35,9 +35,6 @@ public class Hook extends BaseUtil {
 	@Before
 	public void InitializeTest(Scenario scenario) {
 
-		
-
-		
 		System.out.println("TEST");
 		scenarioDef = base.features.createNode(scenario.getName());
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;

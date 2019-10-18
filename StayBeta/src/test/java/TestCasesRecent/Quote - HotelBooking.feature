@@ -1,4 +1,4 @@
-Feature: Hotel booking - gb for few data sources 
+Feature: Hotel Quoting - gb for few data sources 
 
 
 
@@ -22,28 +22,27 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
 	And Verify if Quote is selected by default 
-	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions
    And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
-   #And Click On Details and arrange the Guests in correct Order	
-	And Click on Book Button 
+ 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file
 	Given User clicks On Logout
 	Then User should be logged out and driver is closed	
 	
 	Examples: 
-
-		#|Country                           |CountrySearchString|Data Source      |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition|
+		|Country                           |CountrySearchString|Data Source      |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition|
 		#|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6                      |3      |2,3,1     |1,0,0 |5	   |Ignore   |
-		#|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6                      |3      |2,3,1     |2,1,1   |5,6,7,8	   |Ignore   |
-
-			
-		|Country                            |CountrySearchString|Start Day|Duration Of Stay	|Rooms	|Data Source     		|Guests	|Children	|ChildrenAge|Condition	|Hotel								|
-		|Buenos Aires (BUE), Argentina (AR)	|	BUE				|7		  |1			   	|2		|STAY					|2,2	|0			|			|Ignore		|Regression Hotel (Alloc + Supp)	|	
-		|New York (NYC), United States (US)	|	NYC             |15       |5               	|1    	|Tourico         		|2     	|0			|			|Outside	|
-		|Cape Town (CPT), South Africa (ZA) |	CPT             |10       |6               	|1    	|followme2AFRICA  		|2     	|2			|7,9		|Ignore		|
-	#	|Cape Town (CPT), South Africa (ZA)	|	CPT            |followme2AFRICA|10       |6                      |3      |2,3,1     |2,1,1   |5,6,7,8	   |Ignore   |
+		|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6                      |1      |2     |1   |3	   |Ignore   |
+		#|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6                      |1      |2,     |2   |5,6	   |Ignore   |
+		
+		
+		
+		
+		
+		
+		#|New York (NYC), United States (US)	|	NYC             |15       |5               |1    |Tourico         |2        |0		|Outside|
+		
 		
 		
 		
