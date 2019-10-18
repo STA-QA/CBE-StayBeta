@@ -12,6 +12,7 @@ import java.util.Calendar;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import com.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
 import stayBetaInterfaces.RandomDataGeneration;
@@ -20,28 +21,30 @@ import stayBetaInterfaces.RandomDataGeneration;
 public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGeneration{
 
 	@Override
-	public void storeBookingDetails() throws FileNotFoundException, UnsupportedEncodingException {
+	public void storeBookingDetails() throws IOException {
 		
-		 try {
-	           // FileWriter writer = new FileWriter("Booking-Details.txt", true);
-	            FileWriter writer = new FileWriter("BookingDetails.docx", true);
-	            BufferedWriter bufferedWriter = new BufferedWriter(writer);
-	            bufferedWriter.newLine();
-	            String text = CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_up']/div/div/h4")).getText();
-	            Calendar cal = Calendar.getInstance();
-	    		SimpleDateFormat format1 = new SimpleDateFormat("dd-MMM-yy hh:mm");
-	    		String BookingDate = format1.format(cal.getTime());
-	    		bufferedWriter.write("The Below booking done at : " + BookingDate);
-	    		bufferedWriter.newLine();
-	            bufferedWriter.write(text);
-	            bufferedWriter.newLine();
-	            bufferedWriter.close();
-	        } 
-		 catch (IOException e) {
-	            e.printStackTrace();
-	        }
+		String bookingrefnumber = CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_up']/div/div/h4")).getText();
+		Reporter.addStepLog(bookingrefnumber);
+		String screenShotPath = screenshot(CBEDriver, System.currentTimeMillis());
+		Reporter.addScreenCaptureFromPath(screenShotPath);
 		
-		
+		/*
+		 * try {
+		 * 
+		 * // FileWriter writer = new FileWriter("Booking-Details.txt", true);
+		 * FileWriter writer = new FileWriter("BookingDetails.docx", true);
+		 * BufferedWriter bufferedWriter = new BufferedWriter(writer);
+		 * bufferedWriter.newLine();
+		 * 
+		 * Calendar cal = Calendar.getInstance(); SimpleDateFormat format1 = new
+		 * SimpleDateFormat("dd-MMM-yy hh:mm"); String BookingDate =
+		 * format1.format(cal.getTime());
+		 * bufferedWriter.write("The Below booking done at : " + BookingDate);
+		 * bufferedWriter.newLine(); bufferedWriter.write(text);
+		 * bufferedWriter.newLine(); bufferedWriter.close(); } catch (IOException e) {
+		 * e.printStackTrace(); }
+		 * 
+		 */
 		
 		
 	}

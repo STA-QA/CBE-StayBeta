@@ -158,6 +158,16 @@ public class HotelBookingDefinitions extends BaseUtil {
         Hotel.EnterChildrenDetails(TotalAdults, TotalGuests, childrenage);
         
     }
+	
+	
+	public void testlogic(List<Integer> adults, List<Integer> children, List<Integer> childrenage) {
+		int index=0;
+		
+		for(int i=0; i<adults.get(i) ;i++){
+			
+		}
+		
+	}
 
 	@Then("^Booking has been done successfully and Booking reference Text is stored in a file$")
 	public void booking_has_been_done_successfully_and_booking_reference_text_is_stored_in_a_file() throws Throwable {

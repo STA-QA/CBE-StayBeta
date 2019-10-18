@@ -23,6 +23,8 @@ public interface Hotel {
 	public void ExpandExtraSearch();
 
 	public void DeselectAll();
+	
+	public void ExcludeOnRequestRooms();
 
 	public void SelectHotelDataSource(String HotelProvider);
 

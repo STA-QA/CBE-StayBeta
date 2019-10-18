@@ -175,6 +175,18 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	}
 
 	@Override
+	public void ExcludeOnRequestRooms() {
+		Boolean a = CBEDriver.findElement(By.id("m_c_C000_m_m_m_c_c3_c3_uscSrchParms_cbxIncludeOnRequest")).isSelected();
+		if (a == true) {
+			CBEDriver.findElement(By.id("m_c_C000_m_m_m_c_c3_c3_uscSrchParms_cbxIncludeOnRequest")).click();
+		} else {
+			System.out.println("Select all is already deselected");
+		}
+	}
+	
+	
+	
+	@Override
 	public void SelectHotelDataSource(String HotelProvider) {
 		String HotelXpath1 = "//label[contains(.,'";
 		String HotelXpath2 = "')]";
@@ -482,8 +494,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
 
 		for (int i = 0; i < Adults; i++) {
-			String firstName = faker.name().firstName();
-			String lastName = faker.name().lastName();
+			String firstName = faker.name().firstName().replaceAll("\\uFEFF", "");
+			String lastName = faker.name().lastName().replaceAll("\\uFEFF", "");
 			String Title = Common + i + Title1;
 			String FNpath = Common + i + idFN1;
 			String LNpath = Common + i + idLN1;
@@ -516,8 +528,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		int j =0;
 		
 		for (int i = children; i < total; i++) {
-			String firstName = faker.name().firstName();
-			String lastName = faker.name().lastName();
+			String firstName = faker.name().firstName().replaceAll("\\uFEFF", "");
+			String lastName = faker.name().lastName().replaceAll("\\uFEFF", "");
 			String Title = Common + i + Title1;
 			String FNpath = Common + i + idFN1;
 			String LNpath = Common + i + idLN1;
