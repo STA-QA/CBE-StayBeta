@@ -24,4 +24,4 @@ Scenario Outline: User Book a hotel through
 	Examples: 
 		|country| |numberofdaysfromtoday| |Rooms| |Guests| |Children|  |Data Source|                       |pendingprocess |
 		#|lon    | |94         |            |1|     |2|     |2|        |Expedia Affiliate - Package Rate| |Quote|
-		|par   | |91         |            |1|     |2|      |0|        |Expedia Affiliate - Package Rate| |book|
+		|par   | |91         |            |1|     |2|      |2|        |Expedia Affiliate - Package Rate| |book|

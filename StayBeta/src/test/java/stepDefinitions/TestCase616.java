@@ -1,9 +1,6 @@
 package stepDefinitions;
 
-import java.io.FileWriter;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -108,23 +105,23 @@ public class TestCase616 extends BaseUtil {
 	public void Add_Child_childage(DataTable age) throws Throwable {
 		String path = System.getProperty("user.dir");
 		   String testdatapath = path + "\\src\\Testdata\\user_details.csv";
-		FileWriter writer = new FileWriter(testdatapath);
+		//FileWriter writer = new FileWriter(testdatapath);
 		List<String> childage = age.asList(String.class);
-		List<String> listOfage = new ArrayList<String>();
+		//List<String> listOfage = new ArrayList<String>();
+
 		String childageid = "//input[@id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_";
 		for (int i = 0; i < childage.size(); i++) {
 			String childageids = childageid+i+"_AgePassengerItem2_txtAge']";
-
-			listOfage.add(childage.get(i));
-			String collect = listOfage.stream().collect(Collectors.joining(","));
-		    System.out.println(collect);
-
-		    writer.write(collect);
+			//listOfage.add(childage.get(i));
+			//String collect = listOfage.stream().collect(Collectors.joining(","));
+		   // System.out.println(collect);
+		   // writer.write(collect);
+			System.out.println("Children age added to search is:  "+childage.get(i));
 
 			driver.findElement(By.xpath(childageids)).sendKeys(childage.get(i));
 
 		}
-		writer.close();
+		//writer.close();
 
 	}
 

@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="119842" started-at="2019-10-16T15:08:21Z" finished-at="2019-10-16T15:10:21Z">
+  <suite name="Default suite" duration-ms="206238" started-at="2019-10-18T08:36:46Z" finished-at="2019-10-18T08:40:12Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="119842" started-at="2019-10-16T15:08:21Z" finished-at="2019-10-16T15:10:21Z">
+    <test name="Default test" duration-ms="206238" started-at="2019-10-18T08:36:46Z" finished-at="2019-10-18T08:40:12Z">
       <class name="cucumberOptions.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="setUpClass" is-config="true" duration-ms="832" started-at="2019-10-16T15:08:21Z" finished-at="2019-10-16T15:08:22Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="setUpClass" is-config="true" duration-ms="619" started-at="2019-10-18T08:36:46Z" finished-at="2019-10-18T08:36:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="setup" is-config="true" duration-ms="3" started-at="2019-10-16T15:08:22Z" finished-at="2019-10-16T15:08:22Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="setup" is-config="true" duration-ms="1" started-at="2019-10-18T08:36:47Z" finished-at="2019-10-18T08:36:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="feature" duration-ms="118209" started-at="2019-10-16T15:08:22Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-10-16T15:10:21Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="feature" duration-ms="205062" started-at="2019-10-18T08:36:47Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-10-18T08:40:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Benchmark LightBox loading time]]>
+                <![CDATA[Hotel Booking through Expedia]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="tearDownClass" is-config="true" duration-ms="636" started-at="2019-10-16T15:10:21Z" finished-at="2019-10-16T15:10:21Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@61f8bee4]" name="tearDownClass" is-config="true" duration-ms="434" started-at="2019-10-18T08:40:12Z" finished-at="2019-10-18T08:40:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

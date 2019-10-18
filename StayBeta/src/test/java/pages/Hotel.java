@@ -111,6 +111,13 @@ public class Hotel extends BaseUtil {
 	@FindBy(how = How.XPATH, using = "//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']")
 	public WebElement CompleteBookingButton;
 
+
+
+
+
+	@FindBy(how = How.XPATH, using = "//div[@class='filters--open']//div[@class='price-filter']")
+	public WebElement priceFilterXpath;
+
 	@FindBy(how = How.XPATH, using = "//div/h4/span[@id='lblFoldNo']")
 	public WebElement Bookingref;
 	@FindBy(how = How.XPATH, using = " //div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']")
@@ -221,12 +228,14 @@ public class Hotel extends BaseUtil {
 
 		Dropdown(numberofchildren, Children);
 
+
+		  //driver.findElement(By.id(Children)).sendKeys("0");
+		  //Thread.sleep(2000);
+		  //driver.findElement(By.id(Children)).sendKeys(Children);
+		  //Thread.sleep(2000);
+
 		/*
-		 * driver.findElement(By.id(Children)).sendKeys("0"); Thread.sleep(2000);
-		 * driver.findElement(By.id(Children)).sendKeys(NoOfChildren);
-		 * Thread.sleep(2000);
-		 *
-		 * int child = Integer.parseInt(NoOfChildren); if (child >= 2) {
+		 * int child = Integer.parseInt(Children); if (child >= 2) {
 		 * driver.findElement(By.xpath(
 		 * "//*[@id=\"m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_bclChildren_0_AgePassengerItem2_txtAge\"]"
 		 * )) .sendKeys("3"); Thread.sleep(2000); driver.findElement(By.xpath(
@@ -263,6 +272,7 @@ public class Hotel extends BaseUtil {
 
 	public void ClickSearch() {
 		driver.findElement(By.id(SearchButton)).click();
+		searchLoadingtime();
 	}
 
 	public void SearchHotel(String SearchText, String HotelName) throws InterruptedException {
@@ -1444,6 +1454,20 @@ public class Hotel extends BaseUtil {
 			driver.switchTo().defaultContent();
 
 		}
+	}
+
+
+
+	public void searchLoadingtime() {
+
+		long timerstart = System.currentTimeMillis();
+		Assert.assertTrue(priceFilterXpath.isDisplayed());
+		long timerfinish = System.currentTimeMillis();
+		long totalTime = timerfinish - timerstart;
+		int seconds = (int) ((totalTime / 1000) % 60);
+		System.out.println(("Total Time in Seconds to display Search Results:   " + seconds));
+		Reporter.addStepLog("Total Time in Seconds to display Search Results:   " + seconds);
+
 	}
 
 	public void Dropdown(WebElement ele, String text) throws InterruptedException {

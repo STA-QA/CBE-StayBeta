@@ -45,7 +45,7 @@ public class commonfunctions extends BaseUtil {
 		Calendar cal = Calendar.getInstance();
 		SimpleDateFormat format1 = new SimpleDateFormat("dd-MMM-yyyy");
 		System.out.println("Today : " + cal.getTime());
-		cal.add(Calendar.YEAR, -7);
+		cal.add(Calendar.YEAR, -3);
 		String NewDate = format1.format(cal.getTime());
 		String dateParts[] = NewDate.split("-");
 		String day = dateParts[0];

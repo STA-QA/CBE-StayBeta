@@ -29,8 +29,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	Examples: 
 		|Country                                           |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source           |Guests|Children|Condition|
-		|New York (NYC), United States (US)	|	NYC                      |15            |5                      |1        |Tourico                 |2        |0|Outside|
-		|Cape Town (CPT), South Africa (ZA)  	|	CPT                      |10            |6                      |1        |followme2AFRICA  |2        |2|Ignore|
+		#|New York (NYC), United States (US)	|	NYC                      |15            |5                      |1        |Tourico                 |2        |0|Outside|
+		|Cape Town (CPT), South Africa (ZA)  	|	CPT                      |10            |6                      |1        |followme2AFRICA  |2        |2|Outside|
 		
 		
 		
