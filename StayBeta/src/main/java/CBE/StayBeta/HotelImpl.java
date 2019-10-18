@@ -492,10 +492,10 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBD1 = "_paxItmUsc_birthDateBdbdays";
 		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
-
-		for (int i = 0; i < Adults; i++) {
-			String firstName = faker.name().firstName().replaceAll("\\uFEFF", "");
-			String lastName = faker.name().lastName().replaceAll("\\uFEFF", "");
+int i= Adults;
+		//for (int i = 0; i < Adults; i++) {
+			String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+","");
+			String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+","");
 			String Title = Common + i + Title1;
 			String FNpath = Common + i + idFN1;
 			String LNpath = Common + i + idLN1;
@@ -512,11 +512,11 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			Thread.sleep(1000);
 			CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");		
 		
-	}
+	//}
 	}
 
-	@Override
-	public void EnterChildrenDetails(int children, int total, List<Integer> ChildrenAge) throws InterruptedException {
+	//@Override
+	public void EnterChildrenDetails(int index, int ChildrenAge) throws InterruptedException {
 		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
 		String Title1 = "_paxItmUsc_namePrefixDdl";
 		String idFN1 = "_paxItmUsc_givenNameTbx";
@@ -526,10 +526,10 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
 
 		int j =0;
-		
-		for (int i = children; i < total; i++) {
-			String firstName = faker.name().firstName().replaceAll("\\uFEFF", "");
-			String lastName = faker.name().lastName().replaceAll("\\uFEFF", "");
+		int i=index;
+		//for (int i = children; i < total; i++) {
+			String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+","");
+			String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+","");
 			String Title = Common + i + Title1;
 			String FNpath = Common + i + idFN1;
 			String LNpath = Common + i + idLN1;
@@ -544,7 +544,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 						
 			
 			LocalDate today = LocalDate.now();
-			int year = today.getYear() - ChildrenAge.get(j);
+			int year = today.getYear() - ChildrenAge;
 			Month month = today.getMonth();	
 			String mon = month.toString().substring(0,3);
 			int day = today.getDayOfMonth();
@@ -561,7 +561,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));	
 			j++;
 		
-	}
+	//}
 		
 	}
 

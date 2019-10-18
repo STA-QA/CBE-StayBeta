@@ -100,9 +100,16 @@ public class TestCase616 extends BaseUtil {
 	@And("^Select Number of Child Guests (.+) into (.+) in automatic order$")
 	public void select_number_of_child_guests_into_in_automatic_order(List<Integer> children, int rooms)
 			throws Throwable {
+		int TotalChildren=0;
+		for(int j=0; j<children.size();j++) 
+		{
+			 TotalChildren+=children.get(j); 
+		}
+		if(TotalChildren>0) {
 		for (int j = 0; j < rooms; j++) {
 			Hotel.SelectNumberOfChildren(Integer.toString(children.get(j)), j);
 			Thread.sleep(2000);
+		}
 		}
 	}
 
