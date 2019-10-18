@@ -33,18 +33,17 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Then User should be logged out and driver is closed	
 	
 	Examples: 
-		|Country                           |CountrySearchString|Data Source      |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition|
+
+		#|Country                           |CountrySearchString|Data Source      |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition|
 		#|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6                      |3      |2,3,1     |1,0,0 |5	   |Ignore   |
-		|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6                      |3      |2,3,1     |2,1,1   |5,6,7,8	   |Ignore   |
-		#|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6                      |1      |2,     |2   |5,6	   |Ignore   |
-		
-		
-		
-		
-		
-		
-		#|New York (NYC), United States (US)	|	NYC             |15       |5               |1    |Tourico         |2        |0		|Outside|
-		
+		#|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6                      |3      |2,3,1     |2,1,1   |5,6,7,8	   |Ignore   |
+
+			
+		|Country                            |CountrySearchString|Start Day|Duration Of Stay	|Rooms	|Data Source     		|Guests	|Children	|ChildrenAge|Condition	|Hotel								|
+		|Buenos Aires (BUE), Argentina (AR)	|	BUE				|7		  |1			   	|2		|STAY					|2,2	|0			|			|Ignore		|Regression Hotel (Alloc + Supp)	|	
+		|New York (NYC), United States (US)	|	NYC             |15       |5               	|1    	|Tourico         		|2     	|0			|			|Outside	|
+		|Cape Town (CPT), South Africa (ZA) |	CPT             |10       |6               	|1    	|followme2AFRICA  		|2     	|2			|7,9		|Ignore		|
+	#	|Cape Town (CPT), South Africa (ZA)	|	CPT            |followme2AFRICA|10       |6                      |3      |2,3,1     |2,1,1   |5,6,7,8	   |Ignore   |
 		
 		
 		
