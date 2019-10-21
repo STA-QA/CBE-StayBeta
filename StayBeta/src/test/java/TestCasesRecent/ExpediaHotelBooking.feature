@@ -17,7 +17,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Enter the ChildrenAge <ChildrenAge> 
 	And Deselect SelectAll DataSources
 	And Select DataSource <Data Source>
-	And Click Search Button 
+	And User Click Search Button on Hotel Searchpage 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
 	And Verify if Quote is selected by default 

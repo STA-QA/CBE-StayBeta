@@ -99,9 +99,9 @@ public class TestCase616 extends BaseUtil {
 	public void select_number_of_child_guests_into_in_automatic_order(List<Integer> children, int rooms)
 			throws Throwable {
 		int TotalChildren=0;
-		for(int j=0; j<children.size();j++) 
+		for(int j=0; j<children.size();j++)
 		{
-			 TotalChildren+=children.get(j); 
+			 TotalChildren+=children.get(j);
 		}
 		if(TotalChildren>0) {
 		for (int j = 0; j < rooms; j++) {
@@ -149,10 +149,18 @@ public class TestCase616 extends BaseUtil {
 	@And("^Click Search Button")
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
-		Hotel.searchLoadingtime();
 		//Thread.sleep(20000);
 		System.out.println("Wait is Done!!");
 	}
+
+	@And("^User Click Search Button on Hotel Searchpage")
+	public void User_Click_Search_Button_on_Hotel_Searchpage () throws Throwable {
+		Hotel.ClickSearch();
+		Hotel.searchLoadingtime();
+
+	}
+
+
 
 	@When("^User Searches and Selects a particular Hotel")
 	public void User_Searches_and_Selects_a_particular_Hotel() throws Throwable {
