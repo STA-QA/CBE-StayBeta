@@ -1,10 +1,8 @@
 package stepDefinitions;
 
 import java.util.List;
-import java.util.Random;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import Base.BaseUtil;
@@ -76,9 +74,9 @@ public class HotelBookingDefinitions extends BaseUtil {
 		Home.ClickOnHome();
 		Home.ClickOnMenuItem("Hotel");
 	}
-	
-	
-	
+
+
+
 
 	@And("^Select a Random Hotel$")
 	public void select_a_random_hotel() throws Throwable {
@@ -118,14 +116,14 @@ public class HotelBookingDefinitions extends BaseUtil {
 				System.out.println("Proper Hotel is selected in first go" );
 			}
 		}
-		
+
 		if (condition.equalsIgnoreCase("Ignore")) {
-			
+
 		}
-		
+
 	}
 
-	
+
 	@And("^Click on Room Selection in LB$")
 	public void click_on_room_selection_in_lb() throws Throwable {
 		Thread.sleep(2000);
@@ -138,12 +136,31 @@ public class HotelBookingDefinitions extends BaseUtil {
 		int total = guests + children;
 		Hotel.EnterGuestDetails(total);
 	}
-	
+
 	@And("^Provides the Adults (.+) Details and (.+) details with (.+)$")
     public void provides_the_adults_details_and_details_with(List<Integer> adults, List<Integer> children, List<Integer> childrenage) throws Throwable {
-	   
+
+		int TotalAdults=0;
+        for(int i=0; i<adults.size();i++) {
+        	TotalAdults+=adults.get(i);
+        }
+        System.out.println("total adults are : " + TotalAdults);
+
+        int TotalChildren=0;
+        for(int j=0; j<children.size();j++) {
+        	TotalChildren+=children.get(j);
+        }
+        System.out.println("total adults are : " + TotalChildren);
+        int TotalGuests = TotalAdults+TotalChildren;
+
+        Hotel.EnterAdultDetails(TotalAdults);
+        Hotel.EnterChildrenDetails(TotalAdults, TotalGuests, childrenage);
+
+
+
+
 		int index=0;
-		int childageindex=0; 
+		int childageindex=0;
         for(int top= 0; top<adults.size(); top++) {
      	   int k = adults.get(top);
             int l = children.get(top);
@@ -151,7 +168,7 @@ public class HotelBookingDefinitions extends BaseUtil {
      			 Hotel.EnterAdultDetails(index);
      			index=index+1;
      		}
-     		
+
      		for(int j=0; j<l ;j++){
      			System.out.println("j is :" +j);
      			Hotel.EnterChildrenDetails(index, childrenage.get(childageindex));
@@ -159,14 +176,13 @@ public class HotelBookingDefinitions extends BaseUtil {
      			index=index+1;
      		}
           }
-		
-		
-		
+
+
     }
-	
-	
-	
-	
+
+
+
+
 
 	@Then("^Booking has been done successfully and Booking reference Text is stored in a file$")
 	public void booking_has_been_done_successfully_and_booking_reference_text_is_stored_in_a_file() throws Throwable {

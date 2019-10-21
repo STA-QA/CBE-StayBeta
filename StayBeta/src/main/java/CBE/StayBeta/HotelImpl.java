@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Random;
 
 import org.apache.log4j.helpers.LogLog;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -21,15 +20,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.cucumber.listener.Reporter;
 import com.github.javafaker.Faker;
 import com.google.common.io.Files;
 
 import Base.BaseUtil;
 import stayBetaInterfaces.Hotel;
 
-
 public class HotelImpl extends BaseUtil implements Hotel {
-	
+
 	Faker faker = new Faker();
 
 	String CityTextBox = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_astLocation_astLocationtbx";
@@ -38,8 +37,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String NumberOfRooms = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ddlRoomCount";
 	String AdultId1 = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_";
 	String AdultId2 = "_uscPassengers_ddlAdults";
-	String ChildId1 ="m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_";
-	String ChildId2 ="_uscPassengers_ddlChildren";
+	String ChildId1 = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_";
+	String ChildId2 = "_uscPassengers_ddlChildren";
 	String Children = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_ddlChildren";
 	String Infants = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_bclRooms_0_uscPassengers_ddlInfants";
 	String ShowExtraSearchOptions = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_btnSearchOptionsExpander";
@@ -55,7 +54,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String QuoteId = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl01_rbnProcess";
 	String CompleteBookingCSS = "#m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1 > .link-center";
 	String AcceptTerms = "m_c_C000_m_c_cbxAcceptedConditions";
-	String BookXpath = "//a[@id='m_c_C000_m_c_continueBtn']/span";
+	String BookXpath = "//a[@id='m_c_C000_m_c_continueBtn']";
+	public String Price = "//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']";
+	public String Bookingref = "//div/h4/span[@id='lblFoldNo']";
 	String Title = "m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_namePrefixDdl";
 	String FirstName = "m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_givenNameTbx";
 	String LastName = "m_c_C000_m_c_paxItmsUsc_bclPax_0_paxItmUsc_surnameTbx";
@@ -74,8 +75,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String AmendThisItem = "//a[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_btnAmend']/span";
 	String PopupOK = "//*[contains(@id,'confirm')]/div/div[2]/a[1]/span/span";
 	String PopupCancel = "//*[contains(@id,'confirm')]/div/div[2]/a[2]/span/span";
-
-	
+	String detailsbutton = "//div[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_detailsUpd']";
+	String priceFilterXpath = "//div[@class='filters--open']//div[@class='price-filter']";
 
 	@Override
 	public void SearchCountry(String SearchText, String Country) {
@@ -127,8 +128,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	public void SelectNumberOfRooms(String NoOfRooms) {
 		String a = "//select[@id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ddlRoomCount']/option[";
 		String b = "]";
-		String finalpath = a+NoOfRooms+b;		
-		
+		String finalpath = a + NoOfRooms + b;
+
 		CBEDriver.findElement(By.xpath(finalpath)).click();
 	}
 
@@ -143,22 +144,20 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	@Override
 	public void SelectNumberOfChildren(String NoOfChildren, int RoomNumber) throws InterruptedException {
 		String NoOfChildsId = ChildId1 + (RoomNumber) + ChildId2;
-		WebDriverWait wait = new WebDriverWait(CBEDriver, 10); 
-		WebElement element=CBEDriver.findElement(By.id(NoOfChildsId));  
-		wait.until(ExpectedConditions.elementToBeClickable(element));		
+		WebDriverWait wait = new WebDriverWait(CBEDriver, 10);
+		WebElement element = CBEDriver.findElement(By.id(NoOfChildsId));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 		element.sendKeys("0");
 		Thread.sleep(2000);
 		element.sendKeys(NoOfChildren);
 	}
 
-	
 	@Override
 	public void EnterChildrenAge(int age, int box) {
-	 List <WebElement> options = CBEDriver.findElements(By.xpath("//*[contains(@id,'_txtAge')]"));
-	 options.get(box).sendKeys(Integer.toString(age));		
+		List<WebElement> options = CBEDriver.findElements(By.xpath("//*[contains(@id,'_txtAge')]"));
+		options.get(box).sendKeys(Integer.toString(age));
 	}
-	
-	
+
 	@Override
 	public void ExpandExtraSearch() {
 		CBEDriver.findElement(By.id(ShowExtraSearchOptions)).click();
@@ -176,15 +175,15 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	@Override
 	public void ExcludeOnRequestRooms() {
-		Boolean a = CBEDriver.findElement(By.id("m_c_C000_m_m_m_c_c3_c3_uscSrchParms_cbxIncludeOnRequest")).isSelected();
+		Boolean a = CBEDriver.findElement(By.id("m_c_C000_m_m_m_c_c3_c3_uscSrchParms_cbxIncludeOnRequest"))
+				.isSelected();
 		if (a == true) {
 			CBEDriver.findElement(By.id("m_c_C000_m_m_m_c_c3_c3_uscSrchParms_cbxIncludeOnRequest")).click();
 		} else {
 			System.out.println("Select all is already deselected");
 		}
 	}
-		
-	
+
 	@Override
 	public void SelectHotelDataSource(String HotelProvider) {
 		String HotelXpath1 = "//label[contains(.,'";
@@ -205,6 +204,19 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	}
 
 	@Override
+	public void searchLoadingtime() {
+
+		long timerstart = System.currentTimeMillis();
+		Assert.assertTrue(CBEDriver.findElement(By.xpath(priceFilterXpath)).isDisplayed());
+		long timerfinish = System.currentTimeMillis();
+		long totalTime = timerfinish - timerstart;
+		int seconds = (int) ((totalTime / 1000) % 60);
+		System.out.println(("Total Time in Seconds to display Search Results:   " + seconds));
+		Reporter.addStepLog("Total Time in Seconds to display Search Results:   " + seconds);
+
+	}
+
+	@Override
 	public void SearchHotel(String SearchText, String HotelName) throws InterruptedException {
 		Thread.sleep(8000);
 		CBEDriver.findElement(By.xpath(HotelNameSearchXpath)).sendKeys(SearchText);
@@ -212,9 +224,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		Thread.sleep(2000);
 		String h1 = "//*/a[contains(.,'";
 		String h2 = "')]";
-		String hotelxpath = h1+HotelName+h2;
+		String hotelxpath = h1 + HotelName + h2;
 		CBEDriver.findElement(By.xpath(hotelxpath)).click();
-		
+
 	}
 
 	@Override
@@ -234,77 +246,75 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		Thread.sleep(4000);
 		try {
 			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Overview')]")).isDisplayed());
-		}catch(AssertionError e) {
+		} catch (AssertionError e) {
 			LogLog.error("Overview Tab is not displayed");
 		}
-		
+
 		try {
 			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Photos')]")).isDisplayed());
-		}catch(AssertionError e) {
+		} catch (AssertionError e) {
 			LogLog.error("Photos Tab is not displayed");
 		}
-		
+
 		try {
 			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Map')]")).isDisplayed());
-		}catch(AssertionError e) {
+		} catch (AssertionError e) {
 			LogLog.error("Map Tab is not displayed");
 		}
-		
+
 		try {
 			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Room selection')]")).isDisplayed());
-		}catch(AssertionError e) {
+		} catch (AssertionError e) {
 			LogLog.error("Room selection Tab is not displayed");
 		}
-		
+
 		try {
 			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Rate/Room info')]")).isDisplayed());
-		}catch(AssertionError e) {
+		} catch (AssertionError e) {
 			LogLog.error("Rate/Room info Tab is not displayed");
 		}
-		
+
 		try {
 			Assert.assertTrue(CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).isDisplayed());
 			CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
 			Thread.sleep(2000);
-			File src= ((TakesScreenshot)CBEDriver).getScreenshotAs(OutputType.FILE);
+			File src = ((TakesScreenshot) CBEDriver).getScreenshotAs(OutputType.FILE);
 			try {
-			 // now copy the  screenshot to desired location using copyFile //method
-			Files.copy(src, new File("C:\\CBE-Automation\\StayBeta\\Screenshots\\Cancellations.png"));
+				// now copy the screenshot to desired location using copyFile //method
+				Files.copy(src, new File("C:\\CBE-Automation\\StayBeta\\Screenshots\\Cancellations.png"));
 			}
-			 
-			catch (IOException e)
-			 {
-			  System.out.println(e.getMessage());
-			 
-			 }
+
+			catch (IOException e) {
+				System.out.println(e.getMessage());
+
+			}
 			CBEDriver.getPageSource().contains("split commission");
-		}catch(AssertionError e) {
+		} catch (AssertionError e) {
 			LogLog.error("Error with Cancellation tab or the split commission in the tab");
 		}
-		
-		
+
 		CBEDriver.findElement(By.xpath(OLBAddToCartXpath)).click();
 	}
 
 	@Override
 	public void ClickOnCompleteBooking() throws InterruptedException {
 		Thread.sleep(3000);
-	//	CBEDriver.findElement(By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']/span[2]")).click();
-		//CBEDriver.findElement(By.xpath("//*/span[contains(.,'Complete booking')]")).click();
+		// CBEDriver.findElement(By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']/span[2]")).click();
+		// CBEDriver.findElement(By.xpath("//*/span[contains(.,'Complete
+		// booking')]")).click();
 		WebElement element = CBEDriver.findElement(By.xpath("//span[contains(text(),'Complete booking')]"));
 		Actions actions = new Actions(CBEDriver);
 		actions.moveToElement(element).click().perform();
-		
-		
+
 	}
 
 	@Override
 	public void SelectBookRB() throws InterruptedException {
 		Thread.sleep(5000);
 		CBEDriver.findElement(By.xpath(BookRadioButton)).click();
-		//CBEDriver.findElement(By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/label[1]")).click();
-		//*[@id="m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess"]/label[1]
-		//CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input")).click();
+		// CBEDriver.findElement(By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/label[1]")).click();
+		// *[@id="m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess"]/label[1]
+		// CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input")).click();
 
 	}
 
@@ -326,9 +336,18 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	}
 
 	@Override
-	public void ClickOnBook() {
-
+	public void ClickOnBook() throws IOException {
 		CBEDriver.findElement(By.xpath(BookXpath)).click();
+	}
+
+	@Override
+	public void bookingConfirmation() throws IOException {
+		CBEDriver.findElement(By.xpath(Price)).click();
+		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
+
+		Reporter.addStepLog(bookingrefnumber);
+		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		Reporter.addScreenCaptureFromPath(screenShotPath);
 	}
 
 	@Override
@@ -441,7 +460,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
 			Thread.sleep(1000);
 			CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
-		
+
 		}
 
 	}
@@ -453,7 +472,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		java.util.List<WebElement> listings = CBEDriver.findElements(By.xpath(TestXpath));
 		Random r = new Random();
 		int randomValue = r.nextInt(listings.size());
-		
+
 		listings.get(randomValue).click();
 
 	}
@@ -474,10 +493,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	@Override
 	public void VerifyQuoteRBIsSelected() {
 		boolean a = CBEDriver.findElement(By.id(QuoteId)).isSelected();
-		if (a==true) {
+		if (a == true) {
 			System.out.println("Quote is selected by default");
-		}
-		else {
+		} else {
 			LogLog.error("Quote is not selected By default");
 		}
 	}
@@ -491,30 +509,30 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBD1 = "_paxItmUsc_birthDateBdbdays";
 		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
-int i= Adults;
-		//for (int i = 0; i < Adults; i++) {
-			String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+","");
-			String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+","");
-			String Title = Common + i + Title1;
-			String FNpath = Common + i + idFN1;
-			String LNpath = Common + i + idLN1;
-			String BirthDay = Common + i + idBD1;
-			String BirthMonth = Common + i + idBM1;
-			String BirthYear = Common + i + idBY1;
-			CBEDriver.findElement(By.id(Title)).sendKeys("M");
-			CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-			CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
-			Thread.sleep(1000);
-			CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
-			Thread.sleep(1000);
-			CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
-			Thread.sleep(1000);
-			CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");		
-		
-	//}
+		int i = Adults;
+		// for (int i = 0; i < Adults; i++) {
+		String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+", "");
+		String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+", "");
+		String Title = Common + i + Title1;
+		String FNpath = Common + i + idFN1;
+		String LNpath = Common + i + idLN1;
+		String BirthDay = Common + i + idBD1;
+		String BirthMonth = Common + i + idBM1;
+		String BirthYear = Common + i + idBY1;
+		CBEDriver.findElement(By.id(Title)).sendKeys("M");
+		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
+		CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
+		Thread.sleep(1000);
+
+		CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
+
 	}
 
-	//@Override
+	// @Override
 	public void EnterChildrenDetails(int index, int ChildrenAge) throws InterruptedException {
 		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
 		String Title1 = "_paxItmUsc_namePrefixDdl";
@@ -539,32 +557,34 @@ int i= Adults;
 			CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
 			CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
 			Thread.sleep(1000);
-					
-						
-			
+
+
+
 			LocalDate today = LocalDate.now();
 			int year = today.getYear() - ChildrenAge;
-			Month month = today.getMonth();	
+			Month month = today.getMonth();
 			String mon = month.toString().substring(0,3);
 			int day = today.getDayOfMonth();
 			System.out.println(mon);
 			System.out.println(day);
 			System.out.println(year-5);
-			
-			
-			
+
+
+
 			CBEDriver.findElement(By.id(BirthDay)).sendKeys(Integer.toString(day));
 			Thread.sleep(1000);
 			CBEDriver.findElement(By.id(BirthMonth)).sendKeys(mon);
 			Thread.sleep(1000);
-			CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));	
+			CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));
 			j++;
-		
+
 	//}
-		
+
 	}
 
-	
+	@Override
+	public void EnterChildrenDetails(int children, int total, List<Integer> ChildrenAge) throws InterruptedException {
+		// TODO Auto-generated method stub
 
-	
+	}
 }

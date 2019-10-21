@@ -23,7 +23,7 @@ public class BaseUtil {
 
 	public static ExtentTest features;
 	static String applicationURL = "http://staybeta.bluee.net/login?username=staycbegbcbg&password=cbeuser";
-	//http://staybeta.bluee.net/login?username=STAYCBEDEDEU&password=cbeuser 
+	//http://staybeta.bluee.net/login?username=STAYCBEDEDEU&password=cbeuser
 	static String applicationURL_au = "http://staybeta.bluee.net/login?username=staycbeauauu&password=cbeuser";
 	// public static String reportLocation = System.getProperty("user.dir") +
 	// "//Reports//";
@@ -32,21 +32,10 @@ public class BaseUtil {
 	public void Setup() {
 
 	}
-	
-	
-	public static String screenshot(WebDriver driver, long ms) throws IOException {
 
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		String dest = System.getProperty("user.dir") + "\\screenshot\\" + ms + ".png";
-		File destination = new File(dest);
-		FileUtils.copyFile(source, destination);
-		System.out.println("ScreenShot Taken");
 
-		return dest;
 
-	}
-	
+
 	// This method is used to Launch the application
 		public void openUrl_au() {
 			CBEDriver.navigate().to(applicationURL_au);
@@ -60,5 +49,24 @@ public class BaseUtil {
 
 	public void TeardownTest() {
 		BaseUtil.CBEDriver.quit();
+	}
+
+
+	public static String screenshot(WebDriver driver, long ms) throws IOException {
+
+		TakesScreenshot ts = (TakesScreenshot) CBEDriver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String dest = System.getProperty("user.dir") + "\\screenshot\\" + ms + ".png";
+		File destination = new File(dest);
+		FileUtils.copyFile(source, destination);
+		System.out.println("ScreenShot Taken");
+
+		return dest;
+
+	}
+
+	public void searchLoadingtime() {
+		// TODO Auto-generated method stub
+
 	}
 }
