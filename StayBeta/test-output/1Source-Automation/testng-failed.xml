@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="Base.staNGlistener"/>
   </listeners>
-  <test thread-count="5" verbose="2" name="Smoke(failed)" parallel="classes">
+  <test thread-count="5" verbose="2" name="Regression(failed)" parallel="classes">
     <classes>
       <class name="cucumberOptions.TestRunner">
         <methods>
@@ -15,5 +15,5 @@
         </methods>
       </class> <!-- cucumberOptions.TestRunner -->
     </classes>
-  </test> <!-- Smoke(failed) -->
+  </test> <!-- Regression(failed) -->
 </suite> <!-- Failed suite [1Source-Automation] -->

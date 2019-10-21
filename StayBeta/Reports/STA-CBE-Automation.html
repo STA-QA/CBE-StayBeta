@@ -35,8 +35,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
 		<span class='report-name'>ExtentReports</span>
@@ -45,7 +44,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 21, 2019 11:55:29 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 21, 2019 05:20:05 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -61,7 +60,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -104,10 +102,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -118,10 +116,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -132,10 +130,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='95.455%'><span class='strong'>21</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>19</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='4.545%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -153,11 +151,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='2'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>Hotel booking - gb for few data sources</span>
-						<span class='test-time'>Oct 21, 2019 11:55:33 AM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Oct 21, 2019 05:20:09 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -166,132 +164,101 @@
     <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenariooutline node' test-id='3' status='fail'>
-    <span class='duration right label'>0h 3m 10s+947ms</span>
+<div class='scenariooutline node' test-id='3' status='pass'>
+    <span class='duration right label'>0h 1m 27s+199ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> ScenarioOutline: User Book a hotel through <Data Source></div>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: User Book a hotel through <Data Source></div>
     </div>
     <ul class='steps'>
-        <li test-id='4' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User Book a hotel through Expedia Affiliate - Package Rate</div>
+        <li test-id='4' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User Book a hotel through Expedia Affiliate - Package Rate</div>
             <ul class='gc steps'>
-                    <li test-id='6' class='gc given pass' status='pass'>
+                    <li test-id='5' class='gc given pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='7' class='gc and pass' status='pass'>
+                    <li test-id='6' class='gc and pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='8' class='gc then pass' status='pass'>
+                    <li test-id='7' class='gc then pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='9' class='gc and pass' status='pass'>
+                    <li test-id='8' class='gc and pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='10' class='gc given pass' status='pass'>
+                    <li test-id='9' class='gc given pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is in the Hotel Search Page</h6>
                             <div class="node-step">passed</div>
                     </li>
+                    <li test-id='10' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Search for a London (LON), United Kingdom (GB) with particular LON</h6>
+                            <div class="node-step">passed</div>
+                    </li>
                     <li test-id='11' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Search for a Cape Town (CPT), South Africa (ZA) with particular CPT</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select the 100 and 2</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='12' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select the 10 and 6</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Rooms 1</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='13' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Rooms 3</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Adult Guests 2 into 1 in automatic order</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='14' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Adult Guests 2,3,1 into 3 in automatic order</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Child Guests 2 into 1 in automatic order</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='15' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Child Guests 2,1,1 into 3 in automatic order</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enter the ChildrenAge 7,9</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='16' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enter the ChildrenAge 5,6,7,8</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Deselect SelectAll DataSources</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='17' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Hotel Expedia Affiliate - Package Rate</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select DataSource Expedia Affiliate - Package Rate</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='18' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click Search Button</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Click Search Button on Hotel Searchpage</h6>
+                            <div class="node-step">Total Time in Seconds to display Search Results:   14</div>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='19' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Add to cart on a hotel from search results</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Add to cart on a hotel from search results for Expedia</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='20' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Check for Cancellation Condition Ignore</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User clicks Quote radio button</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='21' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Verify if Quote is selected by default</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Provides the Expedia Adults 2 Details and 2 details with 7,9</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='22' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks On Book Radio Button</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='23' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='24' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='25' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Provides the Adults 2,3,1 Details and 2,1,1 details with 5,6,7,8</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='26' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Book Button</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='27' class='gc then fail' status='fail'>
-                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Booking has been done successfully</h6>
+                    <li test-id='22' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User confirms Booking</h6>
                         <ul class='screenshots right'>
-                            <li><a data-featherlight="image" href="C:\Automation\CBE_Kiranmai\CBE-Automation\StayBeta\screenshot\1571655524781.png"><i class='material-icons'>panorama</i></a></li>
+                            <li><a data-featherlight="image" href="C:\Automation\CBE_Kiranmai\CBE-Automation\StayBeta\screenshot\1571674895932.png"><i class='material-icons'>panorama</i></a></li>
+                            <li><a data-featherlight="image" href="C:\Automation\CBE_Kiranmai\CBE-Automation\StayBeta\screenshot\1571674895932.png"><i class='material-icons'>panorama</i></a></li>
                         </ul>
-                            <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']"}
-  (Session info: chrome=77.0.3865.90)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'UKL60YBN32', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_192'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\GURURA~1.SUB\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58857}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 3a2ef59c2de329ea6dd2d120f7858210
-*** Element info: {Using=xpath, value=//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at CBE.StayBeta.HotelImpl.bookingConfirmation(HotelImpl.java:330)
-	at stepDefinitions.TestCase616.booking_has_been_done_successfully(TestCase616.java:187)
-	at ?.Then Booking has been done successfully(src/test/java/TestCasesRecent/ExpediaHotelBooking.feature:29)
-</textarea>
-                                                </li>
+                            <div class="node-step">GB 1555184</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='23' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking has been done successfully</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="C:\Automation\CBE_Kiranmai\CBE-Automation\StayBeta\screenshot\1571674896468.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">GB 1555184</div>
+                            <div class="node-step">passed</div>
+                    </li>
             </ul>
         </li>
     </ul>
@@ -318,88 +285,7 @@ Session ID: 3a2ef59c2de329ea6dd2d120f7858210
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Oct 21, 2019 11:58:34 AM</td>
-										<td class='linked' test-id='27'>Hotel booking - gb for few data sources.User Book a hotel through <Data Source>.User Book a hotel through Expedia Affiliate - Package Rate.Then Booking has been done successfully</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']"}
-  (Session info: chrome=77.0.3865.90)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'UKL60YBN32', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_192'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\GURURA~1.SUB\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58857}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 3a2ef59c2de329ea6dd2d120f7858210
-*** Element info: {Using=xpath, value=//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at CBE.StayBeta.HotelImpl.bookingConfirmation(HotelImpl.java:330)
-	at stepDefinitions.TestCase616.booking_has_been_done_successfully(TestCase616.java:187)
-	at ?.Then Booking has been done successfully(src/test/java/TestCasesRecent/ExpediaHotelBooking.feature:29)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -419,25 +305,25 @@ Session ID: 3a2ef59c2de329ea6dd2d120f7858210
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>22</div>
+					<div class='panel-lead'>19</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 21, 2019 11:55:29 AM</div>
+					<div class='panel-lead'>Oct 21, 2019 05:20:05 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 21, 2019 11:58:45 AM</div>
+			 		<div class='panel-lead'>Oct 21, 2019 05:21:36 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 3m 16s+109ms</div>
+					<div class='panel-lead'>0h 1m 31s+652ms</div>
 				</div>
 			</div>
 		</div>
@@ -449,38 +335,38 @@ Session ID: 3a2ef59c2de329ea6dd2d120f7858210
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				childCount: 1,
-				passChild: 0,
-				failChild: 1,
+				passChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 1,
-				grandChildCount: 22,
-				passGrandChild: 21,
-				failGrandChild: 1,
+				exceptionsChild: 0,
+				grandChildCount: 19,
+				passGrandChild: 19,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 1,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Hotel booking - gb for few data sources":190.947
+			        "Hotel booking - gb for few data sources":87.199
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

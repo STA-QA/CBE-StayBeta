@@ -89,4 +89,8 @@ public interface Hotel {
 
 	public void searchLoadingtime();
 
+	void addToCart_RefundableHotelRooms() throws InterruptedException;
+
+
+
 }

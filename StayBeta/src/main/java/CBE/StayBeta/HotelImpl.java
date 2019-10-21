@@ -11,6 +11,7 @@ import java.util.Random;
 
 import org.apache.log4j.helpers.LogLog;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -481,6 +482,118 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		CBEDriver.findElement(By.xpath("//label[contains(.,'Cancel item')]")).click();
 	}
 
+
+
+	@Override
+	public void addToCart_RefundableHotelRooms() throws InterruptedException {
+		Thread.sleep(4000);
+
+		List<WebElement> roomNames = CBEDriver.findElements(By.xpath("//span[@title='Expand alternate room options']"));
+		for (int i = 0; i < roomNames.size(); i++) {
+
+			String names = roomNames.get(i).getAttribute("innerText");
+			String NonrefundText = "Non Refundable";
+			if (!names.contains(NonrefundText)) {
+				List<WebElement> Addtocart  = CBEDriver.findElements(By.xpath("//a[@class='primary-button cart-button']"));
+				System.out.println("----" + roomNames.get(i) + names);
+				JavascriptExecutor executor = (JavascriptExecutor) CBEDriver;
+				executor.executeScript("arguments[0].click();", Addtocart.get(i));
+				//clickbyJS(Addtocart.get(i));
+				//Addtocart.get(i).click();
+				break;
+			}
+
+		}
+
+
+		WebElement hotelsummary = CBEDriver.findElement(By.xpath("//div[@class='summary-details']"));
+
+		Thread.sleep(7000);
+		System.out.println("Hotel added to cart is "
+				+ CBEDriver.findElement(By.xpath("//span[@class='product-details-label']")).getText());
+		List<WebElement> cancellationChargePeriod = CBEDriver.findElements(By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning']/p"));
+		System.out.println(" " + cancellationChargePeriod.size());
+
+		if (cancellationChargePeriod.size() <= 0) {
+			//Actions actions = new Actions(driver);
+			//actions.moveToElement(cancelConditionLink).click().build().perform();
+			WebElement cancelConditionLink = CBEDriver.findElement(By.xpath("//div/a[@class='lightbox-link lightbox-new cboxElement']"));
+			JavascriptExecutor executor = (JavascriptExecutor) CBEDriver;
+			executor.executeScript("arguments[0].click();", cancelConditionLink);
+
+			System.out.println("click on Cancellation Terms");
+			WebDriverWait wait = new WebDriverWait(CBEDriver, 30);
+			wait.until(ExpectedConditions.visibilityOfElementLocated((By.tagName("iframe"))));
+
+			WebElement iFrame = CBEDriver.findElement(By.tagName("iframe"));
+			CBEDriver.switchTo().frame(iFrame);
+
+			WebElement cancellationCharges = CBEDriver.findElement(By.xpath("//div[@class='machine-readable']//ul/li[1]"));
+			System.out.println(cancellationCharges.getText());
+			String ActualCancellationCharges = cancellationCharges.getText();
+			String ExpectedCallationCharges = "no charge";
+
+			if (ActualCancellationCharges.toLowerCase().indexOf(ExpectedCallationCharges.toLowerCase()) != -1) {
+
+				System.out.println("No Charge if cancelled displayed");
+
+			} else {
+
+				System.out.println("Hotel would charge if cancelled");
+
+			}
+			WebElement popupclose = CBEDriver.findElement(By.xpath("//div/a[@class='close']"));
+			popupclose.click();
+
+			CBEDriver.switchTo().defaultContent();
+		}
+		}
+
+
+	public void confirmBooking() throws InterruptedException, IOException {
+		WebElement TermsandconditionsBooking = CBEDriver.findElement(By.xpath("//div/input[@id='m_c_C000_m_c_cbxAcceptedConditions']"));
+		waitandclick(TermsandconditionsBooking);
+		WebElement Savebutton = CBEDriver.findElement(By.xpath("//div/a[@id='m_c_C000_m_c_continueBtn']"));
+		waitandclick(Savebutton);
+
+
+		CBEDriver.findElement(By.xpath(Price)).click();
+		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
+
+		Reporter.addStepLog(bookingrefnumber);
+		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		Reporter.addScreenCaptureFromPath(screenShotPath);
+
+
+
+	}
+
+	public void bookprocessbooking() throws InterruptedException, IOException {
+
+		WebElement bookingprocessRadiobutton= CBEDriver.findElement(By.xpath("//input[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl00_rbnProcess']"));
+		Actions actions = new Actions(CBEDriver);
+		actions.moveToElement(bookingprocessRadiobutton).click().build().perform();
+		WebElement CompleteBookingButton= CBEDriver.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
+		waitandclick(CompleteBookingButton);
+	}
+
+	public void quotebooking() throws InterruptedException, IOException {
+		WebElement CompleteBookingButton= CBEDriver.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
+		waitandclick(CompleteBookingButton);
+		Thread.sleep(3000);
+
+	}
+
+
+	public void waitandclick(WebElement element) throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) CBEDriver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		new WebDriverWait(CBEDriver, 60).until(ExpectedConditions.visibilityOf(element));
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+		js.executeScript("arguments[0].click();", element);
+
+	}
+
 	@Override
 	public void ClickUpdateButton() {
 		String UpdateXpath = "//span[contains(.,'Update')]";
@@ -530,7 +643,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
 
 	}
-	
+
 
 	public void EnterAdultDetailsForExpedia(int Adults) throws InterruptedException {
 		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
@@ -541,7 +654,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
 		int i = Adults;
-		
+
 		String Title = Common + i + Title1;
 		String FNpath = Common + i + idFN1;
 		String LNpath = Common + i + idLN1;
@@ -610,7 +723,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	//}
 
 	}
-	
+
 	public void EnterChildrenDetailsForExpedia(int index, int ChildrenAge) throws InterruptedException {
 		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
 		String Title1 = "_paxItmUsc_namePrefixDdl";

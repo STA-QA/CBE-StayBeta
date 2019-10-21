@@ -1,9 +1,12 @@
 package stepDefinitions;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
+import com.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
@@ -95,6 +98,34 @@ public class HotelBookingDefinitions extends BaseUtil {
 	public void clicks_on_add_to_cart_on_a_hotel_from_search_results() throws Throwable {
 		Thread.sleep(3000);
 		HotelSearch.AddRandomHotelToCartFromTSRes();
+	}
+	@And("^Clicks on Add to cart on a hotel from search results for Expedia$")
+	public void And_Clicks_on_Add_to_cart_on_a_hotel_from_search_results_for_Expedia() throws InterruptedException {
+
+
+		Hotel.addToCart_RefundableHotelRooms();
+	}
+
+
+	@And("^User clicks (.+) radio button$")
+
+	public void User_clicks_radio_button(String process) throws InterruptedException, IOException {
+
+		if (process.equalsIgnoreCase("Book")) {
+			Hotel.bookprocessbooking();
+		} else if(process.equalsIgnoreCase("Quote")) {
+			Hotel.quotebooking();
+		}
+
+		else {
+			Reporter.addStepLog("This Test is executed :-  Search criteria for performance benchmarks only - Search only - no Booking");
+		}
+
+	}
+
+	@Then("^User confirms Booking$")
+	public void User_confirms_Booking() throws InterruptedException, IOException {
+		Hotel.confirmBooking();
 	}
 
 	@And("^Check for Cancellation Condition (.+)$")

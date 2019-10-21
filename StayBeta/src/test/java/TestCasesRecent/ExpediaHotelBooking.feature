@@ -15,24 +15,19 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Number of Adult Guests <Adults> into <Rooms> in automatic order 
 	And Select Number of Child Guests <Children> into <Rooms> in automatic order 
 	And Enter the ChildrenAge <ChildrenAge> 
-	And Deselect SelectAll DataSources
-	And Select DataSource <Data Source>
+	And Deselect SelectAll DataSources 
+	And Select DataSource <Data Source> 
 	And User Click Search Button on Hotel Searchpage 
-	And Clicks on Add to cart on a hotel from search results 
-	And Check for Cancellation Condition <Condition> 
-	And Verify if Quote is selected by default 
-	And Clicks On Book Radio Button 
-	And Clicks on Complete Booking 
-	And Accepts the Terms and Conditions
+	And Clicks on Add to cart on a hotel from search results for Expedia 
+	And User clicks <pendingprocess> radio button 
 	And Provides the Expedia Adults <Adults> Details and <Children> details with <ChildrenAge> 
-	And Click on Book Button 
-	Then Booking has been done successfully
-	#Given User clicks On Logout
-	#Then User should be logged out and driver is closed	
+	Then User confirms Booking
+	
+	
 	
 	Examples: 
-		|Country                                      |CountrySearchString|Data Source                         |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition|
-		|Cape Town (CPT), South Africa (ZA)|	CPT                     |Expedia Affiliate - Package Rate|100       |2                     |1        |2    |0   |0	   |Ignore   |
+		|Country                             |CountrySearchString|Data Source                     |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition||pendingprocess |
+		|London (LON), United Kingdom (GB)|	LON             |Expedia Affiliate - Package Rate|100       |2                     |1        |2    |2   |7,9	   |Ignore   |       |Quote|
 		
 		
 		

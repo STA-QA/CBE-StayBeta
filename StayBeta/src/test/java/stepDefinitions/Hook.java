@@ -10,13 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
-import com.cucumber.listener.ExtentProperties;
 import com.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
@@ -42,15 +36,15 @@ public class Hook extends BaseUtil {
 		//extentProperties.setReportPath("Reports/STA-CBE-Automation.html");
 		  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
 		  + "/WebDrivers/chromedriver.exe");
-		  
-		  
+
+
 		  ChromeOptions options = new ChromeOptions();
-		  options.setExperimentalOption("useAutomationExtension", false);		  
+		  options.setExperimentalOption("useAutomationExtension", false);
 		//  options.addArguments("----headless");
 		  CBEDriver = new ChromeDriver(options);
-		 
+
 		  CBEDriver.manage().window().maximize();
-		  CBEDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		  CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 	}
 
