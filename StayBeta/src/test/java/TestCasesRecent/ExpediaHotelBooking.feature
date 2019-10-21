@@ -15,7 +15,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Number of Adult Guests <Adults> into <Rooms> in automatic order 
 	And Select Number of Child Guests <Children> into <Rooms> in automatic order 
 	And Enter the ChildrenAge <ChildrenAge> 
-	And Select Hotel <Data Source> 
+	And Deselect SelectAll DataSources
+	And Select DataSource <Data Source>
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
