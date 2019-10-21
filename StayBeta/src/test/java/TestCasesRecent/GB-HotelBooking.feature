@@ -30,8 +30,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	Examples: 
 
-		 |Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|Hotel								|
-		 |Cape Town (CPT), South Africa (ZA)  |	CPT                      |followme2AFRICA   |10          |6                    	|1    	  |2     	    |2			|7,9		     |Ignore		|
+		 |Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
+		 |Cape Town (CPT), South Africa (ZA)  |CPT                    |followme2AFRICA   |10          |6                    	|1    	  |2     	    |2			|7,9		     |Ignore		|
 	 #  |Buenos Aires (BUE), Argentina (AR)    |	BUE				       |STAY                   |7		     |1			   	    |2		  |2,2     	|0			|			     |Ignore		|Regression Hotel (Alloc + Supp)	|	
 	 #  |New York (NYC), United States (US)  |	NYC                      |Tourico                |15          |5               	    |1    	  |2     	    |0			|			     |Outside	|
 		

@@ -4,11 +4,13 @@
 	<listeners>
 		<listener class-name="Base.staNGlistener" />
 	</listeners>
-	<test name="Smoke">
+	<test name="Regression">
 		<classes>
+		<class name="cucumberOptions.GBHotelBookingRunner" />
+		
 		<!-- <class name="cucumberOptions.InsuranceRunner" /> -->
 		<!-- <class name="cucumberOptions.TransfersRunner" /> -->
-	 	<class name="cucumberOptions.ActivitiesAndDayTripsRunner" /> 
+	 	<!-- <class name="cucumberOptions.ActivitiesAndDayTripsRunner" />  -->
 		</classes>
 	</test>
 </suite>

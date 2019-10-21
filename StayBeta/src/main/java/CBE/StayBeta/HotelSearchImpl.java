@@ -27,6 +27,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.cucumber.listener.Reporter;
+
 import Base.BaseUtil;
 import stayBetaInterfaces.HotelSearch;
 
@@ -108,19 +110,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		  ;
 		  
 		  System.out.println("The Hotel Name is:  "+HotelName);
-		  
-		/*
-		 * String RoomTypeXpath1 = "//*[@id='"+id+"']/td[6]/span";
-		 * 
-		 * String RoomTypeXpath2 = "//*[@id='"+id+"']/td[6]/span"; String RoomType1 =
-		 * CBEDriver.findElement(By.xpath(RoomTypeXpath1)).getText();
-		 * 
-		 * String RoomType2 = CBEDriver.findElement(By.xpath(RoomTypeXpath2)).getText();
-		 */
-		  
-		  // System.out.println("Room Type is:  " +RoomType1);
-		  
-		  //System.out.println("Room Type 2 is:  " +RoomType2);
+	
 		  
 		  try { FileWriter writer = new FileWriter("BookingDetails.docx", true);
 		  BufferedWriter bufferedWriter = new BufferedWriter(writer);
@@ -143,7 +133,15 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		  bufferedWriter.newLine(); bufferedWriter.write("Split Commission is:  "
 		  +SplComm); bufferedWriter.close(); } catch (IOException e) {
 		  e.printStackTrace(); }
-		  
+		  String screenShotPath;
+		try {
+			screenShotPath = screenshot(CBEDriver, System.currentTimeMillis());
+			Reporter.addScreenCaptureFromPath(screenShotPath);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
 		  
 		  
 		  Thread.sleep(2000); CBEDriver.findElement(By.xpath(CollapseXpath)).click();
