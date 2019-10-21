@@ -8,4 +8,7 @@ public interface ActAndDayTripsSearch {
 	
 	public void SelectNoOfAdults();
 	
+	public void ClickOnBookRadioButton();
+	
+	public void ClickOnBookButton();
 }

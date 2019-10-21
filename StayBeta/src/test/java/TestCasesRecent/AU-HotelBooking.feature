@@ -14,7 +14,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Number of Rooms <Rooms>
 	And Select Number of Adults <Guests>
 	And Select Number of Children <Children>
-	And Select Hotel <Data Source>
+	#And Select Hotel <Data Source>
 	And Click Search Button
 	And Clicks on Add to cart on a hotel from search results
 	And Check for Cancellation Condition <Condition>

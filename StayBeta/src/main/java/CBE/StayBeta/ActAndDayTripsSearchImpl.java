@@ -73,6 +73,18 @@ public class ActAndDayTripsSearchImpl extends BaseUtil implements ActAndDayTrips
 		
 	}
 
+	@Override
+	public void ClickOnBookRadioButton() {
+		
+		CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl00_rbnProcess")).click();
+	}
+
+	@Override
+	public void ClickOnBookButton() {
+		CBEDriver.findElement(By.xpath("//span[text()='Book']")).click();
+		
+	}
+
 	
 	
 }

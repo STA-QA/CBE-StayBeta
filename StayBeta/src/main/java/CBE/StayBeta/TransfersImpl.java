@@ -15,6 +15,7 @@ public class TransfersImpl extends BaseUtil {
 
 	String AdultT1 = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscSelectedPassengers_ddlAdults";
 	
+	
 	public void EnterStartDates (int minStartDate, int maxStartDate)
 	{
 		Calendar cal = Calendar.getInstance();
