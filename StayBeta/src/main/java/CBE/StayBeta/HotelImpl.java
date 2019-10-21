@@ -205,7 +205,6 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	@Override
 	public void searchLoadingtime() {
-
 		long timerstart = System.currentTimeMillis();
 		Assert.assertTrue(CBEDriver.findElement(By.xpath(priceFilterXpath)).isDisplayed());
 		long timerfinish = System.currentTimeMillis();
@@ -531,6 +530,36 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
 
 	}
+	
+
+	public void EnterAdultDetailsForExpedia(int Adults) throws InterruptedException {
+		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String Title1 = "_paxItmUsc_namePrefixDdl";
+		String idFN1 = "_paxItmUsc_givenNameTbx";
+		String idLN1 = "_paxItmUsc_surnameTbx";
+		String idBD1 = "_paxItmUsc_birthDateBdbdays";
+		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
+		String idBY1 = "_paxItmUsc_birthDateBdbyears";
+		int i = Adults;
+		
+		String Title = Common + i + Title1;
+		String FNpath = Common + i + idFN1;
+		String LNpath = Common + i + idLN1;
+		String BirthDay = Common + i + idBD1;
+		String BirthMonth = Common + i + idBM1;
+		String BirthYear = Common + i + idBY1;
+		CBEDriver.findElement(By.id(Title)).sendKeys("M");
+		CBEDriver.findElement(By.id(FNpath)).sendKeys("Test Booking");
+		CBEDriver.findElement(By.id(LNpath)).sendKeys("Test Booking");
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
+		Thread.sleep(1000);
+
+		CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
+
+	}
 
 	// @Override
 	public void EnterChildrenDetails(int index, int ChildrenAge) throws InterruptedException {
@@ -556,6 +585,53 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			CBEDriver.findElement(By.id(Title)).sendKeys("M");
 			CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
 			CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
+			Thread.sleep(1000);
+
+
+
+			LocalDate today = LocalDate.now();
+			int year = today.getYear() - ChildrenAge;
+			Month month = today.getMonth();
+			String mon = month.toString().substring(0,3);
+			int day = today.getDayOfMonth();
+			System.out.println(mon);
+			System.out.println(day);
+			System.out.println(year-5);
+
+
+
+			CBEDriver.findElement(By.id(BirthDay)).sendKeys(Integer.toString(day));
+			Thread.sleep(1000);
+			CBEDriver.findElement(By.id(BirthMonth)).sendKeys(mon);
+			Thread.sleep(1000);
+			CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));
+			j++;
+
+	//}
+
+	}
+	
+	public void EnterChildrenDetailsForExpedia(int index, int ChildrenAge) throws InterruptedException {
+		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String Title1 = "_paxItmUsc_namePrefixDdl";
+		String idFN1 = "_paxItmUsc_givenNameTbx";
+		String idLN1 = "_paxItmUsc_surnameTbx";
+		String idBD1 = "_paxItmUsc_birthDateBdbdays";
+		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
+		String idBY1 = "_paxItmUsc_birthDateBdbyears";
+
+		int j =0;
+		int i=index;
+		//for (int i = children; i < total; i++) {
+			String Title = Common + i + Title1;
+			String FNpath = Common + i + idFN1;
+			String LNpath = Common + i + idLN1;
+			String BirthDay = Common + i + idBD1;
+			String BirthMonth = Common + i + idBM1;
+			String BirthYear = Common + i + idBY1;
+			CBEDriver.findElement(By.id(Title)).sendKeys("M");
+			CBEDriver.findElement(By.id(FNpath)).sendKeys("TestBooking");
+			CBEDriver.findElement(By.id(LNpath)).sendKeys("Test Booking");
 			Thread.sleep(1000);
 
 

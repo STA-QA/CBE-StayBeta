@@ -149,8 +149,8 @@ public class TestCase616 extends BaseUtil {
 	@And("^Click Search Button")
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
-		Hotel.searchLoadingtime();
-		//Thread.sleep(20000);
+		//Hotel.searchLoadingtime();
+		Thread.sleep(20000);
 		System.out.println("Wait is Done!!");
 	}
 

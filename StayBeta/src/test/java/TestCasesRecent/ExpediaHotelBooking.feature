@@ -15,16 +15,16 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Number of Adult Guests <Adults> into <Rooms> in automatic order 
 	And Select Number of Child Guests <Children> into <Rooms> in automatic order 
 	And Enter the ChildrenAge <ChildrenAge> 
-	And Select Hotel <Data Source> 
+	And Deselect SelectAll DataSources 
+	And Select DataSource <Data Source> 
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
 	And Verify if Quote is selected by default 
 	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
-	And Accepts the Terms and Conditions 
-	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
-	
+	And Accepts the Terms and Conditions
+	And Provides the Expedia Adults <Adults> Details and <Children> details with <ChildrenAge> 
 	And Click on Book Button 
 	Then Booking has been done successfully
 	#Given User clicks On Logout
