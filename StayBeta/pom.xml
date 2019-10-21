@@ -42,11 +42,11 @@
 						<goals>
 							<goal>generate</goal>
 						</goals>
-						<configuration>
+						 <configuration>
 							<projectName>STAX-BDD</projectName>
 							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
 							<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
-						</configuration>
+						</configuration> 
 					</execution>
 				</executions>
 			</plugin>

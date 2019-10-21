@@ -35,11 +35,9 @@ public class Hook extends BaseUtil {
 	@Before
 	public void InitializeTest(Scenario scenario) {
 
-		System.out.println("TEST");
-		scenarioDef = base.features.createNode(scenario.getName());
-		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/STA-CBE-Automation.html");
+		//System.out.println("TEST");
+		//scenarioDef = base.features.createNode(scenario.getName());
+		
 		  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
 		  + "/WebDrivers/chromedriver.exe");
 		  

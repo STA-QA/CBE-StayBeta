@@ -6,7 +6,9 @@
 	</listeners>
 	<test name="Smoke">
 		<classes>
-			<class name="cucumberOptions.ActivitiesAndDayTripsRunner" />
+		<!-- <class name="cucumberOptions.InsuranceRunner" /> -->
+		<!-- <class name="cucumberOptions.TransfersRunner" /> -->
+	 	<class name="cucumberOptions.ActivitiesAndDayTripsRunner" /> 
 		</classes>
 	</test>
 </suite>

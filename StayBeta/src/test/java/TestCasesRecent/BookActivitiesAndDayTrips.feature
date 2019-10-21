@@ -24,4 +24,5 @@ Scenario Outline: Login into Application
 	
 Examples:
 |Country                                           |CountrySearchString|minStartDate|maxStartDate|Data Source|Adults|
-|London (LON), United Kingdom (GB)      |LON						|2                |4                 |Viator       |2|
+|London (LON), United Kingdom (GB)      |LON						|2                |4                 |Viator       |2      |
+|Bangkok (BKK), Thailand (TH)              |BKK						|90               |91                 |Viator       |2      |
