@@ -6,5 +6,9 @@ public interface ActAndDayTripsSearch {
 	
 	public void ClickOnRandomCheckAvailability();
 	
+	public void SelectNoOfAdults();
 	
+	public void ClickOnBookRadioButton();
+	
+	public void ClickOnBookButton();
 }

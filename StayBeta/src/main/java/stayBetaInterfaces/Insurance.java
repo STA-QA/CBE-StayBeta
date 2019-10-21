@@ -13,4 +13,6 @@ public interface Insurance {
 	public void AddInsuranceToCart();
 	
 	public void CompleteInsuranceBooking();
+	
+	public void SelectBookRB();
 }

@@ -1,7 +1,7 @@
 Feature: Insurance
 
 @GB
-Scenario: User Book Insurance
+Scenario Outline: User Book Insurance
 
 Given User launches the application 
 And User enters Valid Credentials 
@@ -12,5 +12,11 @@ And Selects the Region
 And Enter the Date Of Birth for Insurance
 And Click On Insurance Search
 And Select Any Random Insurance and Add to cart
-And Click On Complete Booking For Insurance
+And Select Book Radio Button for Insurance
+And Click On Insurance Details and Add additional Details
+And Accepts the Terms and Conditions
+And Click On Book Button
+Examples:
+||
+
 	

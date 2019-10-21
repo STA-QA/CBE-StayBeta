@@ -16,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import com.cucumber.listener.ExtentProperties;
 import com.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
@@ -34,8 +35,8 @@ public class Hook extends BaseUtil {
 	@Before
 	public void InitializeTest(Scenario scenario) {
 
-		System.out.println("TEST");
-		scenarioDef = base.features.createNode(scenario.getName());
+		//System.out.println("TEST");
+		//scenarioDef = base.features.createNode(scenario.getName());
 		
 		  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
 		  + "/WebDrivers/chromedriver.exe");
@@ -46,17 +47,6 @@ public class Hook extends BaseUtil {
 		//  options.addArguments("----headless");
 		  CBEDriver = new ChromeDriver(options);
 		 
-		// Driver = new FirefoxDriver();
-
-		/*
-		 * System.setProperty("webdriver.gecko.driver",
-		 * "C:\\STAX-BDD\\STA-BDD\\TestConfig\\geckodriver_0_23.exe"); File pathBinary =
-		 * new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe"); FirefoxBinary
-		 * firefoxBinary = new FirefoxBinary(pathBinary); DesiredCapabilities desired =
-		 * DesiredCapabilities.firefox(); FirefoxOptions options = new FirefoxOptions();
-		 * desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS,
-		 * options.setBinary(firefoxBinary)); Driver = new FirefoxDriver(options);
-		 */
 		  CBEDriver.manage().window().maximize();
 		  CBEDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

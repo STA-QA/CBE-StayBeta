@@ -1,7 +1,7 @@
 Feature: Hotel booking - au for few data sources 
 
 
-@au
+@AU
 Scenario Outline: User Book a hotel through <Data Source> 
 
     Given User launches the au application
@@ -14,7 +14,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Number of Rooms <Rooms>
 	And Select Number of Adults <Guests>
 	And Select Number of Children <Children>
-	And Select Hotel <Data Source>
+	#And Select Hotel <Data Source>
 	And Click Search Button
 	And Clicks on Add to cart on a hotel from search results
 	And Check for Cancellation Condition <Condition>
@@ -30,12 +30,14 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	
 	Examples: 
-		|Country                                       |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source      |Guests|Children|Condition|
-		|Singapore (SIN), Singapore (SG)|SIN					 |31			  |2                       |1       |Qantas             |2			|0         |Outside    |
-	#	|Sydney (SYD), Australia (AU)	|SYD                      |20            |2                      |1        |AOT AU - New   |2        |0           | Outside |
-		#|Bangkok (BKK), Thailand (TH)		|BKK						 |2			  |5						|1		  |Diethelm Travel		  |1			|0			|Inside		|
-	
 		
+		
+	#Data to be used for release
+		|Country                           	|CountrySearchString|Data Source      		|Start Day	|Duration Of Stay	|Rooms	|Adults |Children	|ChildrenAge	|Condition	|
+		|London (LON), United Kingdom (GB)	|LON				|JacTravel/Totalstay	|1			|2					|1		|1		|			|				|Inside		|
+		|Melbourne (MEL), Australia (AU)	|MEL				|AOT AU					|7			|2					|1		|2		|			|				|
+		|Sydney (SYD), Australia (AU)		|SYD				|Sunlover Australia		|14			|3					|1		|2		|			|				|			|
+			
 		
 	
 	@GB

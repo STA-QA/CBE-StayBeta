@@ -96,10 +96,18 @@ public class TestCase616 extends BaseUtil {
 	}
 
 	@And("^Select Number of Child Guests (.+) into (.+) in automatic order$")
-	public void select_number_of_child_guests_into_in_automatic_order(List<Integer> children, int rooms) throws Throwable {
+	public void select_number_of_child_guests_into_in_automatic_order(List<Integer> children, int rooms)
+			throws Throwable {
+		int TotalChildren=0;
+		for(int j=0; j<children.size();j++) 
+		{
+			 TotalChildren+=children.get(j); 
+		}
+		if(TotalChildren>0) {
 		for (int j = 0; j < rooms; j++) {
 			Hotel.SelectNumberOfChildren(Integer.toString(children.get(j)), j);
 			Thread.sleep(2000);
+		}
 		}
 	}
 
@@ -121,12 +129,21 @@ public class TestCase616 extends BaseUtil {
 
 	}
 
-	@And("^Select Hotel (.+)$")
-	public void select_hotel(String datasource) throws Throwable {
+	@And("^Deselect SelectAll DataSources$")
+	public void deselect_selectall_datasources() throws Throwable {
 		Hotel.ExpandExtraSearch();
 		Thread.sleep(2000);
 		Hotel.DeselectAll();
+	}
+
+	@And("^Select DataSource (.+)$")
+	public void select_datasource(String datasource) throws Throwable {
 		Hotel.SelectHotelDataSource(datasource);
+	}
+
+	@And("^Exclude On Request Rooms$")
+	public void exclude_on_request_rooms() throws Throwable {
+		Hotel.ExcludeOnRequestRooms();
 	}
 
 	@And("^Click Search Button")

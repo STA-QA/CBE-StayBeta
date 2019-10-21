@@ -42,6 +42,9 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 	@FindBy(how = How.ID, using = "m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1")
 	public WebElement CompleteBooking;
 	
+	@FindBy(how = How.ID, using = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl00_rbnProcess")
+	public WebElement BookRB;
+	
 	@Override
 	public void SelectRegion(String Region) {
 		RegionDropDown.sendKeys(Region);
@@ -85,6 +88,11 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 		wait.until(ExpectedConditions.elementToBeClickable(CompleteBooking));
 		CompleteBooking.click();
 		
+	}
+
+	@Override
+	public void SelectBookRB() {
+		BookRB.click();
 	}
 
 }

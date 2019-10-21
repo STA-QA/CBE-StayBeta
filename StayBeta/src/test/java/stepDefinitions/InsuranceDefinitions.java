@@ -43,6 +43,10 @@ public class InsuranceDefinitions extends  BaseUtil{
 	    	 Insurance.CompleteInsuranceBooking();
 	    }
 	 
-	 
+	    @And("^Select Book Radio Button for Insurance$")
+	    public void select_book_radio_button_for_insurance() throws Throwable {
+	       Insurance.SelectBookRB();
+	    }
+
 	 
 }

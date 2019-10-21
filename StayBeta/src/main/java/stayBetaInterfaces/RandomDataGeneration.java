@@ -6,6 +6,6 @@ import java.io.UnsupportedEncodingException;
 
 public interface RandomDataGeneration {
 
- public void storeBookingDetails() throws FileNotFoundException, UnsupportedEncodingException ;
+ public void storeBookingDetails() throws FileNotFoundException, UnsupportedEncodingException, IOException ;
 	
 }
