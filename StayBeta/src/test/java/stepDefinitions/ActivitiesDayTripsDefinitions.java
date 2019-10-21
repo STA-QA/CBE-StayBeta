@@ -36,4 +36,9 @@ public class ActivitiesDayTripsDefinitions extends BaseUtil {
         Thread.sleep(5000);
     }
 	
+	 @And("^Add Number of Adults  for Activities and Day Trips (.+)$")
+	    public void add_number_of_adults_for_activities_and_day_trips(String adults) throws Throwable {
+	        
+	    }
+	
 }

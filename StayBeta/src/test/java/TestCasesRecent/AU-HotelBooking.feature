@@ -1,7 +1,7 @@
 Feature: Hotel booking - au for few data sources 
 
 
-@au
+@AU
 Scenario Outline: User Book a hotel through <Data Source> 
 
     Given User launches the au application

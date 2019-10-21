@@ -6,5 +6,6 @@ public interface ActAndDayTripsSearch {
 	
 	public void ClickOnRandomCheckAvailability();
 	
+	public void SelectNoOfAdults();
 	
 }

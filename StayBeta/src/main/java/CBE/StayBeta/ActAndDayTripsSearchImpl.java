@@ -67,6 +67,12 @@ public class ActAndDayTripsSearchImpl extends BaseUtil implements ActAndDayTrips
 	
 	}
 
+	@Override
+	public void SelectNoOfAdults() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 }

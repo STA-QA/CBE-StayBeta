@@ -6,7 +6,7 @@
 	</listeners>
 	<test name="Smoke">
 		<classes>
-			<class name="cucumberOptions.ActivitiesAndDayTrips" />
+			<class name="cucumberOptions.ActivitiesAndDayTripsRunner" />
 		</classes>
 	</test>
 </suite>
