@@ -22,6 +22,14 @@ Scenario Outline: User Book a hotel through
 	And User enters DOB details for <Guests> and <Children> 
 	
 	Examples: 
-		|country| |numberofdaysfromtoday| |Rooms| |Guests| |Children|  |Data Source|                       |pendingprocess |
-		#|lon    | |94         |            |1|     |2|     |2|        |Expedia Affiliate - Package Rate| |Quote|
-		|par   | |91         |            |1|     |2|      |2|        |Expedia Affiliate - Package Rate| |book|
+		|country| |numberofdaysfromtoday| |Rooms| |Guests| |Children|  |Data Source						| |pendingprocess |
+#		|lon    | |94         			| |1	| |2	 | |2		|  |Expedia Affiliate - Package Rate| |Quote|
+		|par   	| |91         			| |1	| |2	 | |2		|  |Expedia Affiliate - Package Rate| |book|
+# Search criteria for performance benchmarks only - Search only - no Booking
+		|lon	| |34					| |1	| |3	 | |0		|  |Expedia Affiliate - Package Rate| |book|
+		|bkk	| |34					| |1	| |3	 | |0		|  |Expedia Affiliate - Package Rate| |book|
+		|syd	| |34					| |1	| |3	 | |0		|  |Expedia Affiliate - Package Rate| |book|
+		|nyc	| |34					| |1	| |3	 | |0		|  |Expedia Affiliate - Package Rate| |book|
+		|nan	| |34					| |1	| |3	 | |0		|  |Expedia Affiliate - Package Rate| |book|
+		|cpt	| |34					| |1	| |3	 | |0		|  |Expedia Affiliate - Package Rate| |book|
+		|hkt	| |34					| |1	| |3	 | |0		|  |Expedia Affiliate - Package Rate| |book|	
