@@ -15,9 +15,9 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select Number of Adult Guests <Adults> into <Rooms> in automatic order 
 	And Select Number of Child Guests <Children> into <Rooms> in automatic order 
 	And Enter the ChildrenAge <ChildrenAge> 
-	And Deselect SelectAll DataSources 
-	And Select DataSource <Data Source> 
-	And Click Search Button 
+	And Deselect SelectAll DataSources
+	And Select DataSource <Data Source>
+	And User Click Search Button on Hotel Searchpage 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
 	And Verify if Quote is selected by default 
@@ -31,8 +31,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	#Then User should be logged out and driver is closed	
 	
 	Examples: 
-		|Country                           |CountrySearchString|Data Source      |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition|
-		|Cape Town (CPT), South Africa (ZA)|	CPT            |Expedia Affiliate - Package Rate|10       |6               |3    |2,3,1    |2,1,1   |5,6,7,8	   |Ignore   |
+		|Country                                      |CountrySearchString|Data Source                         |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition|
+		|Cape Town (CPT), South Africa (ZA)|	CPT                     |Expedia Affiliate - Package Rate|100       |2                     |1        |2    |0   |0	   |Ignore   |
 		
 		
 		
