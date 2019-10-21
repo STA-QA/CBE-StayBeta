@@ -25,7 +25,6 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
 	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
-	
 	And Click on Book Button 
 	Then Booking has been done successfully
 	#Given User clicks On Logout
