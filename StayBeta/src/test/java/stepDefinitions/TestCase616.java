@@ -3,8 +3,6 @@ package stepDefinitions;
 import java.util.List;
 
 import org.junit.runner.RunWith;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
@@ -107,12 +105,12 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Enter the ChildrenAge (.+)$")
 	public void enter_the_childrenage(List<Integer> childrenage) throws Throwable {
-				
+
 		for (int j = 0; j < childrenage.size(); j++) {
-			Hotel.EnterChildrenAge(childrenage.get(j), j);			
+			Hotel.EnterChildrenAge(childrenage.get(j), j);
 			Thread.sleep(2000);
 		}
-		
+
 	}
 
 	@And("^Select Number of Children (.+)$")
@@ -134,7 +132,8 @@ public class TestCase616 extends BaseUtil {
 	@And("^Click Search Button")
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
-		Thread.sleep(20000);
+		Hotel.searchLoadingtime();
+		//Thread.sleep(20000);
 		System.out.println("Wait is Done!!");
 	}
 
@@ -180,12 +179,13 @@ public class TestCase616 extends BaseUtil {
 	public void click_on_book_button() throws Throwable {
 		Thread.sleep(2000);
 		Hotel.ClickOnBook();
+
 		Thread.sleep(2000);
 	}
 
 	@Then("^Booking has been done successfully$")
 	public void booking_has_been_done_successfully() throws Throwable {
-		// Add the assertions for different types of texts available after booking
+		Hotel.bookingConfirmation();
 	}
 
 }

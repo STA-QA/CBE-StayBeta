@@ -23,17 +23,16 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
-	#	And Provides the <Adults> and <Children> Details 
 	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
 	
-	#	And Click on Book Button 
-	#Then Booking has been done successfully and Booking reference Text is stored in a file
+	And Click on Book Button 
+	Then Booking has been done successfully
 	#Given User clicks On Logout
 	#Then User should be logged out and driver is closed	
 	
 	Examples: 
 		|Country                           |CountrySearchString|Data Source      |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition|
-		|Cape Town (CPT), South Africa (ZA)|	CPT            |followme2AFRICA|10       |6               |3    |2,3,1    |2,1,1   |5,6,7,8	   |Ignore   |
+		|Cape Town (CPT), South Africa (ZA)|	CPT            |Expedia Affiliate - Package Rate|10       |6               |3    |2,3,1    |2,1,1   |5,6,7,8	   |Ignore   |
 		
 		
 		
