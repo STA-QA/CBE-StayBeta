@@ -50,18 +50,6 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 	public void AddRandomHotelToCartFromTSRes() throws InterruptedException {
 		Thread.sleep(20000);
 
-		/*
-		 * if(CBEDriver.findElements(By.id("pnlSearchResultsPagination")).size()>0) {
-		 * System.out.println("In Pagination"); List<WebElement> Pages =
-		 * CBEDriver.findElements(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_ul\"]/li"));
-		 * Random r = new Random(); System.out.println("The total page numbers is : " +
-		 * Pages.size()); int rValue = r.nextInt(Pages.size());
-		 * System.out.println("The page number is : " + rValue);
-		 * Pages.get(rValue).click(); Thread.sleep(2000); }
-		 */
-
-		// String AddToCartXpath =
-		// "//tr[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes__')]/td[12]/div/a";
 		String AddToCartXpath = "//span[contains(.,'Add to cart')]";
 
 		List<WebElement> listings = CBEDriver.findElements(By.xpath(AddToCartXpath));

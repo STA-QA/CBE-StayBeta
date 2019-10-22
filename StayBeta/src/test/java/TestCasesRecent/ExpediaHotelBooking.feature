@@ -19,21 +19,42 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Select DataSource <Data Source> 
 	And User Click Search Button on Hotel Searchpage 
 	And Clicks on Add to cart on a hotel from search results for Expedia 
-	And User clicks <pendingprocess> radio button 
+	And Clicks On Book Radio Button
+	And Clicks on Complete Booking 
+	And Accepts the Terms and Conditions
 	And Provides the Expedia Adults <Adults> Details and <Children> details with <ChildrenAge> 
+#	And Click on Book Button 
+	Then Booking has been done successfully and Booking reference Text is stored in a file 
+	Given User clicks On Logout 
+	Then User should be logged out and driver is closed 
 	Then User confirms Booking
 	
 	
 	
 	Examples: 
-		|Country                             |CountrySearchString|Data Source                     |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|Condition||pendingprocess |
-		|London (LON), United Kingdom (GB)|	LON             |Expedia Affiliate - Package Rate|100       |2                     |1        |2    |2   |7,9	   |Ignore   |       |Quote|
+		|Country                             |CountrySearchString|Data Source                            |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|pendingprocess |
+		|London (LON), United Kingdom (GB)|	LON             |Expedia Affiliate - Package Rate|100         |2                     |1        |1         |0         |0	     |Book|
+		
+		
+	Scenario: Amend Booking By Searching BRN from My Bookings 
+Given User launches the application 
+	And User enters Valid Credentials 
+	Then User logged into application 
+	And User Selects any agency 
+	Given User Clicks on My Bookings 
+	And Clicks on Retrieve latest booking 
+	And Clicks on Complete Booking 
+	And Select Amend this item Option 
+	And Fetch the From date and move it few days further 
+	And Click Search Button 
+	And Click on Add to Cart 
+	And Clicks on Complete Booking 
+	And Accepts the Terms and Conditions 
+	And Click on Update button 
 		
 		
 		
-		
-		
-		#|New York (NYC), United States (US)	|	NYC             |15       |5               |1    |Tourico         |2        |0		|Outside|
+
 		
 		
 		

@@ -555,8 +555,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		waitandclick(TermsandconditionsBooking);
 		WebElement Savebutton = CBEDriver.findElement(By.xpath("//div/a[@id='m_c_C000_m_c_continueBtn']"));
 		waitandclick(Savebutton);
-
-
+		//public String Price = "//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']";
+		//public String Bookingref = "//div/h4/span[@id='lblFoldNo']";
 		CBEDriver.findElement(By.xpath(Price)).click();
 		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
 
@@ -662,6 +662,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String BirthMonth = Common + i + idBM1;
 		String BirthYear = Common + i + idBY1;
 		CBEDriver.findElement(By.id(Title)).sendKeys("M");
+		
 		CBEDriver.findElement(By.id(FNpath)).sendKeys("Test Booking");
 		CBEDriver.findElement(By.id(LNpath)).sendKeys("Test Booking");
 		Thread.sleep(1000);

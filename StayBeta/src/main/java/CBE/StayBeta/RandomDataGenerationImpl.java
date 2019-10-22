@@ -19,14 +19,24 @@ import stayBetaInterfaces.RandomDataGeneration;
 
 
 public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGeneration{
-
+	public String Price = "//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']";
+	public String Bookingref = "//div/h4/span[@id='lblFoldNo']";
 	@Override
 	public void storeBookingDetails() throws IOException {
 		
-		String bookingrefnumber = CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_up']/div/div/h4")).getText();
+		CBEDriver.findElement(By.xpath(Price)).click();
+		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
+
 		Reporter.addStepLog(bookingrefnumber);
-		String screenShotPath = screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
+		/*
+		 * String bookingrefnumber =
+		 * CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_up']/div/div/h4")).
+		 * getText(); Reporter.addStepLog(bookingrefnumber); String screenShotPath =
+		 * screenshot(CBEDriver, System.currentTimeMillis());
+		 * Reporter.addScreenCaptureFromPath(screenShotPath);
+		 */
 		
 		/*
 		 * try {

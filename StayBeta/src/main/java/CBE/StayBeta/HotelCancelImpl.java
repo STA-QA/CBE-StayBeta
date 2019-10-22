@@ -96,7 +96,7 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		try {
 			Date date = format1.parse(CurrentFromDate);
 			cal.setTime(date);
-			cal.add(Calendar.DATE, 4);
+			cal.add(Calendar.DATE, 1);
 			String NewDate = format1.format(cal.getTime());
 			CBEDriver.findElement(By.xpath(From)).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), NewDate);
 

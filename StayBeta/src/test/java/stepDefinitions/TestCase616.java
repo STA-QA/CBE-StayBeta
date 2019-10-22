@@ -113,10 +113,16 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Enter the ChildrenAge (.+)$")
 	public void enter_the_childrenage(List<Integer> childrenage) throws Throwable {
-
+		int TotalChildren=0;
+		for(int j=0; j<childrenage.size();j++)
+		{
+			 TotalChildren+=childrenage.get(j);
+		}
+		if(TotalChildren>0) {
 		for (int j = 0; j < childrenage.size(); j++) {
 			Hotel.EnterChildrenAge(childrenage.get(j), j);
 			Thread.sleep(2000);
+		}
 		}
 
 	}
