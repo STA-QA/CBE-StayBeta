@@ -18,6 +18,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -136,10 +137,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	@Override
 	public void SelectNumberOfAdults(String NoOfAdults, int RoomNumber) throws InterruptedException {
-		String NoOfAdultsId = AdultId1 + (RoomNumber) + AdultId2;
-		CBEDriver.findElement(By.id(NoOfAdultsId)).sendKeys("0");
-		Thread.sleep(2000);
-		CBEDriver.findElement(By.id(NoOfAdultsId)).sendKeys(NoOfAdults);
+		String NoOfAdultsId = AdultId1 + (RoomNumber) + AdultId2;		
+		Select dropdown = new Select(CBEDriver.findElement(By.id(NoOfAdultsId)));
+		dropdown.selectByValue(NoOfAdults);	
 	}
 
 	@Override
@@ -148,9 +148,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		WebDriverWait wait = new WebDriverWait(CBEDriver, 10);
 		WebElement element = CBEDriver.findElement(By.id(NoOfChildsId));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
-		element.sendKeys("0");
-		Thread.sleep(2000);
-		element.sendKeys(NoOfChildren);
+		Select dropdown = new Select(element);
+		dropdown.selectByValue(NoOfChildren);	
+		
 	}
 
 	@Override

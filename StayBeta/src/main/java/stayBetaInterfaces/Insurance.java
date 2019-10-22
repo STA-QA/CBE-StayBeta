@@ -6,6 +6,10 @@ public interface Insurance {
 	
 	public void selectTheDOB() throws InterruptedException;
 	
+	public void selectTheDOB(int index, int Age) throws InterruptedException;
+	
+	public void selectNumberOfPassengers(String Pax);
+	
 	public void SelectInsuranceType(String InsuranceType);
 	
 	public void ClickInsuranceSearch();
@@ -15,4 +19,6 @@ public interface Insurance {
 	public void CompleteInsuranceBooking();
 	
 	public void SelectBookRB();
+	
+	
 }

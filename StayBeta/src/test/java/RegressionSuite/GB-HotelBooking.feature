@@ -17,21 +17,21 @@ Given User launches the application
 	And Exclude On Request Rooms 
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
-#	And Check for Cancellation Condition <Condition> 
-#	And Verify if Quote is selected by default 
-#	And Clicks On Book Radio Button
-#	And Clicks on Complete Booking 
-#	And Accepts the Terms and Conditions 
-#	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
-#	And Click on Book Button 
-#	Then Booking has been done successfully and Booking reference Text is stored in a file 
-	#Given User clicks On Logout 
-#	Then User should be logged out and driver is closed 
+	And Check for Cancellation Condition <Condition> 
+	And Verify if Quote is selected by default 
+	And Clicks On Book Radio Button
+	And Clicks on Complete Booking 
+	And Accepts the Terms and Conditions 
+	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
+	And Click on Book Button 
+	Then Booking has been done successfully and Booking reference Text is stored in a file 
+	Given User clicks On Logout 
+	Then User should be logged out and driver is closed 
 	
 	Examples: 
 	
 	|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-	|London (LON), United Kingdom (GB)  |	LON               |STAy        |65       |5               |1    |2     |0		|	0		 |Outside	| 
+	|London (LON), United Kingdom (GB)  |	LON               |STAy                             |65         |5                       |1    |3     |0		|	0		 |Outside	| 
  
 	
 	#|Cape Town (CPT), South Africa (ZA)  |CPT                    |followme2AFRICA   |10          |6                    	|1    	  |2     	    |2			|7,9		     |Ignore		|

@@ -1,5 +1,7 @@
 package CBE.StayBeta;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 import java.util.Random;
 
@@ -20,8 +22,14 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 	public InsuranceImpl(WebDriver CEDriver) {
 		PageFactory.initElements(CEDriver, this);
 	}
+	
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ddlRegionCode")
 	public WebElement RegionDropDown;
+	
+	
+	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscPassengers_ddlAdults")
+	public WebElement PaxDropDown;
+	
 	
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscPassengers_bclAdults_0_birthDateBdbdays")
 	public WebElement Date_DOB;
@@ -53,6 +61,25 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 
 	@Override
 	public void selectTheDOB() {
+		Date_DOB.sendKeys("7");
+		Month_DOB.sendKeys("Aug");
+		Year_DOB.sendKeys("1990");
+		
+	}
+	
+	@Override
+	public void selectTheDOB(int index, int age) {
+		
+		LocalDate today = LocalDate.now();
+		int year = today.getYear() - age;
+		Month month = today.getMonth();
+		String mon = month.toString().substring(0,3);
+		int day = today.getDayOfMonth();
+		System.out.println(mon);
+		System.out.println(day);
+		System.out.println(year-5);
+		
+		
 		Date_DOB.sendKeys("7");
 		Month_DOB.sendKeys("Aug");
 		Year_DOB.sendKeys("1990");
@@ -93,6 +120,13 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 	@Override
 	public void SelectBookRB() {
 		BookRB.click();
+	}
+
+	@Override
+	public void selectNumberOfPassengers(String Pax) {
+		Select dropdown = new Select(PaxDropDown);
+		dropdown.selectByValue(Pax);
+		
 	}
 
 }

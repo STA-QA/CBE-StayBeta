@@ -21,6 +21,21 @@ public class InsuranceDefinitions extends  BaseUtil{
         Insurance.SelectRegion("Worldwide excl USA");
     }
 
+	@And("^Enter Number Of (.+) for Insurance$")
+    public void enter_number_of_for_insurance(String passengers) throws Throwable {
+        Insurance.selectNumberOfPassengers(passengers);
+    }
+	
+	@And("^Enter the Date Of Birth for Insurance (.+)$")
+    public void enter_the_date_of_birth_for_insurance(String age) throws Throwable {
+        
+    }
+	
+	@And("^Select the Insurance Type (.+)$")
+    public void select_the_insurance_type(String insurancetype) throws Throwable {
+       
+    }
+	
 	 @And("^Enter the Date Of Birth for Insurance$")
 	    public void enter_the_date_of_birth_for_insurance() throws Throwable {
 	        Insurance.selectTheDOB();   
