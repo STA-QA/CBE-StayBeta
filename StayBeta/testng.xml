@@ -7,7 +7,7 @@
 	<test name="Regression">
 		<classes>
 		<class name="cucumberOptions.GBHotelBookingRunner" />
-		<class name="cucumberOptions.TestRunner" />
+		<!-- <class name="cucumberOptions.TestRunner" /> -->
 		
 		<!-- <class name="cucumberOptions.InsuranceRunner" /> -->
 		<!-- <class name="cucumberOptions.TransfersRunner" /> -->

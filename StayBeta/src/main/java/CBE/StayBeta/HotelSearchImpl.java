@@ -18,6 +18,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.cucumber.listener.Reporter;
+
 import Base.BaseUtil;
 import stayBetaInterfaces.HotelSearch;
 
@@ -47,8 +49,8 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 	}
 
 	@Override
-	public void AddRandomHotelToCartFromTSRes() throws InterruptedException {
-		Thread.sleep(20000);
+	public void AddRandomHotelToCartFromTSRes() throws InterruptedException, IOException {
+		//Thread.sleep(20000);
 
 		String AddToCartXpath = "//span[contains(.,'Add to cart')]";
 
@@ -64,16 +66,26 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 
 		  System.out.println(id);
 
-		  String HotelNamepath = "//*[@id='"+id+"']/td[3]";
+		  String HotelNamepath = "//*[@id='"+id+"']/td[3]/a";
 		  String HotelName =  CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
-
-		  String ExpandXpath =
-		  "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Expand price breakdown']";
-		  CBEDriver.findElement(By.xpath(ExpandXpath)).click(); Thread.sleep(1000);
-		  String SplComm = CBEDriver.findElement(By.xpath(
-		  "//*[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes')]/td/table/tbody/tr[2]/td[3]"
-		  )).getText(); System.out.println("Special Commission is: " +SplComm); String
-		  intValue = SplComm.replaceAll("[^0-9]", ""); float f =
+		  
+		  CBEDriver.findElement(By.xpath(HotelNamepath)).click();
+		  Thread.sleep(2000);
+			CBEDriver.switchTo().frame(0);
+			Thread.sleep(5000);
+			CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
+			String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+			Reporter.addScreenCaptureFromPath(screenShotPath);
+			
+		  
+			CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
+			Thread.sleep(3000);
+		  String ExpandXpath =  "//*[@id='"+id+"']/td[11]//div/div/a/span[@title='Expand price breakdown']";
+		  CBEDriver.findElement(By.xpath(ExpandXpath)).click(); 
+		  Thread.sleep(1000);
+		  String SplComm = CBEDriver.findElement(By.xpath( "//*[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes')]/td/table/tbody/tr[2]/td[3]")).getText(); 
+		  System.out.println("Special Commission is: " +SplComm);
+		  String intValue = SplComm.replaceAll("[^0-9]", ""); float f =
 		  Float.parseFloat(intValue);
 
 		  try { Assert.assertTrue(f>0); }catch(AssertionError E) {
@@ -88,18 +100,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 
 		  System.out.println("The Hotel Name is:  "+HotelName);
 
-		/*
-		 * String RoomTypeXpath1 = "//*[@id='"+id+"']/td[6]/span";
-		 *
-		 * String RoomTypeXpath2 = "//*[@id='"+id+"']/td[6]/span"; String RoomType1 =
-		 * CBEDriver.findElement(By.xpath(RoomTypeXpath1)).getText();
-		 *
-		 * String RoomType2 = CBEDriver.findElement(By.xpath(RoomTypeXpath2)).getText();
-		 */
-
-		  // System.out.println("Room Type is:  " +RoomType1);
-
-		  //System.out.println("Room Type 2 is:  " +RoomType2);
+		
 
 		  try { FileWriter writer = new FileWriter("BookingDetails.docx", true);
 		  BufferedWriter bufferedWriter = new BufferedWriter(writer);
@@ -110,14 +111,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		  bufferedWriter.newLine(); bufferedWriter.write("The Hotel Name is: " +
 		  HotelName);
 
-			/*
-			 * bufferedWriter.newLine(); bufferedWriter.write("Room Type 1 is:  "
-			 * +RoomType1);
-			 *
-			 *
-			 * bufferedWriter.newLine(); bufferedWriter.write("Room Type 2 is:  "
-			 * +RoomType2);
-			 */
+			
 
 		  bufferedWriter.newLine(); bufferedWriter.write("Split Commission is:  "
 		  +SplComm); bufferedWriter.close(); } catch (IOException e) {

@@ -1,5 +1,7 @@
 package stayBetaInterfaces;
 
+import java.io.IOException;
+
 public interface HotelSearch {
 
 	public void VerifySearchResultsOfDS(String DataSource);
@@ -8,7 +10,7 @@ public interface HotelSearch {
 
 	public void VerifyRatingsForHotel();
 
-	public void AddRandomHotelToCartFromTSRes() throws InterruptedException;
+	public void AddRandomHotelToCartFromTSRes() throws InterruptedException, IOException;
 
 	public void SelectRoomSelectionTabFromLB() throws InterruptedException;
 
