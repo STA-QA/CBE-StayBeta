@@ -5,6 +5,7 @@ import java.time.Month;
 import java.util.List;
 import java.util.Random;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,6 +34,11 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 	
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscPassengers_bclAdults_0_birthDateBdbdays")
 	public WebElement Date_DOB;
+	
+	String DOBCommon = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscPassengers_bclAdults_";
+	String Date_DOB1 = "_birthDateBdbdays";
+	String Month_DOB1 = "_birthDateBdbmonths";
+	String Year_DOB1 = "_birthDateBdbyears";
 	
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscPassengers_bclAdults_0_birthDateBdbmonths")
 	public WebElement Month_DOB;
@@ -69,26 +75,52 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 	
 	@Override
 	public void selectTheDOB(int index, int age) {
-		
+			
 		LocalDate today = LocalDate.now();
 		int year = today.getYear() - age;
-		Month month = today.getMonth();
-		String mon = month.toString().substring(0,3);
+		int month = today.getMonthValue();
+		
 		int day = today.getDayOfMonth();
-		System.out.println(mon);
+		
+		
+		System.out.println(month);
 		System.out.println(day);
-		System.out.println(year-5);
+		System.out.println(year);
+		
+		String DateID= DOBCommon+index+Date_DOB1;
+		String MonthId= DOBCommon+index+Month_DOB1;
+		String YearId= DOBCommon+index+Year_DOB1;
+		
+		WebDriverWait wait = new WebDriverWait(CBEDriver, 10);
+		WebElement date_dob = CBEDriver.findElement(By.id(DateID));
+		WebElement month_dob = CBEDriver.findElement(By.id(MonthId));
+		WebElement year_dob = CBEDriver.findElement(By.id(YearId));
+		
+		wait.until(ExpectedConditions.elementToBeClickable(month_dob));
+		Select Monthdropdown = new Select(month_dob);
+		Monthdropdown.selectByValue(Integer.toString(month));
+		
+		wait.until(ExpectedConditions.elementToBeClickable(date_dob));
+		Select Datedropdown = new Select(date_dob);
+		Datedropdown.selectByValue(Integer.toString(day));
 		
 		
-		Date_DOB.sendKeys("7");
-		Month_DOB.sendKeys("Aug");
-		Year_DOB.sendKeys("1990");
+		
+		
+		
+		wait.until(ExpectedConditions.elementToBeClickable(year_dob));
+		Select Yeardropdown = new Select(year_dob);
+		Yeardropdown.selectByValue(Integer.toString(year));
+		/*
+		 * Date_DOB.sendKeys(""); Month_DOB.sendKeys("Aug"); Year_DOB.sendKeys("1990");
+		 */
 		
 	}
 
 	@Override
 	public void SelectInsuranceType(String InsuranceType) {
-		// TODO Auto-generated method stub
+		String Label = "//label[contains(.,'"+InsuranceType+"')]";
+		CBEDriver.findElement(By.xpath(Label)).click();
 		
 	}
 
