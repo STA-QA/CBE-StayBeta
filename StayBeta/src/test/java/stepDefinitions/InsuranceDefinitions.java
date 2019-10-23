@@ -4,12 +4,14 @@ import java.util.List;
 
 import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
+import CBE.StayBeta.HotelImpl;
 import CBE.StayBeta.InsuranceImpl;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 
 public class InsuranceDefinitions extends  BaseUtil{
 	HomePageImpl Home = new HomePageImpl();
+	HotelImpl Hotel = new HotelImpl();
 	InsuranceImpl Insurance = new InsuranceImpl(CBEDriver);
 	
 	@Given("^User is in the Insurance Page$")
@@ -69,5 +71,23 @@ public class InsuranceDefinitions extends  BaseUtil{
 	       Insurance.SelectBookRB();
 	    }
 
+	    @And("^Adds the Passenger (.+) Details for Insurance with their (.+)$")
+	    public void adds_the_passenger_details_for_insurance_with_their(int passengers, List<Integer> age) throws Throwable {
+	    	Thread.sleep(2000);
+	        for(int i=0; i<passengers;i++) {
+	        	Hotel.EnterChildrenDetails(i, age.get(i));
+	        }
+	    }
+
+	    @And("^Click On Insurance Details$")
+	    public void click_on_insurance_details() throws Throwable {
+	    	Thread.sleep(5000);
+	       Insurance.ClickOnDetailIcon();
+	    }
+
+	    @And("^Add additional Details for Insurance$")
+	    public void add_additional_details_for_insurance() throws Throwable {
+	        Insurance.AddAdditionalDetailsForInsurance();
+	    }
 	 
 }

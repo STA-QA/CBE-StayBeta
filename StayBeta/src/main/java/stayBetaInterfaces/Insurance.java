@@ -20,5 +20,9 @@ public interface Insurance {
 	
 	public void SelectBookRB();
 	
+	public void ClickOnDetailIcon();
+	
+	public void AddAdditionalDetailsForInsurance();
+	
 	
 }

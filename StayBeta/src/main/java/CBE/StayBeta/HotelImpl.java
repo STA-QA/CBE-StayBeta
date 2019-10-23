@@ -633,7 +633,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String BirthYear = Common + i + idBY1;
 		CBEDriver.findElement(By.id(Title)).sendKeys("M");
 		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-		CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
+		CBEDriver.findElement(By.id(LNpath)).sendKeys("TestAutomation");
 		Thread.sleep(1000);
 		CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
 		Thread.sleep(1000);
@@ -698,7 +698,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			String BirthYear = Common + i + idBY1;
 			CBEDriver.findElement(By.id(Title)).sendKeys("M");
 			CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-			CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
+			CBEDriver.findElement(By.id(LNpath)).sendKeys("TestAutomation");
 			Thread.sleep(1000);
 
 

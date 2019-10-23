@@ -39,6 +39,8 @@ Given User launches the application
 		#  |New York (NYC), United States (US)  |	NYC                      |Tourico                |15          |5               	    |1    	  |2     	    |0			|			     |Outside	|
 		
 		
+		#|Singapore (SIN), Singapore (SG)|SIN					 |31			  |2                       |1       |Qantas             |2			|0         |Outside    |
+		
 
 	
 	

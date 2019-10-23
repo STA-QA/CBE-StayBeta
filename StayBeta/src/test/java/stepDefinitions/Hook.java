@@ -44,7 +44,7 @@ public class Hook extends BaseUtil {
 		  CBEDriver = new ChromeDriver(options);
 
 		  CBEDriver.manage().window().maximize();
-		  CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		  CBEDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}
 
