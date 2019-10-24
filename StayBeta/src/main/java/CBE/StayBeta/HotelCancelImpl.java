@@ -1,7 +1,6 @@
 package CBE.StayBeta;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -77,6 +76,8 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		Thread.sleep(2000);
 	}
 
+
+
 	@Override
 	public void VerifyBookingCancellation() {
 		String CancelledTxt = "//td[contains(text(),'Cancelled')]";
@@ -87,7 +88,7 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 	@Override
 	public void ChangeFromDateForHotelAmend() {
 		String From = "//*[@id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckIntbx']";
-		
+
 		Calendar cal = Calendar.getInstance();
 		SimpleDateFormat format1 = new SimpleDateFormat("ddMMMyy");
 		String CurrentFromDate =CBEDriver.findElement(By.xpath(From)).getAttribute("Value");
@@ -107,12 +108,12 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		}
 
 	}
-	
-	
+
+
 	@Override
 	public void ReduceFromDateForHotelAmend(int NoOfNightsToReduce) throws ParseException {
 	String From = "//*[@id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckIntbx']";
-		
+
 		Calendar cal = Calendar.getInstance();
 		SimpleDateFormat format1 = new SimpleDateFormat("ddMMMyy");
 		String CurrentFromDate =CBEDriver.findElement(By.xpath(From)).getAttribute("Value");
@@ -130,31 +131,31 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		catch (ParseException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
-	
-	
-	
-	
+
+
+
+
 
 	@Override
 	public void AddToCartInAmend() {
 		String AddToCartXpath = "//span[contains(text(),'Add to cart')]";
 		CBEDriver.findElement(By.xpath(AddToCartXpath)).click();
-		
+
 	}
 
 	@Override
 	public void ClickOnCancellationConditionsLink() {
-		CBEDriver.findElement(By.xpath("//a[contains(.,'Cancellation conditions')]")).click();	
+		CBEDriver.findElement(By.xpath("//a[contains(.,'Cancellation conditions')]")).click();
 		try {
 		 FileWriter writer = new FileWriter("BookingDetails.docx", true);
          BufferedWriter bufferedWriter = new BufferedWriter(writer);
-         bufferedWriter.newLine();            	
-         bufferedWriter.write( "The Cancellation Charges are: ");			  		
+         bufferedWriter.newLine();
+         bufferedWriter.write( "The Cancellation Charges are: ");
          bufferedWriter.close();
-		} 
+		}
 		 catch (IOException e) {
 	          e.printStackTrace();
 	      }
@@ -166,29 +167,29 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		CBEDriver.switchTo().frame(0);
 		Thread.sleep(4000);
 		List<WebElement> listings = CBEDriver.findElements(By.xpath("//*[@id='CancellationsContainer']/div/div/div/div/ul/li"));
-		      
+
 		for (WebElement we : listings) {
 			try {
 				try {
 					 FileWriter writer = new FileWriter("BookingDetails.docx", true);
 			         BufferedWriter bufferedWriter = new BufferedWriter(writer);
-			         bufferedWriter.newLine();            	
-			         bufferedWriter.write( we.getText());			  		
+			         bufferedWriter.newLine();
+			         bufferedWriter.write( we.getText());
 			         bufferedWriter.close();
-			      } 
+			      }
 				 catch (IOException e) {
 			          e.printStackTrace();
 			      }
-								
+
 			} catch (AssertionError e) {
-				
+
 				LogLog.error("Other Data Sources Hotels are displayed in the search");
 			}
 		}
-		
+
 		Thread.sleep(2000);
-		CBEDriver.findElement(By.xpath("//*[@id=\"glbLightBoxDiv\"]/div[3]/div/a[2]/i")).click();		
-		
+		CBEDriver.findElement(By.xpath("//*[@id=\"glbLightBoxDiv\"]/div[3]/div/a[2]/i")).click();
+
 		Thread.sleep(2000);
 		//CBEDriver.switchTo().frame(1);
 		Thread.sleep(2000);

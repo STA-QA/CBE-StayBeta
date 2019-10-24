@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //@RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/java/TestCasesRecent/ExpediaHotelBooking.feature", plugin = {
+@CucumberOptions(features = "src/test/java/TestCasesRecent/Amend-ChangeNumberOfPassenger.feature", plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:" }, glue = "stepDefinitions")
 
 

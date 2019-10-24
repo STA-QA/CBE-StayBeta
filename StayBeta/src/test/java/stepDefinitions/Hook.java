@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -39,12 +40,14 @@ public class Hook extends BaseUtil {
 
 
 		  ChromeOptions options = new ChromeOptions();
+		 // options.addArguments("enable-automation");
 		  options.setExperimentalOption("useAutomationExtension", false);
-		//  options.addArguments("----headless");
+		  options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+		 // options.addArguments("----headless");
 		  CBEDriver = new ChromeDriver(options);
 
 		  CBEDriver.manage().window().maximize();
-		  CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		  CBEDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 	}
 

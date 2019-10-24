@@ -23,6 +23,8 @@ public class CancelBooking {
 		Hotel.ClickMyBookings();
 	}
 
+
+
 	@And("^Clicks on Search Booking$")
 	public void clicks_on_search_booking() throws Throwable {
 		Hotel.SelectBookingSearch();
@@ -66,6 +68,8 @@ public class CancelBooking {
 	public void click_on_update_button() throws Throwable {
 		Thread.sleep(1000);
 		Hotel.ClickUpdateButton();
+
+
 	}
 
 	@And("^Clicks on Retrieve latest booking$")
@@ -74,21 +78,25 @@ public class CancelBooking {
 		Hotel.AcceptThePopup();
 	}
 
+
+
+
+
 	@And("^Fetch the From date and move it few days further$")
 	public void fetch_the_from_date_and_move_it_few_days_further() throws Throwable {
 		Thread.sleep(4000);
 		HotelCancel.ChangeFromDateForHotelAmend();
 		Thread.sleep(2000);
 	}
-	
-	
+
+
 	@And("^Fetch the From date and Reduce by (.+) Nights$")
     public void fetch_the_from_date_and_reduce_by_nights(int noofnights) throws Throwable {
 		Thread.sleep(4000);
 		HotelCancel.ReduceFromDateForHotelAmend(noofnights);
 		Thread.sleep(2000);
     }
-	
+
 
 	@And("^Click on Add to Cart$")
 	public void click_on_add_to_cart() throws Throwable {
