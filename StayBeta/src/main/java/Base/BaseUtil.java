@@ -24,11 +24,13 @@ public class BaseUtil {
 	public static ExtentTest features;
 	static String applicationURL = "http://staybeta.bluee.net/login?username=staycbegbcbg&password=cbeuser";
 	
-	static String applicationURL_de = "// http://staybeta.bluee.net/login?username=STAYCBEDEDEU&password=cbeuser";
+	static String applicationURL_de = "http://staybeta.bluee.net/login?username=STAYCBEDEDEU&password=cbeuser";
 	
 	static String applicationURL_au = "http://staybeta.bluee.net/login?username=staycbeauauu&password=cbeuser";
 
 	static String applicationURL_us = "http://staybeta.bluee.net/login?username=staycbeususu&password=cbeuser";
+	
+	static String applicationURL_za = "http://staybeta.bluee.net/login?username=staycbezaza2&password=cbeuser";
 
 	// This method is used to Launch the application
 	public void openUrl_au() {
@@ -46,6 +48,10 @@ public class BaseUtil {
 
 	public void openUrl_DE() {
 		CBEDriver.navigate().to(applicationURL_de);
+	}
+	
+	public void openUrl_ZA() {
+		CBEDriver.navigate().to(applicationURL_za);
 	}
 	
 	@AfterSuite

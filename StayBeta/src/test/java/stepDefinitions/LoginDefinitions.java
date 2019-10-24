@@ -34,10 +34,21 @@ public class LoginDefinitions extends BaseUtil {
     public void user_launches_the_de_application() throws Throwable {
         openUrl_DE();
     }
+	
+	 @Given("^User launches the ZA application$")
+	    public void user_launches_the_za_application() throws Throwable {
+		 openUrl_ZA();
+		 
+	    }
+
+	    @And("^User enters Valid ZA Credentials$")
+	    public void user_enters_valid_za_credentials() throws Throwable {
+	       login.EnterZALoginCredentials();
+	    }
 
     @And("^User enters Valid DE Credentials$")
     public void user_enters_valid_de_credentials() throws Throwable {
-        
+        login.EnterDELoginCredentials();
     }
     @And("^User enters Valid US Credentials$")
     public void user_enters_valid_us_credentials() throws Throwable {

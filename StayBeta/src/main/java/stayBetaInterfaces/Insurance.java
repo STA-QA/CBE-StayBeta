@@ -24,5 +24,7 @@ public interface Insurance {
 	
 	public void AddAdditionalDetailsForInsurance();
 	
+	public void SelectTheDates(int StartDate, int Duration);
+	
 	
 }

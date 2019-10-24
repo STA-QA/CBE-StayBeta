@@ -202,7 +202,7 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Accepts the Terms and Conditions$")
 	public void accepts_the_terms_and_conditions() throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		Hotel.AcceptTermsAndConditions();
 	}
 

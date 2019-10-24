@@ -1,11 +1,14 @@
 package CBE.StayBeta;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,11 +27,19 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 		PageFactory.initElements(CEDriver, this);
 	}
 
+	
+	
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ddlRegionCode")
 	public WebElement RegionDropDown;
 
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscPassengers_ddlAdults")
 	public WebElement PaxDropDown;
+	
+	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_dtbStartDatetbx")
+	public WebElement FromDate;
+	
+	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_dtbEndDatetbx")
+	public WebElement ToDate;
 
 	@FindBy(how = How.ID, using = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscPassengers_bclAdults_0_birthDateBdbdays")
 	public WebElement Date_DOB;
@@ -59,6 +70,11 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_detailBtn\"]/span[1]")
 	public WebElement DetailIcon;
 
+		
+	
+	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_uscPax_bclPax_0_uscPax_passportTbx")
+	public WebElement PassportNo;
+	
 	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_address1Tbx")
 	public WebElement Address1;
 
@@ -160,7 +176,6 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 	public void AddInsuranceToCart() {
 		Random r = new Random();
 		int randomValue = r.nextInt(AddToCart.size());
-
 		AddToCart.get(randomValue).click();
 
 	}
@@ -196,6 +211,12 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 
 	@Override
 	public void AddAdditionalDetailsForInsurance() {
+		try {
+		 PassportNo.sendKeys("ABCD123");
+		}
+		catch(Exception e) {
+			System.out.println("Other divisions doesn't have DE");
+		}
 		Address1.sendKeys("STA Travel");
 		Address2.sendKeys("6 Wrights Lane");
 		City.sendKeys("London");
@@ -206,6 +227,22 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 		contactnumber2.sendKeys("3456");
 		contactnumber3.sendKeys("7891011");
 		SaveButton.click();
+		
+	}
+
+	@Override
+	public void SelectTheDates(int StartDate, int Duration) {
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat format1 = new SimpleDateFormat("ddMMMyy");
+		cal.add(Calendar.DATE, StartDate);
+		String StartDate1 = format1.format(cal.getTime());
+
+		FromDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), StartDate1);
+
+		cal.add(Calendar.DATE, Duration);
+		String EndDate = format1.format(cal.getTime());
+
+	    ToDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), EndDate);
 		
 	}
 
