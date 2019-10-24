@@ -6,12 +6,23 @@
 	</listeners>
 	<test name="Regression">
 		<classes>
+<<<<<<< HEAD
 		
 		 <class name="cucumberOptions.TestRunner" />
 		
 		<!-- <class name="cucumberOptions.InsuranceRunner" /> -->
+||||||| merged common ancestors
+		<class name="cucumberOptions.GBHotelBookingRunner" />
+		<!-- <class name="cucumberOptions.TestRunner" /> -->
+		
+		<!-- <class name="cucumberOptions.InsuranceRunner" /> -->
+=======
+		    <class name="cucumberOptions.InsuranceRunner" />   
+>>>>>>> 00c8f8c4a5b3a6a6c677c19ece68b0885b829816
 		<!-- <class name="cucumberOptions.TransfersRunner" /> -->
-	 	<!-- <class name="cucumberOptions.ActivitiesAndDayTripsRunner" />  -->
+	  	<!-- <class name="cucumberOptions.ActivitiesAndDayTripsRunner" /> -->   
+	 	 <!-- <class name="cucumberOptions.GBHotelBookingRunner" /> -->
+		<!-- <class name="cucumberOptions.TestRunner" /> -->
 		</classes>
 	</test>
 </suite>

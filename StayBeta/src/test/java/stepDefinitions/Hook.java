@@ -25,29 +25,31 @@ public class Hook extends BaseUtil {
 
 	public BaseUtil base;
 
-//Author Guru
+
 
 	@Before
 	public void InitializeTest(Scenario scenario) {
 
-		//System.out.println("TEST");
-	//	scenarioDef = base.features.createNode(scenario.getName());
-	//	ExtentProperties extentProperties = ExtentProperties.INSTANCE;
 
-		//extentProperties.setReportPath("Reports/STA-CBE-Automation.html");
 		  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
 		  + "/WebDrivers/chromedriver.exe");
 
 
 		  ChromeOptions options = new ChromeOptions();
-		 // options.addArguments("enable-automation");
+
 		  options.setExperimentalOption("useAutomationExtension", false);
 		  options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		 // options.addArguments("----headless");
 		  CBEDriver = new ChromeDriver(options);
 
 		  CBEDriver.manage().window().maximize();
+
 		  CBEDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		  CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+		  CBEDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 
 	}
 

@@ -18,11 +18,34 @@ public class Login extends BaseUtil {
 		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq5");
 	}
 	
+	
+	public void EnterUSLoginCredentials() {
+		CBEDriver.findElement(By.id(Username)).clear();
+		CBEDriver.findElement(By.id(Username)).sendKeys("uszq5");
+		CBEDriver.findElement(By.id(Password)).clear();
+		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq5");
+	}
+	
 	public void EnterAULoginCredentials() {
 		CBEDriver.findElement(By.id(Username)).clear();
-		CBEDriver.findElement(By.id(Username)).sendKeys("auzq3");
+		CBEDriver.findElement(By.id(Username)).sendKeys("auzq5");
 		CBEDriver.findElement(By.id(Password)).clear();
-		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq3");
+		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq5");
+	}
+	
+	
+	public void EnterDELoginCredentials() {
+		CBEDriver.findElement(By.id(Username)).clear();
+		CBEDriver.findElement(By.id(Username)).sendKeys("dezq5");
+		CBEDriver.findElement(By.id(Password)).clear();
+		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq5");
+	}
+	
+	public void EnterZALoginCredentials() {
+		CBEDriver.findElement(By.id(Username)).clear();
+		CBEDriver.findElement(By.id(Username)).sendKeys("zazq5");
+		CBEDriver.findElement(By.id(Password)).clear();
+		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq5");
 	}
 	
 	public void ClickOnLogin() {

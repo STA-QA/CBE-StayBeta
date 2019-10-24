@@ -11,7 +11,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/TestCasesRecent/BookActivitiesAndDayTrips.feature",  plugin = {
+@CucumberOptions(features = "src/test/java/regressionSuite/BookActivitiesAndDayTrips.feature", tags = {"@US"},  plugin = {
 "com.cucumber.listener.ExtentCucumberFormatter:" }, glue = "stepDefinitions")
 
 

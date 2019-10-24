@@ -17,25 +17,48 @@ public class LoginDefinitions extends BaseUtil {
 
 	@Given("^User launches the application")
 	public void User_launches_the_application() throws Throwable {
-		//main();
 		openUrl();
 	}
 
 	@Given("^User launches the au application$")
     public void user_launches_the_au_application() throws Throwable {
-		//main();
-		//openUrl_au();
+		openUrl_au();
     }
 	
-	@And("^User login with valid credentials")
-	public void User_login_with_valid_credentials() throws Throwable {
-		
-		//CBEDriver.navigate().refresh();
-	}
+	@Given("^User launches the US application$")
+    public void user_launches_the_us_application() throws Throwable {
+        openUrl_US();
+    }
+
+	@Given("^User launches the DE application$")
+    public void user_launches_the_de_application() throws Throwable {
+        openUrl_DE();
+    }
+	
+	 @Given("^User launches the ZA application$")
+	    public void user_launches_the_za_application() throws Throwable {
+		 openUrl_ZA();
+		 
+	    }
+
+	    @And("^User enters Valid ZA Credentials$")
+	    public void user_enters_valid_za_credentials() throws Throwable {
+	       login.EnterZALoginCredentials();
+	    }
+
+    @And("^User enters Valid DE Credentials$")
+    public void user_enters_valid_de_credentials() throws Throwable {
+        login.EnterDELoginCredentials();
+    }
+    @And("^User enters Valid US Credentials$")
+    public void user_enters_valid_us_credentials() throws Throwable {
+        login.EnterUSLoginCredentials();
+    }
+	
 	
 	@And("^User enters Valid Credentials$")
     public void user_enters_valid_credentials() throws Throwable {
-        login.EnterLoginCredentials();
+		 login.EnterLoginCredentials();
     }
 	
 	   @And("^User enters Valid AU Credentials$")
@@ -50,6 +73,7 @@ public class LoginDefinitions extends BaseUtil {
 	
 	@And("^Takes The Screenshot And Add to Report$")
     public void takes_the_screenshot_and_add_to_report() throws Throwable {
+		Thread.sleep(3000);
         general.AddScreenshotToReport();
     }
 

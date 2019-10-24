@@ -18,6 +18,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -138,9 +139,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	@Override
 	public void SelectNumberOfAdults(String NoOfAdults, int RoomNumber) throws InterruptedException {
 		String NoOfAdultsId = AdultId1 + (RoomNumber) + AdultId2;
-		CBEDriver.findElement(By.id(NoOfAdultsId)).sendKeys("0");
-		Thread.sleep(2000);
-		CBEDriver.findElement(By.id(NoOfAdultsId)).sendKeys(NoOfAdults);
+		Select dropdown = new Select(CBEDriver.findElement(By.id(NoOfAdultsId)));
+		dropdown.selectByValue(NoOfAdults);
 	}
 
 	@Override
@@ -149,9 +149,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		WebDriverWait wait = new WebDriverWait(CBEDriver, 10);
 		WebElement element = CBEDriver.findElement(By.id(NoOfChildsId));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
-		element.sendKeys("0");
-		Thread.sleep(2000);
-		element.sendKeys(NoOfChildren);
+		Select dropdown = new Select(element);
+		dropdown.selectByValue(NoOfChildren);
+
 	}
 
 	@Override
@@ -646,7 +646,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String BirthYear = Common + i + idBY1;
 		CBEDriver.findElement(By.id(Title)).sendKeys("M");
 		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-		CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
+		CBEDriver.findElement(By.id(LNpath)).sendKeys("TestAutomation");
 		Thread.sleep(1000);
 		CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
 		Thread.sleep(1000);
@@ -697,30 +697,38 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
 
-		int j = 0;
-		int i = index;
-		// for (int i = children; i < total; i++) {
-		String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+", "");
-		String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+", "");
-		String Title = Common + i + Title1;
-		String FNpath = Common + i + idFN1;
-		String LNpath = Common + i + idLN1;
-		String BirthDay = Common + i + idBD1;
-		String BirthMonth = Common + i + idBM1;
-		String BirthYear = Common + i + idBY1;
-		CBEDriver.findElement(By.id(Title)).sendKeys("M");
-		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-		CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
-		Thread.sleep(1000);
 
-		LocalDate today = LocalDate.now();
-		int year = today.getYear() - ChildrenAge;
-		Month month = today.getMonth();
-		String mon = month.toString().substring(0, 3);
-		int day = today.getDayOfMonth();
-		System.out.println(mon);
-		System.out.println(day);
-		System.out.println(year - 5);
+
+		int j =0;
+		int i=index;
+		//for (int i = children; i < total; i++) {
+			String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+","");
+			String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+","");
+			String Title = Common + i + Title1;
+			String FNpath = Common + i + idFN1;
+			String LNpath = Common + i + idLN1;
+			String BirthDay = Common + i + idBD1;
+			String BirthMonth = Common + i + idBM1;
+			String BirthYear = Common + i + idBY1;
+			CBEDriver.findElement(By.id(Title)).sendKeys("M");
+			CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
+			CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
+			Thread.sleep(1000);
+
+
+
+			LocalDate today = LocalDate.now();
+			int year = today.getYear() - ChildrenAge;
+			Month month = today.getMonth();
+			String mon = month.toString().substring(0,3);
+			int day = today.getDayOfMonth();
+			System.out.println(mon);
+			System.out.println(day);
+			System.out.println(year-5);
+
+
+
+
 
 		CBEDriver.findElement(By.id(BirthDay)).sendKeys(Integer.toString(day));
 		Thread.sleep(1000);

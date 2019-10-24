@@ -2,7 +2,7 @@ package cucumberOptions;
 
 
 
-import org.junit.BeforeClass;
+
 
 
 
@@ -11,7 +11,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/TestCasesRecent/Insurance.feature",  plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/Insurance.feature", tags = {"@GB"},  plugin = {
 "com.cucumber.listener.ExtentCucumberFormatter:" }, glue = "stepDefinitions")
 
 
