@@ -69,17 +69,18 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		  String HotelNamepath = "//*[@id='"+id+"']/td[3]/a";
 		  String HotelName =  CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
 		  
-		  CBEDriver.findElement(By.xpath(HotelNamepath)).click();
-		  Thread.sleep(2000);
-			CBEDriver.switchTo().frame(0);
-			Thread.sleep(5000);
-			CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
-			String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
-			Reporter.addScreenCaptureFromPath(screenShotPath);
-			
-		  
-			CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
-			Thread.sleep(3000);
+		/*
+		 * CBEDriver.findElement(By.xpath(HotelNamepath)).click(); Thread.sleep(2000);
+		 * CBEDriver.switchTo().frame(0); Thread.sleep(5000);
+		 * CBEDriver.findElement(By.xpath("//span[contains(.,'Cancellations')]")).click(
+		 * ); String screenShotPath = BaseUtil.screenshot(CBEDriver,
+		 * System.currentTimeMillis());
+		 * Reporter.addScreenCaptureFromPath(screenShotPath);
+		 * 
+		 * 
+		 * CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
+		 * Thread.sleep(3000);
+		 */
 		/*
 		 * String ExpandXpath = "//*[@id='"+
 		 * id+"']/td[@class='cell-price tab']//div/div/a/span[@title='Expand price breakdown']"

@@ -14,7 +14,8 @@ public class HotelSearchDefinitions extends BaseUtil {
 	HotelSearchImpl HotelSearch = new HotelSearchImpl();
 	HotelSearchPageAssertions SearchAssert = new HotelSearchPageAssertions();
 	
-	
+
+    
 	
 	@Then("^Verify if Reviews are present for each hotel$")
 	public void verify_if_reviews_are_present_for_each_hotel() throws Throwable {

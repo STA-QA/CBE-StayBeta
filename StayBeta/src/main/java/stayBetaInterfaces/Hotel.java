@@ -73,13 +73,7 @@ public interface Hotel {
 
 	public void EnterAdultDetails(int Guests) throws InterruptedException;
 
-
-	public void EnterChildrenDetails(int children, int total, List<Integer> ChildrenAge) throws InterruptedException;
-
-
-
-	//public void EnterChildrenDetails(int children, int total, List<Integer> ChildrenAge) throws InterruptedException;
-		public void ClickOnCancelItem();
+	public void ClickOnCancelItem();
 
 	public void ClickUpdateButton();
 
@@ -91,6 +85,6 @@ public interface Hotel {
 
 	void addToCart_RefundableHotelRooms() throws InterruptedException;
 
-
+	public void ClickOnSearchDropDownInCart() throws Exception;
 
 }
