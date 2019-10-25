@@ -5,14 +5,16 @@ import org.testng.annotations.BeforeClass;
 import com.cucumber.listener.ExtentProperties;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-
-@CucumberOptions(features = "src/test/java/RegressionSuite/Amend-RemovePassengerafterBooking.feature", plugin = {
-		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
-
-
-public class TestRunner extends AbstractTestNGCucumberTests {
+@CucumberOptions(
+	    monochrome = true,
+	    features = "@target/rerun.txt",
+	    format = {"pretty", "html:target/site/cucumber-pretty",
+	            "json:target/cucumber.json"},
+	    plugin = {
+	    		"com.cucumber.listener.ExtentCucumberFormatter:"}
+	  )
+	public class FailedScenarios {
 
 	@BeforeClass
 	public static void setup() {
@@ -23,4 +25,5 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
 	}
 
-}
+
+	}
