@@ -72,6 +72,11 @@ public class CancelBooking {
 
 	}
 
+	 @Then("^Get updated Booking Details$")
+	    public void get_updated_booking_details() throws Throwable {
+	        Hotel.getAmendedRefnumber();
+	    }
+
 	@And("^Clicks on Retrieve latest booking$")
 	public void clicks_on_retrieve_latest_booking() throws Throwable {
 		HotelCancel.ClickRetrieveLatestBooking();

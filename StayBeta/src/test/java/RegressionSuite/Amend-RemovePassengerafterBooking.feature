@@ -33,7 +33,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 		|London (LON), United Kingdom (GB)  |	LON                      |JacTravel/Totalstay               |165          |1              	    |1    	  |3     	    |0			|	0		     |Outside	|
 	
 	
-Scenario Outline:: Number of Passengers from My Bookings 
+Scenario Outline: Remove Passengers after Bookings 
 Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
@@ -50,6 +50,7 @@ Given User launches the application
 	
 	And Accepts the Terms and Conditions 
 	And Click on Update button 
+	Then Get updated Booking Details
 	
 	Examples: 
 	
