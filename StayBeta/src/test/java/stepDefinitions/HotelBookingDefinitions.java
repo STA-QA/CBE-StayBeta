@@ -192,6 +192,23 @@ public class HotelBookingDefinitions extends BaseUtil {
 
     }
 
+
+
+
+
+	@And("^Provied Amended Adults (.+) Details and (.+) details with (.+)")
+    public void provides_Amended_adults_details_and_details_with(List<Integer> adults, List<Integer> children, List<Integer> childrenage) throws Throwable {
+
+
+		Hotel.amenedAdultdetails();
+
+
+    }
+
+
+
+
+
 	@And("^Provides the Expedia Adults (.+) Details and (.+) details with (.+)$")
     public void provides_the_expedia_adults_details_and_details_with(List<Integer> adults, List<Integer> children, List<Integer> childrenage) throws Throwable {
 
@@ -215,6 +232,12 @@ public class HotelBookingDefinitions extends BaseUtil {
 
 
     }
+
+	@And("^User Enters Booking Refnumber$")
+	public void User_Enters_Booking_Refnumber() throws Throwable {
+		Hotel.eneterBookingref();
+		Hotel.AcceptThePopup();
+	}
 
 
 

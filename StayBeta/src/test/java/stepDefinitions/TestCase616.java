@@ -154,8 +154,8 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Click Search Button")
 	public void Click_Search_Button() throws Throwable {
-		Hotel.ClickSearch();		
-		Thread.sleep(40000);
+		Hotel.ClickSearch();
+		Thread.sleep(20000);
 		System.out.println("Wait is Done!!");
 	}
 
@@ -186,7 +186,7 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Clicks on Complete Booking$")
 	public void clicks_on_complete_booking() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		Hotel.ClickOnCompleteBooking();
 	}
 

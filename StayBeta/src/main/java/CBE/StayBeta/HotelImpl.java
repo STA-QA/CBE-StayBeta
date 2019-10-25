@@ -21,6 +21,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import com.cucumber.listener.Reporter;
 import com.github.javafaker.Faker;
@@ -32,7 +33,7 @@ import stayBetaInterfaces.Hotel;
 public class HotelImpl extends BaseUtil implements Hotel {
 
 	Faker faker = new Faker();
-
+	Base.funtions functions = new Base.funtions();
 	String CityTextBox = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_astLocation_astLocationtbx";
 	String From = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckIntbx";
 	String To = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckOuttbx";
@@ -137,9 +138,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	@Override
 	public void SelectNumberOfAdults(String NoOfAdults, int RoomNumber) throws InterruptedException {
-		String NoOfAdultsId = AdultId1 + (RoomNumber) + AdultId2;		
+		String NoOfAdultsId = AdultId1 + (RoomNumber) + AdultId2;
 		Select dropdown = new Select(CBEDriver.findElement(By.id(NoOfAdultsId)));
-		dropdown.selectByValue(NoOfAdults);	
+		dropdown.selectByValue(NoOfAdults);
 	}
 
 	@Override
@@ -149,8 +150,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		WebElement element = CBEDriver.findElement(By.id(NoOfChildsId));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		Select dropdown = new Select(element);
-		dropdown.selectByValue(NoOfChildren);	
-		
+		dropdown.selectByValue(NoOfChildren);
+
 	}
 
 	@Override
@@ -482,8 +483,6 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		CBEDriver.findElement(By.xpath("//label[contains(.,'Cancel item')]")).click();
 	}
 
-
-
 	@Override
 	public void addToCart_RefundableHotelRooms() throws InterruptedException {
 		Thread.sleep(4000);
@@ -494,30 +493,32 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			String names = roomNames.get(i).getAttribute("innerText");
 			String NonrefundText = "Non Refundable";
 			if (!names.contains(NonrefundText)) {
-				List<WebElement> Addtocart  = CBEDriver.findElements(By.xpath("//a[@class='primary-button cart-button']"));
+				List<WebElement> Addtocart = CBEDriver
+						.findElements(By.xpath("//a[@class='primary-button cart-button']"));
 				System.out.println("----" + roomNames.get(i) + names);
 				JavascriptExecutor executor = (JavascriptExecutor) CBEDriver;
 				executor.executeScript("arguments[0].click();", Addtocart.get(i));
-				//clickbyJS(Addtocart.get(i));
-				//Addtocart.get(i).click();
+				// clickbyJS(Addtocart.get(i));
+				// Addtocart.get(i).click();
 				break;
 			}
 
 		}
-
 
 		WebElement hotelsummary = CBEDriver.findElement(By.xpath("//div[@class='summary-details']"));
 
 		Thread.sleep(7000);
 		System.out.println("Hotel added to cart is "
 				+ CBEDriver.findElement(By.xpath("//span[@class='product-details-label']")).getText());
-		List<WebElement> cancellationChargePeriod = CBEDriver.findElements(By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning']/p"));
+		List<WebElement> cancellationChargePeriod = CBEDriver.findElements(
+				By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning']/p"));
 		System.out.println(" " + cancellationChargePeriod.size());
 
 		if (cancellationChargePeriod.size() <= 0) {
-			//Actions actions = new Actions(driver);
-			//actions.moveToElement(cancelConditionLink).click().build().perform();
-			WebElement cancelConditionLink = CBEDriver.findElement(By.xpath("//div/a[@class='lightbox-link lightbox-new cboxElement']"));
+			// Actions actions = new Actions(driver);
+			// actions.moveToElement(cancelConditionLink).click().build().perform();
+			WebElement cancelConditionLink = CBEDriver
+					.findElement(By.xpath("//div/a[@class='lightbox-link lightbox-new cboxElement']"));
 			JavascriptExecutor executor = (JavascriptExecutor) CBEDriver;
 			executor.executeScript("arguments[0].click();", cancelConditionLink);
 
@@ -528,7 +529,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			WebElement iFrame = CBEDriver.findElement(By.tagName("iframe"));
 			CBEDriver.switchTo().frame(iFrame);
 
-			WebElement cancellationCharges = CBEDriver.findElement(By.xpath("//div[@class='machine-readable']//ul/li[1]"));
+			WebElement cancellationCharges = CBEDriver
+					.findElement(By.xpath("//div[@class='machine-readable']//ul/li[1]"));
 			System.out.println(cancellationCharges.getText());
 			String ActualCancellationCharges = cancellationCharges.getText();
 			String ExpectedCallationCharges = "no charge";
@@ -547,16 +549,17 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 			CBEDriver.switchTo().defaultContent();
 		}
-		}
-
+	}
 
 	public void confirmBooking() throws InterruptedException, IOException {
-		WebElement TermsandconditionsBooking = CBEDriver.findElement(By.xpath("//div/input[@id='m_c_C000_m_c_cbxAcceptedConditions']"));
+		WebElement TermsandconditionsBooking = CBEDriver
+				.findElement(By.xpath("//div/input[@id='m_c_C000_m_c_cbxAcceptedConditions']"));
 		waitandclick(TermsandconditionsBooking);
 		WebElement Savebutton = CBEDriver.findElement(By.xpath("//div/a[@id='m_c_C000_m_c_continueBtn']"));
 		waitandclick(Savebutton);
-		//public String Price = "//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']";
-		//public String Bookingref = "//div/h4/span[@id='lblFoldNo']";
+		// public String Price =
+		// "//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']";
+		// public String Bookingref = "//div/h4/span[@id='lblFoldNo']";
 		CBEDriver.findElement(By.xpath(Price)).click();
 		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
 
@@ -564,26 +567,26 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 
-
-
 	}
 
 	public void bookprocessbooking() throws InterruptedException, IOException {
 
-		WebElement bookingprocessRadiobutton= CBEDriver.findElement(By.xpath("//input[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl00_rbnProcess']"));
+		WebElement bookingprocessRadiobutton = CBEDriver.findElement(By.xpath(
+				"//input[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl00_rbnProcess']"));
 		Actions actions = new Actions(CBEDriver);
 		actions.moveToElement(bookingprocessRadiobutton).click().build().perform();
-		WebElement CompleteBookingButton= CBEDriver.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
+		WebElement CompleteBookingButton = CBEDriver
+				.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
 		waitandclick(CompleteBookingButton);
 	}
 
 	public void quotebooking() throws InterruptedException, IOException {
-		WebElement CompleteBookingButton= CBEDriver.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
+		WebElement CompleteBookingButton = CBEDriver
+				.findElement(By.xpath("//div/a[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']"));
 		waitandclick(CompleteBookingButton);
 		Thread.sleep(3000);
 
 	}
-
 
 	public void waitandclick(WebElement element) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) CBEDriver;
@@ -600,6 +603,16 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		WebElement element = CBEDriver.findElement(By.xpath(UpdateXpath));
 		Actions actions = new Actions(CBEDriver);
 		actions.moveToElement(element).click().perform();
+
+	}
+
+	public void getAmendedRefnumber() {
+
+		WebElement updatedBookingRefnumber= CBEDriver.findElement(By.xpath("(//div/div/h4)[1]"));
+		System.out.println(updatedBookingRefnumber.getAttribute("innerHtml"));
+		Reporter.addStepLog(updatedBookingRefnumber.getAttribute("innerHtml"));
+		String verifySuccessmessage = updatedBookingRefnumber.getAttribute("innerHtml");
+		Assert.assertEquals(verifySuccessmessage, "Update was successful");
 	}
 
 	@Override
@@ -644,7 +657,6 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	}
 
-
 	public void EnterAdultDetailsForExpedia(int Adults) throws InterruptedException {
 		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
 		String Title1 = "_paxItmUsc_namePrefixDdl";
@@ -662,7 +674,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String BirthMonth = Common + i + idBM1;
 		String BirthYear = Common + i + idBY1;
 		CBEDriver.findElement(By.id(Title)).sendKeys("M");
-		
+
 		CBEDriver.findElement(By.id(FNpath)).sendKeys("Test Booking");
 		CBEDriver.findElement(By.id(LNpath)).sendKeys("Test Booking");
 		Thread.sleep(1000);
@@ -685,6 +697,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
 
+
+
 		int j =0;
 		int i=index;
 		//for (int i = children; i < total; i++) {
@@ -698,7 +712,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			String BirthYear = Common + i + idBY1;
 			CBEDriver.findElement(By.id(Title)).sendKeys("M");
 			CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-			CBEDriver.findElement(By.id(LNpath)).sendKeys("TestAutomation");
+			CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
 			Thread.sleep(1000);
 
 
@@ -714,14 +728,16 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 
 
-			CBEDriver.findElement(By.id(BirthDay)).sendKeys(Integer.toString(day));
-			Thread.sleep(1000);
-			CBEDriver.findElement(By.id(BirthMonth)).sendKeys(mon);
-			Thread.sleep(1000);
-			CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));
-			j++;
 
-	//}
+
+		CBEDriver.findElement(By.id(BirthDay)).sendKeys(Integer.toString(day));
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthMonth)).sendKeys(mon);
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));
+		j++;
+
+		// }
 
 	}
 
@@ -734,42 +750,52 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
 
-		int j =0;
-		int i=index;
-		//for (int i = children; i < total; i++) {
-			String Title = Common + i + Title1;
-			String FNpath = Common + i + idFN1;
-			String LNpath = Common + i + idLN1;
-			String BirthDay = Common + i + idBD1;
-			String BirthMonth = Common + i + idBM1;
-			String BirthYear = Common + i + idBY1;
-			CBEDriver.findElement(By.id(Title)).sendKeys("M");
-			CBEDriver.findElement(By.id(FNpath)).sendKeys("TestBooking");
-			CBEDriver.findElement(By.id(LNpath)).sendKeys("Test Booking");
-			Thread.sleep(1000);
+		int j = 0;
+		int i = index;
+		// for (int i = children; i < total; i++) {
+		String Title = Common + i + Title1;
+		String FNpath = Common + i + idFN1;
+		String LNpath = Common + i + idLN1;
+		String BirthDay = Common + i + idBD1;
+		String BirthMonth = Common + i + idBM1;
+		String BirthYear = Common + i + idBY1;
+		CBEDriver.findElement(By.id(Title)).sendKeys("M");
+		CBEDriver.findElement(By.id(FNpath)).sendKeys("TestBooking");
+		CBEDriver.findElement(By.id(LNpath)).sendKeys("Test Booking");
+		Thread.sleep(1000);
 
+		LocalDate today = LocalDate.now();
+		int year = today.getYear() - ChildrenAge;
+		Month month = today.getMonth();
+		String mon = month.toString().substring(0, 3);
+		int day = today.getDayOfMonth();
+		System.out.println(mon);
+		System.out.println(day);
+		System.out.println(year - 5);
 
+		CBEDriver.findElement(By.id(BirthDay)).sendKeys(Integer.toString(day));
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthMonth)).sendKeys(mon);
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));
+		j++;
 
-			LocalDate today = LocalDate.now();
-			int year = today.getYear() - ChildrenAge;
-			Month month = today.getMonth();
-			String mon = month.toString().substring(0,3);
-			int day = today.getDayOfMonth();
-			System.out.println(mon);
-			System.out.println(day);
-			System.out.println(year-5);
+		// }
 
+	}
 
-
-			CBEDriver.findElement(By.id(BirthDay)).sendKeys(Integer.toString(day));
-			Thread.sleep(1000);
-			CBEDriver.findElement(By.id(BirthMonth)).sendKeys(mon);
-			Thread.sleep(1000);
-			CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));
-			j++;
-
-	//}
-
+	@Test
+	public void eneterBookingref() throws Exception {
+		WebElement Bookingrefxpath = CBEDriver.findElement(
+				By.xpath("//div/input[@name='m$cphHeader$T_CustToolbar$cbeNav$myAccount$txtBookingNumber']"));
+		List<String> getnumber = functions.readCSVdata(0);
+		String number = String.join("", getnumber);
+		Bookingrefxpath.sendKeys(number);
+		// String number = listString.replaceAll("\\D+","");
+		System.out.println("Booking Ref entred is : " + number);
+		WebElement okayButton = CBEDriver.findElement(
+				By.xpath("//*[@id='m_cphHeader_T_CustToolbar_cbeNav_myAccount_btnRetrieveBooking']/span[1]"));
+		okayButton.click();
 	}
 
 	
@@ -781,4 +807,86 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		CBEDriver.findElement(By.xpath("//*/span[contains(.,'Search for Transfers...')]")).click();
 		Thread.sleep(4000);
 	}
+
+	public void amenedAdultdetails() {
+
+		WebElement passengerdetailsForms = CBEDriver
+				.findElement(By.xpath("//div[@class='passenger-list input-panel']"));
+		passengerdetailsForms
+				.findElement(By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]/option[3]"))
+				.click();
+		// Select Title from dropdown
+		List<WebElement> title = passengerdetailsForms
+				.findElements(By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]"));
+
+		for (int i = 0; i < title.size(); i++) {
+			try {
+				title.get(i).click();
+				passengerdetailsForms
+						.findElement(By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]/option[3]"))
+						.click();
+			} catch (Exception e) {
+				System.out.println("Title Dropdown" + e);
+			}
+
+		}
+       // Enter Firstname and Lastname
+		List<WebElement> firname = passengerdetailsForms
+				.findElements(By.xpath("//div/input[(@class='text') and not (@disabled='disabled')]"));
+		try {
+			for (int i = 1; i < firname.size(); i++) {
+				System.out.println("Entered Passenger Names: ");
+				firname.get(i).sendKeys("Test Booking");
+			}
+		} catch (Exception e) {
+			System.out.println("Names TextFeild" + e);
+		}
+
+		//Select Day from DOB DropDrown
+		List<WebElement> day = passengerdetailsForms
+				.findElements(By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[1]"));
+		try {
+			for (int i = 0; i < day.size(); i++) {
+
+				passengerdetailsForms
+						.findElement(
+								By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[1]/option[13]"))
+						.click();
+
+			}
+		} catch (Exception e) {
+			System.out.println("Day Dropdown" + e);
+		}
+
+		//Select Month from DOB DropDrown
+		List<WebElement> month = passengerdetailsForms
+				.findElements(By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[2]"));
+		try {
+			for (int i = 0; i < month.size(); i++) {
+				passengerdetailsForms
+						.findElement(
+								By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[2]/option[4]"))
+						.click();
+
+			}
+		} catch (Exception e) {
+			System.out.println("Month Dropdown" + e);
+		}
+
+		//Select Year from DOB DropDrown
+		List<WebElement> year = passengerdetailsForms
+				.findElements(By.xpath("//div/select[(@class='dob year') and not (@disabled='disabled')]"));
+		try {
+			for (int i = 0; i < year.size(); i++) {
+				passengerdetailsForms
+						.findElement(
+								By.xpath("//div/select[(@class='year') and not (@disabled='disabled')]/option[15]"))
+						.click();
+
+			}
+		} catch (Exception e) {
+			System.out.println("Title Dropdown" + e);
+		}
+	}
+
 }

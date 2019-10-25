@@ -86,7 +86,7 @@ public class funtions {
 
 			writer.write(sb.toString());
 
-			System.out.println("done!");
+			System.out.println("Refrence number stored in CSV file done!");
 
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getMessage());
@@ -98,22 +98,22 @@ public class funtions {
 	private static final char DEFAULT_SEPARATOR = ',';
 	private static final char DEFAULT_QUOTE = '"';
 
-	public void readCSVdata(int index) throws Exception {
-
+	public List<String> readCSVdata(int index) throws Exception {
+		List<String> line = null;
 		String path = System.getProperty("user.dir");
-		String csvFile = path + "\\src\\Testdata\\user_details.csv";
-
-		// String csvFile = "/Users/csv/country2.csv";
-
-		Scanner scanner = new Scanner(new File(csvFile));
+		String csvFile = path + "\\src\\Testdata\\Bookingconfirmation.csv";
+		File file = new File(csvFile);
+	    System.out.println(file.exists());
+		Scanner scanner = new Scanner(file);
 		while (scanner.hasNext()) {
-			List<String> line = parseLine(scanner.nextLine());
+			 line = parseLine(scanner.nextLine());
 			System.out.println(line.get(index));
 			// System.out.println(line.get(1));
 			// System.out.println(line.get(2));
+			break;
 		}
 		scanner.close();
-
+        return line;
 	}
 
 	public static List<String> parseLine(String cvsLine) {
