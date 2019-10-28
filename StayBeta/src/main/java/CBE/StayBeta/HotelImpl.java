@@ -1,5 +1,7 @@
 package CBE.StayBeta;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -15,8 +17,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -203,6 +207,16 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	@Override
 	public void ClickSearch() {
 		CBEDriver.findElement(By.id(SearchButton)).click();
+		long timerstart = System.currentTimeMillis();
+		WebDriverWait wait = new WebDriverWait(CBEDriver, 60);
+		WebElement element = wait.until(
+		        ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='search-results-table']")));
+		long timerfinish = System.currentTimeMillis();
+		long totalTime = timerfinish - timerstart;
+		int seconds = (int) ((totalTime / 1000) % 60);
+		System.out.println(("Total Time in Seconds to display Search Results:   " + seconds));
+		Reporter.addStepLog("Total Time in Seconds to display Search Results:   " + seconds);
+
 	}
 
 	@Override
@@ -300,9 +314,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	@Override
 	public void ClickOnCompleteBooking() throws InterruptedException {
 		Thread.sleep(3000);
-		// CBEDriver.findElement(By.xpath("//*[@id='m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1']/span[2]")).click();
-		// CBEDriver.findElement(By.xpath("//*/span[contains(.,'Complete
-		// booking')]")).click();
+
 		WebElement element = CBEDriver.findElement(By.xpath("//span[contains(text(),'Complete booking')]"));
 		Actions actions = new Actions(CBEDriver);
 		actions.moveToElement(element).click().perform();
@@ -606,14 +618,36 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	}
 
-	public void getAmendedRefnumber() {
+	public void getAmendedRefnumber() throws InterruptedException, IOException {
+		Thread.sleep(6000);
+		waitForPageLoaded();
+		WebElement updatedBookingRefnumber = CBEDriver.findElement(By.xpath("(//div/div/h4)[1]"));
+		System.out.println(updatedBookingRefnumber.getText());
+		Reporter.addStepLog(updatedBookingRefnumber.getText());
+		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		Reporter.addScreenCaptureFromPath(screenShotPath);
+		String verifySuccessmessage = updatedBookingRefnumber.getText();
+		assertTrue(verifySuccessmessage.contains("UPDATE WAS SUCCESSFUL"));
 
-		WebElement updatedBookingRefnumber= CBEDriver.findElement(By.xpath("(//div/div/h4)[1]"));
-		System.out.println(updatedBookingRefnumber.getAttribute("innerHtml"));
-		Reporter.addStepLog(updatedBookingRefnumber.getAttribute("innerHtml"));
-		String verifySuccessmessage = updatedBookingRefnumber.getAttribute("innerHtml");
-		Assert.assertEquals(verifySuccessmessage, "Update was successful");
 	}
+
+
+	public void waitForPageLoaded() {
+        ExpectedCondition<Boolean> expectation = new
+                ExpectedCondition<Boolean>() {
+                    @Override
+					public Boolean apply(WebDriver CBEDriver) {
+                        return ((JavascriptExecutor) CBEDriver).executeScript("return document.readyState").toString().equals("complete");
+                    }
+                };
+        try {
+            Thread.sleep(1000);
+            WebDriverWait wait = new WebDriverWait(CBEDriver, 60);
+            wait.until(expectation);
+        } catch (Throwable error) {
+            Assert.fail("Timeout waiting for Page Load Request to complete.");
+        }
+    }
 
 	@Override
 	public void VerifyQuoteRBIsSelected() {
@@ -697,38 +731,30 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
 
+		int j = 0;
+		int i = index;
+		// for (int i = children; i < total; i++) {
+		String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+", "");
+		String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+", "");
+		String Title = Common + i + Title1;
+		String FNpath = Common + i + idFN1;
+		String LNpath = Common + i + idLN1;
+		String BirthDay = Common + i + idBD1;
+		String BirthMonth = Common + i + idBM1;
+		String BirthYear = Common + i + idBY1;
+		CBEDriver.findElement(By.id(Title)).sendKeys("M");
+		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
+		CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
+		Thread.sleep(1000);
 
-
-		int j =0;
-		int i=index;
-		//for (int i = children; i < total; i++) {
-			String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+","");
-			String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+","");
-			String Title = Common + i + Title1;
-			String FNpath = Common + i + idFN1;
-			String LNpath = Common + i + idLN1;
-			String BirthDay = Common + i + idBD1;
-			String BirthMonth = Common + i + idBM1;
-			String BirthYear = Common + i + idBY1;
-			CBEDriver.findElement(By.id(Title)).sendKeys("M");
-			CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-			CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
-			Thread.sleep(1000);
-
-
-
-			LocalDate today = LocalDate.now();
-			int year = today.getYear() - ChildrenAge;
-			Month month = today.getMonth();
-			String mon = month.toString().substring(0,3);
-			int day = today.getDayOfMonth();
-			System.out.println(mon);
-			System.out.println(day);
-			System.out.println(year-5);
-
-
-
-
+		LocalDate today = LocalDate.now();
+		int year = today.getYear() - ChildrenAge;
+		Month month = today.getMonth();
+		String mon = month.toString().substring(0, 3);
+		int day = today.getDayOfMonth();
+		System.out.println(mon);
+		System.out.println(day);
+		System.out.println(year - 5);
 
 		CBEDriver.findElement(By.id(BirthDay)).sendKeys(Integer.toString(day));
 		Thread.sleep(1000);
@@ -806,82 +832,90 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	public void amenedAdultdetails() {
 
-		WebElement passengerdetailsForms = CBEDriver
-				.findElement(By.xpath("//div[@class='passenger-list input-panel']"));
-		passengerdetailsForms
-				.findElement(By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]/option[3]"))
-				.click();
-		// Select Title from dropdown
-		List<WebElement> title = passengerdetailsForms
-				.findElements(By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]"));
+		List<WebElement> newTextfield = CBEDriver
+				.findElements(By.xpath("//div/input[(@class='text') and not (@disabled='disabled')]"));
 
-		for (int i = 0; i < title.size(); i++) {
+		if (newTextfield.size() > 1) {
+			WebElement passengerdetailsForms = CBEDriver
+					.findElement(By.xpath("//div[@class='passenger-list input-panel']"));
+			passengerdetailsForms
+					.findElement(By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]/option[3]"))
+					.click();
+			// Select Title from dropdown
+			List<WebElement> title = passengerdetailsForms
+					.findElements(By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]"));
+
+			for (int i = 0; i < title.size(); i++) {
+				try {
+					title.get(i).click();
+					passengerdetailsForms
+							.findElement(
+									By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]/option[3]"))
+							.click();
+				} catch (Exception e) {
+					System.out.println("Title Dropdown" + e);
+				}
+
+			}
+			// Enter Firstname and Lastname
+			List<WebElement> firstname = passengerdetailsForms
+					.findElements(By.xpath("//div/input[(@class='text') and not (@disabled='disabled')]"));
 			try {
-				title.get(i).click();
-				passengerdetailsForms
-						.findElement(By.xpath("//div/select[(@class='auto') and not (@disabled='disabled')]/option[3]"))
-						.click();
+				for (int i = 1; i < firstname.size(); i++) {
+					System.out.println("Entered Passenger Names: ");
+					firstname.get(i).sendKeys("Test Booking");
+				}
+			} catch (Exception e) {
+				System.out.println("Names TextFeild" + e);
+			}
+
+			// Select Day from DOB DropDrown
+			List<WebElement> day = passengerdetailsForms
+					.findElements(By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[1]"));
+			try {
+				for (int i = 0; i < day.size(); i++) {
+
+					passengerdetailsForms
+							.findElement(By.xpath(
+									"(//div/select[(@class='dob') and not (@disabled='disabled')])[1]/option[13]"))
+							.click();
+
+				}
+			} catch (Exception e) {
+				System.out.println("Day Dropdown" + e);
+			}
+
+			// Select Month from DOB DropDrown
+			List<WebElement> month = passengerdetailsForms
+					.findElements(By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[2]"));
+			try {
+				for (int i = 0; i < month.size(); i++) {
+					passengerdetailsForms
+							.findElement(By.xpath(
+									"(//div/select[(@class='dob') and not (@disabled='disabled')])[2]/option[4]"))
+							.click();
+
+				}
+			} catch (Exception e) {
+				System.out.println("Month Dropdown" + e);
+			}
+
+			// Select Year from DOB DropDrown
+			List<WebElement> year = passengerdetailsForms
+					.findElements(By.xpath("//div/select[(@class='dob year') and not (@disabled='disabled')]"));
+			try {
+				for (int i = 0; i < year.size(); i++) {
+					passengerdetailsForms
+							.findElement(
+									By.xpath("//div/select[(@class='year') and not (@disabled='disabled')]/option[15]"))
+							.click();
+
+				}
 			} catch (Exception e) {
 				System.out.println("Title Dropdown" + e);
 			}
-
-		}
-       // Enter Firstname and Lastname
-		List<WebElement> firname = passengerdetailsForms
-				.findElements(By.xpath("//div/input[(@class='text') and not (@disabled='disabled')]"));
-		try {
-			for (int i = 1; i < firname.size(); i++) {
-				System.out.println("Entered Passenger Names: ");
-				firname.get(i).sendKeys("Test Booking");
-			}
-		} catch (Exception e) {
-			System.out.println("Names TextFeild" + e);
-		}
-
-		//Select Day from DOB DropDrown
-		List<WebElement> day = passengerdetailsForms
-				.findElements(By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[1]"));
-		try {
-			for (int i = 0; i < day.size(); i++) {
-
-				passengerdetailsForms
-						.findElement(
-								By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[1]/option[13]"))
-						.click();
-
-			}
-		} catch (Exception e) {
-			System.out.println("Day Dropdown" + e);
-		}
-
-		//Select Month from DOB DropDrown
-		List<WebElement> month = passengerdetailsForms
-				.findElements(By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[2]"));
-		try {
-			for (int i = 0; i < month.size(); i++) {
-				passengerdetailsForms
-						.findElement(
-								By.xpath("(//div/select[(@class='dob') and not (@disabled='disabled')])[2]/option[4]"))
-						.click();
-
-			}
-		} catch (Exception e) {
-			System.out.println("Month Dropdown" + e);
-		}
-
-		//Select Year from DOB DropDrown
-		List<WebElement> year = passengerdetailsForms
-				.findElements(By.xpath("//div/select[(@class='dob year') and not (@disabled='disabled')]"));
-		try {
-			for (int i = 0; i < year.size(); i++) {
-				passengerdetailsForms
-						.findElement(
-								By.xpath("//div/select[(@class='year') and not (@disabled='disabled')]/option[15]"))
-						.click();
-
-			}
-		} catch (Exception e) {
-			System.out.println("Title Dropdown" + e);
+		} else {
+			Reporter.addStepLog("No New Passenger row displayed hence skipping this Step");
 		}
 	}
 

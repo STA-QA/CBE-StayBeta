@@ -50,6 +50,8 @@ Given User launches the application
 	
 	And Accepts the Terms and Conditions 
 	And Click on Update button 
+	Then Get updated Booking Details
+	Then User should be logged out and driver is closed
 	
 	Examples: 
 	

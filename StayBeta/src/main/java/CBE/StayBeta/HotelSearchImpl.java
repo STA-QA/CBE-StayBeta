@@ -3,8 +3,6 @@ package CBE.StayBeta;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Random;
@@ -68,16 +66,16 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 
 		  String HotelNamepath = "//*[@id='"+id+"']/td[3]/a";
 		  String HotelName =  CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
-		  
+
 		  CBEDriver.findElement(By.xpath(HotelNamepath)).click();
 		  Thread.sleep(2000);
 			CBEDriver.switchTo().frame(0);
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 			CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
 			String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
-			
-		  
+
+
 			CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
 			Thread.sleep(3000);
 		/*
@@ -89,21 +87,21 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		 * )).getText(); System.out.println("Special Commission is: " +SplComm); String
 		 * intValue = SplComm.replaceAll("[^0-9]", ""); float f =
 		 * Float.parseFloat(intValue);
-		 * 
+		 *
 		 * try { Assert.assertTrue(f>0); }catch(AssertionError E) {
 		 * LogLog.error("Split Commission is not displayed properly for : " +
 		 * HotelName); } catch(Exception E) {
 		 * LogLog.error("Split Commission is not displayed properly for : " +
 		 * HotelName); }
-		 * 
+		 *
 		 * String CollapseXpath = "//*[@id='"+
 		 * id+"']/td[@class='cell-price tab']//div/div/a/span[@title='Collapse price breakdown']"
 		 * ;
 		 */
 
 		  System.out.println("The Hotel Name is:  "+HotelName);
-		  
-		 
+
+
 
 
 
@@ -114,7 +112,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		WebDriverWait wait = new WebDriverWait(CBEDriver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listing.get(randomValue)));
 		listing.get(randomValue).click();
-		  
+
 	}
 
 	@Override

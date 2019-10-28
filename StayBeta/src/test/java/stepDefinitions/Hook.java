@@ -25,31 +25,21 @@ public class Hook extends BaseUtil {
 
 	public BaseUtil base;
 
-
-
 	@Before
 	public void InitializeTest(Scenario scenario) {
 
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver.exe");
 
-		  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
-		  + "/WebDrivers/chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
 
+		options.setExperimentalOption("useAutomationExtension", false);
+		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+		// options.addArguments("----headless");
+		CBEDriver = new ChromeDriver(options);
 
-		  ChromeOptions options = new ChromeOptions();
+		CBEDriver.manage().window().maximize();
 
-		  options.setExperimentalOption("useAutomationExtension", false);
-		  options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-		 // options.addArguments("----headless");
-		  CBEDriver = new ChromeDriver(options);
-
-		  CBEDriver.manage().window().maximize();
-
-		  CBEDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-		  CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
-		  CBEDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		CBEDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}
 

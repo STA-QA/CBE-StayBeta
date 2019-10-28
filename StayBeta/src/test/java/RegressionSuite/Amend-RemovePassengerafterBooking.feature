@@ -30,7 +30,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Examples: 
 	
 		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|London (LON), United Kingdom (GB)  |	LON                      |JacTravel/Totalstay               |165          |1              	    |1    	  |3     	    |0			|	0		     |Outside	|
+		|Cape Town (CPT), South Africa (ZA)  |	CPT                      |followme2AFRICA               |165          |1              	    |1    	  |3     	    |0			|	0		     |Outside	|
 	
 	
 Scenario Outline: Remove Passengers after Bookings 
@@ -51,10 +51,11 @@ Given User launches the application
 	And Accepts the Terms and Conditions 
 	And Click on Update button 
 	Then Get updated Booking Details
+	Then User should be logged out and driver is closed
 	
 	Examples: 
 	
 		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|London (LON), United Kingdom (GB)  |	LON                      |JacTravel/Totalstay       |165          |1              	    |1    	  |2     	    |0			|	0		     |Outside	|
+		|Cape Town (CPT), South Africa (ZA)  |	CPT                     |followme2AFRICA       |165          |1              	    |1    	  |2     	    |0			|	0		     |Outside	|
 	
 	
