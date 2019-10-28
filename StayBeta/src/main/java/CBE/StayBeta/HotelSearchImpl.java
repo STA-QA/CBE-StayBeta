@@ -79,7 +79,6 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 
 			CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
 			Thread.sleep(3000);
-
 		  System.out.println("The Hotel Name is:  "+HotelName);
 
 
