@@ -17,9 +17,10 @@ Scenario Outline: Login into Application
 	And Add the Details Of Guests <Adults>
 	And Clicks On Book Radio Button for DayTrips
 	And Accepts the Terms and Conditions
-	And Click On Details And Add The additional information
+	And Add the Details Of Guests <Adults> 
+	#And Click On Details And Add The additional information
 	And Click On Book Button
-	And Takes The Screenshot And Add to Report
+	#And Takes The Screenshot And Add to Report
 	
 Examples:
 |Country                                           |CountrySearchString|minStartDate|maxStartDate|Adults|

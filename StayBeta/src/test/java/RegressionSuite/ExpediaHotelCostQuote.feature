@@ -1,4 +1,5 @@
-Feature: Hotel booking through Expedia Rapid
+Feature: Hotel Cost Quote for Expedia Rapid
+
 
 Scenario Outline: User Book a hotel through <Data Source> 
 

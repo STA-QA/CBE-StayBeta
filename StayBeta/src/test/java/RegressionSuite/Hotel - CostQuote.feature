@@ -1,7 +1,7 @@
-Feature: Hotel Quoting - GB for few data sources 
+Feature: Hotel Cost Quoting for few data sources 
 
 @GB
-Scenario Outline: User Book a hotel through <Data Source> 
+Scenario Outline: User Cost Quote a hotel through <Data Source> 
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 

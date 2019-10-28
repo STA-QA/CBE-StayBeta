@@ -10,8 +10,8 @@
 		 <!--   <class name="cucumberOptions.InsuranceRunner" />  -->  		
 		<!--  <class name="cucumberOptions.TestRunner" /> -->		
 		<!-- <class name="cucumberOptions.FailedScenarios" />  -->
-		<!-- <class name="cucumberOptions.TransfersRunner" /> -->
-	  	<class name="cucumberOptions.ActivitiesAndDayTripsRunner" />   
+		<class name="cucumberOptions.TransfersRunner" />
+	<!--   	<class name="cucumberOptions.ActivitiesAndDayTripsRunner" />    -->
 	 	 <!-- <class name="cucumberOptions.GBHotelBookingRunner" /> -->
 		<!-- <class name="cucumberOptions.TestRunner" /> -->
 		</classes>
