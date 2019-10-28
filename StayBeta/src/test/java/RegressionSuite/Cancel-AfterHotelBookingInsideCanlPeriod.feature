@@ -1,5 +1,4 @@
-Feature: Hotel booking and Amend Add Passengers after booking
-
+Feature: Cancel After Hotel Booking Confirmatiom
 Scenario Outline: User Book a hotel through <Data Source> 
 	Given User launches the application 
 	And User enters Valid Credentials 
@@ -30,31 +29,21 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Examples: 
 	
 		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|London (LON), United Kingdom (GB)  |	LON                      |STAy               |65          |5               	    |1    	  |1     	    |0			|	0		     |Outside	|
+		|London (LON), United Kingdom (GB)  |	LON                      |STAy               |65          |5               	    |1    	  |1     	    |0			|	0		     |Inside	|
 	
-	
-Scenario Outline: Add Passengers after Bookings 
-Given User launches the application 
+
+Scenario: Cancel Booking By Retrieving latest Booking
+   Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
 	And User Selects any agency 
 	Given User Clicks on My Bookings 
 	And User Enters Booking Refnumber 
 	And Clicks on Complete Booking 
-	And Select Amend this item Option 
-	And Select Number of Adult Guests <Adults> into <Rooms> in automatic order 
-	And Click Search Button 
-	And Click on Add to Cart 
-	And Clicks on Complete Booking 
-	And Provied Amended Adults <Adults> Details and <Children> details with <ChildrenAge>	
+	And User selects cancel item 
 	And Accepts the Terms and Conditions 
-	And Click on Update button 
+	And Click on Update button
+	Then Booking is Cancelled 
 	Then Get updated Booking Details
 	Then User should be logged out and driver is closed
-	
-	Examples: 
-	
-		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|London (LON), United Kingdom (GB)  |	LON                      |STAy               |65          |5               	    |1    	  |3     	    |0			|	0		     |Outside	|
-	
 	
