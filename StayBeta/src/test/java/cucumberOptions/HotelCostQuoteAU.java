@@ -8,11 +8,11 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/RegressionSuite/HotelBookingWithExtras.feature", plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/Transfers.feature", plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 
-public class HotelBookingWithExtrasRunner extends AbstractTestNGCucumberTests {
+public class HotelCostQuoteAU extends AbstractTestNGCucumberTests {
 
 	@BeforeClass
 	public static void setup() {

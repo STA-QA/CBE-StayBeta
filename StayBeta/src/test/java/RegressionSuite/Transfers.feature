@@ -1,5 +1,6 @@
-Feature: Transfers - gb 
+Feature: Booking Transfers
 
+@GB
 Scenario Outline: Login into Application 
 
 	Given User launches the application 

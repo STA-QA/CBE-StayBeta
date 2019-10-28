@@ -1,6 +1,5 @@
-Feature: Activities and Day Trips booking - gb 
+Feature: Activities and Day Trips Booking 
 
-@GB 
 Scenario Outline: User Makes The Activities and Day Trips Booking in GB 
 	Given User launches the application 
 	And User enters Valid Credentials 
@@ -31,7 +30,7 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in GB
 		#|Bangkok (BKK), Thailand (TH)              |BKK						|90               |91                 |Viator       |2      |Outside|
 		
 @US 
-Scenario Outline: User Makes The Activities and Day Trips Booking in GB 
+Scenario Outline: User Makes The Activities and Day Trips Booking in US 
 	Given User launches the US application
 	And User enters Valid US Credentials
 	Then User logged into application 
@@ -43,13 +42,13 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in GB
 	And Deselect SelectAll DataSources 
 	And Select DataSource <Data Source> 
 	And Click Search Button 
-	And Click Check availability for any Random record 
-	And Check for Cancellation condition for DayTrips <Condition> 
-	And Clicks on Complete Booking 
-	And Add the Details Of Guests <Adults> 
-	And Clicks On Book Radio Button for DayTrips 
-	And Accepts the Terms and Conditions 
-	And Click On Book Button 
+#	And Click Check availability for any Random record 
+#	And Check for Cancellation condition for DayTrips <Condition> 
+#	And Clicks on Complete Booking 
+#	And Add the Details Of Guests <Adults> 
+#	And Clicks On Book Radio Button for DayTrips 
+#	And Accepts the Terms and Conditions 
+#	And Click On Book Button 
 	And Takes The Screenshot And Add to Report 
 			
 			
