@@ -258,4 +258,14 @@ public class HotelBookingDefinitions extends BaseUtil {
 		HotelCancel.ProductDeleteVerification();
 	}
 
+	@Given("^User Clicks on Search Dropdown in Shopping cart$")
+    public void user_clicks_on_search_dropdown_in_shopping_cart() throws Throwable {
+       Hotel.ClickOnSearchDropDownInCart();
+    }
+	
+	@And("^Click On Search For Transfers from Dropdown$")
+    public void click_on_search_for_transfers_from_dropdown() throws Throwable {
+        
+    }
+	
 }

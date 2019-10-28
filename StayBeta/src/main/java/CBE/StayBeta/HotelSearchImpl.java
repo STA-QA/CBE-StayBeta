@@ -67,6 +67,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		  String HotelNamepath = "//*[@id='"+id+"']/td[3]/a";
 		  String HotelName =  CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
 
+
 		  CBEDriver.findElement(By.xpath(HotelNamepath)).click();
 		  Thread.sleep(2000);
 			CBEDriver.switchTo().frame(0);
@@ -78,26 +79,6 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 
 			CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
 			Thread.sleep(3000);
-		/*
-		 * String ExpandXpath = "//*[@id='"+
-		 * id+"']/td[@class='cell-price tab']//div/div/a/span[@title='Expand price breakdown']"
-		 * ; CBEDriver.findElement(By.xpath(ExpandXpath)).click(); Thread.sleep(1000);
-		 * String SplComm = CBEDriver.findElement(By.xpath(
-		 * "//*[contains(@id,'m_c_C000_m_m_m_c_c8_c8_uscResults_grvRes')]/td/table/tbody/tr[2]/td[3]"
-		 * )).getText(); System.out.println("Special Commission is: " +SplComm); String
-		 * intValue = SplComm.replaceAll("[^0-9]", ""); float f =
-		 * Float.parseFloat(intValue);
-		 *
-		 * try { Assert.assertTrue(f>0); }catch(AssertionError E) {
-		 * LogLog.error("Split Commission is not displayed properly for : " +
-		 * HotelName); } catch(Exception E) {
-		 * LogLog.error("Split Commission is not displayed properly for : " +
-		 * HotelName); }
-		 *
-		 * String CollapseXpath = "//*[@id='"+
-		 * id+"']/td[@class='cell-price tab']//div/div/a/span[@title='Collapse price breakdown']"
-		 * ;
-		 */
 
 		  System.out.println("The Hotel Name is:  "+HotelName);
 

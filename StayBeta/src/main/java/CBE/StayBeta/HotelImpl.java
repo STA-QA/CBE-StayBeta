@@ -824,10 +824,14 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		okayButton.click();
 	}
 
-	@Override
-	public void EnterChildrenDetails(int children, int total, List<Integer> ChildrenAge) throws InterruptedException {
-		// TODO Auto-generated method stub
+	
 
+	@Override
+	public void ClickOnSearchDropDownInCart() throws Exception {
+		CBEDriver.findElement(By.xpath(SearchOptionInCart)).click();
+		Thread.sleep(4000);
+		CBEDriver.findElement(By.xpath("//*/span[contains(.,'Search for Transfers...')]")).click();
+		Thread.sleep(4000);
 	}
 
 	public void amenedAdultdetails() {
