@@ -1,6 +1,7 @@
 package cucumberOptions;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
 import com.cucumber.listener.ExtentProperties;
 
@@ -14,13 +15,13 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 public class InsuranceRunnerGB extends AbstractTestNGCucumberTests {
 
-	@BeforeClass
+
+	@BeforeSuite
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
 
-		extentProperties.setReportPath("Reports/STA-CBE-Automation.html");
-
+		extentProperties.setReportPath("Reports/1SourceReleaseAutomationReport.html");
 	}
 
 }

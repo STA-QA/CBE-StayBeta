@@ -28,6 +28,7 @@ public class Hook extends BaseUtil {
 	@Before
 	public void InitializeTest(Scenario scenario) {
 
+		scenarioDef = base.features.createNode(scenario.getName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver.exe");
 
 		ChromeOptions options = new ChromeOptions();
@@ -51,9 +52,10 @@ public class Hook extends BaseUtil {
 			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
+			CBEDriver.quit();
 
 		}
-		// Driver.quit();
+		CBEDriver.quit();
 
 	}
 

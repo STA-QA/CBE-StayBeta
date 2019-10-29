@@ -36,7 +36,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -46,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 29, 2019 01:54:02 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 29, 2019 02:57:24 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -62,8 +61,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -75,7 +72,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@DE</a></li>
+					<li><a href='#'>@GB</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -116,10 +113,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -130,10 +127,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -144,10 +141,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='84.615%'><span class='strong'>11</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>24</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='7.692%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='7.692%'>1</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -165,11 +162,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='2'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>User Book Insurance for @Tag</span>
-						<span class='test-time'>Oct 29, 2019 01:54:07 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>Hotel Cost Quoting for few data sources</span>
+						<span class='test-time'>Oct 29, 2019 02:57:28 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -178,21 +175,21 @@
     <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenariooutline node' test-id='3' status='fail'>
-    <span class='duration right label'>0h 0m 58s+405ms</span>
+<div class='scenariooutline node' test-id='3' status='pass'>
+    <span class='duration right label'>0h 3m 17s+312ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> ScenarioOutline: User Book Insurance for DE</div>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: User Cost Quote a hotel through <Data Source></div>
     </div>
     <ul class='steps'>
-        <li test-id='4' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User Book Insurance for DE</div>
+        <li test-id='4' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User Cost Quote a hotel through followme2AFRICA</div>
             <ul class='gc steps'>
                     <li test-id='6' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the DE application</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='7' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid DE Credentials</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='8' class='gc then pass' status='pass'>
@@ -204,48 +201,92 @@
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='10' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is in the Insurance Page</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is in the Hotel Search Page</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='11' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Selects the Region</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Search for a Cape Town (CPT), South Africa (ZA) with particular CPT</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='12' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select the Insurance Type Single trip</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select the 10 and 6</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='13' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enter Number Of 1 for Insurance</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Rooms 1</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='14' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And From Date and To Date for Insurance 60 and 30</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Adult Guests 2 into 1 in automatic order</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='15' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enter the Date Of Birth for Insurance 40 for 1</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Child Guests 0 into 1 in automatic order</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='16' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click On Insurance Search</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enter the ChildrenAge 0</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='17' class='gc and fail' status='fail'>
-                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And Select Any Random Insurance and Add to cart</h6>
-                            <textarea disabled class="code-block">java.lang.IllegalArgumentException: bound must be positive
-	at java.util.Random.nextInt(Random.java:388)
-	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:178)
-	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:66)
-	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance.feature:46)
-</textarea>
-                                                </li>
-                    <li test-id='18' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Takes The Screenshot And Add to Report</h6>
+                    <li test-id='17' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Deselect SelectAll DataSources</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='18' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select DataSource followme2AFRICA</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='19' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Exclude On Request Rooms</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='20' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click Search Button</h6>
+                            <div class="node-step">Total Time in Seconds to display Search Results:   40</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='21' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Add to cart on a hotel from search results</h6>
                         <ul class='screenshots right'>
-                            <li><a data-featherlight="image" href="C:\CBE-Automation\StayBeta\screenshot\1572357306301.png"><i class='material-icons'>panorama</i></a></li>
+                            <li><a data-featherlight="image" href="C:\CBE-Automation\StayBeta\screenshot\1572361189611.png"><i class='material-icons'>panorama</i></a></li>
                         </ul>
-                            <div class="node-step">skipped</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='22' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Check for Cancellation Condition Ignore</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='23' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Verify if Quote is selected by default</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='24' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='25' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='26' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Book Button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='27' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking has been done successfully and Booking reference Text is stored in a file</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="C:\CBE-Automation\StayBeta\screenshot\1572361237165.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">GB 1555212</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='28' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User clicks On Logout</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='29' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
                     </li>
             </ul>
         </li>
@@ -293,15 +334,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@DE</span>
+						<span class='category-name'>@GB</span>
 						<span class='category-status right'>
-						<span class='label fail'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -315,9 +356,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 29, 2019 01:54:07 PM</td>
-										<td class='linked' test-id='4'>User Book Insurance for @Tag.User Book Insurance for DE.User Book Insurance for DE</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Oct 29, 2019 02:57:28 PM</td>
+										<td class='linked' test-id='4'>Hotel Cost Quoting for few data sources.User Cost Quote a hotel through <Data Source>.User Cost Quote a hotel through followme2AFRICA</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -333,67 +374,7 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.IllegalArgumentException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Oct 29, 2019 01:54:36 PM</td>
-										<td class='linked' test-id='17'>User Book Insurance for @Tag.User Book Insurance for DE.User Book Insurance for DE.And Select Any Random Insurance and Add to cart</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: bound must be positive
-	at java.util.Random.nextInt(Random.java:388)
-	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:178)
-	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:66)
-	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance.feature:46)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -413,25 +394,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>13</div>
+					<div class='panel-lead'>24</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 29, 2019 01:54:02 PM</div>
+					<div class='panel-lead'>Oct 29, 2019 02:57:24 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 29, 2019 01:55:06 PM</div>
+			 		<div class='panel-lead'>Oct 29, 2019 03:00:46 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 3s+880ms</div>
+					<div class='panel-lead'>0h 3m 22s+288ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -447,12 +428,12 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@DE</td>
-							<td>0</td>
+							<td>@GB</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -467,38 +448,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				childCount: 1,
-				passChild: 0,
-				failChild: 1,
+				passChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 1,
-				grandChildCount: 13,
-				passGrandChild: 11,
-				failGrandChild: 1,
+				exceptionsChild: 0,
+				grandChildCount: 24,
+				passGrandChild: 24,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 1,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 2,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "User Book Insurance for @Tag":58.405
+			        "Hotel Cost Quoting for few data sources":197.312
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

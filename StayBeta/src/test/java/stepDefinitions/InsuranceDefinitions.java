@@ -38,7 +38,7 @@ public class InsuranceDefinitions extends BaseUtil {
 
 	@And("^Enter the Date Of Birth for Insurance (.+) for (.+)$")
 	public void enter_the_date_of_birth_for_insurance_for(List<Integer> age, int passengers) throws Throwable {
-
+		Thread.sleep(3000);
 		for (int i = 0; i < passengers; i++) {
 			Insurance.selectTheDOB(i, age.get(i));
 		}
