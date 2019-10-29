@@ -9,19 +9,19 @@ Scenario Outline: Login into Application
 	And User Selects any agency 
 	Given User is in the Transfers Page
 	And Search for a <Country> with particular <CountrySearchString>
-	And Select minimum <minStartDate> and maximum <maxStartDate>
+	And Select minimum <minStartDate> and maximum <Duration>
 	And Add Number of Adults <Adults>
 	And Click Search Button
-	And Click Check availability for any Random record
-	And Clicks on Complete Booking
+	And Click Check availability for any Random record	
+	And Clicks On Book Radio Button for Transfers
+	And Clicks on Complete Booking	
 	And Add the Details Of Guests <Adults>
-	And Clicks On Book Radio Button for DayTrips
 	And Accepts the Terms and Conditions
-	And Add the Details Of Guests <Adults> 
-	#And Click On Details And Add The additional information
+	And Click On Insurance Details
+	And Add The Passengers Transfers Additional Details
 	And Click On Book Button
-	#And Takes The Screenshot And Add to Report
+	And Takes The Screenshot And Add to Report
 	
 Examples:
-|Country                                           |CountrySearchString|minStartDate|maxStartDate|Adults|
-|London (LON), United Kingdom (GB)      |LON						|2                |4                |2       |
+|Country                                           |CountrySearchString|minStartDate|Duration|Adults|
+|London (LON), United Kingdom (GB)      |LON						|100                |4                |2       |

@@ -78,7 +78,7 @@ public class ActivitiesDayTripsDefinitions extends BaseUtil {
 	
 	 @And("^Clicks On Book Radio Button for DayTrips$")
 	    public void clicks_on_book_radio_button_for_daytrips() throws Throwable {
-		 Thread.sleep(5000);
+		 Thread.sleep(10000);
 	        DayTrip.ClickOnBookRadioButton();
 	    }
 	 

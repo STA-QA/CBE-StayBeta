@@ -64,7 +64,7 @@ public class ActAndDayTripsSearchImpl extends BaseUtil implements ActAndDayTrips
 		
 		AvailableOptions.get(randomValue).click();
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

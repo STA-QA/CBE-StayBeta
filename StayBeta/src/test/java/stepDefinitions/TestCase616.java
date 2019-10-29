@@ -187,7 +187,7 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Clicks on Complete Booking$")
 	public void clicks_on_complete_booking() throws Throwable {
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		Hotel.ClickOnCompleteBooking();
 	}
 
