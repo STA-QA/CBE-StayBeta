@@ -25,9 +25,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 
-	Then User confirms Booking
-	
-	
+		
 	
 	Examples: 
 		|Country                                     |CountrySearchString|Data Source                |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|

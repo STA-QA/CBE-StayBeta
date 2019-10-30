@@ -707,9 +707,11 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String BirthDay = Common + i + idBD1;
 		String BirthMonth = Common + i + idBM1;
 		String BirthYear = Common + i + idBY1;
+		
+		String Name[] = {"One","Two", "Three","Four","Five","Six","Seven","Eight","Nine","Ten"};
 		CBEDriver.findElement(By.id(Title)).sendKeys("M");
 
-		CBEDriver.findElement(By.id(FNpath)).sendKeys("Test Booking");
+		CBEDriver.findElement(By.id(FNpath)).sendKeys("Test Booking"+Name[i]);
 		CBEDriver.findElement(By.id(LNpath)).sendKeys("Test Booking");
 		Thread.sleep(1000);
 		CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
@@ -730,7 +732,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String idBD1 = "_paxItmUsc_birthDateBdbdays";
 		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
 		String idBY1 = "_paxItmUsc_birthDateBdbyears";
-
+	
 		int j = 0;
 		int i = index;
 		// for (int i = children; i < total; i++) {
@@ -744,7 +746,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String BirthYear = Common + i + idBY1;
 		CBEDriver.findElement(By.id(Title)).sendKeys("M");
 		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-		CBEDriver.findElement(By.id(LNpath)).sendKeys(lastName);
+		CBEDriver.findElement(By.id(LNpath)).sendKeys("TestAutomation");
 		Thread.sleep(1000);
 
 		LocalDate today = LocalDate.now();
@@ -785,8 +787,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String BirthDay = Common + i + idBD1;
 		String BirthMonth = Common + i + idBM1;
 		String BirthYear = Common + i + idBY1;
+		String Name[] = {"One","Two", "Three","Four","Five","Six","Seven","Eight","Nine","Ten"};
 		CBEDriver.findElement(By.id(Title)).sendKeys("M");
-		CBEDriver.findElement(By.id(FNpath)).sendKeys("TestBooking");
+		CBEDriver.findElement(By.id(FNpath)).sendKeys("TestBooking"+Name[i]);
 		CBEDriver.findElement(By.id(LNpath)).sendKeys("Test Booking");
 		Thread.sleep(1000);
 
