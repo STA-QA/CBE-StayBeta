@@ -30,7 +30,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Examples: 
 	
 		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|London (LON), United Kingdom (GB)  |	LON                      |STAy               |65          |5               	    |1    	  |1     	    |0			|	0		     |Outside	|
+		|Cape Town (CPT), South Africa (ZA)  |CPT                        |followme2AFRICA   |10          |6                    	|1    	  |2     	    |0			|0		     |Ignore		|
 	
 	
 Scenario Outline: Add Passengers after Bookings 
@@ -54,7 +54,7 @@ Given User launches the application
 	
 	Examples: 
 	
-		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|London (LON), United Kingdom (GB)  |	LON                      |STAy               |65          |5               	    |1    	  |3     	    |0			|	0		     |Outside	|
+		|Rooms|Adults  	|Children	|ChildrenAge|
+	    |1    	  |3     	    |0			|	0		     |
 	
 	

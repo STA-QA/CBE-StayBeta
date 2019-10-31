@@ -173,19 +173,27 @@ public class HotelBookingDefinitions extends BaseUtil {
 
 		int index=0;
 		int childageindex=0;
+		int TotalChildren=0;
+		for(int j=0; j<childrenage.size();j++)
+		{
+			 TotalChildren+=childrenage.get(j);
+		}
+		
         for(int top= 0; top<adults.size(); top++) {
      	   int k = adults.get(top);
-            int l = children.get(top);
+           
      		for(int a=0; a<k ;a++){
      			 Hotel.EnterAdultDetails(index);
      			index=index+1;
      		}
-
+     		if(TotalChildren>0) {
+     			 int l = children.get(top);
      		for(int j=0; j<l ;j++){
      			System.out.println("j is :" +j);
      			Hotel.EnterChildrenDetails(index, childrenage.get(childageindex));
      			childageindex = childageindex+1;
      			index=index+1;
+     		}
      		}
           }
 

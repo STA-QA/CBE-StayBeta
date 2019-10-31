@@ -9,7 +9,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/RegressionSuite/Hotel - CostQuote.feature", plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/Hotel - CostQuote.feature", tags= {"@GB"}, plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 

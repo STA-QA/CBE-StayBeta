@@ -234,10 +234,15 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	@Override
 	public void SearchHotel(String SearchText, String HotelName) throws InterruptedException {
 		Thread.sleep(8000);
-		CBEDriver.findElement(By.xpath(HotelNameSearchXpath)).sendKeys(SearchText);
-		CBEDriver.findElement(By.cssSelector(".radius-label > .floating-label")).click();
+		
+		/*
+		 * CBEDriver.findElement(By.xpath(HotelNameSearchXpath)).sendKeys(SearchText);
+		 * CBEDriver.findElement(By.cssSelector(".radius-label > .floating-label")).
+		 * click();
+		 */
+		 
 		Thread.sleep(2000);
-		String h1 = "//*/a[contains(.,'";
+		String h1 = "//td[3]/a[contains(.,'";
 		String h2 = "')]";
 		String hotelxpath = h1 + HotelName + h2;
 		CBEDriver.findElement(By.xpath(hotelxpath)).click();

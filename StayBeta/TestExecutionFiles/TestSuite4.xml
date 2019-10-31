@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Amendments & Cancellations - Expedia" verbose="2" parallel="false">
+	<listeners>
+		<listener class-name="Base.staNGlistener" />
+	</listeners>
+	<test name="Regression">
+		<classes>
+		   <class name="cucumberOptions.Expedia_Amend_AddPassengerRunner" />  
+		   <class name="cucumberOptions.Expedia_Amend_ChangeStartDateRunner" /> 
+	       <class name="cucumberOptions.Expedia_Amend_RemovePassengerAfterBookingRunner" /> 
+		   <class name="cucumberOptions.Expedia_Cancel_OutsideCanclPeriodRunner" /> 
+	 	</classes>
+	</test>
+</suite>

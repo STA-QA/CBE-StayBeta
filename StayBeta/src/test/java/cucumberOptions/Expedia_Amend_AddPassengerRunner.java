@@ -1,16 +1,19 @@
 package cucumberOptions;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+
 import com.cucumber.listener.ExtentProperties;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/RegressionSuite/Hotel - CostQuote.feature", tags= {"@AU"}, plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/Expedia Amend-AddPassenger.feature", plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 
-public class HotelCostQuoteAU extends AbstractTestNGCucumberTests {
+public class Expedia_Amend_AddPassengerRunner extends AbstractTestNGCucumberTests {
 
 	@BeforeSuite
 	public static void setup() {
@@ -18,6 +21,8 @@ public class HotelCostQuoteAU extends AbstractTestNGCucumberTests {
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
 
 		extentProperties.setReportPath("Reports/1SourceReleaseAutomationReport.html");
+
 	}
 
 }
+

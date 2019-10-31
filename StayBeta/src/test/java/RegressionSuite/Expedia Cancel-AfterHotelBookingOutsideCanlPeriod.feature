@@ -1,4 +1,4 @@
-Feature: Hotel booking through Expedia Rapid
+Feature: Cancelling hotel (Outside Cancellation Period) - Expedia
 
 Scenario Outline: User Book a hotel through <Data Source> 
 
@@ -24,9 +24,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file
 	Given User clicks On Logout 
-	Then User should be logged out and driver is closed 
-	
-	
+	Then User should be logged out and driver is closed 	
 	
 	
 	Examples: 

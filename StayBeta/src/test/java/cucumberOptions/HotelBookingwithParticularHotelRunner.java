@@ -1,16 +1,18 @@
 package cucumberOptions;
 
 import org.testng.annotations.BeforeSuite;
+
 import com.cucumber.listener.ExtentProperties;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/RegressionSuite/Hotel - CostQuote.feature", tags= {"@AU"}, plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/HotelBookingWithHotelSearch.feature", plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 
-public class HotelCostQuoteAU extends AbstractTestNGCucumberTests {
+public class HotelBookingwithParticularHotelRunner extends AbstractTestNGCucumberTests {
 
 	@BeforeSuite
 	public static void setup() {
