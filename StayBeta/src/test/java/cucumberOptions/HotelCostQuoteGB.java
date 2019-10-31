@@ -19,7 +19,7 @@ public class HotelCostQuoteGB extends AbstractTestNGCucumberTests {
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/1SourceReleaseAutomationReport.html");
+		extentProperties.setReportPath("Reports/OtherDataSourcesBookingAndCQ.html");
+		
 	}
 }

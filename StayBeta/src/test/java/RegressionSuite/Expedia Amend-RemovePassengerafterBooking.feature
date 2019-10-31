@@ -53,5 +53,5 @@ Given User launches the application
 	
 	Examples: 
 	
-		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|Cape Town (CPT), South Africa (ZA)  |	CPT                     |followme2AFRICA       |165          |1              	    |1    	  |2     	    |0			|	0		     |Outside	|
+		|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
+		|1    	  |2     	    |0			|	0		     |Outside	|

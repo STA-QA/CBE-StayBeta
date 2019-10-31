@@ -1,6 +1,5 @@
 package cucumberOptions;
 
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import com.cucumber.listener.ExtentProperties;
@@ -19,8 +18,8 @@ public class HotelBookingWithExtrasRunner extends AbstractTestNGCucumberTests {
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/1SourceReleaseAutomationReport.html");
+		extentProperties.setReportPath("Reports/OtherDataSourcesBookingAndCQ.html");
+		
 	}
 
 }

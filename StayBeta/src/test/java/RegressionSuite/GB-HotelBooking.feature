@@ -25,20 +25,17 @@ Given User launches the application
 	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
-	#Given User clicks On Logout 
-	#Then User should be logged out and driver is closed 
+	Given User clicks On Logout 
+	Then User should be logged out and driver is closed 
 	
 	Examples: 
 	
 	|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-	|Buenos Aires (BUE), Argentina (AR)    |	BUE				       |STAy                   |7		     |1			   	    |2		  |2,2     	|0			|0			     |Ignore		|
+	|Cape Town (CPT), South Africa (ZA)  |CPT                    |followme2AFRICA   |10          |6                    	|1    	  |2     	    |2			|7,9		     |Ignore		|
+	|New York (NYC), United States (US)  |	NYC                      |Tourico                |15          |5               	    |1    	  |2     	    |0			|			     |Outside	|
+		
+		
 	
-	#|Cape Town (CPT), South Africa (ZA)  |CPT                    |followme2AFRICA   |10          |6                    	|1    	  |2     	    |2			|7,9		     |Ignore		|
-		#  |Buenos Aires (BUE), Argentina (AR)    |	BUE				       |STAY                   |7		     |1			   	    |2		  |2,2     	|0			|			     |Ignore		|Regression Hotel (Alloc + Supp)	|	
-		#  |New York (NYC), United States (US)  |	NYC                      |Tourico                |15          |5               	    |1    	  |2     	    |0			|			     |Outside	|
-		
-		
-		#|Singapore (SIN), Singapore (SG)|SIN					 |31			  |2                       |1       |Qantas             |2			|0         |Outside    |
 		
 
 	

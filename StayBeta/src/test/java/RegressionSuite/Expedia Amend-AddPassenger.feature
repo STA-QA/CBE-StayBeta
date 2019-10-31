@@ -29,7 +29,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	Examples: 
 		|Country                                     |CountrySearchString|Data Source                |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|
-		|London (LON), United Kingdom (GB)|	LON                    |Expedia Rapid               |100         |2                   |1        |1         |0         |0	             |
+		|Paris (PAR), France (FR)				|PAR                        |Expedia Rapid               |100         |2                   |1        |1        |0         |0	            |
+			
 
 Scenario Outline: Add Passengers after Bookings 
 Given User launches the application 
@@ -52,5 +53,8 @@ Given User launches the application
 	
 	Examples: 
 	
-		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|London (LON), United Kingdom (GB)  |	LON                      |STAy               |65          |5               	    |1    	  |3     	    |0			|	0		     |Outside	|
+		|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
+		|1    	  |3     	    |0			|	0		     |Outside	|
+		
+		
+		

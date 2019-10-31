@@ -18,8 +18,8 @@ public class HotelBookingwithParticularHotelRunner extends AbstractTestNGCucumbe
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/1SourceReleaseAutomationReport.html");
+		extentProperties.setReportPath("Reports/OtherDataSourcesBookingAndCQ.html");
+		
 	}
 
 }
