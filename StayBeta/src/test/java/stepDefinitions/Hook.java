@@ -28,19 +28,20 @@ public class Hook extends BaseUtil {
 	@Before
 	public void InitializeTest(Scenario scenario) {
 
-		scenarioDef = base.features.createNode(scenario.getName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver.exe");
 
 		ChromeOptions options = new ChromeOptions();
 
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+
 		options.addArguments("----headless");
+
 		CBEDriver = new ChromeDriver(options);
 
 		CBEDriver.manage().window().maximize();
 
-		CBEDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 	}
 
@@ -52,10 +53,27 @@ public class Hook extends BaseUtil {
 			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
+<<<<<<< HEAD
+			CBEDriver.quit();
+=======
+
 			CBEDriver.quit();
 
+			//CBEDriver.quit();
+>>>>>>> e0b4dbd45ca837de1c09cae9e2fc2614c0d23548
+
+
 		}
+<<<<<<< HEAD
 		CBEDriver.quit();
+=======
+
+		// Driver.quit();
+
+		CBEDriver.quit();
+
+		//CBEDriver.quit();
+>>>>>>> e0b4dbd45ca837de1c09cae9e2fc2614c0d23548
 
 	}
 

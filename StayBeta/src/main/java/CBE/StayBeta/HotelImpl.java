@@ -207,11 +207,15 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	@Override
 	public void ClickSearch() {
 		CBEDriver.findElement(By.id(SearchButton)).click();
+		String currenttimeStamp = new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
+		Reporter.addStepLog("User CLicks on Search button at time:   " + currenttimeStamp);
 		long timerstart = System.currentTimeMillis();
 		WebDriverWait wait = new WebDriverWait(CBEDriver, 60);
 		WebElement element = wait.until(
 		        ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='search-results-table']")));
 		long timerfinish = System.currentTimeMillis();
+		String aftertimeStamp = new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
+		Reporter.addStepLog("User Can see Search page at time:    " + aftertimeStamp);
 		long totalTime = timerfinish - timerstart;
 		int seconds = (int) ((totalTime / 1000) % 60);
 		System.out.println(("Total Time in Seconds to display Search Results:   " + seconds));
@@ -221,8 +225,12 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	@Override
 	public void searchLoadingtime() {
+		String currenttimeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+		Reporter.addStepLog("User CLicks on Search button at time:   " + currenttimeStamp);
 		long timerstart = System.currentTimeMillis();
 		Assert.assertTrue(CBEDriver.findElement(By.xpath(priceFilterXpath)).isDisplayed());
+		String aftertimeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+		Reporter.addStepLog("User Can see Search page at time:    " + aftertimeStamp);
 		long timerfinish = System.currentTimeMillis();
 		long totalTime = timerfinish - timerstart;
 		int seconds = (int) ((totalTime / 1000) % 60);
@@ -832,7 +840,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		okayButton.click();
 	}
 
-	
+
 
 	@Override
 	public void ClickOnSearchDropDownInCart() throws Exception {
