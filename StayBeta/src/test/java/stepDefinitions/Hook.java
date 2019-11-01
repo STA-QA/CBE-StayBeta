@@ -53,27 +53,15 @@ public class Hook extends BaseUtil {
 			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
-<<<<<<< HEAD
-			CBEDriver.quit();
-=======
 
 			CBEDriver.quit();
 
-			//CBEDriver.quit();
->>>>>>> e0b4dbd45ca837de1c09cae9e2fc2614c0d23548
 
 
 		}
-<<<<<<< HEAD
-		CBEDriver.quit();
-=======
-
-		// Driver.quit();
 
 		CBEDriver.quit();
 
-		//CBEDriver.quit();
->>>>>>> e0b4dbd45ca837de1c09cae9e2fc2614c0d23548
 
 	}
 

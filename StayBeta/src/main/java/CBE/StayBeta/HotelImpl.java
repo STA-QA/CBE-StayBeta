@@ -750,7 +750,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		int i = index;
 		// for (int i = children; i < total; i++) {
 		String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+", "");
-		String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+", "");
+		
 		String Title = Common + i + Title1;
 		String FNpath = Common + i + idFN1;
 		String LNpath = Common + i + idLN1;
@@ -820,9 +820,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		CBEDriver.findElement(By.id(BirthMonth)).sendKeys(mon);
 		Thread.sleep(1000);
 		CBEDriver.findElement(By.id(BirthYear)).sendKeys(Integer.toString(year));
-		j++;
-
-		// }
+		j++;		
 
 	}
 
