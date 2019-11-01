@@ -163,7 +163,7 @@ public class TestCase616 extends BaseUtil {
 	@And("^User Click Search Button on Hotel Searchpage")
 	public void User_Click_Search_Button_on_Hotel_Searchpage () throws Throwable {
 		Hotel.ClickSearch();
-		Hotel.searchLoadingtime();
+		//Hotel.searchLoadingtime();
 
 	}
 
