@@ -167,6 +167,10 @@ public class TestCase616 extends BaseUtil {
 
 	}
 
+	@And("^User Search For a Particular Hotel (.+)$")
+    public void user_search_for_a_particular_hotel(String hotel) throws Throwable {
+		Hotel.SearchHotel(hotel,hotel);
+    }
 
 
 	@When("^User Searches and Selects a particular Hotel")

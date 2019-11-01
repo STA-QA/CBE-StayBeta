@@ -55,8 +55,18 @@ public class Hook extends BaseUtil {
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
 
+			CBEDriver.quit();
+
+			//CBEDriver.quit();
+
+
 		}
+
 		// Driver.quit();
+
+		CBEDriver.quit();
+
+		//CBEDriver.quit();
 
 	}
 

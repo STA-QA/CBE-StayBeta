@@ -25,8 +25,7 @@ public class ActivitiesDayTripsDefinitions extends BaseUtil {
 
 	@And("^Select minimum (.+) and maximum (.+)$")
 	public void select_minimum_and_maximum(int minstartdate, int Duration) throws Throwable {
-		Thread.sleep(2000);
-		
+		Thread.sleep(2000);		
 		DayTrip.EnterStartDates(minstartdate, Duration);
 
 	}

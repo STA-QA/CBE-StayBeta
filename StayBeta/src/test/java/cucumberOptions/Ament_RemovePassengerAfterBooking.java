@@ -19,9 +19,8 @@ public class Ament_RemovePassengerAfterBooking extends AbstractTestNGCucumberTes
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/1SourceReleaseAutomationReport.html");
-
+		extentProperties.setReportPath("Reports/OtherDataSoucesAmendAndCancel.html");
+		
 	}
 
 }

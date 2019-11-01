@@ -33,27 +33,18 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 	
 	
 	Examples: 
-		
-		
-	#Data to be used for release
-		|Country                           	|CountrySearchString|Data Source      		|Start Day	|Duration Of Stay	|Rooms	|Adults |Children	|ChildrenAge	|Condition	|
-		|London (LON), United Kingdom (GB)	|LON				|JacTravel/Totalstay	|1			|2					|1		|1		|			|				|Inside		|
-		|Melbourne (MEL), Australia (AU)	|MEL				|AOT AU					|7			|2					|1		|2		|			|				|
-		|Sydney (SYD), Australia (AU)		|SYD				|Sunlover Australia		|14			|3					|1		|2		|			|				|			|
+	
+		|Country                                      	|CountrySearchString|Data Source      		|Start Day	|Duration Of Stay	|Rooms	|Adults |Children	|ChildrenAge	|Condition	|
+		|London (LON), United Kingdom (GB)	|LON				         |JacTravel/Totalstay	|1			    |2					    |1		    |1		   |0			|0				    |Inside		|
+		|Melbourne (MEL), Australia (AU)	        |MEL				         |AOT AU					|7			    |2					    |1		    |2		   |0			|0				    |Outside		|
+		|Sydney (SYD), Australia (AU)		    |SYD				         |Sunlover Australia		|14			|3					    |1		    |2		   |0			|0				    |Outside	    |
 			
 		
 	
 	
 
 	
-	
-#	Examples: 
-	#	|Country                                       |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source      |Guests|Children|Condition|
-	#	|Singapore (SIN), Singapore (SG)|SIN					 |31			  |2                       |1       |Qantas             |2			|0         |Outside    |
-	#	|Sydney (SYD), Australia (AU)	|SYD                      |20            |2                      |1        |AOT AU - New   |2        |0           | Outside |
-		#|Bangkok (BKK), Thailand (TH)		|BKK						 |2			  |5						|1		  |Diethelm Travel		  |1			|0			|Inside		|
 
-					
 		
 
 	

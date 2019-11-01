@@ -73,7 +73,7 @@ public class LoginDefinitions extends BaseUtil {
 	
 	@And("^Takes The Screenshot And Add to Report$")
     public void takes_the_screenshot_and_add_to_report() throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(10000);
         general.AddScreenshotToReport();
     }
 

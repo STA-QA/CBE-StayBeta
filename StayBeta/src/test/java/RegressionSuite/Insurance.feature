@@ -14,20 +14,21 @@ Scenario Outline: User Book Insurance for GB
 	And Enter the Date Of Birth for Insurance <Age> for <Passengers> 
 	And Click On Insurance Search 
 	And Select Any Random Insurance and Add to cart 
-#	And Select Book Radio Button for Insurance 
-#	And Clicks on Complete Booking 
-#	And Adds the Passenger <Passengers> Details for Insurance with their <Age> 
-#	And Click On Insurance Details 
-#	And Add additional Details for Insurance 
-#	And Accepts the Terms and Conditions 
-#  And Click On Book Button
+	And Select Book Radio Button for Insurance 
+	And Clicks on Complete Booking 
+	And Adds the Passenger <Passengers> Details for Insurance with their <Age> 
+	And Click On Insurance Details 
+	And Add additional Details for Insurance 
+	And Accepts the Terms and Conditions 
+    And Click On Book Button
 	And Takes The Screenshot And Add to Report 
 	
 
 Examples:
 |Passengers|Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40    |Single trip     |60|30|
-#|1             |58    |Annual     |
+|1             |40    |Single trip       |60         |30         |
+|1             |58    |Annual     		  |50         |365        |
+
 
 
 @DE
@@ -44,19 +45,19 @@ Scenario Outline: User Book Insurance for DE
 	And Enter the Date Of Birth for Insurance <Age> for <Passengers> 
 	And Click On Insurance Search 
 	And Select Any Random Insurance and Add to cart 
-#	And Select Book Radio Button for Insurance
-#	And Clicks on Complete Booking 
-#	And Adds the Passenger <Passengers> Details for Insurance with their <Age> 
-#	And Click On Insurance Details 
-#	And Add additional Details for Insurance 
-#	And Accepts the Terms and Conditions 
-#	And Click On Book Button 
+	And Select Book Radio Button for Insurance
+	And Clicks on Complete Booking 
+	And Adds the Passenger <Passengers> Details for Insurance with their <Age> 
+	And Click On Insurance Details 
+	And Add additional Details for Insurance 
+	And Accepts the Terms and Conditions 
+	And Click On Book Button 
 	And Takes The Screenshot And Add to Report 
 
 Examples:
 |Passengers|Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40    |Single trip     |60|30|
-#|1             |58    |Annual     |
+|1             |40    |Single trip       |60         |30         |
+|1             |58    |Annual     		  |50         |365        |
 
 
 @ZA
@@ -73,32 +74,19 @@ Scenario Outline: User Book Insurance for ZA
 	And Enter the Date Of Birth for Insurance <Age> for <Passengers> 
 	And Click On Insurance Search 
 	And Select Any Random Insurance and Add to cart 
-	#And Select Book Radio Button for Insurance
-	#And Clicks on Complete Booking
-	#And Adds the Passenger <Passengers> Details for Insurance with their <Age>
-	#And Click On Insurance Details
-	#And Add additional Details for Insurance
-	#And Accepts the Terms and Conditions
-	#And Click On Book Button
+	And Select Book Radio Button for Insurance
+	And Clicks on Complete Booking
+	And Adds the Passenger <Passengers> Details for Insurance with their <Age>
+	And Click On Insurance Details
+	And Add additional Details for Insurance
+	And Accepts the Terms and Conditions
+	And Click On Book Button
 	And Takes The Screenshot And Add to Report 
 
 Examples: 
 |Passengers|Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40    |Single trip     |60|30|
-#|1             |58    |Annual     |
+|1             |40    |Single trip       |60         |30         |
+|1             |58    |Annual     		  |50         |365        |
 
 
-@Cancel
-Scenario: Cancel Booking By Retrieving latest Booking
-Given User launches the application 
-And User enters Valid Credentials 
-Then User logged into application 
-And User Selects any agency 
-	Given User Clicks on My Bookings 
-	And Clicks on Retrieve latest booking 
-	And Clicks on Complete Booking 
-	And User selects cancel item 
-	And Accepts the Terms and Conditions 
-	And Click on Update button
-	Then Booking is Cancelled
-	And Takes The Screenshot And Add to Report
+
