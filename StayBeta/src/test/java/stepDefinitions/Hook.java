@@ -35,7 +35,7 @@ public class Hook extends BaseUtil {
 
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-		// options.addArguments("----headless");
+		options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
 
 		CBEDriver.manage().window().maximize();
@@ -52,10 +52,10 @@ public class Hook extends BaseUtil {
 			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
-			//CBEDriver.quit();
+			CBEDriver.quit();
 
 		}
-		//CBEDriver.quit();
+		CBEDriver.quit();
 
 	}
 

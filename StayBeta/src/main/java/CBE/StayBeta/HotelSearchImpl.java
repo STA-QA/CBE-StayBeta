@@ -423,6 +423,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		if (CBEDriver
 				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
 				.size() > 0) {
+			Reporter.addStepLog("Couldn't find hotel outside cancellation period in 5 trials");
 			LogLog.error("Couldn't find hotel outside cancellation period in 5 trials");
 			CBEDriver.findElement(By.id("DeleteButton")).click();
 		} else {

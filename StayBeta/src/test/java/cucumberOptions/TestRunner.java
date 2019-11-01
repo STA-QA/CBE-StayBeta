@@ -1,5 +1,8 @@
 package cucumberOptions;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.annotations.BeforeClass;
 
 import com.cucumber.listener.ExtentProperties;
@@ -18,8 +21,12 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/STA-CBE-Automation.html");
+		String timeStamp = new SimpleDateFormat("dd-MMMHH:mm").format(new Date());
+		String Path = "Reports/CBEREport.html";
+		extentProperties.setReportPath(Path);
+		
+		
+	
 
 	}
 

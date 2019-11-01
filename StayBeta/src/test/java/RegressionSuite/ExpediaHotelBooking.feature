@@ -26,12 +26,12 @@ Scenario Outline: User Book a hotel through <Data Source> for GB division
 	Then Booking has been done successfully and Booking reference Text is stored in a file	
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 	
-	
-	
-	Examples: 
-		|Country                                     |CountrySearchString|Data Source   |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|
-		|London (LON), United Kingdom (GB)|LON                       |Expedia Rapid  |100        |2                   |1        |1         |0         |0	             |
-		|Paris (PAR), France (FR)				|PAR                        |Expedia Rapid  |91         |2                    |1        |2         |2         |5,6            |
+
+ Examples: 
+     | Country                           | CountrySearchString | Data Source   | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | 
+     | London (LON), United Kingdom (GB) | LON                 | Expedia Rapid | 100       | 2                | 1     | 1      | 0        | 0           | 
+     | Paris (PAR), France (FR)          | PAR                 | Expedia Rapid | 91        | 2                | 1     | 2      | 2        | 5,6         | 	
+		
 		
 @US
 Scenario Outline: User Book a hotel through <Data Source> for US division
@@ -59,15 +59,13 @@ Scenario Outline: User Book a hotel through <Data Source> for US division
 	Then Booking has been done successfully and Booking reference Text is stored in a file
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 	
+  
+  Examples: 
+      | Country                           | CountrySearchString | Data Source   | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | 
+      | London (LON), United Kingdom (GB) | LON                 | Expedia Rapid | 100       | 2                | 1     | 1      | 0        | 0           | 
+      | Paris (PAR), France (FR)          | PAR                 | Expedia Rapid | 91        | 2                | 1     | 2      | 2        | 5,6         | 	
 	
 	
-	Examples: 
-		|Country                                     |CountrySearchString|Data Source   |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|
-		|London (LON), United Kingdom (GB)|LON                       |Expedia Rapid  |100        |2                   |1        |1         |0         |0	             |
-		|Paris (PAR), France (FR)				|PAR                        |Expedia Rapid  |91         |2                    |1        |2         |2         |5,6            |
-			
-
-		
 		
 		
 		

@@ -1,6 +1,6 @@
 Feature: Hotel Cost Quoting for few data sources 
 
-@GB
+@GB 
 Scenario Outline: User Cost Quote a hotel through <Data Source> 
 	Given User launches the application 
 	And User enters Valid Credentials 
@@ -30,16 +30,15 @@ Scenario Outline: User Cost Quote a hotel through <Data Source>
 	
 	Examples: 
 	
-		|Country                                        |CountrySearchString  |Data Source          |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|Cape Town (CPT), South Africa (ZA)  |CPT                         |followme2AFRICA   |10          |6                   |1    	  |2     	    |0			|0		         |Ignore		|
-		|New York (NYC), United States (US)  |	NYC                      |Tourico                |15          |5               	   |1    	  |2     	    |0			|0		         |Outside	|
+		| Country                            | CountrySearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
+		| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 10        | 6                | 1     | 2      | 0        | 0           | Ignore    | 
+		| New York (NYC), United States (US) | NYC                 | Tourico         | 15        | 5                | 1     | 2      | 0        | 0           | Outside   | 
 		
+@AU 
+Scenario Outline: User Book a hotel through <Data Source> for AU 
 		
-@AU
-Scenario Outline: User Book a hotel through <Data Source> for AU
-
-    Given User launches the au application
-	And User enters Valid AU Credentials
+	Given User launches the au application 
+	And User enters Valid AU Credentials 
 	Then User logged into application 
 	And User Selects any agency 
 	Given User is in the Hotel Search Page 
@@ -63,15 +62,10 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 
-	
-	
-	Examples: 
-	
-		|Country                                      	|CountrySearchString|Data Source      		|Start Day	|Duration Of Stay	|Rooms	|Adults |Children	|ChildrenAge	|Condition	|
-		|London (LON), United Kingdom (GB)	|LON				         |JacTravel/Totalstay	|1			    |2					    |1		    |1		   |0			|0				    |Inside		|
-		|Melbourne (MEL), Australia (AU)	        |MEL				         |AOT AU					|7			    |2					    |1		    |2		   |0			|0				    |Outside		|	
-		
-		
-		
-		
-	
+			
+   Examples: 
+	| Country                           | CountrySearchString | Data Source         | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
+	| London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                | 1     | 1      | 0        | 0           | Inside    | 
+	| Melbourne (MEL), Australia (AU)   | MEL                 | AOT AU              | 7         | 2                | 1     | 2      | 0        | 0           | Outside   | 
+				
+  

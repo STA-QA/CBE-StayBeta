@@ -1,7 +1,7 @@
-Feature: GB Hotel booking by adding Transfers to the Same booking
+Feature: Verify if User is able to book a Hotel and adding Extras(Transfers) in GB
 
 Scenario Outline: User Book a hotel through <Data Source> 
-Given User launches the application 
+	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
 	And User Selects any agency 
@@ -19,31 +19,26 @@ Given User launches the application
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
 	And Verify if Quote is selected by default 
-	And Clicks On Book Radio Button
+	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
 	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
-	Given User Clicks on Search Dropdown in Shopping cart
-	And Click On Search For Transfers from Dropdown
-	And Search for a <Country> with particular <CountrySearchString>
-	And Select minimum <Start Day> and maximum <Duration Of Stay>
-	And Add Number of Adults <Adults>
-	And Click Search Button
-	And Click Check availability for any Random record
-	And Clicks on Complete Booking
+	Given User Clicks on Search Dropdown in Shopping cart 
+	And Click On Search For Transfers from Dropdown 
+	And Search for a <Country> with particular <CountrySearchString> 
+	And Select minimum <Start Day> and maximum <Duration Of Stay> 
+	And Add Number of Adults <Adults> 
+	And Click Search Button 
+	And Click Check availability for any Random record 
+	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 
 	
-	Examples: 
-	
-	|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-	|Cape Town (CPT), South Africa (ZA)  |CPT                    |followme2AFRICA   |10          |6                    	|1    	  |2     	    |2			|7,9		     |Ignore		|
-
-
-	
-	
-	
-	
+Examples: 
+	| Country                            | CountrySearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
+	| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 10        | 6                | 1     | 2      | 2        | 7,9         | Ignore    | 
+		
+  

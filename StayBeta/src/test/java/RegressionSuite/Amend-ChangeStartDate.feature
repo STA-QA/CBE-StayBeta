@@ -1,4 +1,4 @@
-Feature: Hotel booking - gb for few data sources 
+Feature: Hotel booking and Amend by Changing the Start Date
 
 Scenario Outline: User Book a hotel through <Data Source> 
 	Given User launches the application 
@@ -29,13 +29,12 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Then User should be logged out and driver is closed 
 	
 	Examples: 
-	
-		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-	    |New York (NYC), United States (US)  |	NYC                      |Tourico                |15          |5               	    |1    	  |2     	    |0			|			     |Outside	|
+	|Country                             |CountrySearchString|Data Source |Start Day|Duration Of Stay|Rooms|Adults |Children|ChildrenAge|Condition	|
+	|New York (NYC), United States (US)  |	NYC              |Tourico     |15       |5               |1    |2      |0		|0		    |Outside	|
 		
 		
 Scenario: Amend Booking By Searching BRN from My Bookings 
-Given User launches the application 
+	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
 	And User Selects any agency 
@@ -49,7 +48,8 @@ Given User launches the application
 	And Click on Add to Cart 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
-	And Click on Update button 
+	And Click on Update button
+    And Takes The Screenshot And Add to Report 
 	
 	
 	

@@ -1,6 +1,8 @@
 package cucumberOptions;
 
-import org.testng.annotations.BeforeClass;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.annotations.BeforeSuite;
 
 import com.cucumber.listener.ExtentProperties;
@@ -19,8 +21,7 @@ public class ActivitiesAndDayTripsRunnerGB extends AbstractTestNGCucumberTests {
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/1SourceReleaseAutomationReport.html");
+		extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
 
 	}
 

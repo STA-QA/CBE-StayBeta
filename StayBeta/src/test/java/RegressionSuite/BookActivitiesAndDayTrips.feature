@@ -25,10 +25,10 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in GB
 	And Takes The Screenshot And Add to Report 
 	
 	
-	Examples: 
-		|Country                                           |CountrySearchString|minStartDate|Duration|Data Source|Adults|Condition|
-		|London (LON), United Kingdom (GB)      |LON						|2               |2                 |Viator       |2      |Ignore|
-		|Bangkok (BKK), Thailand (TH)              |BKK						|90               |1                 |Viator       |2      |Outside|
+  Examples: 
+		| Country                           | CountrySearchString | minStartDate | Duration | Data Source | Adults | Condition | 
+		| London (LON), United Kingdom (GB) | LON                 | 2            | 2        | Viator      | 2      | Ignore    | 
+		| Bangkok (BKK), Thailand (TH)      | BKK                 | 90           | 1        | Viator      | 2      | Outside   |
 		
 @US 
 Scenario Outline: User Makes The Activities and Day Trips Booking in US 
@@ -53,7 +53,7 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in US
 	And Takes The Screenshot And Add to Report 
 			
 			
-Examples: 
-       |Country                                           |CountrySearchString|minStartDate|Duration|Data Source|Adults|Condition|
-	   |London (LON), United Kingdom (GB)      |LON						|2               |2                 |Viator       |2      |Ignore|
-	   |Bangkok (BKK), Thailand (TH)              |BKK						|90               |1                 |Viator       |2      |Outside|
+  Examples: 
+		| Country                           | CountrySearchString | minStartDate | Duration | Data Source | Adults | Condition | 
+		| London (LON), United Kingdom (GB) | LON                 | 2            | 2        | Viator      | 2      | Ignore    | 
+		| Bangkok (BKK), Thailand (TH)      | BKK                 | 90           | 1        | Viator      | 2      | Outside   |     

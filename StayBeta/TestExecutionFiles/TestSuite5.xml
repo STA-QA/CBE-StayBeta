@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="1Source-Automation - Insurance,Transfers & Day Trips" verbose="2" parallel="false">
+<suite name="1Source-Automation - Insurance,Transfers and Day Trips" verbose="2" parallel="false">
 	<listeners>
 		<listener class-name="Base.staNGlistener" />
 	</listeners>

@@ -1,5 +1,8 @@
 package cucumberOptions;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.annotations.BeforeSuite;
 import com.cucumber.listener.ExtentProperties;
 import cucumber.api.CucumberOptions;
@@ -16,7 +19,7 @@ public class HotelCostQuoteAU extends AbstractTestNGCucumberTests {
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-		extentProperties.setReportPath("Reports/OtherDataSourcesBookingAndCQ.html");
+		extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
 		
 	}
 

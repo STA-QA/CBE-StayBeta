@@ -1,5 +1,8 @@
 package cucumberOptions;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
@@ -19,8 +22,7 @@ public class Expedia_Amend_AddPassengerRunner extends AbstractTestNGCucumberTest
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/1SourceReleaseAutomationReport.html");
+		extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
 
 	}
 

@@ -8,7 +8,7 @@
 		<classes>
 		<!-- <class name="cucumberOptions.HotelCostQuoteGB" />   -->
 		   <!-- <class name="cucumberOptions.InsuranceRunnerDE" />   -->
-		   <class name="cucumberOptions.InsuranceRunnerGB" /> 
+		   <class name="cucumberOptions.TestRunner" /> 
 	<!-- 	     <class name="cucumberOptions.InsuranceRunnerZA" /> -->
 		<!-- <class name="cucumberOptions.HotelBookingWithExtrasRunner" /> -->			
 		<!--  <class name="cucumberOptions.TestRunner" /> -->		

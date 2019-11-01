@@ -1,4 +1,4 @@
-Feature: Hotel booking through Expedia Rapid
+Feature: Hotel booking and Amend by Changing the Start Date - Expedia Rapid
 
 Scenario Outline: User Book a hotel through <Data Source> 
 
@@ -30,9 +30,9 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	
 	Examples: 
-		|Country                                     |CountrySearchString|Data Source                |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|
-		|London (LON), United Kingdom (GB)|	LON                    |Expedia Rapid               |100         |2                   |1        |1         |0         |0	             |
-
+	|Country                          |CountrySearchString|Data Source      |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|
+	|London (LON), United Kingdom (GB)|	LON               |Expedia Rapid    |100      |2               |1    |1        |0       |0	        |
+	
 Scenario: Amend Booking By Searching BRN from My Bookings 
 Given User launches the application 
 	And User enters Valid Credentials 

@@ -1,4 +1,5 @@
-Feature: Cancel After Hotel Booking Confirmatiom
+Feature: Cancel After Hotel Booking Confirmatiom - Outside Cancellation Period
+
 Scenario Outline: User Book a hotel through <Data Source> 
 	Given User launches the application 
 	And User enters Valid Credentials 
@@ -27,9 +28,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 
 	Examples: 
-	
-		|Country                                        |CountrySearchString  |Data Source            |Start Day|Duration Of Stay|Rooms|Adults  	    |Children	|ChildrenAge|Condition	|
-		|London (LON), United Kingdom (GB)  |	LON                         |STAy                      |65          |5               	    |1    	  |1     	    |0			|	0		     |Outside	|
+	 | Country                           | CountrySearchString | Data Source | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
+     | London (LON), United Kingdom (GB) | LON                 | STAy        | 65        | 5                | 1     | 1      | 0        | 0           | Outside	  | 
 	
 
 Scenario: Cancel Booking By Retrieving latest Booking

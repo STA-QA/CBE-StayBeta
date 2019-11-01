@@ -1,4 +1,4 @@
-Feature: Hotel booking and Amend Remove Passengers after booking
+Feature: Hotel booking and Amend that booking by Removing a Passengers
 
 Scenario Outline: User Book a hotel through <Data Source> 
 	Given User launches the application 
@@ -28,9 +28,9 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 
 	Examples: 
-	
-		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|Cape Town (CPT), South Africa (ZA)  |	CPT                      |followme2AFRICA  |165          |1              	    |1    	  |3     	    |0			|	0		     |Outside	|
+	 | Country                            | CountrySearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
+     | Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 165       | 1                | 1     | 3      | 0        | 0           | Outside   | 
+		
 	
 	
 Scenario Outline: Remove Passengers after Bookings 
@@ -53,8 +53,8 @@ Scenario Outline: Remove Passengers after Bookings
 	Then User should be logged out and driver is closed
 	
 	Examples: 
+	 | Rooms | Adults | Children | ChildrenAge | Condition | 
+     | 1     | 2      | 0        | 0           | Outside   | 
 	
-		|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|1    	  |2     	    |0			|	0		     |Outside	|
 	
 	

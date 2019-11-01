@@ -1,4 +1,4 @@
-Feature: Hotel booking and Amend Add Passengers after booking
+Feature: Hotel booking and Amend by Add Passengers to the booking
 
 Scenario Outline: User Book a hotel through <Data Source> 
 	Given User launches the application 
@@ -27,14 +27,14 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 
-	Examples: 
 	
-		|Country                                        |CountrySearchString  |Data Source         |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-		|Cape Town (CPT), South Africa (ZA)  |CPT                        |followme2AFRICA   |10          |6                    	|1    	  |2     	    |0			|0		     |Ignore		|
+	Examples: 
+	|Country                            |CountrySearchString  |Data Source       |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
+	|Cape Town (CPT), South Africa (ZA) |CPT                  |followme2AFRICA   |10       |6               |1    |2     	|0			|0		    |Ignore		|
 	
 	
 Scenario Outline: Add Passengers after Bookings 
-Given User launches the application 
+	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
 	And User Selects any agency 
@@ -48,13 +48,15 @@ Given User launches the application
 	And Clicks on Complete Booking 
 	And Provied Amended Adults <Adults> Details and <Children> details with <ChildrenAge>	
 	And Accepts the Terms and Conditions 
-	And Click on Update button 
+	And Click on Update button
+	And Takes The Screenshot And Add to Report 
 	Then Get updated Booking Details
 	Then User should be logged out and driver is closed
 	
-	Examples: 
 	
-		|Rooms|Adults  	|Children	|ChildrenAge|
-	    |1    	  |3     	    |0			|	0		     |
+	Examples: 	
+	| Rooms | Adults | Children | ChildrenAge | 
+    | 1     | 3      | 0        | 0           |
+   
 	
 	

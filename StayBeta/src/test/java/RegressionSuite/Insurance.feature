@@ -1,4 +1,4 @@
- Feature: User Book Insurance for Different Divisons
+ Feature: Verify if User is able to book Insurance for Different Divisons
  
 @GB
 Scenario Outline: User Book Insurance for GB 
@@ -25,9 +25,9 @@ Scenario Outline: User Book Insurance for GB
 	
 
 Examples:
-|Passengers|Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40    |Single trip       |60         |30         |
-|1             |58    |Annual     		  |50         |365        |
+|Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
+|1             |40   |Single trip   |60      |30      |
+|1             |58   |Annual     	|50      |365     |
 
 
 
@@ -55,9 +55,9 @@ Scenario Outline: User Book Insurance for DE
 	And Takes The Screenshot And Add to Report 
 
 Examples:
-|Passengers|Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40    |Single trip       |60         |30         |
-|1             |58    |Annual     		  |50         |365        |
+|Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
+|1             |40   |Single trip   |60      |30      |
+|1             |58   |Annual     	|50      |365     |
 
 
 @ZA
@@ -84,9 +84,9 @@ Scenario Outline: User Book Insurance for ZA
 	And Takes The Screenshot And Add to Report 
 
 Examples: 
-|Passengers|Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40    |Single trip       |60         |30         |
-|1             |58    |Annual     		  |50         |365        |
+|Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
+|1             |40   |Single trip   |60      |30      |
+|1             |58   |Annual     	|50      |365     |
 
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Bookings & Cost Quote - Expedia" verbose="2" parallel="false">
+<suite name="Bookings Cost Quote - Expedia" verbose="2" parallel="false">
 	<listeners>
 		<listener class-name="Base.staNGlistener" />
 	</listeners>

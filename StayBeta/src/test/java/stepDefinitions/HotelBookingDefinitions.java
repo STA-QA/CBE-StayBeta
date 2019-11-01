@@ -149,7 +149,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 		}
 
 		if (condition.equalsIgnoreCase("Ignore")) {
-
+			
 		}
 
 	}
