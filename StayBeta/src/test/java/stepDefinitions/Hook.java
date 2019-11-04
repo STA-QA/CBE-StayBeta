@@ -4,10 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
+import javax.imageio.ImageIO;
+
 import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,6 +19,9 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import gherkin.formatter.model.Result;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class Hook extends BaseUtil {
 
@@ -67,12 +69,16 @@ public class Hook extends BaseUtil {
 
 	public static void captureScreenshot(WebDriver driver, String screenshotName) {
 
+		Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+
+
 		try {
-			TakesScreenshot ts = (TakesScreenshot) driver;
+			ImageIO.write(screenshot.getImage(),"PNG",new File("./screenshot/" + screenshotName + ".png"));
+			//TakesScreenshot ts = (TakesScreenshot) driver;
 
-			File source = ts.getScreenshotAs(OutputType.FILE);
+			//File source = ts.getScreenshotAs(OutputType.FILE);
 
-			FileUtils.copyFile(source, new File("./screenshot/" + screenshotName + ".png"));
+			//FileUtils.copyFile(source, new File("./screenshot/" + screenshotName + ".png"));
 
 			System.out.println("Screenshot taken");
 

@@ -30,6 +30,7 @@ import com.github.javafaker.Faker;
 import com.google.common.io.Files;
 
 import Base.BaseUtil;
+import Base.funtions;
 import stayBetaInterfaces.Hotel;
 
 public class HotelImpl extends BaseUtil implements Hotel {
@@ -846,7 +847,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		Thread.sleep(4000);
 	}
 
-	public void amenedAdultdetails() throws InterruptedException {
+	public void amenedAdultdetails() throws InterruptedException, IOException {
 Thread.sleep(3000);
 		List<WebElement> newTextfield = CBEDriver
 				.findElements(By.xpath("//div/input[(@class='text') and not (@disabled='disabled')]"));
@@ -947,6 +948,9 @@ Thread.sleep(3000);
 		} else {
 			Reporter.addStepLog("No New Passenger row displayed hence skipping this Step");
 		}
+		funtions commonfunctions = new funtions();
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
+		Reporter.addScreenCaptureFromPath(screenShotPath);
 	}
 
 }
