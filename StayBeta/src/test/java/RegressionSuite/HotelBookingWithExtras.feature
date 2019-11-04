@@ -22,7 +22,9 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
-	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
+	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
+	And Click On Insurance Details
+	And Click On save in Additional info box 
 	Given User Clicks on Search Dropdown in Shopping cart 
 	And Click On Search For Transfers from Dropdown 
 	And Search for a <Country> with particular <CountrySearchString> 

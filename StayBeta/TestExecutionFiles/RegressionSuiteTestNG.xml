@@ -5,7 +5,7 @@
 		<suite-file path="TestSuite1.xml"/>
 		<suite-file path="TestSuite2.xml"/>
 		<suite-file path="TestSuite3.xml"/>
-		<suite-file path="TestSuite4.xml"/>
+		<!-- <suite-file path="TestSuite4.xml"/> -->
 		<suite-file path="TestSuite5.xml"/>		
 	</suite-files>
 </suite>

@@ -399,7 +399,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 	@Override
 	public void CancellationCondition_Outside() throws InterruptedException {
 		Thread.sleep(2000);
-		int b = 5;
+		int b = 20;
 		int i = 1;
 		while (CBEDriver
 				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
@@ -424,7 +424,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 				.findElements(By.id("m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_lblCanxPeriodWarning"))
 				.size() > 0) {
 			Reporter.addStepLog("Couldn't find hotel outside cancellation period in 5 trials");
-			LogLog.error("Couldn't find hotel outside cancellation period in 5 trials");
+			LogLog.error("Couldn't find hotel outside cancellation period in 7 trials");
 			CBEDriver.findElement(By.id("DeleteButton")).click();
 		} else {
 			System.out.println("Proper Hotel is selected in while loop");

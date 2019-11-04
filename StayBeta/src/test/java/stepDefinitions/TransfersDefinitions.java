@@ -38,6 +38,7 @@ public class TransfersDefinitions {
 	@And("^Add The Passengers Transfers Additional Details$")
     public void add_the_passengers_transfers_additional_details() throws Throwable {
         Transfers.AddAdditionalDetails();
+        Thread.sleep(4000);
     }
 
 }

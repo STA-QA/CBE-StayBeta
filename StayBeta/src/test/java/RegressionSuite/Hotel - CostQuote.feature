@@ -22,7 +22,9 @@ Scenario Outline: User Cost Quote a hotel through <Data Source>
 	And Verify if Quote is selected by default 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
-	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
+	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
+	And Click On Insurance Details
+	And Click On save in Additional info box 
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 
@@ -57,7 +59,9 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 	And Verify if Quote is selected by default 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
-	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
+	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
+	And Click On Insurance Details
+	And Click On save in Additional info box
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 
@@ -66,6 +70,6 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
    Examples: 
 	| Country                           | CountrySearchString | Data Source         | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
 	| London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                | 1     | 1      | 0        | 0           | Inside    | 
-	| Melbourne (MEL), Australia (AU)   | MEL                 | AOT AU              | 7         | 2                | 1     | 2      | 0        | 0           | Outside   | 
+	| Melbourne (MEL), Australia (AU)   | MEL                 | AOT AU              | 7         | 2                | 1     | 2      | 0        | 0           |Outside  | 
 				
   
