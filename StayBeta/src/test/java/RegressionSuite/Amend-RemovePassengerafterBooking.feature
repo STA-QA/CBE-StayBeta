@@ -49,7 +49,8 @@ Scenario Outline: Remove Passengers after Bookings
 	And Click on Add to Cart 
 	And Clicks on Complete Booking 
 	And Provied Amended Adults <Adults> Details and <Children> details with <ChildrenAge>	
-	And Accepts the Terms and Conditions 
+	And Accepts the Terms and Conditions
+	And Click On Details icon during amendments 
 	And Click on Update button 
 	Then Get updated Booking Details
 	Then User should be logged out and driver is closed

@@ -1,6 +1,6 @@
 Feature: Hotel booking and Amend by Add Passengers to the booking
 
-Scenario Outline: User Book a hotel through <Data Source> 
+Scenario Outline: User Book a hotel through <Data Source>
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
@@ -32,7 +32,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	Examples: 
 	|Country                            |CountrySearchString  |Data Source       |Start Day|Duration Of Stay|Rooms|Adults  	|Children	|ChildrenAge|Condition	|
-	|Cape Town (CPT), South Africa (ZA) |CPT                  |followme2AFRICA   |100       |6               |1    |1     	|0			|0		    |Ignore		|
+	|Cape Town (CPT), South Africa (ZA) |CPT                  |followme2AFRICA   |100       |3               |1    |1     	|0			|0		    |Ignore		|
 	
 	
 Scenario Outline: Add Passengers after Bookings 
@@ -50,8 +50,7 @@ Scenario Outline: Add Passengers after Bookings
 	And Clicks on Complete Booking 
 	And Provied Amended Adults <Adults> Details and <Children> details with <ChildrenAge>	
 	And Accepts the Terms and Conditions 
-	And Click On Insurance Details
-	And Click On save in Additional info box
+	And Click On Details icon during amendments	
 	And Click on Update button
 	And Takes The Screenshot And Add to Report 
 	Then Get updated Booking Details

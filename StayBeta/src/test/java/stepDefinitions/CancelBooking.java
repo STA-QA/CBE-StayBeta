@@ -54,7 +54,7 @@ public class CancelBooking {
 		Hotel.SelectAmendThisItem();
 		Thread.sleep(2000);
 		Hotel.AcceptThePopup();
-		AmendAssert.VerifyDisabledAssertions();
+		//AmendAssert.VerifyDisabledAssertions();
 	}
 
 	@And("^User selects cancel item$")
@@ -83,6 +83,12 @@ public class CancelBooking {
 		Hotel.AcceptThePopup();
 	}
 
+	@And("^Click On Details icon during amendments$")
+	public void click_on_details_icon_during_amendments() throws Throwable {
+		Thread.sleep(6000);
+	       HotelCancel.ClickHotelDetailiconDuringAmendments();
+	       Thread.sleep(3000);
+	}
 
 
 
