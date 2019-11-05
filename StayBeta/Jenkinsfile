@@ -1,0 +1,11 @@
+node {
+stage ('Git Checkout'){
+git "https://github.com/gururajsta/STA-BDD"
+}
+stage ('Build Project'){
+bat "mvn clean"
+}
+ stage ('Run Test'){
+bat "mvn test"
+}
+}
