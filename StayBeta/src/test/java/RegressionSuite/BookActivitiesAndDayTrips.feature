@@ -20,7 +20,7 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in GB
 	And Clicks on Complete Booking 
 	And Add the Details Of Guests <Adults> 
 	And Clicks On Book Radio Button for DayTrips 
-	And Accepts the Terms and Conditions 
+	And Accepts the Terms and Conditions	
 	And Click On Book Button 
 	And Takes The Screenshot And Add to Report 
 	
@@ -47,13 +47,14 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in US
 	And Check for Cancellation condition for DayTrips <Condition> 
 	And Clicks on Complete Booking 
 	And Add the Details Of Guests <Adults> 
-	And Clicks On Book Radio Button for DayTrips 
-	And Accepts the Terms and Conditions 
+	And Clicks On Book Radio Button for DayTrips
+	And Accepts the Terms and Conditions
+	And Click On Insurance Details 
+	And Add The Passengers Transfers Additional Details
 	And Click On Book Button 
 	And Takes The Screenshot And Add to Report 
 			
 			
   Examples: 
 		| Country                           | CountrySearchString | minStartDate | Duration | Data Source | Adults | Condition | 
-		| London (LON), United Kingdom (GB) | LON                 | 2            | 2        | Viator      | 2      | Ignore    | 
 		| Bangkok (BKK), Thailand (TH)      | BKK                 | 90           | 1        | Viator      | 2      | Outside   |     

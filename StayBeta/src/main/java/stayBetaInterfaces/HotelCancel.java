@@ -14,4 +14,5 @@ public interface HotelCancel {
 	public void AddToCartInAmend();
 	public void ClickOnCancellationConditionsLink();
 	public void GetTheCancellationChargesDetails() throws InterruptedException;
+	 public void ClickHotelDetailiconDuringAmendments() throws InterruptedException;
 }

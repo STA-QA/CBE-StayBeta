@@ -3,6 +3,7 @@ package stepDefinitions;
 import java.util.List;
 
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
 
 import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
@@ -156,7 +157,7 @@ public class TestCase616 extends BaseUtil {
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
 
-		Thread.sleep(20000);
+		Thread.sleep(40000);
 		System.out.println("Wait is Done!!");
 	}
 
@@ -197,6 +198,7 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Clicks On Book Radio Button$")
 	public void clicks_on_book_radio_button() throws Throwable {
+		Thread.sleep(5000);
 		Hotel.SelectBookRB();
 	}
 
@@ -213,12 +215,17 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Click on Book Button$")
 	public void click_on_book_button() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		Hotel.ClickOnBook();
-
 		Thread.sleep(2000);
 	}
-
+	
+	 @And("^Click On save in Additional info box$")
+	 public void click_on_save_in_additional_info_box() throws Throwable {
+		 Thread.sleep(4000);
+	      CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_saveBtn")).click(); 
+	  }
+	 
 	@Then("^Booking has been done successfully$")
 	public void booking_has_been_done_successfully() throws Throwable {
 		Hotel.bookingConfirmation();

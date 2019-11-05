@@ -149,7 +149,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 		}
 
 		if (condition.equalsIgnoreCase("Ignore")) {
-			
+
 		}
 
 	}
@@ -178,10 +178,10 @@ public class HotelBookingDefinitions extends BaseUtil {
 		{
 			 TotalChildren+=childrenage.get(j);
 		}
-		
+
         for(int top= 0; top<adults.size(); top++) {
      	   int k = adults.get(top);
-           
+
      		for(int a=0; a<k ;a++){
      			 Hotel.EnterAdultDetails(index);
      			index=index+1;
@@ -206,8 +206,6 @@ public class HotelBookingDefinitions extends BaseUtil {
 
 	@And("^Provied Amended Adults (.+) Details and (.+) details with (.+)")
     public void provides_Amended_adults_details_and_details_with(List<Integer> adults, List<Integer> children, List<Integer> childrenage) throws Throwable {
-
-
 		Hotel.amenedAdultdetails();
 
 
@@ -268,12 +266,13 @@ public class HotelBookingDefinitions extends BaseUtil {
 
 	@Given("^User Clicks on Search Dropdown in Shopping cart$")
     public void user_clicks_on_search_dropdown_in_shopping_cart() throws Throwable {
+		Thread.sleep(5000);
        Hotel.ClickOnSearchDropDownInCart();
     }
-	
+
 	@And("^Click On Search For Transfers from Dropdown$")
     public void click_on_search_for_transfers_from_dropdown() throws Throwable {
-        
+
     }
-	
+
 }

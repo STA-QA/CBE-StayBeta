@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="1Source-Automation" duration-ms="313571" started-at="2019-10-31T11:08:52Z" finished-at="2019-10-31T11:14:06Z">
+  <suite name="1Source-Automation" duration-ms="417453" started-at="2019-11-04T16:44:51Z" finished-at="2019-11-04T16:51:49Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@67784306]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.Amend_AddPassenger@3b0143d3]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Regression" duration-ms="313571" started-at="2019-10-31T11:08:52Z" finished-at="2019-10-31T11:14:06Z">
-      <class name="cucumberOptions.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@67784306]" name="setUpClass" is-config="true" duration-ms="839" started-at="2019-10-31T11:08:53Z" finished-at="2019-10-31T11:08:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:cucumberOptions.TestRunner@67784306]" name="setup" is-config="true" duration-ms="1" started-at="2019-10-31T11:08:54Z" finished-at="2019-10-31T11:08:54Z">
+    <test name="Regression" duration-ms="417453" started-at="2019-11-04T16:44:51Z" finished-at="2019-11-04T16:51:49Z">
+      <class name="cucumberOptions.Amend_AddPassenger">
+        <test-method status="PASS" signature="setup()[pri:0, instance:cucumberOptions.Amend_AddPassenger@3b0143d3]" name="setup" is-config="true" duration-ms="16" started-at="2019-11-04T16:44:51Z" finished-at="2019-11-04T16:44:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@67784306]" name="feature" duration-ms="311334" started-at="2019-10-31T11:08:54Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-10-31T11:14:05Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberOptions.Amend_AddPassenger@3b0143d3]" name="setUpClass" is-config="true" duration-ms="635" started-at="2019-11-04T16:44:52Z" finished-at="2019-11-04T16:44:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.Amend_AddPassenger@3b0143d3]" name="feature" duration-ms="415851" started-at="2019-11-04T16:44:52Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-11-04T16:51:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Print Search loading time]]>
+                <![CDATA[Hotel booking and Amend by Add Passengers to the booking]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@67784306]" name="tearDownClass" is-config="true" duration-ms="926" started-at="2019-10-31T11:14:05Z" finished-at="2019-10-31T11:14:06Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberOptions.Amend_AddPassenger@3b0143d3]" name="tearDownClass" is-config="true" duration-ms="529" started-at="2019-11-04T16:51:48Z" finished-at="2019-11-04T16:51:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- cucumberOptions.TestRunner -->
+      </class> <!-- cucumberOptions.Amend_AddPassenger -->
     </test> <!-- Regression -->
   </suite> <!-- 1Source-Automation -->
 </testng-results>

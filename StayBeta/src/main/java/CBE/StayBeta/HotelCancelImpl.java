@@ -18,7 +18,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Base.BaseUtil;
 import stayBetaInterfaces.HotelCancel;
@@ -76,7 +79,20 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		Thread.sleep(2000);
 	}
 
+	
+   public void ClickHotelDetailiconDuringAmendments() throws InterruptedException {
+	   Thread.sleep(2000);
+	   WebElement element = CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_detailsUpd"));
+	   WebDriverWait wait = new WebDriverWait(CBEDriver, 10);
 
+	   wait.until(ExpectedConditions.elementToBeClickable(element));
+	  
+	  element.click();
+	Thread.sleep(4000);
+    CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_saveBtn")).click(); 
+    }
+   
+  
 
 	@Override
 	public void VerifyBookingCancellation() {
