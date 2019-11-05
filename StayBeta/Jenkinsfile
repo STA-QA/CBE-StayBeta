@@ -1,6 +1,6 @@
 node {
 stage ('Git Checkout'){
-git "https://github.com/gururajsta/STA-BDD"
+git "https://github.com/Kiranmaiadams/CBE-Automation"
 }
 stage ('Build Project'){
 bat "mvn clean"

@@ -16,9 +16,9 @@ public class ExtentReportUtil extends BaseUtil {
 
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
         htmlReporter.config().setTheme(Theme.DARK);
-        htmlReporter.config().setDocumentTitle("Sta-Automation Report");
+        htmlReporter.config().setDocumentTitle("1Source-Automation Report");
         htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setReportName("STA-BDD");
+        htmlReporter.config().setReportName("CBE-StayBeta");
        // htmlReporter.config().enableTimeline(true);
 
         extent.attachReporter(htmlReporter);
