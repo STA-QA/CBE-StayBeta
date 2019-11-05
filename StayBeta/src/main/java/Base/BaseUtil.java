@@ -2,6 +2,7 @@ package Base;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -12,6 +13,8 @@ import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.KlovReporter;
 
 public class BaseUtil {
 
@@ -22,6 +25,12 @@ public class BaseUtil {
 	public static ExtentTest scenarioDef;
 
 	public static ExtentTest features;
+	
+	public static Date d;
+	public static ExtentHtmlReporter htmlReporter;
+	KlovReporter klov = new KlovReporter();
+	
+	
 	static String applicationURL = "http://staybeta.bluee.net/login?username=staycbegbcbg&password=cbeuser";
 	
 	static String applicationURL_de = "http://staybeta.bluee.net/login?username=STAYCBEDEDEU&password=cbeuser";
