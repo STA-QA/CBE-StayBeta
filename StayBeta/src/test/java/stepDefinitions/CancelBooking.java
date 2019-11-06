@@ -96,9 +96,16 @@ public class CancelBooking {
 	@And("^Fetch the From date and move it few days further$")
 	public void fetch_the_from_date_and_move_it_few_days_further() throws Throwable {
 		Thread.sleep(4000);
-		HotelCancel.ChangeFromDateForHotelAmend();
+		//HotelCancel.ChangeFromDateForHotelAmend();
 		Thread.sleep(2000);
 	}
+	
+	@And("^Change the From Date To move Inside Cancellation Period (.+)$")
+    public void change_the_from_date_to_move_inside_cancellation_period(int startday) throws Throwable {
+		Thread.sleep(4000);
+		HotelCancel.ChangeFromDateForHotelAmend(startday);
+		Thread.sleep(2000);
+    }
 
 
 	@And("^Fetch the From date and Reduce by (.+) Nights$")

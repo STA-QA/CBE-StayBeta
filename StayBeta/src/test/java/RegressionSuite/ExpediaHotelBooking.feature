@@ -31,8 +31,8 @@ Scenario Outline: User Book a hotel through <Data Source> for GB division
 
  Examples: 
      | Country                           | CountrySearchString | Data Source   | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | 
-     | London (LON), United Kingdom (GB) | LON                 | Expedia Rapid | 100       | 2                | 1     | 1      | 0        | 0           | 
-     | Paris (PAR), France (FR)          | PAR                 | Expedia Rapid | 91        | 2                | 1     | 2      | 2        | 5,6         | 	
+     | London (LON), United Kingdom (GB) | LON                 |Expedia Rapid Package| 100       | 2                | 1     | 1      | 0        | 0           | 
+     | Paris (PAR), France (FR)          | PAR                 |Expedia Rapid Package| 91        | 2                | 1     | 2      | 2        | 5,6         | 	
 		
 		
 @US
@@ -64,8 +64,8 @@ Scenario Outline: User Book a hotel through <Data Source> for US division
   
   Examples: 
       | Country                           | CountrySearchString | Data Source   | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | 
-      | London (LON), United Kingdom (GB) | LON                 | Expedia Rapid | 100       | 2                | 1     | 1      | 0        | 0           | 
-      | Paris (PAR), France (FR)          | PAR                 | Expedia Rapid | 91        | 2                | 1     | 2      | 2        | 5,6         | 	
+      | London (LON), United Kingdom (GB) | LON                 |Expedia Rapid Package | 100       | 2                | 1     | 1      | 0        | 0           | 
+      | Paris (PAR), France (FR)          | PAR                 |Expedia Rapid Package| 91        | 2                | 1     | 2      | 2        | 5,6         | 	
 	
 	
 		

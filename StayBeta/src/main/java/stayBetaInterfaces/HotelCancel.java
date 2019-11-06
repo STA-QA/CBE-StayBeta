@@ -9,7 +9,7 @@ public interface HotelCancel {
 	public void ProductDeleteVerification();
 	public void ClickRetrieveLatestBooking() throws InterruptedException;
 	public void VerifyBookingCancellation();
-	public void ChangeFromDateForHotelAmend() throws ParseException;
+	public void ChangeFromDateForHotelAmend(int NewDate) throws ParseException;
 	public void ReduceFromDateForHotelAmend(int NoOfNightsToReduce) throws ParseException;
 	public void AddToCartInAmend();
 	public void ClickOnCancellationConditionsLink();

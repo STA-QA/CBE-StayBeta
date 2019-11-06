@@ -1,7 +1,6 @@
-Feature: Hotel booking and Amend by Add Passengers to the booking - Expedia Rapid
+Feature: Hotel booking and Amend by Changing the Start Date
 
 Scenario Outline: User Book a hotel through <Data Source> 
-
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
@@ -15,49 +14,47 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Enter the ChildrenAge <ChildrenAge> 
 	And Deselect SelectAll DataSources 
 	And Select DataSource <Data Source> 
-	And User Click Search Button on Hotel Searchpage 
-	And Clicks on Add to cart on a hotel from search results for Expedia 
+	And Exclude On Request Rooms 
+	And Click Search Button 
+	And Clicks on Add to cart on a hotel from search results 
+	And Check for Cancellation Condition <Condition> 
+	And Verify if Quote is selected by default 
 	And Clicks On Book Radio Button
 	And Clicks on Complete Booking 
-	And Accepts the Terms and Conditions
-	And Provides the Expedia Adults <Adults> Details and <Children> details with <ChildrenAge>
+	And Accepts the Terms and Conditions 
+	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
 	And Click On Insurance Details
-	And Click On save in Additional info box
+	And Click On save in Additional info box 
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 
 	
 	Examples: 
-	| Country                  | CountrySearchString | Data Source   | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | 
-    | Paris (PAR), France (FR) | PAR                 |Expedia Rapid Package | 100       | 2                | 1     | 1      | 0        | 0           | 	
-			
-
-Scenario Outline: Add Passengers after Bookings 
-Given User launches the application 
+	|Country                             |CountrySearchString|Data Source |Start Day|Duration Of Stay|Rooms|Adults |Children|ChildrenAge|Condition	|
+	|New York (NYC), United States (US)  |	NYC              |Tourico     |15       |3               |1    |2      |0		|0		    |Outside	|
+		
+		
+Scenario Outline: Amend Booking By Searching BRN from My Bookings 
+	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
 	And User Selects any agency 
 	Given User Clicks on My Bookings 
-	And User Enters Booking Refnumber 
+	And User Enters Booking Refnumber  
 	And Clicks on Complete Booking 
 	And Select Amend this item Option 
-	And Select Number of Adult Guests <Adults> into <Rooms> in automatic order 
+	And Change the From Date To move Inside Cancellation Period <Start Day>
 	And Click Search Button 
 	And Click on Add to Cart 
 	And Clicks on Complete Booking 
-	And Provied Amended Adults <Adults> Details and <Children> details with <ChildrenAge>	
 	And Accepts the Terms and Conditions
-	And Click On Insurance Details
-	And Click On save in Additional info box 
-	And Click on Update button 
-	Then Get updated Booking Details
-	Then User should be logged out and driver is closed
+	And Click On Details icon during amendments	  
+	And Click on Update button
+    And Takes The Screenshot And Add to Report 
 	
-	Examples: 
-	 | Rooms | Adults | Children | ChildrenAge | Condition | 
-     | 1     | 2      | 0        | 0           | Outside   |
+Examples:
+|Start Day|
+|2|
 	
-		
-		
-		
+	

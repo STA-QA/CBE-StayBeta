@@ -102,7 +102,7 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 	}
 
 	@Override
-	public void ChangeFromDateForHotelAmend() {
+	public void ChangeFromDateForHotelAmend(int StartDay) {
 		String From = "//*[@id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckIntbx']";
 
 		Calendar cal = Calendar.getInstance();
@@ -113,7 +113,7 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		try {
 			Date date = format1.parse(CurrentFromDate);
 			cal.setTime(date);
-			cal.add(Calendar.DATE, 1);
+			cal.add(Calendar.DATE, StartDay);
 			String NewDate = format1.format(cal.getTime());
 			CBEDriver.findElement(By.xpath(From)).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), NewDate);
 
