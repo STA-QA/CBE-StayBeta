@@ -216,7 +216,7 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Click on Book Button$")
 	public void click_on_book_button() throws Throwable {
-		Thread.sleep(10000);
+		Thread.sleep(8000);
 		Hotel.ClickOnBook();
 		Thread.sleep(2000);
 	}

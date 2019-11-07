@@ -14,6 +14,8 @@ public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGene
 	Base.funtions functions = new Base.funtions();
 	public String Price = "//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']";
 	public String Bookingref = "//div/h4/span[@id='lblFoldNo']";
+	
+	
 	@Override
 	public void storeBookingDetails() throws IOException {
 
@@ -29,7 +31,8 @@ public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGene
 	}
 
 	public void AddScreenshotToReport() throws IOException {
-		String screenShotPath = screenshot(CBEDriver, System.currentTimeMillis());
+		//captureScreenshot(CBEDriver, "Screenshot");
+		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 	}
 

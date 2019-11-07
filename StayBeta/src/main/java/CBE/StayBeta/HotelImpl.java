@@ -641,6 +641,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 		String verifySuccessmessage = updatedBookingRefnumber.getText();
+		if(verifySuccessmessage.contains("PLEASE WAIT, THIS MAY TAKE SOME TIME.")){
+			Thread.sleep(10000);
+		}
 		Assert.assertTrue(verifySuccessmessage.contains("UPDATE WAS SUCCESSFUL"));
 		Assert.assertFalse(verifySuccessmessage.contains("YOUR REFERENCE IS UNAVAILABLE"));
 		boolean a = verifySuccessmessage.contains("YOUR REFERENCE IS UNAVAILABLE");

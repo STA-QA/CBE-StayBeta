@@ -6,12 +6,12 @@
 	</listeners>
 	<test name="Regression">
 		<classes>
-		  <class name="cucumberOptions.InsuranceRunnerDE" />  
-		   <!-- <class name="cucumberOptions.InsuranceRunnerGB" /> 
-	     <class name="cucumberOptions.InsuranceRunnerZA" /> 
-		 <class name="cucumberOptions.TransfersRunner" />  
-	  <	<class name="cucumberOptions.ActivitiesAndDayTripsRunnerGB" /> 
-	  	<class name="cucumberOptions.ActivitiesAndDayTripsRunnerUS" /> -->     -->
+		<class name="cucumberOptions.InsuranceRunnerZA" /> 
+		 <!--  <class name="cucumberOptions.InsuranceRunnerDE" />  
+		  <class name="cucumberOptions.InsuranceRunnerGB" />  	     
+		  <class name="cucumberOptions.TransfersRunner" />  
+	  	<class name="cucumberOptions.ActivitiesAndDayTripsRunnerGB" /> 
+	  	<class name="cucumberOptions.ActivitiesAndDayTripsRunnerUS" /> -->   
 	 	</classes>
 	</test>
 </suite>

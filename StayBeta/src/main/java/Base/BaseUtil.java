@@ -3,6 +3,8 @@ package Base;
 import java.io.File;
 import java.io.IOException;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,6 +14,10 @@ import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class BaseUtil {
 
@@ -72,6 +78,27 @@ public class BaseUtil {
 
 	}
 
+	public static void captureScreenshot(WebDriver driver, String screenshotName) {
+
+		Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+
+
+		try {
+			ImageIO.write(screenshot.getImage(),"PNG",new File("./screenshot/" + screenshotName + ".png"));
+			//TakesScreenshot ts = (TakesScreenshot) driver;
+
+			//File source = ts.getScreenshotAs(OutputType.FILE);
+
+			//FileUtils.copyFile(source, new File("./screenshot/" + screenshotName + ".png"));
+
+			System.out.println("Screenshot taken");
+
+		} catch (Exception e) {
+
+			System.out.println("Exception while taking screenshot " + e.getMessage());
+		}
+
+	}
 	public void searchLoadingtime() {
 		// TODO Auto-generated method stub
 
