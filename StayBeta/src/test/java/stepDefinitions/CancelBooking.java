@@ -74,6 +74,7 @@ public class CancelBooking {
 
 	 @Then("^Get updated Booking Details$")
 	    public void get_updated_booking_details() throws Throwable {
+		 Thread.sleep(10000);
 	        Hotel.getAmendedRefnumber();
 	    }
 
@@ -85,7 +86,7 @@ public class CancelBooking {
 
 	@And("^Click On Details icon during amendments$")
 	public void click_on_details_icon_during_amendments() throws Throwable {
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 	       HotelCancel.ClickHotelDetailiconDuringAmendments();
 	       Thread.sleep(3000);
 	}

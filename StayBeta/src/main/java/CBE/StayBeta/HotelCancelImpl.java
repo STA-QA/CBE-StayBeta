@@ -82,14 +82,20 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 	
    public void ClickHotelDetailiconDuringAmendments() throws InterruptedException {
 	   Thread.sleep(2000);
-	   WebElement element = CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_detailsUpd"));
-	   WebDriverWait wait = new WebDriverWait(CBEDriver, 10);
-
-	   wait.until(ExpectedConditions.elementToBeClickable(element));
 	  
-	  element.click();
+	   int a = CBEDriver.findElements(By.xpath("//td/div/a[@title='Detail']")).size();
+	  System.out.println("Total detail icons available are : " +a);
+	   WebElement element = CBEDriver.findElement(By.xpath("//td/div/a[@title='Detail']/span[1]"));
+	   WebDriverWait wait = new WebDriverWait(CBEDriver, 20);
+	   wait.until(ExpectedConditions.elementToBeClickable(element));
+	   Actions actions = new Actions(CBEDriver);
+	   actions.moveToElement(element).click().build().perform();
+	   
+	   
+	  	   
+	   
 	Thread.sleep(4000);
-    CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_saveBtn")).click(); 
+    CBEDriver.findElement(By.xpath("//*[contains(@id,'uscItm_saveBtn')]")).click(); 
     }
    
   
@@ -110,6 +116,10 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		String CurrentFromDate =CBEDriver.findElement(By.xpath(From)).getAttribute("Value");
 
 		System.out.println("the date fetched is " + CurrentFromDate);
+		
+			
+		
+		
 		try {
 			Date date = format1.parse(CurrentFromDate);
 			cal.setTime(date);

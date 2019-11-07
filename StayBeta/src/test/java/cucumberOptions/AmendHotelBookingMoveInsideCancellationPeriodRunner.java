@@ -22,7 +22,7 @@ public class AmendHotelBookingMoveInsideCancellationPeriodRunner extends Abstrac
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-		extentProperties.setReportPath("Reports/Auto6.2.html");
+		extentProperties.setReportPath("Reports/Auto1-2.html");
 	
 
 	}

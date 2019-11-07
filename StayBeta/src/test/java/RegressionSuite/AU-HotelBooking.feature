@@ -36,9 +36,10 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 	
 	Examples: 
 	 | Country                           | CountrySearchString | Data Source         | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
-     | Sydney (SYD), Australia (AU)      | SYD                 | Sunlover Australia  | 14        | 3                | 1     | 2      | 0        | 0           | Outside   |
-     | London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                | 1     | 1      | 0        | 0           | Inside    | 
-     | Melbourne (MEL), Australia (AU)   | MEL                 | AOT AU              | 7         | 2                | 1     | 2      | 0        | 0           | Outside   | 
+    |Singapore (SIN), Singapore (SG)     | SIN                | Qantas Holidays CSG  | 40        | 2                | 1     | 2      | 0        | 0           | Outside   | 
+   #  | Sydney (SYD), Australia (AU)      | SYD                 | Sunlover Australia  | 16        | 3                | 1     | 2      | 0        | 0           | Outside   |
+  #   | Melbourne (MEL), Australia (AU)   | MEL                 | AOT AU              | 7         | 2                | 1     | 2      | 0        | 0           | Outside   |
+   # | London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                | 1     | 1      | 0        | 0           | Inside    | 
       
 	
 			

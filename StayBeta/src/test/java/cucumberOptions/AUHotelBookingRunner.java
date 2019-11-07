@@ -12,7 +12,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/RegressionSuite/AU-HotelBooking.feature", plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/AUAmend-AddPassenger.feature", plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 
@@ -22,7 +22,7 @@ public class AUHotelBookingRunner extends AbstractTestNGCucumberTests {
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-		extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+		extentProperties.setReportPath("Reports/Auto5-2.html");
 		
 	}
 

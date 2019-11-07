@@ -1,4 +1,4 @@
-Feature: Hotel booking and Amend by Changing the Start Date
+Feature: Hotel booking and Amend by Changing the Start Date inside Cancellation Period
 
 Scenario Outline: User Book a hotel through <Data Source> 
 	Given User launches the application 
@@ -26,7 +26,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Click On Insurance Details
 	And Click On save in Additional info box 
 	And Click on Book Button 
-	Then Booking has been done successfully and Booking reference Text is stored in a file 
+    Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 
 	Then User should be logged out and driver is closed 
 	
@@ -46,15 +46,16 @@ Scenario Outline: Amend Booking By Searching BRN from My Bookings
 	And Select Amend this item Option 
 	And Change the From Date To move Inside Cancellation Period <Start Day>
 	And Click Search Button 
-	And Click on Add to Cart 
-	And Clicks on Complete Booking 
+	And Click on Add to Cart
+	And Clicks on Complete Booking
+	And Takes The Screenshot And Add to Report	
 	And Accepts the Terms and Conditions
-	And Click On Details icon during amendments	  
+	And Click On Details icon during amendments  
 	And Click on Update button
     And Takes The Screenshot And Add to Report 
 	
 Examples:
 |Start Day|
-|2|
+|-13|
 	
 	

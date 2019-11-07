@@ -192,7 +192,7 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Clicks on Complete Booking$")
 	public void clicks_on_complete_booking() throws Throwable {
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		Hotel.ClickOnCompleteBooking();
 	}
 
@@ -211,6 +211,7 @@ public class TestCase616 extends BaseUtil {
 	public void accepts_the_terms_and_conditions() throws Throwable {
 		Thread.sleep(4000);
 		Hotel.AcceptTermsAndConditions();
+		Thread.sleep(4000);
 	}
 
 	@And("^Click on Book Button$")
