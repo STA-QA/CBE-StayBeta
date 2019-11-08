@@ -10,6 +10,6 @@ bat "mvn -f StayBeta/pom.xml test"
 }
 
 stage ('Publish Report'){
-publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'Reports/', reportFiles: 'STA-Automation.html', reportName: '1SourceReleaseReport', reportTitles: ''])
+publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/Reports/', reportFiles: 'STA-Automation.html', reportName: '1SourceReleaseReport', reportTitles: ''])
 }
 }
