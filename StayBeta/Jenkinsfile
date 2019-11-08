@@ -6,6 +6,6 @@ stage ('Build Project'){
 bat "mvn -f StayBeta/pom.xml clean"
 }
  stage ('Run Test'){
-bat "mvn test"
+bat "mvn -f StayBeta/pom.xml test"
 }
 }
