@@ -5,9 +5,9 @@
 		<listener class-name="Base.staNGlistener" />
 	</listeners>
 	<test name="Regression">
-		<classes>
-		<class name="cucumberOptions.InsuranceRunnerZA" /> 
-		 <!--  <class name="cucumberOptions.InsuranceRunnerDE" />  
+		<classes>		
+		  <class name="cucumberOptions.InsuranceRunnerDE" />  
+		 <!-- <class name="cucumberOptions.InsuranceRunnerZA" /> 
 		  <class name="cucumberOptions.InsuranceRunnerGB" />  	     
 		  <class name="cucumberOptions.TransfersRunner" />  
 	  	<class name="cucumberOptions.ActivitiesAndDayTripsRunnerGB" /> 
