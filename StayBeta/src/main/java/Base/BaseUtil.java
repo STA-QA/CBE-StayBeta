@@ -2,6 +2,8 @@ package Base;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.imageio.ImageIO;
 
@@ -99,6 +101,21 @@ public class BaseUtil {
 		}
 
 	}
+	
+	public static String getScreenshot(WebDriver CBEDriver, String ScreenShotName) throws IOException
+    {
+        String dateName=new SimpleDateFormat("YYYYMMDDHHMMSS").format(new Date());
+        TakesScreenshot ts=(TakesScreenshot)CBEDriver;
+        File source=ts.getScreenshotAs(OutputType.FILE);
+        String destination=System.getProperty("user.dir")+"/FailedScreenshots/"+ScreenShotName+dateName+".png";
+        File finalDestination=new File(destination);
+        FileUtils.copyFile(source, finalDestination);
+
+        String Imagepath="file://Machinename/FailedScreenshots/"+ScreenShotName+dateName+".png";
+        return Imagepath;
+    }
+	
+	
 	public void searchLoadingtime() {
 		// TODO Auto-generated method stub
 
