@@ -53,7 +53,7 @@ Scenario Outline: User Book Insurance for DE
 	And Add additional Details for Insurance 
 	And Accepts the Terms and Conditions 
 	And Click On Book Button 
-	And Takes The Screenshot And Add to Report 
+	And Takes The Screenshot And Add to Report
 
 Examples:
 |Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
