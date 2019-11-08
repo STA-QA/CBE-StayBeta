@@ -20,32 +20,42 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 public class InsuranceRunnerDE extends AbstractTestNGCucumberTests {
 
-	public ExtentReports extent;
-	public static Date d;
-	@BeforeClass
+	@BeforeSuite
 	public static void setup() {
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-		extentProperties.setReportPath("Reports/STA-Automation.html");
-
+		extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+		
 	}
+	
+	/*
+	 * public ExtentReports extent; public static Date d;
+	 * 
+	 * @BeforeSuite public static void setup() {
+	 * 
+	 * ExtentProperties extentProperties = ExtentProperties.INSTANCE;
+	 * 
+	 * extentProperties.setReportPath("Reports/STA-Automation.html");
+	 * 
+	 * }
+	 */
 
-	@BeforeSuite
-
-	public void report() {
-		KlovReporter klov = new KlovReporter();
-
-	    extent = new ExtentReports();
-
-	    klov.initMongoDbConnection("localhost", 27017);
-	    klov.setProjectName("STAX-CD/CI-Report");
-	    klov.setReportName("STAx" + d.toString());
-
-
-	    extent.attachReporter( klov);
-
-	}
+	/*
+	 * @BeforeSuite
+	 * 
+	 * public void report() { KlovReporter klov = new KlovReporter();
+	 * 
+	 * extent = new ExtentReports();
+	 * 
+	 * klov.initMongoDbConnection("localhost", 27017);
+	 * klov.setProjectName("STAX-CD/CI-Report"); klov.setReportName("STAx" +
+	 * d.toString());
+	 * 
+	 * 
+	 * extent.attachReporter( klov);
+	 * 
+	 * }
+	 */
 
 
 }
