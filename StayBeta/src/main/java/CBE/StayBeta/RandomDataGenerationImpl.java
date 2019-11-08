@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import com.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
+import Base.funtions;
 import stayBetaInterfaces.RandomDataGeneration;
 
 
@@ -14,8 +15,9 @@ public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGene
 	Base.funtions functions = new Base.funtions();
 	public String Price = "//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']";
 	public String Bookingref = "//div/h4/span[@id='lblFoldNo']";
-	
-	
+	funtions commonfunctions = new funtions();
+
+
 	@Override
 	public void storeBookingDetails() throws IOException {
 
@@ -23,8 +25,9 @@ public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGene
 		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
 
 		Reporter.addStepLog(bookingrefnumber);
-		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
+
         String bookingnumber = bookingrefnumber.replaceAll("\\D+","");
 		functions.sendDatatoCSVfile(bookingnumber);
 
@@ -32,8 +35,9 @@ public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGene
 
 	public void AddScreenshotToReport() throws IOException {
 		//captureScreenshot(CBEDriver, "Screenshot");
-		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
+
 	}
 
 

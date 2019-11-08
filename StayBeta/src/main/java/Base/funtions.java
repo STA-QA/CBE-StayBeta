@@ -9,7 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
+import javax.imageio.ImageIO;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -17,6 +18,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class funtions {
 
@@ -52,17 +57,24 @@ public class funtions {
 	}
 
 	public static String screenshot(WebDriver driver, long ms) throws IOException {
+		Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+		ImageIO.write(screenshot.getImage(),"PNG",new File("./Reports/Screenshots_Fail/" + ms + ".png"));
+
 
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		String dest = System.getProperty("user.dir") + "\\screenshot\\" + ms + ".png";
+
+		String dest = "Screenshots_Fail/" + ms + ".png";
+
 		File destination = new File(dest);
-		FileUtils.copyFile(source, destination);
+		//FileUtils.copyFile(source, destination);
 		System.out.println("ScreenShot Taken");
 
 		return dest;
 
 	}
+
+
 
 	public void Dropdown(WebElement ele, String text) throws InterruptedException {
 		ele.click();
@@ -71,6 +83,7 @@ public class funtions {
 		dropdown.deselectByVisibleText(text);
 
 	}
+
 
 	public void sendDatatoCSVfile(String datatostore) {
 

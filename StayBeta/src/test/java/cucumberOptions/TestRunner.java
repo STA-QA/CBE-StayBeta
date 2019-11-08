@@ -11,7 +11,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/perfTesting/checkSearchloadingTime.feature", plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/Amend-AddPassenger.feature", plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 
@@ -24,9 +24,9 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 		String timeStamp = new SimpleDateFormat("dd-MMMHH:mm").format(new Date());
 		String Path = "Reports/CBEREport.html";
 		extentProperties.setReportPath(Path);
-		
-		
-	
+
+
+
 
 	}
 

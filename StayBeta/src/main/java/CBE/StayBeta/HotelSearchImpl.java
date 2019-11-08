@@ -19,6 +19,7 @@ import org.testng.Assert;
 import com.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
+import Base.funtions;
 import stayBetaInterfaces.HotelSearch;
 
 
@@ -26,7 +27,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 
 	String RoomSelXpath = "//button[@id='Pivot3-Tab3']/div/span/span";
 	Actions actions = new Actions(CBEDriver);
-
+	funtions commonfunctions = new funtions();
 	@Override
 	public void VerifySearchResultsOfDS(String DataSource) {
 
@@ -73,7 +74,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 			CBEDriver.switchTo().frame(0);
 			Thread.sleep(8000);
 			CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
-			String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 
 

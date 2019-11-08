@@ -1,7 +1,5 @@
 package CBE.StayBeta;
 
-import static org.testng.Assert.assertFalse;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -85,6 +83,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String PopupCancel = "//*[contains(@id,'confirm')]/div/div[2]/a[2]/span/span";
 	String detailsbutton = "//div[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_detailsUpd']";
 	String priceFilterXpath = "//div[@class='filters--open']//div[@class='price-filter']";
+	funtions commonfunctions = new funtions();
+
 
 	@Override
 	public void SearchCountry(String SearchText, String Country) {
@@ -373,8 +373,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
 
 		Reporter.addStepLog(bookingrefnumber);
-		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
+
 	}
 
 	@Override
@@ -590,7 +591,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
 
 		Reporter.addStepLog(bookingrefnumber);
-		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 
 	}
@@ -638,7 +639,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		WebElement updatedBookingRefnumber = CBEDriver.findElement(By.xpath("(//div/div/h4)[1]"));
 		System.out.println(updatedBookingRefnumber.getText());
 		Reporter.addStepLog(updatedBookingRefnumber.getText());
-		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 		String verifySuccessmessage = updatedBookingRefnumber.getText();
 		if(verifySuccessmessage.contains("PLEASE WAIT, THIS MAY TAKE SOME TIME.")){
