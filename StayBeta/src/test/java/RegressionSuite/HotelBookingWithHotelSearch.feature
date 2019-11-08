@@ -19,7 +19,8 @@
       And User Search For a Particular Hotel <Hotel>
       And Clicks on Add to cart
       And Check for Cancellation Condition <Condition> 
-      And Verify if Quote is selected by default 
+      And Verify if Quote is selected by default
+      And Add the screenshot of the Hotel Cancellation Conditions to Report
       And Clicks On Book Radio Button
       And Clicks on Complete Booking 
       And Accepts the Terms and Conditions 

@@ -11,10 +11,9 @@ import java.util.Set;
 
 import javax.imageio.ImageIO;
 
-<<<<<<< HEAD
-=======
+
 import org.apache.commons.io.FileUtils;
->>>>>>> ba3256b839af784113c5d0e63e9c8c56f6a5aea1
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -61,23 +60,21 @@ public class funtions {
 	}
 
 	public static String screenshot(WebDriver driver, long ms) throws IOException {
-		Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
-		ImageIO.write(screenshot.getImage(),"PNG",new File("./Reports/Screenshots_Fail/" + ms + ".png"));
+		
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
+		FileUtils.copyFile(scrFile, new File("./Reports/Screenshots_Fail/" + ms + ".png"));
 
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
 
 		String dest = "Screenshots_Fail/" + ms + ".png";
 
 		File destination = new File(dest);
-		//FileUtils.copyFile(source, destination);
+		
 		System.out.println("ScreenShot Taken");
 
 		return dest;
 
-	}
-
+	} 
 
 
 	public void Dropdown(WebElement ele, String text) throws InterruptedException {

@@ -69,17 +69,17 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		  String HotelName =  CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
 
 
-		  CBEDriver.findElement(By.xpath(HotelNamepath)).click();
+		  /*CBEDriver.findElement(By.xpath(HotelNamepath)).click();
 		  Thread.sleep(2000);
 			CBEDriver.switchTo().frame(0);
 			Thread.sleep(8000);
-			CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
+			CBEDriver.findElement(By.xpath("//span[contains(.,'Cancellations')]")).click();
 			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 
 
 			CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
-			Thread.sleep(3000);
+			Thread.sleep(3000);*/
 		  System.out.println("The Hotel Name is:  "+HotelName);
 
 

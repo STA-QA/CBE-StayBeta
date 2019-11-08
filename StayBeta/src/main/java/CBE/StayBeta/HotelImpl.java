@@ -672,12 +672,24 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	@Override
 	public void VerifyQuoteRBIsSelected() {
+		try {
+			String text= CBEDriver.findElement(By.xpath("//*[contains(@id,'_uscItm_statusMessageLbl')]/p")).getText();
+	System.out.println("The text displayed is: "+ text);
+		}
+		catch(Exception e) {
+			
+		}
+		
 		boolean a = CBEDriver.findElement(By.id(QuoteId)).isSelected();
 		if (a == true) {
 			System.out.println("Quote is selected by default");
 		} else {
 			LogLog.error("Quote is not selected By default");
-		}
+		}	
+		
+		
+		
+		
 	}
 
 	@Override

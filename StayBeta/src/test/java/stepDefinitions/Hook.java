@@ -23,15 +23,15 @@ public class Hook extends BaseUtil {
 	@Before
 	public void InitializeTest(Scenario scenario) {
 
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver77.exe");
 
 		ChromeOptions options = new ChromeOptions();
 
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-
-		//options.addArguments("--headless");
 		options.addArguments("start-maximized");
+	//	options.addArguments("----headless");
+		
 
 		CBEDriver = new ChromeDriver(options);
 
