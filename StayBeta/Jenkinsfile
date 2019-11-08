@@ -1,9 +1,9 @@
 node {
 stage ('Git Checkout'){
-git "https://github.com/Kiranmaiadams/CBE-Automation/StayBeta"
+git "https://github.com/Kiranmaiadams/CBE-Automation"
 }
 stage ('Build Project'){
-bat "mvn clean"
+bat "mvn -f StayBeta/pom.xml clean"
 }
  stage ('Run Test'){
 bat "mvn test"
