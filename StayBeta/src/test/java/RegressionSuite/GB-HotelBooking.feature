@@ -34,6 +34,6 @@
   
       | Country                            | CountrySearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
       | Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 10        | 6                | 1     | 2      | 2        | 7,9         | Ignore    | 
-      | New York (NYC), United States (US) | NYC                 | Tourico         | 15        | 5                | 1     | 2      | 0        | 0           | Outside   | 
+  #    | New York (NYC), United States (US) | NYC                 | Tourico         | 15        | 5                | 1     | 2      | 0        | 0           | Outside   | 
   
   

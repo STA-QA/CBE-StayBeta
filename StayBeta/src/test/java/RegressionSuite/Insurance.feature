@@ -72,7 +72,8 @@ Scenario Outline: User Book Insurance for ZA
 	And Enter Number Of <Passengers> for Insurance 
 	And From Date and To Date for Insurance <StartDay> and <NoOfDays> 
 	And Enter the Date Of Birth for Insurance <Age> for <Passengers> 
-	And Click On Insurance Search 
+	And Click On Insurance Search
+	And Takes The Screenshot And Add to Report 
 	And Select Any Random Insurance and Add to cart 
 	And Select Book Radio Button for Insurance
 	And Clicks on Complete Booking
@@ -80,13 +81,13 @@ Scenario Outline: User Book Insurance for ZA
 	And Click On Insurance Details
 	And Add additional Details for Insurance
 	And Accepts the Terms and Conditions
-	And Click On Book Button
+	#And Click On Book Button
 	And Takes The Screenshot And Add to Report 
 
 Examples: 
 |Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40   |Single trip   |60      |30      |
-|1             |58   |Annual     	|50      |365     |
+#|1             |40   |Single trip   |60      |30      |
+|1             |58   |Annual     	|50      |364     |
 
 
 

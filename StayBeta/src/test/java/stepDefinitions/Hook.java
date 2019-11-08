@@ -37,11 +37,12 @@ public class Hook extends BaseUtil {
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 
-		//options.addArguments("----headless");
+		//options.addArguments("--headless");
+		options.addArguments("start-maximized");
 
 		CBEDriver = new ChromeDriver(options);
 
-		CBEDriver.manage().window().maximize();
+		//CBEDriver.manage().window().maximize();
 
 		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 

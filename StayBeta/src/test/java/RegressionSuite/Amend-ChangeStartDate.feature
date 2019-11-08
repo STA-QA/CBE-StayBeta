@@ -31,28 +31,35 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Then User should be logged out and driver is closed 
 	
 	Examples: 
-	|Country                             |CountrySearchString|Data Source |Start Day|Duration Of Stay|Rooms|Adults |Children|ChildrenAge|Condition	|
-	|New York (NYC), United States (US)  |	NYC              |Tourico     |15       |3               |1    |2      |0		|0		    |Outside	|
+	|Country                             |CountrySearchString  |Data Source      |Start Day  |Duration Of Stay  |Rooms  |Adults |Children   |ChildrenAge|Condition	|
+	| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 32        | 3                | 1     | 2      | 2        | 7,9         | Outside    | 
 		
 		
-Scenario: Amend Booking By Searching BRN from My Bookings 
+Scenario Outline: Amend Booking By Changing the itinerary 
 	Given User launches the application 
-	And User enters Valid Credentials 
+	And User enters Valid Credentials
 	Then User logged into application 
 	And User Selects any agency 
 	Given User Clicks on My Bookings 
 	And User Enters Booking Refnumber  
 	And Clicks on Complete Booking 
 	And Select Amend this item Option 
-	And Fetch the From date and move it few days further 
-	#Hardcoded to change 1 day further
+	And Select the <Start Day> and <Duration Of Stay>
 	And Click Search Button 
-	And Click on Add to Cart 
-	And Clicks on Complete Booking 
+	And Click on Add to Cart
+	And Clicks on Complete Booking
+	And Takes The Screenshot And Add to Report	
 	And Accepts the Terms and Conditions
-	And Click On Details icon during amendments	  
+	And Click On Details icon during amendments  
 	And Click on Update button
-    And Takes The Screenshot And Add to Report 
+	And Takes The Screenshot And Add to Report 
+	Then Get updated Booking Details
+   
+	
+Examples:
+|Start Day|Duration Of Stay|
+|31		  |3               |
+	
 	
 	
 	

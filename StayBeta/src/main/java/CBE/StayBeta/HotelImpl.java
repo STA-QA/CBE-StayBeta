@@ -1,5 +1,7 @@
 package CBE.StayBeta;
 
+import static org.testng.Assert.assertFalse;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -639,7 +641,13 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 		String verifySuccessmessage = updatedBookingRefnumber.getText();
-		//assertTrue(verifySuccessmessage.contains("UPDATE WAS SUCCESSFUL"));
+		if(verifySuccessmessage.contains("PLEASE WAIT, THIS MAY TAKE SOME TIME.")){
+			Thread.sleep(10000);
+		}
+		Assert.assertTrue(verifySuccessmessage.contains("UPDATE WAS SUCCESSFUL"));
+		Assert.assertFalse(verifySuccessmessage.contains("YOUR REFERENCE IS UNAVAILABLE"));
+		boolean a = verifySuccessmessage.contains("YOUR REFERENCE IS UNAVAILABLE");
+		System.out.println(a + "Condition of reference unavialability");
 
 	}
 
