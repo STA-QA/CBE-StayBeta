@@ -19,7 +19,7 @@ public class ExtentReportUtil extends BaseUtil {
         htmlReporter.config().setDocumentTitle("Sta-Automation Report");
         htmlReporter.config().setEncoding("utf-8");
         htmlReporter.config().setReportName("STA-BDD");
-        htmlReporter.config().enableTimeline(true);
+       // htmlReporter.config().enableTimeline(true);
 
         extent.attachReporter(htmlReporter);
 
