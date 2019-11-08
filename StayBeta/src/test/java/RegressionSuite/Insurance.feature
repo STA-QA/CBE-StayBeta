@@ -37,7 +37,8 @@ Scenario Outline: User Book Insurance for DE
 	And User enters Valid DE Credentials 
 	Then User logged into application 
 	And User Selects any agency 
-	Given User is in the Insurance Page 
+	Given User is in the Insurance Page
+	And Takes The Screenshot And Add to Report
 	And Selects the Region
 	And Select the Insurance Type <Insurance Type> 
 	And Enter Number Of <Passengers> for Insurance 
@@ -52,7 +53,7 @@ Scenario Outline: User Book Insurance for DE
 	And Add additional Details for Insurance 
 	And Accepts the Terms and Conditions 
 	And Click On Book Button 
-	And Takes The Screenshot And Add to Report 
+	And Takes The Screenshot And Add to Report
 
 Examples:
 |Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
@@ -66,14 +67,14 @@ Scenario Outline: User Book Insurance for ZA
 	And User enters Valid ZA Credentials 
 	Then User logged into application 
 	And User Selects any agency 
-	Given User is in the Insurance Page 
+	Given User is in the Insurance Page
 	And Selects the Region 
 	And Select the Insurance Type <Insurance Type> 
 	And Enter Number Of <Passengers> for Insurance 
 	And From Date and To Date for Insurance <StartDay> and <NoOfDays> 
 	And Enter the Date Of Birth for Insurance <Age> for <Passengers> 
 	And Click On Insurance Search
-	And Takes The Screenshot And Add to Report 
+	And Takes The Screenshot And Add to Report
 	And Select Any Random Insurance and Add to cart 
 	And Select Book Radio Button for Insurance
 	And Clicks on Complete Booking

@@ -11,6 +11,10 @@ import java.util.Set;
 
 import javax.imageio.ImageIO;
 
+<<<<<<< HEAD
+=======
+import org.apache.commons.io.FileUtils;
+>>>>>>> ba3256b839af784113c5d0e63e9c8c56f6a5aea1
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
