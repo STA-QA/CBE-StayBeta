@@ -1,0 +1,11 @@
+node {
+stage ('Git Checkout'){
+git "https://github.com/Kiranmaiadams/CBE-Automation"
+}
+stage ('Build Project'){
+bat "mvn -f StayBeta/pom.xml clean"
+}
+ stage ('Run Test'){
+bat "mvn -f StayBeta/pom.xml test"
+}
+}
