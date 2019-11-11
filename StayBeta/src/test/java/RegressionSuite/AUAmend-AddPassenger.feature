@@ -28,12 +28,6 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Click On save in Additional info box 
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
-	Given User clicks On Logout 
-	Then User should be logged out and driver is closed 
-	Given User launches the au application 
-	And User enters Valid AU Credentials 
-	Then User logged into application 
-	And User Selects any agency 
 	Given User Clicks on My Bookings 
 	And User Enters Booking Refnumber 
 	And Clicks on Complete Booking 
