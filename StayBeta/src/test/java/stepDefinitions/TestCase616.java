@@ -157,7 +157,7 @@ public class TestCase616 extends BaseUtil {
 	public void Click_Search_Button() throws Throwable {
 		Hotel.ClickSearch();
 
-		Thread.sleep(20000);
+		Thread.sleep(40000);
 		System.out.println("Wait is Done!!");
 	}
 
