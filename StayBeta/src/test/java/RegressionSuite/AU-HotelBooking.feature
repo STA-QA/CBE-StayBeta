@@ -1,7 +1,7 @@
 Feature: Hotel booking - AU for few data sources 
 
 
-@AU
+@AU @SpiraTestId1
 Scenario Outline: User Book a hotel through <Data Source> for AU
 
     Given User launches the au application
