@@ -58,7 +58,7 @@ Scenario Outline: User Book Insurance for DE
 Examples:
 |Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
 |1             |40   |Single trip   |60      |30      |
-|1             |58   |Annual     	|50      |365     |
+#|1             |58   |Annual     	|50      |365     |
 
 
 @ZA

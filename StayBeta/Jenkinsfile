@@ -12,4 +12,22 @@ bat "mvn -f StayBeta/pom.xml test"
 stage ('Publish Report'){
 publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/Reports/', reportFiles: '1SourceReleaseReport.html', reportName: '1SourceReleaseReport', reportTitles: ''])
 }
-}
+ stage('Email Notification') {
+            steps{
+               bat "del reportsAut.zip"
+               zip zipFile: 'reportsAut.zip', archive: false, dir: 'StayBeta/Reports/'
+            }
+        }
+    }
+    post {
+        failure {
+            emailext attachmentsPattern: 'test.zip', body: '''${SCRIPT, template="groovy-html.template"}''', 
+                    subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Failed", 
+                    mimeType: 'text/html',to: "kiranmai.adams@statravel.com"
+            }
+         success {
+               emailext attachmentsPattern: 'test.zip', body: '''${SCRIPT, template="groovy-html.template"}''', 
+                    subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
+                    mimeType: 'text/html',to: "kiranmai.adams@statravel.com"
+          }      
+    }
