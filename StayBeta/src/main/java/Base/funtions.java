@@ -83,8 +83,8 @@ public class funtions {
 		FileUtils.copyFile(scrFile, new File("./Reports/Screenshots_Fail/" + ms + ".png"));
 
 		File filepath = new File("Reports/Screenshots_Fail/" + ms + ".png");
-		String dest = filepath.getAbsolutePath();
-
+		String dest1 = filepath.getAbsolutePath();
+		String dest = "Screenshots_Fail/" + ms + ".png";
 		File destination = new File(dest);
 
 		System.out.println("ScreenShot Taken");
