@@ -15,7 +15,7 @@ publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, re
 }
  stage('Email Notification') 
  {
-                //bat "del reportsAut.zip"
+                bat "del Reports.zip"
                 echo "ZIP"
                zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
                echo "END - ZIP"
