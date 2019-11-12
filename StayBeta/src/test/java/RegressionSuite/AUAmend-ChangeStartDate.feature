@@ -44,9 +44,9 @@ Scenario Outline: User Book a hotel through <Data Source> and Change itinerary t
 	Then Get updated Booking Details
 	
 	Examples: 
-	|Country                     |SearchString|DataSource         |StartDay|NoOfNights|Rooms|Adults|Children|ChildrenAge|Condition	|NewStartDay|NewNoOfNights|
-	|Sydney (SYD), Australia (AU)| SYD        |Sunlover Australia | 20     | 3        | 1   | 2    | 0      | 0         | Outside   |21		    |1            |
-	|Melbourne (MEL), Australia (AU)| MEL     | AOT AU            | 7      | 2        | 1   | 2    | 0      | 0         | Outside   |9          |2            |
+	|Country                             |SearchString|DataSource         |StartDay|NoOfNights|Rooms|Adults|Children|ChildrenAge|Condition	|NewStartDay|NewNoOfNights|
+	|Sydney (SYD), Australia (AU)| SYD          |Sunlover Australia | 20        | 3            | 1      | 2      | 0        | 0            | Outside   |21		    |1            |
+	|Melbourne (MEL), Australia (AU)| MEL       | AOT AU              | 7          | 2           | 1      | 2      | 0        | 0            | Outside   |9            |2            |
 
 
 	

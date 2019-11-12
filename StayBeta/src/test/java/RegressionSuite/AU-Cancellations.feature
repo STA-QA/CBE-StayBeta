@@ -1,6 +1,5 @@
-Feature: Booking and hotel AMending it by adding Passengers to the booking
+Feature: Cancellations for AU
 
-@AU
 Scenario Outline: User Book a hotel through <Data Source> 
 	Given User launches the au application 
 	And User enters Valid AU Credentials 
@@ -20,32 +19,31 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
 	And Verify if Quote is selected by default 
-	And Clicks On Book Radio Button 
+	And Clicks On Book Radio Button
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
-	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge> 
-	And Click On Insurance Details 
+	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
+	And Click On Insurance Details
 	And Click On save in Additional info box 
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User Clicks on My Bookings 
 	And User Enters Booking Refnumber 
 	And Clicks on Complete Booking 
-	And Select Amend this item Option 
-	And Select Number of Adult Guests <AmendedAdults> into <AmendedRooms> in automatic order 
-	And Click Search Button 
-	And Click on Add to Cart 
-	And Clicks on Complete Booking 
-	And Provied Amended Adults <AmendedAdults> Details and <Children> details with <ChildrenAge> 
+	And User selects cancel item 
 	And Accepts the Terms and Conditions 
-	And Click On Details icon during amendments 
-	And Click on Update button 
-	And Takes The Screenshot And Add to Report 
-	Then Get updated Booking Details 
-	Then User should be logged out and driver is closed 
-  
-Examples: 
-| Country                         | CountrySearchString | Data Source         | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | AmendedRooms | AmendedAdults | 
-| Singapore (SIN), Singapore (SG) | SIN                 | Qantas Holidays CSG | 40        | 2                   | 1         | 2      | 0        | 0                  | Outside   | 1            | 3             | 
-  
-  
+	And Click on Update button
+	Then Booking is Cancelled 
+	Then Get updated Booking Details
+	Then User should be logged out and driver is closed
+	
+	Examples: 
+	| Country                                | CountrySearchString | Data Source      | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
+    | Melbourne (MEL), Australia (AU)   | MEL                    | AOT AU              | 7           | 2                     | 1         | 2       | 0         | 0               | Outside   |
+	| London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                     | 1         | 1       | 0         | 0               | Inside    |
+		
+	
+
+
+
+	
