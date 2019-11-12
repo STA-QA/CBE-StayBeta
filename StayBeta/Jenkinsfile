@@ -2,8 +2,6 @@ node {
 stage ('Git Checkout'){
 git "https://github.com/Kiranmaiadams/CBE-Automation"
 sh script:"echo Checking code from", label: env.BRANCH_NAME
-
-
 }
 stage ('Build Project'){
 bat "mvn -f StayBeta/pom.xml clean"
