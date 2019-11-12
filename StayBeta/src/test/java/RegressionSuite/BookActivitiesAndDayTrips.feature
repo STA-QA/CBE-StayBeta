@@ -37,7 +37,7 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in GB
 	
   Examples: 
 		| Country                           | CountrySearchString | minStartDate | Duration | Data Source | Adults | Condition | 
-		| London (LON), United Kingdom (GB) | LON              | 2            | 2        | Viator      | 2      | Ignore    | 
+		| London (LON), United Kingdom (GB) | LON              | 5            | 2        | Viator      | 2      | Ignore    | 
 		| Bangkok (BKK), Thailand (TH)      | BKK                 | 90           | 1        | Viator      | 2      | Outside   |
 		
 @US 
