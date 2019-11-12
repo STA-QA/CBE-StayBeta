@@ -5,6 +5,8 @@ import java.util.List;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 
+import com.vimalselvam.cucumber.listener.Reporter;
+
 import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
 import CBE.StayBeta.HotelImpl;
@@ -25,6 +27,7 @@ public class TestCase616 extends BaseUtil {
 
 	@Given("^User Selects any agency")
 	public void User_Selects_any_agency() throws Throwable {
+		Reporter.addStepLog("User Selects Agency");
 		Home.UserSelectsAgency();
 		// CBEDriver.navigate().refresh();
 	}

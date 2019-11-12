@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import com.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
 import Base.funtions;

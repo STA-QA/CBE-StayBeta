@@ -6,14 +6,15 @@ import java.util.Date;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
-import com.cucumber.listener.ExtentProperties;
+import com.vimalselvam.cucumber.listener.ExtentProperties;
 
+import Base.funtions;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 @CucumberOptions(features = "src/test/java/RegressionSuite/AU-Cancellations.feature", plugin = {
-		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
+		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 
 public class AU_CancellationsRunner extends AbstractTestNGCucumberTests {
@@ -21,8 +22,8 @@ public class AU_CancellationsRunner extends AbstractTestNGCucumberTests {
 	@BeforeSuite
 	public static void setup() {
 
-		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-		extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+		funtions commonfunctions = new funtions();
+		commonfunctions.reportfunction();
 		
 	}
 
