@@ -59,7 +59,7 @@ public class CancelBooking {
 
 	@And("^User selects cancel item$")
 	public void user_selects_cancel_item() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		Hotel.ClickOnCancelItem();
 		Thread.sleep(3000);
 	}
