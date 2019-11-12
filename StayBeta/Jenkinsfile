@@ -1,7 +1,8 @@
 node {
 stage ('Git Checkout'){
 git "https://github.com/Kiranmaiadams/CBE-Automation"
-echo 'Checking code from ....'+env.BRANCH_NAME
+sh script:"echo Checking code from", label: env.BRANCH_NAME
+
 
 }
 stage ('Build Project'){
