@@ -35,5 +35,5 @@
  Examples: 
   
    | Country                            | CountrySearchString | Data Source | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | Hotel                         | 
-   | Buenos Aires (BUE), Argentina (AR) | BUE                 | STAy        | 7         | 1                | 2     | 2,2    | 0        | 0           | Ignore    | Regression Hotel (Alloc+Supp) | 
+   | Buenos Aires (BUE), Argentina (AR) | BUE                 | STAy        | 20         | 1                | 2     | 2,2    | 0        | 0           | Ignore    | Regression Hotel (Alloc+Supp) | 
   
