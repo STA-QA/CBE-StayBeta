@@ -49,7 +49,7 @@ public class Hook extends BaseUtil {
 	@After
 	public void TearDownTest(Scenario scenario) throws IOException, InterruptedException {
 		
-		extentReports.flush();
+		
 		if (scenario.getStatus().equals(Result.FAILED)) {
 
 			funtions commonfunctions = new funtions();
@@ -67,11 +67,6 @@ public class Hook extends BaseUtil {
 
 
 	}
-	@BeforeStep
-	public void beforestep() {
-		
-		System.out.println("-----------in Beforestep");
-		
-	}
+	
 	
 }
