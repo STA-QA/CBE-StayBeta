@@ -17,7 +17,7 @@ publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, re
  {
                 //bat "del reportsAut.zip"
                 echo "ZIP"
-               zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBetaStayBeta/Reports'
+               zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
                echo "END - ZIP"
                emailext attachmentsPattern: 'Reports.zip', body: '${SCRIPT, template="groovy-html.template"}', 
                 subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
