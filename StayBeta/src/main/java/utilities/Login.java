@@ -2,6 +2,8 @@ package utilities;
 
 import org.openqa.selenium.By;
 
+import com.vimalselvam.cucumber.listener.Reporter;
+
 import Base.BaseUtil;
 
 public class Login extends BaseUtil {
@@ -14,8 +16,10 @@ public class Login extends BaseUtil {
 	public void EnterLoginCredentials() {
 		CBEDriver.findElement(By.id(Username)).clear();
 		CBEDriver.findElement(By.id(Username)).sendKeys("gbzq5");
+		 Reporter.addStepLog("User Name gbzq5");
 		CBEDriver.findElement(By.id(Password)).clear();
 		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq5");
+		Reporter.addStepLog("User Password 1srzq5");
 	}
 
 

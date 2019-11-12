@@ -1,33 +1,32 @@
 package cucumberOptions;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
-import com.cucumber.listener.ExtentProperties;
+import com.vimalselvam.cucumber.listener.ExtentProperties;
 
+import Base.funtions;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 @CucumberOptions(features = "src/test/java/RegressionSuite/Amend-AddPassenger.feature", plugin = {
-		"com.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
+		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
-	@BeforeClass
+	public static String timeStamp = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+	@BeforeSuite
 	public static void setup() {
 
-		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-		String timeStamp = new SimpleDateFormat("dd-MMMHH:mm").format(new Date());
-		String Path = "Reports/CBEREport.html";
-		extentProperties.setReportPath(Path);
-
-
-
-
+		funtions commonfunctions = new funtions();
+		commonfunctions.reportfunction();
 	}
+
 
 }

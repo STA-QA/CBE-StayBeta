@@ -4,16 +4,18 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
 import javax.imageio.ImageIO;
 
-
 import org.apache.commons.io.FileUtils;
-
+import org.bson.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -21,12 +23,27 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.ITestResult;
+import org.testng.annotations.Test;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
+import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientOptions;
+import com.mongodb.MongoClientOptions.Builder;
+import com.mongodb.MongoException;
+import com.mongodb.ServerAddress;
+import com.mongodb.client.MongoDatabase;
+import com.vimalselvam.cucumber.listener.ExtentProperties;
 
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class funtions {
+
+	String Automationdashboard = "No";
 
 	public static String getTourLinkwhichHasDeposit(WebDriver driver) throws InterruptedException {
 		String parentWindow = driver.getWindowHandle();
@@ -60,22 +77,21 @@ public class funtions {
 	}
 
 	public static String screenshot(WebDriver driver, long ms) throws IOException {
-		
-		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 		FileUtils.copyFile(scrFile, new File("./Reports/Screenshots_Fail/" + ms + ".png"));
 
-
-		String dest = "Screenshots_Fail/" + ms + ".png";
+		File filepath = new File("Reports/Screenshots_Fail/" + ms + ".png");
+		String dest = filepath.getAbsolutePath();
 
 		File destination = new File(dest);
-		
+
 		System.out.println("ScreenShot Taken");
 
 		return dest;
 
-	} 
-
+	}
 
 	public void Dropdown(WebElement ele, String text) throws InterruptedException {
 		ele.click();
@@ -84,7 +100,6 @@ public class funtions {
 		dropdown.deselectByVisibleText(text);
 
 	}
-
 
 	public void sendDatatoCSVfile(String datatostore) {
 
@@ -107,8 +122,6 @@ public class funtions {
 		}
 	}
 
-
-
 	private static final char DEFAULT_SEPARATOR = ',';
 	private static final char DEFAULT_QUOTE = '"';
 
@@ -117,17 +130,17 @@ public class funtions {
 		String path = System.getProperty("user.dir");
 		String csvFile = path + "\\src\\Testdata\\Bookingconfirmation.csv";
 		File file = new File(csvFile);
-	    System.out.println(file.exists());
+		System.out.println(file.exists());
 		Scanner scanner = new Scanner(file);
 		while (scanner.hasNext()) {
-			 line = parseLine(scanner.nextLine());
+			line = parseLine(scanner.nextLine());
 			System.out.println(line.get(index));
 			// System.out.println(line.get(1));
 			// System.out.println(line.get(2));
 			break;
 		}
 		scanner.close();
-        return line;
+		return line;
 	}
 
 	public static List<String> parseLine(String cvsLine) {
@@ -218,7 +231,44 @@ public class funtions {
 		return result;
 	}
 
+	public void reportfunction() {
+		String timeStamp = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		if (Automationdashboard.contentEquals("Yes")) {
+			ExtentProperties extentProperties = ExtentProperties.INSTANCE;
 
+			extentProperties.setKlovServerUrl("http://localhost");
 
+			extentProperties.setKlovProjectName("CBE-Automation-Dashboard");
+
+			extentProperties.setKlovReportName("Run    " + timeStamp);
+
+			extentProperties.setMongodbHost("localhost");
+			extentProperties.setMongodbPort(27017);
+			extentProperties.setMongodbDatabase("klov");
+			extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+		} else {
+
+			ExtentProperties extentProperties = ExtentProperties.INSTANCE;
+			extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+
+		}
+
+	}
+
+	@Test
+	public void checkmongoconnection() {
+		Builder o = MongoClientOptions.builder().connectTimeout(3000);
+		MongoClient mongo = new MongoClient(new ServerAddress("10.105.198.13", 27017), o.build());
+
+		try {
+			mongo.getAddress();
+
+		} catch (Exception e) {
+			System.out.println("Mongo is down");
+			mongo.close();
+
+		}
+
+	}
 
 }
