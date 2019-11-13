@@ -203,9 +203,12 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 
 	@Override
 	public void ClickOnDetailIcon() {
+
 		WebDriverWait wait = new WebDriverWait(CBEDriver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(DetailIcon));
 		DetailIcon.click();
+		
+	
 
 	}
 

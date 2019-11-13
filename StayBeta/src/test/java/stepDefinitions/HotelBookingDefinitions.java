@@ -98,7 +98,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 
 	@And("^Clicks on Add to cart on a hotel from search results$")
 	public void clicks_on_add_to_cart_on_a_hotel_from_search_results() throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 		HotelSearch.AddRandomHotelToCartFromTSRes();
 	}
 	@And("^Clicks on Add to cart on a hotel from search results for Expedia$")
