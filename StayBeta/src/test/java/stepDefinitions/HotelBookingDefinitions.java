@@ -93,6 +93,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 	public void verify_if_quote_is_selected_by_default() throws Throwable {
 		Thread.sleep(3000);
 		Hotel.VerifyQuoteRBIsSelected();
+		Thread.sleep(3000);
 	}
 
 	@And("^Clicks on Add to cart on a hotel from search results$")
