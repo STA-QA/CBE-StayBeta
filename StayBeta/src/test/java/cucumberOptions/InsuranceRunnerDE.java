@@ -9,11 +9,9 @@ import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.KlovReporter;
-<<<<<<< HEAD
-import com.cucumber.listener.ExtentProperties;
-=======
+
 import com.vimalselvam.cucumber.listener.ExtentProperties;
->>>>>>> a52e80a788c9be39a93e5fae7feb3b2736f579c3
+
 
 import Base.funtions;
 import cucumber.api.CucumberOptions;
