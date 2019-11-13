@@ -25,7 +25,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.Reporter;
 import com.github.javafaker.Faker;
 import com.google.common.io.Files;
 
@@ -83,6 +83,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String PopupCancel = "//*[contains(@id,'confirm')]/div/div[2]/a[2]/span/span";
 	String detailsbutton = "//div[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_detailsUpd']";
 	String priceFilterXpath = "//div[@class='filters--open']//div[@class='price-filter']";
+	funtions commonfunctions = new funtions();
+
 
 	@Override
 	public void SearchCountry(String SearchText, String Country) {
@@ -371,8 +373,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
 
 		Reporter.addStepLog(bookingrefnumber);
-		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
+
 	}
 
 	@Override
@@ -588,7 +591,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
 
 		Reporter.addStepLog(bookingrefnumber);
-		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 
 	}
@@ -636,10 +639,16 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		WebElement updatedBookingRefnumber = CBEDriver.findElement(By.xpath("(//div/div/h4)[1]"));
 		System.out.println(updatedBookingRefnumber.getText());
 		Reporter.addStepLog(updatedBookingRefnumber.getText());
-		String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
 		String verifySuccessmessage = updatedBookingRefnumber.getText();
-		//assertTrue(verifySuccessmessage.contains("UPDATE WAS SUCCESSFUL"));
+		if(verifySuccessmessage.contains("PLEASE WAIT, THIS MAY TAKE SOME TIME.")){
+			Thread.sleep(10000);
+		}
+		Assert.assertTrue(verifySuccessmessage.contains("UPDATE WAS SUCCESSFUL"));
+		Assert.assertFalse(verifySuccessmessage.contains("YOUR REFERENCE IS UNAVAILABLE"));
+		boolean a = verifySuccessmessage.contains("YOUR REFERENCE IS UNAVAILABLE");
+		System.out.println(a + "Condition of reference unavialability");
 
 	}
 
@@ -663,12 +672,24 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	@Override
 	public void VerifyQuoteRBIsSelected() {
+		try {
+			String text= CBEDriver.findElement(By.xpath("//*[contains(@id,'_uscItm_statusMessageLbl')]/p")).getText();
+	System.out.println("The text displayed is: "+ text);
+		}
+		catch(Exception e) {
+			
+		}
+		
 		boolean a = CBEDriver.findElement(By.id(QuoteId)).isSelected();
 		if (a == true) {
 			System.out.println("Quote is selected by default");
 		} else {
 			LogLog.error("Quote is not selected By default");
-		}
+		}	
+		
+		
+		
+		
 	}
 
 	@Override

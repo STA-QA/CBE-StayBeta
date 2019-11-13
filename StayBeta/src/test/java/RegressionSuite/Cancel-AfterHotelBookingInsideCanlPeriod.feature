@@ -32,7 +32,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	Examples: 
 	| Country                           | CountrySearchString | Data Source | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
-    | London (LON), United Kingdom (GB) | LON                 | STAy        | 5        | 5                | 1     | 1      | 0        | 0           | Inside    | 
+     |Miami (MIA), United States (US) | MIA                 | Tourico         | 3        | 2                | 1     | 2      | 0        | 0           | Inside   | 
 		
 	
 

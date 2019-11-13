@@ -19,7 +19,8 @@
       And User Search For a Particular Hotel <Hotel>
       And Clicks on Add to cart
       And Check for Cancellation Condition <Condition> 
-      And Verify if Quote is selected by default 
+      And Verify if Quote is selected by default
+      And Add the screenshot of the Hotel Cancellation Conditions to Report
       And Clicks On Book Radio Button
       And Clicks on Complete Booking 
       And Accepts the Terms and Conditions 
@@ -34,5 +35,5 @@
  Examples: 
   
    | Country                            | CountrySearchString | Data Source | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | Hotel                         | 
-   | Buenos Aires (BUE), Argentina (AR) | BUE                 | STAy        | 7         | 1                | 2     | 2,2    | 0        | 0           | Ignore    | Regression Hotel (Alloc+Supp) | 
+   | Buenos Aires (BUE), Argentina (AR) | BUE                 | STAy        | 6          | 1                     | 2        | 2,2     | 0          | 0               | Ignore    | Regression Hotel (Alloc+Supp) | 
   

@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import org.testng.annotations.AfterSuite;
 
+import com.vimalselvam.cucumber.listener.Reporter;
+
 import Base.BaseUtil;
 import CBE.StayBeta.RandomDataGenerationImpl;
 import cucumber.api.java.en.And;
@@ -17,6 +19,7 @@ public class LoginDefinitions extends BaseUtil {
 
 	@Given("^User launches the application")
 	public void User_launches_the_application() throws Throwable {
+		 Reporter.addStepLog("User Launches Application");
 		openUrl();
 	}
 
@@ -68,12 +71,13 @@ public class LoginDefinitions extends BaseUtil {
 	
 	@Then("^User logged into application$")
     public void user_logged_into_application() throws Throwable {
+		Reporter.addStepLog("User Logs in into Application");
         login.ClickOnLogin();
     }
 	
 	@And("^Takes The Screenshot And Add to Report$")
     public void takes_the_screenshot_and_add_to_report() throws Throwable {
-		Thread.sleep(12000);
+		Thread.sleep(10000);		
         general.AddScreenshotToReport();
     }
 

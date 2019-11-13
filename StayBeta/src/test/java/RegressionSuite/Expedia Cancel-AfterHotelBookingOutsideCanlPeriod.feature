@@ -30,7 +30,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 
  Examples: 
       | Country                           | CountrySearchString | Data Source   | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | 
-      | London (LON), United Kingdom (GB) | LON                 | Expedia Rapid | 100       | 2                | 1     | 1      | 0        | 0           |	
+      | London (LON), United Kingdom (GB) | LON                 |Expedia Rapid Package | 100       | 2                | 1     | 1      | 0        | 0           |	
 	
 Scenario: Cancel Booking By Retrieving latest Booking
    Given User launches the application 

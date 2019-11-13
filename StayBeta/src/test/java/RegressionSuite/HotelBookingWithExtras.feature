@@ -18,13 +18,14 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
-	And Verify if Quote is selected by default 
+	And Verify if Quote is selected by default
+	And Add the screenshot of the Hotel Cancellation Conditions to Report 
 	And Clicks On Book Radio Button 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
 	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
 	And Click On Insurance Details
-	And Click On save in Additional info box 
+	And Click On save in Additional info box
 	Given User Clicks on Search Dropdown in Shopping cart 
 	And Click On Search For Transfers from Dropdown 
 	And Search for a <Country> with particular <CountrySearchString> 

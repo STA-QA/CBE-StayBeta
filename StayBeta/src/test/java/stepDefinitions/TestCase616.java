@@ -5,6 +5,8 @@ import java.util.List;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 
+import com.vimalselvam.cucumber.listener.Reporter;
+
 import Base.BaseUtil;
 import CBE.StayBeta.HomePageImpl;
 import CBE.StayBeta.HotelImpl;
@@ -25,6 +27,7 @@ public class TestCase616 extends BaseUtil {
 
 	@Given("^User Selects any agency")
 	public void User_Selects_any_agency() throws Throwable {
+		Reporter.addStepLog("User Selects Agency");
 		Home.UserSelectsAgency();
 		// CBEDriver.navigate().refresh();
 	}
@@ -192,7 +195,7 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^Clicks on Complete Booking$")
 	public void clicks_on_complete_booking() throws Throwable {
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		Hotel.ClickOnCompleteBooking();
 	}
 
@@ -211,11 +214,12 @@ public class TestCase616 extends BaseUtil {
 	public void accepts_the_terms_and_conditions() throws Throwable {
 		Thread.sleep(4000);
 		Hotel.AcceptTermsAndConditions();
+		Thread.sleep(4000);
 	}
 
 	@And("^Click on Book Button$")
 	public void click_on_book_button() throws Throwable {
-		Thread.sleep(10000);
+		Thread.sleep(8000);
 		Hotel.ClickOnBook();
 		Thread.sleep(2000);
 	}

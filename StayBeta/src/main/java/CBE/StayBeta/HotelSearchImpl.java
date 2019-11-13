@@ -16,9 +16,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import com.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
+import Base.funtions;
 import stayBetaInterfaces.HotelSearch;
 
 
@@ -26,7 +27,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 
 	String RoomSelXpath = "//button[@id='Pivot3-Tab3']/div/span/span";
 	Actions actions = new Actions(CBEDriver);
-
+	funtions commonfunctions = new funtions();
 	@Override
 	public void VerifySearchResultsOfDS(String DataSource) {
 
@@ -68,17 +69,17 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		  String HotelName =  CBEDriver.findElement(By.xpath(HotelNamepath)).getText();
 
 
-		  CBEDriver.findElement(By.xpath(HotelNamepath)).click();
+		  /*CBEDriver.findElement(By.xpath(HotelNamepath)).click();
 		  Thread.sleep(2000);
 			CBEDriver.switchTo().frame(0);
 			Thread.sleep(8000);
-			CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
-			String screenShotPath = BaseUtil.screenshot(CBEDriver, System.currentTimeMillis());
+			CBEDriver.findElement(By.xpath("//span[contains(.,'Cancellations')]")).click();
+			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 
 
 			CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
-			Thread.sleep(3000);
+			Thread.sleep(3000);*/
 		  System.out.println("The Hotel Name is:  "+HotelName);
 
 

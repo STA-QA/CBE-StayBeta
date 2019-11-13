@@ -59,7 +59,7 @@ public class CancelBooking {
 
 	@And("^User selects cancel item$")
 	public void user_selects_cancel_item() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		Hotel.ClickOnCancelItem();
 		Thread.sleep(3000);
 	}
@@ -74,6 +74,7 @@ public class CancelBooking {
 
 	 @Then("^Get updated Booking Details$")
 	    public void get_updated_booking_details() throws Throwable {
+		 Thread.sleep(10000);
 	        Hotel.getAmendedRefnumber();
 	    }
 
@@ -85,7 +86,7 @@ public class CancelBooking {
 
 	@And("^Click On Details icon during amendments$")
 	public void click_on_details_icon_during_amendments() throws Throwable {
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 	       HotelCancel.ClickHotelDetailiconDuringAmendments();
 	       Thread.sleep(3000);
 	}
@@ -96,9 +97,16 @@ public class CancelBooking {
 	@And("^Fetch the From date and move it few days further$")
 	public void fetch_the_from_date_and_move_it_few_days_further() throws Throwable {
 		Thread.sleep(4000);
-		HotelCancel.ChangeFromDateForHotelAmend();
+		//HotelCancel.ChangeFromDateForHotelAmend();
 		Thread.sleep(2000);
 	}
+	
+	@And("^Change the From Date To move Inside Cancellation Period (.+)$")
+    public void change_the_from_date_to_move_inside_cancellation_period(int startday) throws Throwable {
+		Thread.sleep(4000);
+		HotelCancel.ChangeFromDateForHotelAmend(startday);
+		Thread.sleep(2000);
+    }
 
 
 	@And("^Fetch the From date and Reduce by (.+) Nights$")

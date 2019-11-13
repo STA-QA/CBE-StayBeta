@@ -6,9 +6,10 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import com.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
+import Base.funtions;
 import CBE.StayBeta.HomePageImpl;
 import CBE.StayBeta.HotelCancelImpl;
 import CBE.StayBeta.HotelImpl;
@@ -30,7 +31,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 	HotelSearchPageAssertions HSA = new HotelSearchPageAssertions();
 	RandomDataGenerationImpl rd = new RandomDataGenerationImpl();
 	HotelCancelImpl HotelCancel = new HotelCancelImpl();
-
+    funtions commonfunctions=new funtions();
 	String HotelName = "";
 
 	@And("^Expand Show Extra options$")
@@ -92,6 +93,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 	public void verify_if_quote_is_selected_by_default() throws Throwable {
 		Thread.sleep(3000);
 		Hotel.VerifyQuoteRBIsSelected();
+		Thread.sleep(3000);
 	}
 
 	@And("^Clicks on Add to cart on a hotel from search results$")
@@ -152,9 +154,23 @@ public class HotelBookingDefinitions extends BaseUtil {
 
 		}
 
+	}	
+
+	@And("^Add the screenshot of the Hotel Cancellation Conditions to Report$")
+	public void add_the_screenshot_of_the_hotel_cancellation_conditions_to_report()throws Throwable {
+	Thread.sleep(5000);
+	CBEDriver.findElement(By.xpath("//a[@title='View product details']")).click();
+	Thread.sleep(4000);
+	CBEDriver.switchTo().frame(0);
+	Thread.sleep(8000);
+	CBEDriver.findElement(By.xpath("//*/span[contains(.,'Cancellations')]")).click();
+	String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
+	Reporter.addScreenCaptureFromPath(screenShotPath);
+	CBEDriver.findElement(By.xpath("//a[@class='close']/i")).click();
+	Thread.sleep(3000);
+
 	}
-
-
+	
 	@And("^Click on Room Selection in LB$")
 	public void click_on_room_selection_in_lb() throws Throwable {
 		Thread.sleep(2000);

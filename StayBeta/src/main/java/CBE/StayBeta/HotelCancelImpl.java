@@ -82,14 +82,20 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 	
    public void ClickHotelDetailiconDuringAmendments() throws InterruptedException {
 	   Thread.sleep(2000);
-	   WebElement element = CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_detailsUpd"));
-	   WebDriverWait wait = new WebDriverWait(CBEDriver, 10);
-
-	   wait.until(ExpectedConditions.elementToBeClickable(element));
 	  
-	  element.click();
+	   int a = CBEDriver.findElements(By.xpath("//td/div/a[@title='Detail']")).size();
+	  System.out.println("Total detail icons available are : " +a);
+	   WebElement element = CBEDriver.findElement(By.xpath("//td/div/a[@title='Detail']/span[1]"));
+	   WebDriverWait wait = new WebDriverWait(CBEDriver, 20);
+	   wait.until(ExpectedConditions.elementToBeClickable(element));
+	   Actions actions = new Actions(CBEDriver);
+	   actions.moveToElement(element).click().build().perform();
+	   
+	   
+	  	   
+	   
 	Thread.sleep(4000);
-    CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_1_uscItm_saveBtn")).click(); 
+    CBEDriver.findElement(By.xpath("//*[contains(@id,'uscItm_saveBtn')]")).click(); 
     }
    
   
@@ -102,7 +108,7 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 	}
 
 	@Override
-	public void ChangeFromDateForHotelAmend() {
+	public void ChangeFromDateForHotelAmend(int StartDay) {
 		String From = "//*[@id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurationSelector_dtbCheckIntbx']";
 
 		Calendar cal = Calendar.getInstance();
@@ -110,10 +116,14 @@ public class HotelCancelImpl extends BaseUtil implements HotelCancel {
 		String CurrentFromDate =CBEDriver.findElement(By.xpath(From)).getAttribute("Value");
 
 		System.out.println("the date fetched is " + CurrentFromDate);
+		
+			
+		
+		
 		try {
 			Date date = format1.parse(CurrentFromDate);
 			cal.setTime(date);
-			cal.add(Calendar.DATE, 1);
+			cal.add(Calendar.DATE, StartDay);
 			String NewDate = format1.format(cal.getTime());
 			CBEDriver.findElement(By.xpath(From)).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), NewDate);
 

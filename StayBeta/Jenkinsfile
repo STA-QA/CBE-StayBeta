@@ -1,6 +1,7 @@
 node {
 stage ('Git Checkout'){
 git "https://github.com/Kiranmaiadams/CBE-Automation"
+
 }
 stage ('Build Project'){
 bat "mvn -f StayBeta/pom.xml clean"
@@ -8,4 +9,22 @@ bat "mvn -f StayBeta/pom.xml clean"
  stage ('Run Test'){
 bat "mvn -f StayBeta/pom.xml test"
 }
+
+
+stage ('Publish Report'){
+publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/Reports/', reportFiles: '1SourceReleaseReport.html', reportName: '1SourceReleaseReport', reportTitles: ''])
 }
+ stage('Email Notification') 
+ {
+                bat "del Reports.zip"
+                echo "ZIP"
+               zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
+               echo "END - ZIP"
+               emailext attachmentsPattern: 'Reports.zip', body: '${SCRIPT, template="groovy-html.template"}', 
+                subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
+                    mimeType: 'text/html',to: "qateam@statravel.com"
+            
+        }
+    }
+   
+

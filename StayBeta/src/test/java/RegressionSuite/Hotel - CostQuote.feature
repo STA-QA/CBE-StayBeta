@@ -19,7 +19,8 @@ Scenario Outline: User Cost Quote a hotel through <Data Source>
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
-	And Verify if Quote is selected by default 
+	And Verify if Quote is selected by default
+	And Add the screenshot of the Hotel Cancellation Conditions to Report 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
 	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
@@ -36,7 +37,7 @@ Scenario Outline: User Cost Quote a hotel through <Data Source>
 		| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 10        | 6                | 1     | 2      | 0        | 0           | Ignore    | 
 		| New York (NYC), United States (US) | NYC                 | Tourico         | 15        | 5                | 1     | 2      | 0        | 0           | Outside   | 
 		
-@AU 
+@AU  @SpiraTestId2
 Scenario Outline: User Book a hotel through <Data Source> for AU 
 		
 	Given User launches the au application 
@@ -56,7 +57,8 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
-	And Verify if Quote is selected by default 
+	And Verify if Quote is selected by default
+	And Add the screenshot of the Hotel Cancellation Conditions to Report 
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
 	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
@@ -69,7 +71,7 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 			
    Examples: 
 	| Country                           | CountrySearchString | Data Source         | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
-	| London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                | 1     | 1      | 0        | 0           | Inside    | 
+	| London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                | 1     | 1      | 0        | 0           | Ignore    | 
 	| Melbourne (MEL), Australia (AU)   | MEL                 | AOT AU              | 7         | 2                | 1     | 2      | 0        | 0           |Outside  | 
 				
   
