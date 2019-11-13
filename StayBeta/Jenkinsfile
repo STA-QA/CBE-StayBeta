@@ -1,6 +1,6 @@
 node {
       
-  properties([parameters([choice(choices: ['TestSuite1.xml','TestSuite2.xml', 'TestSuite5.xml'], description: 'Select Which Suite You Wanna Run', name: 'TestsToRun')])])
+  properties([parameters([choice(choices: ['TestExecutionFiles/TestSuite1.xml','TestExecutionFiles/TestSuite2.xml', 'TestExecutionFiles/TestSuite5.xml'], description: 'Select Which Suite You Wanna Run', name: 'TestsToRun')])])
     
 
 stage ('Git Checkout'){
@@ -11,7 +11,7 @@ stage ('Build Project'){
 bat "mvn -f StayBeta/pom.xml clean"
 }
  stage ('Run Test'){
-bat "mvn -f StayBeta/pom.xml test -Dsurefire.suiteXmlFiles=TestExecutionFiles\${TestsToRun}"
+bat "mvn -f StayBeta/pom.xml test -Dsurefire.suiteXmlFiles=${TestsToRun}"
 }
 
 
