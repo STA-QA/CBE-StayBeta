@@ -27,7 +27,7 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>${TestToRun}</suiteXmlFile>
+						<suiteXmlFile>TestExecutionFiles\${TestToRun}</suiteXmlFile>
 
 					</suiteXmlFiles>
 				</configuration>
