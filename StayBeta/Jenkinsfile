@@ -1,13 +1,6 @@
 node {
-       
-  
-    
-    
-  //  properties([parameters([choice(choices: ['TestSuite1.xml,TestSuite2.xml, TestSuite5.xml'], description: 'Select Which Suite You Wanna Run', name: 'TestsToRun')])])
-    properties([  parameters {
-        string(defaultValue: "TEST", description: 'What environment?', name: 'userFlag')
-        choice(choices: ['US-EAST-1', 'US-WEST-2'], description: 'What AWS region?', name: 'region')
-    }])
+      
+  properties([parameters([choice(choices: ['TestSuite1.xml','TestSuite2.xml', 'TestSuite5.xml'], description: 'Select Which Suite You Wanna Run', name: 'TestsToRun')])])
     
 
 stage ('Git Checkout'){
