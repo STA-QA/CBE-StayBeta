@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="1Source-Automation - Insurance,Transfers and Day Trips" verbose="2" parallel="false">
+<suite
+	name="1Source-Automation - Insurance,Transfers and Day Trips"
+	verbose="2" parallel="false">
 	<listeners>
 		<listener class-name="Base.staNGlistener" />
 	</listeners>
 	<test name="Regression">
-		<classes>		
-		   <class name="cucumberOptions.InsuranceRunnerDE" />  
-		<!--  <class name="cucumberOptions.InsuranceRunnerZA" />
-  	<class name="cucumberOptions.ActivitiesAndDayTripsRunnerUS" /> 
-	  	  <class name="cucumberOptions.TransfersRunner" />   
-	  	  
-		  <class name="cucumberOptions.InsuranceRunnerGB" />  	     
-		
-	  	<class name="cucumberOptions.ActivitiesAndDayTripsRunnerGB" /> -->
-	 
-	 	</classes>
+		<classes>
+			<class name="cucumberOptions.InsuranceRunnerGB" />
+			<class name="cucumberOptions.InsuranceRunnerZA" />
+			<class name="cucumberOptions.InsuranceRunnerDE" />
+			<class name="cucumberOptions.ActivitiesAndDayTripsRunnerUS" />
+			<class name="cucumberOptions.TransfersRunner" />
+			<class name="cucumberOptions.ActivitiesAndDayTripsRunnerGB" />
+		</classes>
 	</test>
 </suite>
