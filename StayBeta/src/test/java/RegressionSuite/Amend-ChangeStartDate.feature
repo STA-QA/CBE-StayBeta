@@ -44,7 +44,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Then Get updated Booking Details
 	
 	Examples: 
-	|Country                             |CountrySearchString  |Data Source      |Start Day  |Duration Of Stay  |Rooms  |Adults |Children   |ChildrenAge|Condition	|NewStartDay|NewNoOfNights|
+	|Country                             |SearchString|DataSource         |StartDay|NoOfNights|Rooms|Adults|Children|ChildrenAge|Condition	|NewStartDay|NewNoOfNights|
 	| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 32        | 3                | 1     | 2      | 2        | 7,9         | Outside    | 31|3|
 		
 		
