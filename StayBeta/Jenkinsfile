@@ -7,6 +7,9 @@ node {
         )
         echo "you selected: ${userInput}"
     
+    properties([parameters([choice(choices: ['TestSuite1.xml, TestSuite2.xml, TestSuite5.xml'], description: 'Select Which Suite You Wanna Run', name: 'TestsToRun')])])
+    
+    
 
 stage ('Git Checkout'){
 git "https://github.com/Kiranmaiadams/CBE-Automation"
