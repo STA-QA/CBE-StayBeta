@@ -11,7 +11,7 @@ stage ('Build Project'){
 bat "mvn -f StayBeta/pom.xml clean"
 }
  stage ('Run Test'){
-bat "mvn -f StayBeta/pom.xml test -Dsurefire.suiteXmlFiles=${TestsToRun}"
+bat "mvn -f StayBeta/pom.xml test -Dsurefire.suiteXmlFiles=TestExecutionFiles\${TestsToRun}"
 }
 
 
