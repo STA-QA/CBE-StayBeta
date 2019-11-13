@@ -157,6 +157,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 
 	@And("^Add the screenshot of the Hotel Cancellation Conditions to Report$")
 	public void add_the_screenshot_of_the_hotel_cancellation_conditions_to_report()throws Throwable {
+	Thread.sleep(5000);
 	CBEDriver.findElement(By.xpath("//a[@title='View product details']")).click();
 	Thread.sleep(4000);
 	CBEDriver.switchTo().frame(0);
