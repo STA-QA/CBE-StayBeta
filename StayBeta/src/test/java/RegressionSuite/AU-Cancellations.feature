@@ -40,7 +40,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	Examples: 
 	| Country                                | CountrySearchString | Data Source      | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
-  #  | Melbourne (MEL), Australia (AU)   | MEL                    | AOT AU              | 7           | 2                     | 1         | 2       | 0         | 0               | Outside   |
+    | Melbourne (MEL), Australia (AU)   | MEL                    | AOT AU              | 60           | 2                     | 1         | 2       | 0         | 0               | Outside   |
 	| London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                     | 1         | 1       | 0         | 0               | Inside    |
 		
 	
