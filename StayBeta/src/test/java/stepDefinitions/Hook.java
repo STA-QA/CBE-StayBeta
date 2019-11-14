@@ -28,7 +28,7 @@ public class Hook extends BaseUtil {
 	public void InitializeTest(Scenario scenario) {
 		
 
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver77.exe");
 
 		ChromeOptions options = new ChromeOptions();
 
