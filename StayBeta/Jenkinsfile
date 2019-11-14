@@ -19,7 +19,7 @@ publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, re
                 echo "ZIP"
                zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
                echo "END - ZIP"
-               emailext attachmentsPattern: 'Reports.zip', body: '${FILE,path="StayBeta/Reports/1SourceReleaseReport.html"}', 
+               emailext attachmentsPattern: 'Reports.zip', body: '${FILE,path="StayBeta/test-output/emailable-report.html"}', 
                 subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
                     mimeType: 'text/html',to: "qateam@statravel.com"
             
