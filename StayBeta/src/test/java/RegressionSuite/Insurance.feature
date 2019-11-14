@@ -117,8 +117,8 @@ Scenario Outline: User Book Insurance for ZA
 
 Examples: 
 |Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40   |Single trip   |60      |30      |
-#|1             |58   |Annual     	|50      |364     |
+#|1             |40   |Single trip   |60      |30      |
+|1             |58   |Annual     	|50      |364     |
 
 
 
