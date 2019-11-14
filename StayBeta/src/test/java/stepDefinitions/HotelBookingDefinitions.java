@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import com.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
 import Base.funtions;
@@ -93,11 +93,12 @@ public class HotelBookingDefinitions extends BaseUtil {
 	public void verify_if_quote_is_selected_by_default() throws Throwable {
 		Thread.sleep(3000);
 		Hotel.VerifyQuoteRBIsSelected();
+		Thread.sleep(3000);
 	}
 
 	@And("^Clicks on Add to cart on a hotel from search results$")
 	public void clicks_on_add_to_cart_on_a_hotel_from_search_results() throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 		HotelSearch.AddRandomHotelToCartFromTSRes();
 	}
 	@And("^Clicks on Add to cart on a hotel from search results for Expedia$")
@@ -157,6 +158,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 
 	@And("^Add the screenshot of the Hotel Cancellation Conditions to Report$")
 	public void add_the_screenshot_of_the_hotel_cancellation_conditions_to_report()throws Throwable {
+	Thread.sleep(5000);
 	CBEDriver.findElement(By.xpath("//a[@title='View product details']")).click();
 	Thread.sleep(4000);
 	CBEDriver.switchTo().frame(0);

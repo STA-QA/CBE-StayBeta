@@ -18,7 +18,8 @@ Scenario Outline: User Book a hotel through <Data Source>
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
-	And Verify if Quote is selected by default 
+	And Verify if Quote is selected by default
+	And Add the screenshot of the Hotel Cancellation Conditions to Report 
 	And Clicks On Book Radio Button
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
@@ -39,7 +40,7 @@ Scenario Outline: User Book a hotel through <Data Source>
 	
 	Examples: 
 	| Country                                | CountrySearchString | Data Source      | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
-    | Melbourne (MEL), Australia (AU)   | MEL                    | AOT AU              | 7           | 2                     | 1         | 2       | 0         | 0               | Outside   |
+    | Melbourne (MEL), Australia (AU)   | MEL                    | AOT AU              | 60           | 2                     | 1         | 2       | 0         | 0               | Outside   |
 	| London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 1         | 2                     | 1         | 1       | 0         | 0               | Inside    |
 		
 	

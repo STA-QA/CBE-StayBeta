@@ -27,7 +27,7 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>TestExecutionFiles/TestSuite2.xml</suiteXmlFile>
+						<suiteXmlFile>TestExecutionFiles/TestSuite5.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
@@ -67,6 +67,7 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>1.2.5</version>
 		</dependency>
+		
 
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 		<dependency>
@@ -128,7 +129,7 @@
 		<dependency>
 			<groupId>com.vimalselvam</groupId>
 			<artifactId>cucumber-extentsreport</artifactId>
-			<version>3.0.2</version>
+			<version>3.1.1</version>
 		</dependency>
 
 
@@ -174,11 +175,7 @@
     <artifactId>extentreports</artifactId>
     <version>3.1.5</version>
 </dependency>
-<dependency>
-			<groupId>com.vimalselvam</groupId>
-			<artifactId>cucumber-extentsreport</artifactId>
-			<version>3.0.2</version>
-		</dependency>	
+
 		<dependency>
 			<groupId>io.codearte.jfairy</groupId>
 			<artifactId>jfairy</artifactId>

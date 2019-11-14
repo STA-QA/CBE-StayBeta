@@ -22,12 +22,22 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in GB
 	And Clicks On Book Radio Button for DayTrips 
 	And Accepts the Terms and Conditions	
 	And Click On Book Button 
-	And Takes The Screenshot And Add to Report 
+	And Takes The Screenshot And Add to Report
+	Then Booking has been done successfully and Booking reference Text is stored in a file 
+	Given User Clicks on My Bookings 
+	And User Enters Booking Refnumber 
+	And Clicks on Complete Booking 
+	And User selects cancel item 
+	And Accepts the Terms and Conditions 
+	And Click on Update button
+	Then Booking is Cancelled 
+	Then Get updated Booking Details
+	Then User should be logged out and driver is closed
 	
 	
   Examples: 
 		| Country                           | CountrySearchString | minStartDate | Duration | Data Source | Adults | Condition | 
-		| London (LON), United Kingdom (GB) | LON                 | 2            | 2        | Viator      | 2      | Ignore    | 
+		| London (LON), United Kingdom (GB) | LON              | 6            | 2        | Viator      | 2      | Ignore    | 
 		| Bangkok (BKK), Thailand (TH)      | BKK                 | 90           | 1        | Viator      | 2      | Outside   |
 		
 @US 
@@ -53,6 +63,16 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in US
 	And Add The Passengers Transfers Additional Details
 	And Click On Book Button 
 	And Takes The Screenshot And Add to Report 
+	Then Booking has been done successfully and Booking reference Text is stored in a file 
+	Given User Clicks on My Bookings 
+	And User Enters Booking Refnumber 
+	And Clicks on Complete Booking 
+	And User selects cancel item 
+	And Accepts the Terms and Conditions 
+	And Click on Update button
+	Then Booking is Cancelled 
+	Then Get updated Booking Details
+	Then User should be logged out and driver is closed
 			
 			
   Examples: 

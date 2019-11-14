@@ -5,15 +5,16 @@
 		<listener class-name="Base.staNGlistener" />
 	</listeners>
 	<test name="Regression">
-		<classes>
-			<!-- <class name="cucumberOptions.Amend_AddPassenger" />
-		    <class name="cucumberOptions.Amend_ChangeStartDate" />
+		<classes>			
+		  <class name="cucumberOptions.Amend_ChangeStartDate" />
+		    <class name="cucumberOptions.Amend_AddPassenger" />
 			<class name="cucumberOptions.Ament_RemovePassengerAfterBooking" /> 
 			<class name="cucumberOptions.Cancel_InsideCancPeriodRunner" />
-			<class name="cucumberOptions.Cancel_OutsideCancPeriodRunner" />  -->
+			<class name="cucumberOptions.Cancel_OutsideCancPeriodRunner" />
+			<class name="cucumberOptions.AU_CancellationsRunner" /> 
 			<class name="cucumberOptions.AUAmend_AddPassengerRunner" />
-			<class name="cucumberOptions.AUAmend_ChangeStartDateRunner" />
-			<class name="cucumberOptions.AU_CancellationsRunner" />		
+			<class name="cucumberOptions.AUAmend_ChangeStartDateRunner" /> 
+				
 		</classes>
 	</test>
 </suite>

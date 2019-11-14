@@ -19,7 +19,8 @@ Scenario Outline: User Book a hotel through <Data Source> and Change itinerary t
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
 	And Check for Cancellation Condition <Condition> 
-    And Verify if Quote is selected by default 
+    And Verify if Quote is selected by default
+    And Add the screenshot of the Hotel Cancellation Conditions to Report 
 	And Clicks On Book Radio Button
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
@@ -46,7 +47,7 @@ Scenario Outline: User Book a hotel through <Data Source> and Change itinerary t
 	Examples: 
 	|Country                             |SearchString|DataSource         |StartDay|NoOfNights|Rooms|Adults|Children|ChildrenAge|Condition	|NewStartDay|NewNoOfNights|
 	|Sydney (SYD), Australia (AU)| SYD          |Sunlover Australia | 20        | 3            | 1      | 2      | 0        | 0            | Outside   |21		    |1            |
-	|Melbourne (MEL), Australia (AU)| MEL       | AOT AU              | 7          | 2           | 1      | 2      | 0        | 0            | Outside   |9            |2            |
+	|Melbourne (MEL), Australia (AU)| MEL       | AOT AU              | 23          | 2           | 1      | 2      | 0        | 0            | Outside   |9            |2            |
 
 
 	

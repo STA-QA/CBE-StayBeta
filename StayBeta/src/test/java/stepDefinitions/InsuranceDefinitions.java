@@ -27,6 +27,7 @@ public class InsuranceDefinitions extends BaseUtil {
 
 	@And("^Enter Number Of (.+) for Insurance$")
 	public void enter_number_of_for_insurance(String passengers) throws Throwable {
+		Thread.sleep(3000);
 		Insurance.selectNumberOfPassengers(passengers);
 		Thread.sleep(5000);
 	}
