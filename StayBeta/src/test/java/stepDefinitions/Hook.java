@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -23,27 +24,20 @@ import gherkin.formatter.model.Result;
 public class Hook extends BaseUtil {
 	public static ExtentReports extentReports;
 	public static ExtentHtmlReporter htmlReporter;
+	public static ITestResult iTestResult;
 
 	@Before
 	public void InitializeTest(Scenario scenario) {
-		
-
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver.exe");
-
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver77.exe");
 		ChromeOptions options = new ChromeOptions();
-
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		options.addArguments("start-maximized");
 		//options.addArguments("----headless");
-		
-
 		CBEDriver = new ChromeDriver(options);
-
-		//CBEDriver.manage().window().maximize();
-
 		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
+		// Reporter.log("After Method: " + iTestResult.getMethod().getMethodName());
 	}
 
 	@After

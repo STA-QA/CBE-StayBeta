@@ -1,14 +1,16 @@
 package Base;
 
 import static Base.BaseUtil.features;
-
+import static Base.BaseUtil.scenarioDef;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.gherkin.model.Feature;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.ExtentReportUtil;
+import gherkin.ast.ScenarioDefinition;
 
 public class staNGlistener implements ITestListener {
 
@@ -17,6 +19,7 @@ public class staNGlistener implements ITestListener {
    @Override
     public void onTestStart(ITestResult iTestResult) {
         System.out.println("On test start");
+      
     }
 
   @Override
@@ -48,12 +51,9 @@ public class staNGlistener implements ITestListener {
     @Override
     public void onStart(ITestContext iTestContext) {
         System.out.println("On start");
-
         extentReportUtil.ExtentReport();
-
-
         features = extentReportUtil.extent.createTest(Feature.class, "Registration Feature");
-
+       
     }
 
    @Override
