@@ -71,13 +71,16 @@ public class TransfersImpl extends BaseUtil {
 		
 		List<WebElement> elementList1 = CBEDriver.findElements(By.xpath("//*[contains(@id,'m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_oth_txtAccom')]"));
 		for (WebElement we : elementList) {
+			Thread.sleep(2000);
 			we.sendKeys("Test Automation");
 		}
 		
 		for (WebElement we : elementList1) {
+			Thread.sleep(2000);
 			we.sendKeys("Test Automation");
 		}
 		try {
+			Thread.sleep(2000);
 		CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_oth_uscDateDuration_dttStartDatettbtextbox")).sendKeys("1200");
 		}
 		catch(Exception e) {
