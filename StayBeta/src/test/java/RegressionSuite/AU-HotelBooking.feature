@@ -27,8 +27,8 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 	And Clicks on Complete Booking 
 	And Accepts the Terms and Conditions 
 	And Provides the Adults <Adults> Details and <Children> details with <ChildrenAge>
-	And Click On Insurance Details
-	And Click On save in Additional info box
+#	And Click On Insurance Details
+#	And Click On save in Additional info box
 	And Click on Book Button 
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
 	Given User clicks On Logout 

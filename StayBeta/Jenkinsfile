@@ -22,7 +22,7 @@ publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, re
                emailext attachmentsPattern: 'Reports.zip', body: '${FILE,path="StayBeta/test-output/emailable-report.html"}', 
                 subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
                     mimeType: 'text/html',to: "qateam@statravel.com"
-            
+           
         }
     }
    

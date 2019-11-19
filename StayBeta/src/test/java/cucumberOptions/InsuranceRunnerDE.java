@@ -18,8 +18,6 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = "src/test/java/RegressionSuite/Insurance.feature", tags = {"@DE"}, plugin = {
 		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
-
-
 public class InsuranceRunnerDE extends AbstractTestNGCucumberTests {
 
 	public static String timeStamp = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
