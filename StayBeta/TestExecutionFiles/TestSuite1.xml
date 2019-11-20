@@ -11,7 +11,7 @@
 		 <class name="cucumberOptions.HotelBookingWithExtrasRunner" />
 		<class name="cucumberOptions.HotelCostQuoteGB" />   -->
 	 	 <class name="cucumberOptions.AUHotelBookingRunner" /> 
-	 	<class name="cucumberOptions. AmendHotelBookingMoveInsideCancellationPeriodRunner"/>
+	 	<class name="cucumberOptions.AmendHotelBookingMoveInsideCancellationPeriodRunner"/>
 	 	 <class name="cucumberOptions.Cancel_InsideCancPeriodRunner" />			
 			<class name="cucumberOptions.AUAmend_ChangeStartDateRunner" /> 
 		<!-- <class name="cucumberOptions.HotelCostQuoteAU" />  -->
