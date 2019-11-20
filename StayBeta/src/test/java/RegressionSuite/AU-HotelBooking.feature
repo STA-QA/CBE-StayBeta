@@ -36,7 +36,7 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 	
 	
 	Examples: 
-#	| Country                           | CountrySearchString | Data Source         | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
+	| Country                           | CountrySearchString | Data Source         | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
 | London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 3         | 2                | 1     | 1      | 0        | 0           |Ignore    | 
 #	| Sydney (SYD), Australia (AU)      | SYD                 | Sunlover Australia  | 16        | 3                | 1     | 2      | 0        | 0           | Outside   |
 #	| Melbourne (MEL), Australia (AU)   | MEL                 | AOT AU              | 7         | 2                | 1     | 2      | 0        | 0           | Outside   |
