@@ -74,10 +74,14 @@ public class TransfersImpl extends BaseUtil {
 			Thread.sleep(2000);
 			we.sendKeys("Test Automation");
 		}
-		
+		try {
 		for (WebElement we : elementList1) {
 			Thread.sleep(2000);
 			we.sendKeys("Test Automation");
+		}
+		}
+		catch(Exception e) {
+			
 		}
 		try {
 			Thread.sleep(2000);

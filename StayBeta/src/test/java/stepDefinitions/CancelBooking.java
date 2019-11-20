@@ -66,7 +66,7 @@ public class CancelBooking {
 
 	@And("^Click on Update button$")
 	public void click_on_update_button() throws Throwable {
-		Thread.sleep(1000);
+		Thread.sleep(6000);
 		Hotel.ClickUpdateButton();
 
 
