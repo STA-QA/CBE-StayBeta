@@ -34,5 +34,5 @@ Scenario Outline: Login into Application
 	
 Examples: 
 	| Country                                      | CountrySearchString | minStartDate | Duration | Adults | 
-	| London (LON), United Kingdom (GB) | LON                 | 100          | 4        | 2      | 
+	| Bangkok (BKK), Thailand (TH)| BKK                 | 100          | 4        | 2      | 
   
