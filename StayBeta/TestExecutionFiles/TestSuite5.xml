@@ -10,11 +10,22 @@
 		<listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter" />
 	</listeners>
 
-	<test name="Regression">
+	<test name="Transfers">
 		<classes>
 		<class name="cucumberOptions.TransfersRunner" />
 	<!-- 		<class name="cucumberOptions.InsuranceRunnerDE" />
 	 	<class name="cucumberOptions.InsuranceRunnerZA" />
+	 	<class name="cucumberOptions.InsuranceRunnerGB" />				
+		<class name="cucumberOptions.ActivitiesAndDayTripsRunnerUS" />
+				
+			<class name="cucumberOptions.ActivitiesAndDayTripsRunnerGB" />  -->
+		</classes>
+	</test>
+	<test name="Insurance DE">
+		<classes>
+	
+		<class name="cucumberOptions.InsuranceRunnerDE" />
+	<!-- 	 	<class name="cucumberOptions.InsuranceRunnerZA" />
 	 	<class name="cucumberOptions.InsuranceRunnerGB" />				
 		<class name="cucumberOptions.ActivitiesAndDayTripsRunnerUS" />
 				

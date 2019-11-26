@@ -34,6 +34,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -47,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Nov 20, 2019 12:56:40 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 26, 2019 11:22:01 AM</span>
 				</a>
 			</li>
 			<li>
@@ -73,6 +74,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -86,6 +89,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@GB</a></li>
+					<li><a href='#'>@DE</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -133,10 +137,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -148,10 +152,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -163,10 +167,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>19</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='53.086%'><span class='strong'>43</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='2.469%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='44.444%'>36</span> others
 				</div>
 			</div>
 		</div>
@@ -183,12 +187,12 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>Verify if User is able to book Transfers</span>
-						<span class='test-time'>Nov 20, 2019 12:56:40 PM</span>
+						<span class='test-time'>Nov 26, 2019 11:22:01 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='6' status='pass'>
-	<span class='duration right label'>0h 4m 20s+281ms</span>
+	<span class='duration right label'>0h 3m 37s+431ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Login into Application</span>
@@ -243,8 +247,8 @@
 					</li>
 					<li test-id='16' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And Click Search Button</span>
-							<div class='pre'>User CLicks on Search button at time:   12:56:55</div>
-							<div class='pre'>User Can see Search page at time:    12:57:00</div>
+							<div class='pre'>User CLicks on Search button at time:   11:22:24</div>
+							<div class='pre'>User Can see Search page at time:    11:22:29</div>
 							<div class='pre'>Total Time in Seconds to display Search Results:   4</div>
 							<div class='pre'>passed</div>
 					</li>
@@ -283,17 +287,335 @@
 					<li test-id='25' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
 						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="Screenshots_Fail/1574254860042.png"><i class='material-icons'>panorama</i></a></li>
+							<li><a data-featherlight="image" href="Screenshots_Fail/1574767537928.png"><i class='material-icons'>panorama</i></a></li>
 						</ul>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='26' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then Booking has been done successfully and Booking reference Text is stored in a file</span>
 						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="Screenshots_Fail/1574254860652.png"><i class='material-icons'>panorama</i></a></li>
+							<li><a data-featherlight="image" href="Screenshots_Fail/1574767538593.png"><i class='material-icons'>panorama</i></a></li>
 						</ul>
-							<div class='pre'>GB 1555598</div>
+							<div class='pre'>GB 1555665</div>
 							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify if User is able to book Insurance for Different Divisons</span>
+						<span class='test-time'>Nov 26, 2019 11:25:40 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenariooutline node' test-id='31' status='fail'>
+	<span class='duration right label'>0h 3m 20s+898ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">User Book Insurance for DE</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='32' class='node scenario fail' status='fail'>
+			<div class='category-list'>
+				<span class='category label white-text'>@DE</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User Book Insurance for DE</span>
+			
+				<ul class='steps'>
+					<li test-id='33' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the DE application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='34' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid DE Credentials</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='35' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='36' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='37' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Insurance Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='38' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
+						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="Screenshots_Fail/1574767565435.png"><i class='material-icons'>panorama</i></a></li>
+						</ul>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='39' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Selects the Region</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='40' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the Insurance Type Single trip</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='41' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter Number Of 1 for Insurance</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='42' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And From Date and To Date for Insurance 60 and 30</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='43' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the Date Of Birth for Insurance 40 for 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='44' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Click On Insurance Search</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='45' class='node and fail' status='fail'><b>And</b>
+						<span class="bdd-step-name">And Select Any Random Insurance and Add to cart</span>
+							<div class='pre'><pre>java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Random.java:388)
+	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:178)
+	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:67)
+	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance.feature:58)
+</pre></div>
+					</li>
+					<li test-id='46' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Select Book Radio Button for Insurance</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='47' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Clicks on Complete Booking</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='48' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Adds the Passenger 1 Details for Insurance with their 40</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='49' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Click On Insurance Details</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='50' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Add additional Details for Insurance</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='51' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Accepts the Terms and Conditions</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='52' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Click On Book Button</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='53' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='54' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then Booking has been done successfully and Booking reference Text is stored in a file</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='55' class='node given skip' status='skip'><b>Given</b>
+						<span class="bdd-step-name">Given User Clicks on My Bookings</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='56' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And User Enters Booking Refnumber</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='57' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Clicks on Complete Booking</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='58' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And User selects cancel item</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='59' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Accepts the Terms and Conditions</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='60' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Click on Update button</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='61' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then Booking is Cancelled</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='62' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then Get updated Booking Details</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='63' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="Screenshots_Fail/1574767643536.png"><i class='material-icons'>panorama</i></a></li>
+						</ul>
+							<div class='pre'>skipped</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='64' class='node scenario fail' status='fail'>
+			<div class='category-list'>
+				<span class='category label white-text'>@DE</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User Book Insurance for DE</span>
+			
+				<ul class='steps'>
+					<li test-id='65' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the DE application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='66' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid DE Credentials</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='67' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='68' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='69' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Insurance Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='70' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
+						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="Screenshots_Fail/1574767663235.png"><i class='material-icons'>panorama</i></a></li>
+						</ul>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='71' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Selects the Region</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='72' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the Insurance Type Annual</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='73' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter Number Of 1 for Insurance</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='74' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And From Date and To Date for Insurance 50 and 365</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='75' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the Date Of Birth for Insurance 58 for 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='76' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Click On Insurance Search</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='77' class='node and fail' status='fail'><b>And</b>
+						<span class="bdd-step-name">And Select Any Random Insurance and Add to cart</span>
+							<div class='pre'><pre>java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Random.java:388)
+	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:178)
+	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:67)
+	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance.feature:58)
+</pre></div>
+					</li>
+					<li test-id='78' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Select Book Radio Button for Insurance</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='79' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Clicks on Complete Booking</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='80' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Adds the Passenger 1 Details for Insurance with their 58</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='81' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Click On Insurance Details</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='82' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Add additional Details for Insurance</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='83' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Accepts the Terms and Conditions</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='84' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Click On Book Button</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='85' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='86' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then Booking has been done successfully and Booking reference Text is stored in a file</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='87' class='node given skip' status='skip'><b>Given</b>
+						<span class="bdd-step-name">Given User Clicks on My Bookings</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='88' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And User Enters Booking Refnumber</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='89' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Clicks on Complete Booking</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='90' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And User selects cancel item</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='91' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Accepts the Terms and Conditions</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='92' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Click on Update button</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='93' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then Booking is Cancelled</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='94' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then Get updated Booking Details</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='95' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="Screenshots_Fail/1574767741642.png"><i class='material-icons'>panorama</i></a></li>
+						</ul>
+							<div class='pre'>skipped</div>
 					</li>
 				</ul>
 		</li>
@@ -376,9 +698,48 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2019 12:56:40 PM</td>
+										<td>Nov 26, 2019 11:22:01 AM</td>
 										<td class='linked' test-id='7'>Verify if User is able to book Transfers.Login into Application.Login into Application</td>
 										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@DE</span>
+						<span class='category-status right'>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 26, 2019 11:25:40 AM</td>
+										<td class='linked' test-id='32'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Nov 26, 2019 11:27:24 AM</td>
+										<td class='linked' test-id='64'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -397,6 +758,82 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.IllegalArgumentException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Nov 26, 2019 11:26:23 AM</td>
+                                                        <td class='linked' test-id='45'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE.And Select Any Random Insurance and Add to cart</td>
+                                                        <td><pre><pre>java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Random.java:388)
+	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:178)
+	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:67)
+	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance.feature:58)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nov 26, 2019 11:28:01 AM</td>
+                                                        <td class='linked' test-id='77'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE.And Select Any Random Insurance and Add to cart</td>
+                                                        <td><pre><pre>java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Random.java:388)
+	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:178)
+	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:67)
+	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance.feature:58)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -406,37 +843,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>19</div>
+					<div class='panel-lead'>81</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 20, 2019 12:56:40 PM</div>
+					<div class='panel-lead'>Nov 26, 2019 11:22:01 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 20, 2019 01:01:01 PM</div>
+			 		<div class='panel-lead'>Nov 26, 2019 11:29:02 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 4m 20s+923ms</div>
+					<div class='panel-lead'>0h 7m 1s+128ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -460,6 +897,15 @@
 									100%
 							</td>
 						</tr>
+						<tr>
+							<td>@DE</td>
+							<td>0</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
 					</table>
 				</div>
 			</div>
@@ -474,30 +920,30 @@
 		<script>
 			var statusGroup = {
 				passParent: 1,
-				failParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
 				passChild: 1,
-				failChild: 0,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 2,
 				
-				passGrandChild: 19,
-				failGrandChild: 0,
+				passGrandChild: 43,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 36,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 38,
 			};
 		</script>
 		
