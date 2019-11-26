@@ -19,7 +19,7 @@ publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, re
                 echo "ZIP"
                zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
                echo "END - ZIP"
-               emailext attachmentsPattern: 'Reports.zip', body: ' Hi, /nWe have run Automation on CBE- StayBeta ${SCRIPT, template="groovy_html.template"}', 
+               emailext attachmentsPattern: 'Reports.zip', body: '${SCRIPT, template="template.groovy"}', 
                 subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
                     mimeType: 'text/html',to: "qateam@statravel.com"
            
