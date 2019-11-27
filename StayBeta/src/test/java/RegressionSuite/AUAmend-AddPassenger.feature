@@ -47,6 +47,6 @@ Scenario Outline: User Book a hotel through <Data Source>
   
 Examples: 
 | Country                         | CountrySearchString | Data Source         | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | AmendedRooms | AmendedAdults | 
-| Singapore (SIN), Singapore (SG) | SIN                 | Qantas Holidays CSG | 40        | 2                   | 1         | 2      | 0        | 0                  | Outside   | 1            | 3             | 
+| Cape Town (CPT), South Africa (ZA)  | CPT                    | followme2AFRICA            | 40        | 2                   | 1         | 2      | 0        | 0                  | Outside   | 1            | 3             | 
   
   
