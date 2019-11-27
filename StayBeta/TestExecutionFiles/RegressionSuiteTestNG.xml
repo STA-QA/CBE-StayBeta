@@ -2,7 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="1Source release Automation" verbose="2" parallel="false">
 	<suite-files>
-		<suite-file path="TestSuite1.xml"/>
-		<suite-file path="TestSuite3.xml"/>
+	    	<suite-file path="TestSuite2.xml"/>
 		</suite-files>
 </suite>

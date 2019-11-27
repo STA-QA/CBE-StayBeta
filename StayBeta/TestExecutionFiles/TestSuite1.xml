@@ -11,8 +11,7 @@
 		 <class name="cucumberOptions.HotelBookingWithExtrasRunner" />
 		<class name="cucumberOptions.HotelCostQuoteGB" />   
 	 	 <class name="cucumberOptions.AUHotelBookingRunner" /> 
-	 	 <class name="cucumberOptions.HotelCostQuoteAU" />
-		
+	 	 <class name="cucumberOptions.HotelCostQuoteAU" />		
 	</classes>
 </test>
 </suite>

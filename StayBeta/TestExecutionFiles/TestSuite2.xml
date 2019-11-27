@@ -6,6 +6,7 @@
 	</listeners>
 	<test name="Regression">
 		<classes>			
+		 <class name="cucumberOptions.HotelCostQuoteAU" />	
 		  <class name="cucumberOptions.Amend_ChangeStartDate" />
 		    <class name="cucumberOptions.Amend_AddPassenger" />
 			<class name="cucumberOptions.Ament_RemovePassengerAfterBooking" /> 
