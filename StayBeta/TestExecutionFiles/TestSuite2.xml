@@ -13,8 +13,8 @@
 			<class name="cucumberOptions.Ament_RemovePassengerAfterBooking" /> 
 			<class name="cucumberOptions.Cancel_InsideCancPeriodRunner" />
 			<class name="cucumberOptions.Cancel_OutsideCancPeriodRunner" /> -->
-			<!-- <class name="cucumberOptions.AU_CancellationsRunner" /> 
-			<class name="cucumberOptions.AUAmend_ChangeStartDateRunner" />  -->	
+			<class name="cucumberOptions.AU_CancellationsRunner" /> 
+			<class name="cucumberOptions.AUAmend_ChangeStartDateRunner" />
 			<class name="cucumberOptions.AUAmend_AddPassengerRunner" />
 	 					
 		</classes>
