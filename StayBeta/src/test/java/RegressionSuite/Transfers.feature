@@ -22,15 +22,15 @@ Scenario Outline: Login into Application
 	And Click On Book Button 
 	And Takes The Screenshot And Add to Report
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
-#	Given User Clicks on My Bookings 
-#	And User Enters Booking Refnumber 
-#	And Clicks on Complete Booking 
-#	And User selects cancel item 
-#	And Accepts the Terms and Conditions 
-#	And Click on Update button
-#	Then Booking is Cancelled 
-#	Then Get updated Booking Details
-#	Then User should be logged out and driver is closed
+	Given User Clicks on My Bookings 
+	And User Enters Booking Refnumber 
+	And Clicks on Complete Booking 
+	And User selects cancel item 
+	And Accepts the Terms and Conditions 
+	And Click on Update button
+	Then Booking is Cancelled 
+	Then Get updated Booking Details
+	Then User should be logged out and driver is closed
 	
 Examples: 
 	| Country                                      | CountrySearchString | minStartDate | Duration | Adults | 

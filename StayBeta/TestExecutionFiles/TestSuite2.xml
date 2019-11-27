@@ -14,7 +14,8 @@
 			<class name="cucumberOptions.AU_CancellationsRunner" /> 
 			<class name="cucumberOptions.AUAmend_AddPassengerRunner" />
 			<class name="cucumberOptions.AUAmend_ChangeStartDateRunner" /> 
-				
+				<class name="cucumberOptions.AmendHotelBookingMoveInsideCancellationPeriodRunner"/>
+	 					
 		</classes>
 	</test>
 </suite>
