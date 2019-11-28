@@ -23,21 +23,11 @@ Scenario Outline: User Book Insurance for GB
     And Click On Book Button
 	And Takes The Screenshot And Add to Report
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
-	Given User Clicks on My Bookings 
-	And User Enters Booking Refnumber 
-	And Clicks on Complete Booking 
-	And User selects cancel item 
-	And Accepts the Terms and Conditions 
-	And Click on Update button
-	Then Booking is Cancelled 
-	Then Get updated Booking Details
-	Then User should be logged out and driver is closed
-	
 
 Examples:
-|Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40   |Single trip   |60      |30      |
-|1             |58   |Annual     	|50      |365     |
+|Passengers |Age  |Insurance Type|StartDay|NoOfDays|
+|1               |40    |Single trip       |60         |30      |
+|1               |58    |Annual     	       |50         |365     |
 
 
 
@@ -65,15 +55,7 @@ Scenario Outline: User Book Insurance for DE
 	And Click On Book Button 
 	And Takes The Screenshot And Add to Report
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
-	Given User Clicks on My Bookings 
-	And User Enters Booking Refnumber 
-	And Clicks on Complete Booking 
-	And User selects cancel item 
-	And Accepts the Terms and Conditions 
-	And Click on Update button
-	Then Booking is Cancelled 
-	Then Get updated Booking Details
-	Then User should be logged out and driver is closed
+
 
 Examples:
 |Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
@@ -105,16 +87,7 @@ Scenario Outline: User Book Insurance for ZA
 	And Click On Book Button
 	And Takes The Screenshot And Add to Report
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
-	Given User Clicks on My Bookings 
-	And User Enters Booking Refnumber 
-	And Clicks on Complete Booking 
-	And User selects cancel item 
-	And Accepts the Terms and Conditions 
-	And Click on Update button
-	Then Booking is Cancelled 
-	Then Get updated Booking Details
-	Then User should be logged out and driver is closed
-
+	
 Examples: 
 |Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
 #|1             |40   |Single trip   |60      |30      |
