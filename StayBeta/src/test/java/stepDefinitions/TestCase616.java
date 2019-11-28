@@ -1,9 +1,22 @@
 package stepDefinitions;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.vimalselvam.cucumber.listener.Reporter;
 
@@ -102,31 +115,29 @@ public class TestCase616 extends BaseUtil {
 	@And("^Select Number of Child Guests (.+) into (.+) in automatic order$")
 	public void select_number_of_child_guests_into_in_automatic_order(List<Integer> children, int rooms)
 			throws Throwable {
-		int TotalChildren=0;
-		for(int j=0; j<children.size();j++)
-		{
-			 TotalChildren+=children.get(j);
+		int TotalChildren = 0;
+		for (int j = 0; j < children.size(); j++) {
+			TotalChildren += children.get(j);
 		}
-		if(TotalChildren>0) {
-		for (int j = 0; j < rooms; j++) {
-			Hotel.SelectNumberOfChildren(Integer.toString(children.get(j)), j);
-			Thread.sleep(2000);
-		}
+		if (TotalChildren > 0) {
+			for (int j = 0; j < rooms; j++) {
+				Hotel.SelectNumberOfChildren(Integer.toString(children.get(j)), j);
+				Thread.sleep(2000);
+			}
 		}
 	}
 
 	@And("^Enter the ChildrenAge (.+)$")
 	public void enter_the_childrenage(List<Integer> childrenage) throws Throwable {
-		int TotalChildren=0;
-		for(int j=0; j<childrenage.size();j++)
-		{
-			 TotalChildren+=childrenage.get(j);
-		}
-		if(TotalChildren>0) {
+		int TotalChildren = 0;
 		for (int j = 0; j < childrenage.size(); j++) {
-			Hotel.EnterChildrenAge(childrenage.get(j), j);
-			Thread.sleep(2000);
+			TotalChildren += childrenage.get(j);
 		}
+		if (TotalChildren > 0) {
+			for (int j = 0; j < childrenage.size(); j++) {
+				Hotel.EnterChildrenAge(childrenage.get(j), j);
+				Thread.sleep(2000);
+			}
 		}
 
 	}
@@ -164,18 +175,68 @@ public class TestCase616 extends BaseUtil {
 		System.out.println("Wait is Done!!");
 	}
 
-	@And("^User Click Search Button on Hotel Searchpage")
-	public void User_Click_Search_Button_on_Hotel_Searchpage () throws Throwable {
-		Hotel.ClickSearch();
-		//Hotel.searchLoadingtime();
+	@And("^User Click Search Button on Hotel Searchpage (.+)$")
+	public void User_Click_Search_Button_on_Hotel_Searchpage(String DataSource) throws Throwable {
+
+		CBEDriver.findElement(By.id(Hotel.SearchButton)).click();
+		String currenttimeStamp = new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
+		Reporter.addStepLog("User CLicks on Search button at time:   " + currenttimeStamp);
+		long timerstart = System.currentTimeMillis();
+		WebDriverWait wait = new WebDriverWait(CBEDriver, 60);
+		WebElement element = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='search-results-table']")));
+		long timerfinish = System.currentTimeMillis();
+		String aftertimeStamp = new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
+		Reporter.addStepLog("User Can see Search page at time:    " + aftertimeStamp);
+		long totalTime = timerfinish - timerstart;
+		int seconds = (int) ((totalTime / 1000) % 60);
+		Reporter.addStepLog("Total Time in Seconds to display Search Results:   " + seconds);
+
+		String path = System.getProperty("user.dir") + "\\Testdata\\perf.xlsx";
+
+		FileInputStream inputStream = new FileInputStream(new File(path));
+		Workbook workbook = WorkbookFactory.create(inputStream);
+
+		Sheet sheet = workbook.getSheetAt(0);
+
+		Object[][] bookData = { { DataSource, seconds },
+
+		};
+
+		int rowCount = sheet.getLastRowNum();
+
+		for (Object[] aBook : bookData) {
+			Row row = sheet.createRow(++rowCount);
+
+			int columnCount = 0;
+
+			Cell cell = row.createCell(columnCount);
+			cell.setCellValue(rowCount);
+
+			for (Object field : aBook) {
+				cell = row.createCell(++columnCount);
+				if (field instanceof String) {
+					cell.setCellValue((String) field);
+				} else if (field instanceof Integer) {
+					cell.setCellValue((Integer) field);
+				}
+			}
+
+		}
+
+		inputStream.close();
+
+		FileOutputStream outputStream = new FileOutputStream(path);
+		workbook.write(outputStream);
+		workbook.close();
+		outputStream.close();
 
 	}
 
 	@And("^User Search For a Particular Hotel (.+)$")
-    public void user_search_for_a_particular_hotel(String hotel) throws Throwable {
-		Hotel.SearchHotel(hotel,hotel);
-    }
-
+	public void user_search_for_a_particular_hotel(String hotel) throws Throwable {
+		Hotel.SearchHotel(hotel, hotel);
+	}
 
 	@When("^User Searches and Selects a particular Hotel")
 	public void User_Searches_and_Selects_a_particular_Hotel() throws Throwable {
@@ -223,13 +284,13 @@ public class TestCase616 extends BaseUtil {
 		Hotel.ClickOnBook();
 		Thread.sleep(2000);
 	}
-	
-	 @And("^Click On save in Additional info box$")
-	 public void click_on_save_in_additional_info_box() throws Throwable {
-		 Thread.sleep(4000);
-	      CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_saveBtn")).click(); 
-	  }
-	 
+
+	@And("^Click On save in Additional info box$")
+	public void click_on_save_in_additional_info_box() throws Throwable {
+		Thread.sleep(4000);
+		CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_saveBtn")).click();
+	}
+
 	@Then("^Booking has been done successfully$")
 	public void booking_has_been_done_successfully() throws Throwable {
 		Hotel.bookingConfirmation();
