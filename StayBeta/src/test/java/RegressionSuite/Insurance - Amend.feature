@@ -1,7 +1,7 @@
  Feature: Verify if User is able to book Insurance for Different Divisons
  
 @GB
-Scenario Outline: User Book Insurance for GB 
+Scenario Outline: User Book Insurance for GB for 
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
