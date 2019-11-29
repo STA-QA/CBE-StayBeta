@@ -14,8 +14,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/RegressionSuite/Insurance.feature", tags = {"@GB"}, plugin = {
-		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
+@CucumberOptions(features = "src/test/java/RegressionSuite/Insurance - Amend.feature", tags = {"@GB"}, plugin = {
+		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" ,"json:target/cucumber-report/cucumber.json"}, glue = "stepDefinitions")
 
 
 public class InsuranceRunnerGB extends AbstractTestNGCucumberTests {

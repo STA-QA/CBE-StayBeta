@@ -72,38 +72,76 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 
 		
 	
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_uscPax_bclPax_0_uscPax_passportTbx")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_uscPax_bclPax_0_uscPax_passportTbx")
+	//public WebElement PassportNo;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_uscPax_passportTbx')]")
 	public WebElement PassportNo;
 	
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_address1Tbx")
-	public WebElement Address1;
+	/*
+	 * @FindBy(how = How.ID, using =
+	 * "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_address1Tbx")
+	 * public WebElement Address1;
+	 */
 
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_address2Tbx")
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'ins_custAddrUsc_address1Tbx')]")
+	public WebElement Address1;
+	
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_address2Tbx")
+	//public WebElement Address2;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_ins_custAddrUsc_address2Tbx')]")
 	public WebElement Address2;
 
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_cityTbx")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_cityTbx")
+	//public WebElement City;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_ins_custAddrUsc_cityTbx')]")
 	public WebElement City;
 
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_postCodeTbx")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_custAddrUsc_postCodeTbx")
+	//public WebElement ZipCode;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_ins_custAddrUsc_postCodeTbx')]")
 	public WebElement ZipCode;
 	
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_countryAst_countryAsttbx")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_countryAst_countryAsttbx")
+	//public WebElement Country;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_ins_countryAst_countryAsttbx')]")
 	public WebElement Country;
 
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_emailTbx")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_emailTbx")
+	//public WebElement Email;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_ins_emailTbx')]")
 	public WebElement Email;
 	
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_conactNumberTel_phoneCountryTbx")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_conactNumberTel_phoneCountryTbx")
+	//public WebElement contactnumber1;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_ins_conactNumberTel_phoneCountryTbx')]")
 	public WebElement contactnumber1;
 	
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_conactNumberTel_phoneAreaTbx")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_conactNumberTel_phoneAreaTbx")
+	//public WebElement contactnumber2;
+	
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_ins_conactNumberTel_phoneAreaTbx')]")
 	public WebElement contactnumber2;
 	
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_conactNumberTel_phoneTbx")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_ctlFolSt_uscExpDet_bntDet_0_ins_conactNumberTel_phoneTbx")
+	//public WebElement contactnumber3;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_ins_conactNumberTel_phoneTbx')]")
 	public WebElement contactnumber3;
 	
-	@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_saveBtn")
+	//@FindBy(how = How.ID, using = "m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_saveBtn")
+	//public WebElement SaveButton;
+	
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'_uscItm_saveBtn')]")
 	public WebElement SaveButton;
+	
 
 	@Override
 	public void SelectRegion(String Region) {
@@ -229,6 +267,13 @@ public class InsuranceImpl extends BaseUtil implements Insurance {
 		contactnumber1.sendKeys("012");
 		contactnumber2.sendKeys("3456");
 		contactnumber3.sendKeys("7891011");
+		try {
+			Thread.sleep(2000);
+		}
+		catch(Exception e) {
+			
+		}
+		System.out.println("User clicking on save button");
 		SaveButton.click();
 		
 	}

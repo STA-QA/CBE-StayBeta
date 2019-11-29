@@ -22,12 +22,28 @@ Scenario Outline: User Book Insurance for GB
 	And Accepts the Terms and Conditions 
     And Click On Book Button
 	And Takes The Screenshot And Add to Report
-	Then Booking has been done successfully and Booking reference Text is stored in a file 
+	Then Booking has been done successfully and Booking reference Text is stored in a file
+	Given User Clicks on My Bookings 
+	And User Enters Booking Refnumber 
+	And Clicks on Complete Booking
+	And Select Amend this item Option
+	And From Date and To Date for Insurance <NewStartDay> and <NoOfDays> 
+	And Click Search Button 
+	And Click on Add to Cart
+	And Clicks on Complete Booking
+	And Takes The Screenshot And Add to Report	
+	And Accepts the Terms and Conditions
+	And Click On Details icon during amendments 
+	And Add additional Details for Insurance 
+	And Click on Update button
+	And Takes The Screenshot And Add to Report 
+	Then Get updated Booking Details
+	
 
 Examples:
-|Passengers |Age  |Insurance Type|StartDay|NoOfDays|
-|1               |40    |Single trip       |60         |30      |
-|1               |58    |Annual     	       |50         |365     |
+|Passengers |Age  |Insurance Type|StartDay|NoOfDays|NewStartDay|
+|1               |40    |Single trip       |60         |30      |50|
+#|1               |58    |Annual     	       |50         |365     |60|
 
 
 
@@ -54,13 +70,28 @@ Scenario Outline: User Book Insurance for DE
 	And Accepts the Terms and Conditions 
 	And Click On Book Button 
 	And Takes The Screenshot And Add to Report
-	Then Booking has been done successfully and Booking reference Text is stored in a file 
+	Then Booking has been done successfully and Booking reference Text is stored in a file
+	Given User Clicks on My Bookings 
+	And User Enters Booking Refnumber 
+	And Clicks on Complete Booking
+	And Select Amend this item Option
+	And From Date and To Date for Insurance <NewStartDay> and <NoOfDays> 
+	And Click Search Button 
+	And Click on Add to Cart
+	And Clicks on Complete Booking
+	And Takes The Screenshot And Add to Report	
+	And Accepts the Terms and Conditions
+	And Click On Details icon during amendments 
+	And Add additional Details for Insurance 
+	And Click on Update button
+	And Takes The Screenshot And Add to Report 
+	Then Get updated Booking Details
 
 
 Examples:
-|Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40   |Single trip   |60      |30      |
-|1             |58   |Annual     	|50      |365     |
+|Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|NewStartDay|
+|1             |40   |Single trip   |60      |30      |50|
+|1             |58   |Annual     	|50      |365     |60|
 
 
 @ZA
@@ -87,11 +118,23 @@ Scenario Outline: User Book Insurance for ZA
 	And Click On Book Button
 	And Takes The Screenshot And Add to Report
 	Then Booking has been done successfully and Booking reference Text is stored in a file 
-	
+	Given User Clicks on My Bookings 
+	And User Enters Booking Refnumber 
+	And Clicks on Complete Booking
+	And Select Amend this item Option
+	And From Date and To Date for Insurance <NewStartDay> and <NoOfDays> 
+	And Click Search Button 
+	And Click on Add to Cart
+	And Clicks on Complete Booking
+	And Takes The Screenshot And Add to Report	
+	And Accepts the Terms and Conditions
+	And Click On Details icon during amendments 
+	And Add additional Details for Insurance 
+	And Click on Update button
+	And Takes The Screenshot And Add to Report 
+	Then Get updated Booking Details
 Examples: 
-|Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|
-|1             |40   |Single trip   |60      |30      |
-|1             |58   |Annual     	|50      |364     |
-
-
+|Passengers	   |Age  |Insurance Type|StartDay|NoOfDays|NewStartDay|
+|1             |40   |Single trip   |60      |30      |50|
+|1             |58   |Annual     	|50      |364     |60|
 
