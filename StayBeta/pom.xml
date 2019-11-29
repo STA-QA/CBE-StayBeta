@@ -43,9 +43,12 @@
 							<goal>generate</goal>
 						</goals>
 						 <configuration>
-							<projectName>STAX-BDD</projectName>
-							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
-							<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+							<checkBuildResult>false</checkBuildResult>
+                    <projectName>${project.artifactId}</projectName>
+                    <buildNumber>${project.build}</buildNumber>
+                    <parallelTesting>true</parallelTesting>
+                    <outputDirectory>target/cucumber-report/${timestamp}</outputDirectory>
+                    <cucumberOutput>target/cucumber-report/</cucumberOutput>
 						</configuration> 
 					</execution>
 				</executions>
@@ -164,7 +167,7 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.9</version>
+			<version>3.11</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>

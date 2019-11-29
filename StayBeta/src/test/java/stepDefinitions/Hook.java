@@ -1,8 +1,6 @@
 package stepDefinitions;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.PageLoadStrategy;
@@ -12,13 +10,13 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.KlovReporter;
 import  com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
 import Base.funtions;
 import cucumber.api.Scenario;
-import cucumber.api.java.*;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import gherkin.formatter.model.Result;
 
 public class Hook extends BaseUtil {
@@ -33,7 +31,7 @@ public class Hook extends BaseUtil {
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		options.addArguments("start-maximized");
-		//options.addArguments("----headless");
+		options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
 		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
@@ -42,8 +40,8 @@ public class Hook extends BaseUtil {
 
 	@After
 	public void TearDownTest(Scenario scenario) throws IOException, InterruptedException {
-		
-		
+
+
 		if (scenario.getStatus().equals(Result.FAILED)) {
 
 			funtions commonfunctions = new funtions();
@@ -61,6 +59,6 @@ public class Hook extends BaseUtil {
 
 
 	}
-	
-	
+
+
 }

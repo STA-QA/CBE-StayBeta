@@ -25,9 +25,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.vimalselvam.cucumber.listener.Reporter;
 import com.github.javafaker.Faker;
 import com.google.common.io.Files;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
 import Base.funtions;
@@ -50,7 +50,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String ShowExtraSearchOptions = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_btnSearchOptionsExpander";
 	String STAyCheckBox = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscSources_cbxDataSource500003";
 	String SelectAllCheckbox = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_uscSources_cbxDataSource-1";
-	String SearchButton = "m_c_C000_m_m_m_c_btnSearch";
+	public String SearchButton = "m_c_C000_m_m_m_c_btnSearch";
 	String ClearForm = "//span[contains(.,'Clear form')]";
 	String ExcludeDormBeds = "m_c_C000_m_m_m_c_c3_c3_uscSrchParms_chkExcludeDormBeds";
 	String SuccessMsgXpath = "//span[contains(.,'Success')]";
@@ -219,7 +219,6 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		Reporter.addStepLog("User Can see Search page at time:    " + aftertimeStamp);
 		long totalTime = timerfinish - timerstart;
 		int seconds = (int) ((totalTime / 1000) % 60);
-		System.out.println(("Total Time in Seconds to display Search Results:   " + seconds));
 		Reporter.addStepLog("Total Time in Seconds to display Search Results:   " + seconds);
 
 	}
@@ -677,19 +676,19 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	System.out.println("The text displayed is: "+ text);
 		}
 		catch(Exception e) {
-			
+
 		}
-		
+
 		boolean a = CBEDriver.findElement(By.id(QuoteId)).isSelected();
 		if (a == true) {
 			System.out.println("Quote is selected by default");
 		} else {
 			LogLog.error("Quote is not selected By default");
-		}	
-		
-		
-		
-		
+		}
+
+
+
+
 	}
 
 	@Override

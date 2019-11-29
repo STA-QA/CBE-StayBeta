@@ -8,14 +8,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-import javax.imageio.ImageIO;
-
 import org.apache.commons.io.FileUtils;
-import org.bson.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -23,23 +19,13 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.ITestResult;
 import org.testng.annotations.Test;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBObject;
-import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
 import com.mongodb.MongoClientOptions.Builder;
-import com.mongodb.MongoException;
 import com.mongodb.ServerAddress;
-import com.mongodb.client.MongoDatabase;
 import com.vimalselvam.cucumber.listener.ExtentProperties;
-
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class funtions {
 
@@ -270,5 +256,8 @@ public class funtions {
 		}
 
 	}
+
+
+
 
 }

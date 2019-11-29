@@ -27,7 +27,7 @@ public class BaseUtil {
 
 	public static ExtentTest features;
 	
-	static String applicationURL = "http://staybeta.bluee.net/login?username=staycbegbcbg&password=cbeuser";
+	static String applicationURL = "http://staybeta.bluee.net/login?Language=EN&username=staycbegbcbg&password=cbeuser";
 
 	static String applicationURL_de = "http://staybeta.bluee.net/login?username=STAYCBEDEDEU&password=cbeuser";
 
