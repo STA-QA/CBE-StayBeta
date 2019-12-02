@@ -41,6 +41,16 @@ public class Hook extends BaseUtil {
 
 	@After
 	public void TearDownTest(Scenario scenario) throws IOException, InterruptedException {
+		CucumberResultsOverview results = new CucumberResultsOverview();
+		results.setOutputDirectory("target");
+		results.setOutputName("cucumber-reportt");
+		results.setSourceFile("target/cucumber-report/cucumber.json");	
+		try {
+			results.execute();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 
 		if (scenario.getStatus().equals(Result.FAILED)) {
