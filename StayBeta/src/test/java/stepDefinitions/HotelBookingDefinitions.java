@@ -95,6 +95,23 @@ public class HotelBookingDefinitions extends BaseUtil {
 		Hotel.VerifyQuoteRBIsSelected();
 		Thread.sleep(3000);
 	}
+	
+	  @Given("^User clicks on Actions and selects validate Cost Quote$")
+	    public void user_clicks_on_actions_and_selects_validate_cost_quote() throws Throwable {
+		  Thread.sleep(6000);
+	        Hotel.ClickOnActions();
+	        Hotel.SelectValidateQuote();
+	        Thread.sleep(5000);
+	        String a = null;
+	        a = CBEDriver.findElement(By.xpath("//*[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_statusMessageLbl']/p")).getText();
+	        
+	        while(!a.equalsIgnoreCase("Validated successfully.")) {
+	        	Thread.sleep(2000);
+	        	System.out.println("In loop");
+	        	  a = CBEDriver.findElement(By.xpath("//*[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_statusMessageLbl']/p")).getText();
+	        }
+	       
+	    }
 
 	@And("^Clicks on Add to cart on a hotel from search results$")
 	public void clicks_on_add_to_cart_on_a_hotel_from_search_results() throws Throwable {

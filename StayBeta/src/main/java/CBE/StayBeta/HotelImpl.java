@@ -56,7 +56,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String SuccessMsgXpath = "//span[contains(.,'Success')]";
 	String HotelNameSearchXpath = "//div[@id='dolphin-filters']/div[3]/div/div[2]/input";
 	String OLBAddToCartXpath = "//*[contains(@class,'btn-add-to-cart')]";
-	String BookRadioButton = "//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input";
+	String BookRadioButton = "//div[contains(@id,'dtsPendingProcess')]/input[contains(.,Book)]";
+	//		"//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input";
 	String QuoteId = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl01_rbnProcess";
 	String CompleteBookingCSS = "#m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1 > .link-center";
 	String AcceptTerms = "m_c_C000_m_c_cbxAcceptedConditions";
@@ -684,42 +685,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			System.out.println("Quote is selected by default");
 		} else {
 			LogLog.error("Quote is not selected By default");
-		}
-
-
-
 
 	}
-
-	@Override
-	public void EnterAdultDetails(int Adults) throws InterruptedException {
-		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
-		String Title1 = "_paxItmUsc_namePrefixDdl";
-		String idFN1 = "_paxItmUsc_givenNameTbx";
-		String idLN1 = "_paxItmUsc_surnameTbx";
-		String idBD1 = "_paxItmUsc_birthDateBdbdays";
-		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
-		String idBY1 = "_paxItmUsc_birthDateBdbyears";
-		int i = Adults;
-		// for (int i = 0; i < Adults; i++) {
-		String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+", "");
-		String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+", "");
-		String Title = Common + i + Title1;
-		String FNpath = Common + i + idFN1;
-		String LNpath = Common + i + idLN1;
-		String BirthDay = Common + i + idBD1;
-		String BirthMonth = Common + i + idBM1;
-		String BirthYear = Common + i + idBY1;
-		CBEDriver.findElement(By.id(Title)).sendKeys("M");
-		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-		CBEDriver.findElement(By.id(LNpath)).sendKeys("TestAutomation");
-		Thread.sleep(1000);
-		CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
-		Thread.sleep(1000);
-		CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
-		Thread.sleep(1000);
-
-		CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
 
 	}
 
@@ -971,6 +938,24 @@ Thread.sleep(3000);
 		funtions commonfunctions = new funtions();
 		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
+	}
+
+	@Override
+	public void EnterAdultDetails(int Guests) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ClickOnActions() throws Exception {
+		CBEDriver.findElement(By.xpath("//span[contains(.,'Actions')]")).click();	
+		Thread.sleep(3000);
+	}
+
+	@Override
+	public void SelectValidateQuote() throws Exception {		
+		CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_uscManageBooking_btnValidateQuote")).click();
+		Thread.sleep(3000);
 	}
 
 }

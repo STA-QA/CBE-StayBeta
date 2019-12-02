@@ -77,6 +77,10 @@ public interface Hotel {
 	public void ClickUpdateButton();
 
 	public void VerifyQuoteRBIsSelected();
+	
+	public void ClickOnActions() throws Exception;
+	
+	public void SelectValidateQuote() throws Exception;
 
 	public void bookingConfirmation() throws IOException;
 

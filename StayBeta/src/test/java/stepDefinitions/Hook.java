@@ -10,6 +10,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.github.mkolisnyk.cucumber.reporting.CucumberResultsOverview;
 import  com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
@@ -31,7 +32,7 @@ public class Hook extends BaseUtil {
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		options.addArguments("start-maximized");
-		options.addArguments("----headless");
+		//options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
 		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
@@ -48,14 +49,27 @@ public class Hook extends BaseUtil {
 			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
+			
+			
 
-			CBEDriver.quit();
+			//CBEDriver.quit();
 
 
 
 		}
+		CucumberResultsOverview results = new CucumberResultsOverview();
+		results.setOutputDirectory("target");
+		results.setOutputName("cucumber-reportt");
+		results.setSourceFile("target/cucumber-report/cucumber.json");	
+		try {
+			results.execute();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 
-		CBEDriver.quit();
+		//CBEDriver.quit();
 
 
 	}

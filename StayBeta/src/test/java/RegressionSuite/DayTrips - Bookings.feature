@@ -1,7 +1,7 @@
 Feature: Activities and Day Trips Booking 
 
-@GB
-Scenario Outline: User Makes The Activities and Day Trips Booking in GB 
+@GB 
+Scenario Outline: User Makes The Activities and Day Trips Booking in GB for <Data Source>
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
@@ -33,7 +33,7 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in GB
 		| Bangkok (BKK), Thailand (TH)      | BKK                 | 90           | 1        | Viator      | 2      | Outside   |
 		
 @US 
-Scenario Outline: User Makes The Activities and Day Trips Booking in US 
+Scenario Outline: User Makes The Activities and Day Trips Booking in US for <Data Source>
 	Given User launches the US application
 	And User enters Valid US Credentials
 	Then User logged into application 
@@ -55,8 +55,7 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in US
 	And Add The Passengers Transfers Additional Details
 	And Click On Book Button 
 	And Takes The Screenshot And Add to Report 
-	Then Booking has been done successfully and Booking reference Text is stored in a file 
-	
+	Then Booking has been done successfully and Booking reference Text is stored in a file 	
 			
 			
   Examples: 

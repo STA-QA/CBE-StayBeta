@@ -1,7 +1,7 @@
-Feature: Activities and Day Trips Booking 
+Feature: Activities and Day Trips Cancellations
 
 @GB
-Scenario Outline: User Makes The Activities and Day Trips Booking in GB 
+Scenario Outline: GB - Book and Cancel the Day Trips for <Data Source> 
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
@@ -41,7 +41,7 @@ Scenario Outline: User Makes The Activities and Day Trips Booking in GB
 		| Bangkok (BKK), Thailand (TH)      | BKK                 | 90           | 1        | Viator      | 2      | Outside   |
 		
 @US 
-Scenario Outline: User Makes The Activities and Day Trips Booking in US 
+Scenario Outline: US - Book and Cancel the Day Trips for <Data Source> 
 	Given User launches the US application
 	And User enters Valid US Credentials
 	Then User logged into application 

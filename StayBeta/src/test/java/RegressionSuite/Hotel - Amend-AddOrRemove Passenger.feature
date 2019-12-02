@@ -1,4 +1,4 @@
-Feature: Hotel booking and Amend by Add Passengers to the booking
+Feature: Hotel Amendment by Adding/removing Passengers to the booking
 
 @GB @Amend
 Scenario Outline: User Book a hotel through <Data Source> 
