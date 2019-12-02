@@ -50,7 +50,16 @@ public class Hook extends BaseUtil {
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
 			
-			
+			CucumberResultsOverview results = new CucumberResultsOverview();
+			results.setOutputDirectory("target");
+			results.setOutputName("cucumber-reportt");
+			results.setSourceFile("target/cucumber-report/cucumber.json");	
+			try {
+				results.execute();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 			//CBEDriver.quit();
 

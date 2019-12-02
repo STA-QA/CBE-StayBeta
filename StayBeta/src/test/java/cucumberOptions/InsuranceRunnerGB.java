@@ -15,7 +15,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/RegressionSuite/Hotel - ValidateCostQuote.feature", tags = {"@GB"}, plugin = {"pretty",
+@CucumberOptions(features = "src/test/java/RegressionSuite/Insurance - Bookings.feature", tags = {"@DE"}, plugin = {"pretty",
 		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt" }, glue = "stepDefinitions")
 
 

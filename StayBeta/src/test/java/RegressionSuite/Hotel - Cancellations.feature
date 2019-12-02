@@ -39,18 +39,12 @@ Scenario Outline: User Book a hotel through <Data Source> and Cancel with Cancel
 	Then Get updated Booking Details 
 	Then User should be logged out and driver is closed 
 
-@GB
     Examples: 
   | Country                                          | SearchString | Data Source | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
   | Miami (MIA), United States (US)       | MIA              | Tourico        | 3             | 2                        | 1        | 2         | 0           | 0                 | Inside    | 
   | London (LON), United Kingdom (GB) | LON              | STAy          | 65            | 5                        | 1        | 1         | 0           | 0                 | Outside   | 
   
-  @AU
-    Examples: 
-  | Country                                          | SearchString | Data Source | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
-  | Miami (MIA), United States (US)       | MIA              | Tourico        | 3             | 2                        | 1        | 2         | 0           | 0                 | Inside    | 
-  | London (LON), United Kingdom (GB) | LON              | STAy          | 65            | 5                        | 1        | 1         | 0           | 0                 | Outside   | 
-  
+   
  @AU @Cancellations
 Scenario Outline: User Book a hotel through <Data Source> 
 	Given User launches the au application 
