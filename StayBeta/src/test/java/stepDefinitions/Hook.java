@@ -32,7 +32,7 @@ public class Hook extends BaseUtil {
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		options.addArguments("start-maximized");
-		//options.addArguments("----headless");
+		options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
 		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
@@ -41,16 +41,7 @@ public class Hook extends BaseUtil {
 
 	@After
 	public void TearDownTest(Scenario scenario) throws IOException, InterruptedException {
-		CucumberResultsOverview results = new CucumberResultsOverview();
-		results.setOutputDirectory("target");
-		results.setOutputName("cucumber-reportt");
-		results.setSourceFile("target/cucumber-report/cucumber.json");	
-		try {
-			results.execute();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 
 
 		if (scenario.getStatus().equals(Result.FAILED)) {
@@ -62,12 +53,25 @@ public class Hook extends BaseUtil {
 			
 			
 
-			CBEDriver.quit();
+			//CBEDriver.quit();
 
 
 
 		}
 		
+		CucumberResultsOverview results = new CucumberResultsOverview();
+		results.setOutputDirectory("target");
+		results.setOutputName("Newcucumber-reportt");
+		results.setSourceFile("target/cucumber-report/cucumber.json");	
+		try {
+			System.out.println("Executing Results");
+			results.execute();
+			System.out.println("Executed Results");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Exception block");
+			e.printStackTrace();
+		}
 
 		CBEDriver.quit();
 
