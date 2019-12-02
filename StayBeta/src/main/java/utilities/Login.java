@@ -15,10 +15,10 @@ public class Login extends BaseUtil {
 
 	public void EnterLoginCredentials() {
 		CBEDriver.findElement(By.id(Username)).clear();
-		CBEDriver.findElement(By.id(Username)).sendKeys("gbzq2");
+		CBEDriver.findElement(By.id(Username)).sendKeys("gbzq5");
 		 Reporter.addStepLog("User Name gbzq5");
 		CBEDriver.findElement(By.id(Password)).clear();
-		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq2");
+		CBEDriver.findElement(By.id(Password)).sendKeys("1srzq5");
 		Reporter.addStepLog("User Password 1srzq5");
 	}
 
