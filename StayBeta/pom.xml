@@ -34,8 +34,7 @@
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
-				<version>3.0.0</version>
-				 
+				<version>3.0.0</version>				 
 				<executions>
 					<execution>
 						<id>execution</id>
@@ -47,9 +46,13 @@
 							<checkBuildResult>false</checkBuildResult>
                     <projectName>${project.artifactId}</projectName>
                     <buildNumber>${project.build}</buildNumber>
-                    <parallelTesting>true</parallelTesting>
+                    <parallelTesting>false</parallelTesting>
                     <outputDirectory>target/cucumber-report/${timestamp}</outputDirectory>
                     <cucumberOutput>target/cucumber-report/</cucumberOutput>
+                    <jsonFiles>
+                            <!-- supports wildcard or name pattern -->
+                            <param>**/*.json</param>
+                        </jsonFiles>
 						</configuration> 
 					</execution>
 				</executions>

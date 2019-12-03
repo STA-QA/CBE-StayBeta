@@ -34,7 +34,7 @@ public class Hook extends BaseUtil {
 		options.addArguments("start-maximized");
 		options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
-		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		CBEDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Reporter.log("After Method: " + iTestResult.getMethod().getMethodName());
 	}
@@ -50,29 +50,12 @@ public class Hook extends BaseUtil {
 			String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
-			
-			
 
-			//CBEDriver.quit();
 
+			CBEDriver.quit();
 
 
 		}
-		
-		CucumberResultsOverview results = new CucumberResultsOverview();
-		results.setOutputDirectory("target");
-		results.setOutputName("Newcucumber-reportt");
-		results.setSourceFile("target/cucumber-report/cucumber.json");	
-		try {
-			System.out.println("Executing Results");
-			results.execute();
-			System.out.println("Executed Results");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("Exception block");
-			e.printStackTrace();
-		}
-
 		CBEDriver.quit();
 
 

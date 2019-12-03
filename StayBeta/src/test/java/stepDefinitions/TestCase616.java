@@ -153,15 +153,41 @@ public class TestCase616 extends BaseUtil {
 	@And("^Deselect SelectAll DataSources$")
 	public void deselect_selectall_datasources() throws Throwable {
 		Hotel.ExpandExtraSearch();
-		Thread.sleep(2000);
 		Hotel.DeselectAll();
+		
 	}
 
 	@And("^Select DataSource (.+)$")
-	public void select_datasource(String datasource) throws Throwable {
+	public void select_datasource(String datasource) throws Throwable {		
 		Hotel.SelectHotelDataSource(datasource);
 	}
 
+	 @And("^Through Home Search Deselect SelectAll DataSources$")
+	    public void through_home_search_deselect_selectall_datasources() throws Throwable {
+		 String text = CBEDriver.findElement(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_u2\"]/h4")).getText();
+		 while(text.equalsIgnoreCase("SEARCHING")) {
+			 Thread.sleep(2000);
+			 System.out.println(text);
+			 text = CBEDriver.findElement(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_u2\"]/h4")).getText();
+		 }
+		 	Thread.sleep(5000);
+			Hotel.DeselectAll_new();
+			Thread.sleep(5000);
+	    }
+
+	    @And("^Through Home Search Select DataSource (.+)$")
+	    public void through_home_search_select_datasource(String datasource) throws Throwable {
+	    	String text = CBEDriver.findElement(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_u2\"]/h4")).getText();
+			 while(!text.equalsIgnoreCase("Search Results")) {
+				 System.out.println(text);
+				 text = CBEDriver.findElement(By.xpath("//*[@id=\"m_c_C000_m_m_m_c_u2\"]/h4")).getText();
+			 }
+			Hotel.SelectHotelDataSource(datasource);
+	    }
+
+	
+	
+	
 	@And("^Exclude On Request Rooms$")
 	public void exclude_on_request_rooms() throws Throwable {
 		Hotel.ExcludeOnRequestRooms();
@@ -265,6 +291,12 @@ public class TestCase616 extends BaseUtil {
 		Thread.sleep(5000);
 		Hotel.SelectBookRB();
 	}
+	
+	 @And("^Clicks Book rb during changing from quote to book$")
+	    public void clicks_book_rb_during_changing_from_quote_to_book() throws Throwable {
+		 Thread.sleep(5000);
+			Hotel.SelectBookRBDuringQuoteToBook();
+	    }
 
 	@And("^Provides the Person details$")
 	public void provides_the_person_details() throws Throwable {

@@ -214,7 +214,7 @@ public class HotelBookingDefinitions extends BaseUtil {
 
         for(int top= 0; top<adults.size(); top++) {
      	   int k = adults.get(top);
-
+     	   System.out.println("value of k is: " +k);
      		for(int a=0; a<k ;a++){
      			 Hotel.EnterAdultDetails(index);
      			index=index+1;
@@ -277,6 +277,12 @@ public class HotelBookingDefinitions extends BaseUtil {
 		Hotel.eneterBookingref();
 		Hotel.AcceptThePopup();
 	}
+	
+	@And("^Through scenario outline User Enters the BookingRefnumber (.+)$")
+    public void through_scenario_outline_user_enters_the_bookingrefnumber(String bookingref) throws Throwable {
+		Hotel.eneterBookingrefthroughScenariooutline(bookingref);
+		Hotel.AcceptThePopup();
+    }
 
 
 

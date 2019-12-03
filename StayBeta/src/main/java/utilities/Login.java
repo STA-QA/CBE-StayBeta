@@ -64,5 +64,24 @@ public class Login extends BaseUtil {
 		CBEDriver.findElement(By.xpath("//*/span[contains(.,'OK')]")).click();
 		Thread.sleep(1000);
 	}
+	
+	
+	public void EnterGBProdLoginCredentials() {
+		CBEDriver.findElement(By.id(Username)).clear();
+		CBEDriver.findElement(By.id(Username)).sendKeys("GBAUT");
+		 Reporter.addStepLog("User Name gbzq5");
+		CBEDriver.findElement(By.id(Password)).clear();
+		CBEDriver.findElement(By.id(Password)).sendKeys("1sraut");
+		Reporter.addStepLog("User Password 1srzq5");
+	}
+
+	public void EnterAUProdLoginCredentials() {
+		CBEDriver.findElement(By.id(Username)).clear();
+		CBEDriver.findElement(By.id(Username)).sendKeys("AUAUT");
+		 Reporter.addStepLog("User Name gbzq5");
+		CBEDriver.findElement(By.id(Password)).clear();
+		CBEDriver.findElement(By.id(Password)).sendKeys("1sraut");
+		Reporter.addStepLog("User Password 1srzq5");
+	}
 
 }
