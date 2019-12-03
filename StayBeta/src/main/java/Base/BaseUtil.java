@@ -36,6 +36,12 @@ public class BaseUtil {
 	static String applicationURL_us = "http://staybeta.bluee.net/login?username=staycbeususu&password=cbeuser";
 
 	static String applicationURL_za = "http://staybeta.bluee.net/login?username=staycbezaza2&password=cbeuser";
+	
+	static String applicationURL_au_Prod = "http://stayprod.bluee.net/login?username=staycbeauauu&password=cbeuser";
+	
+	static String applicationURL_gb_Prod = "http://stayprod.bluee.net/login?username=staycbegbcbg&password=cbeuser";
+	
+	
 
 	// This method is used to Launch the application
 	public void openUrl_au() {
@@ -57,6 +63,14 @@ public class BaseUtil {
 
 	public void openUrl_ZA() {
 		CBEDriver.navigate().to(applicationURL_za);
+	}
+	
+	public void openProdUrl_GB() {
+		CBEDriver.navigate().to(applicationURL_gb_Prod);
+	}
+	
+	public void openProdUrl_AU() {
+		CBEDriver.navigate().to(applicationURL_au_Prod);
 	}
 
 	@AfterSuite

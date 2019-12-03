@@ -34,7 +34,7 @@ public class Hook extends BaseUtil {
 		options.addArguments("start-maximized");
 		//options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
-		CBEDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		CBEDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Reporter.log("After Method: " + iTestResult.getMethod().getMethodName());
 	}
@@ -50,32 +50,30 @@ public class Hook extends BaseUtil {
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
 			
-			CucumberResultsOverview results = new CucumberResultsOverview();
-			results.setOutputDirectory("target");
-			results.setOutputName("cucumber-reportt");
-			results.setSourceFile("target/cucumber-report/cucumber.json");	
-			try {
-				results.execute();
-			} catch (Exception e) {
+		//	CucumberResultsOverview results = new CucumberResultsOverview();
+		//	results.setOutputDirectory("target");
+		//	results.setOutputName("cucumber-reportt");
+		//	results.setSourceFile("target/cucumber-reports/cucumber.json");	
+		//	try {
+		//		results.execute();
+		//	} catch (Exception e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			//	e.printStackTrace();
+			//}
 
 			//CBEDriver.quit();
 
 
 
 		}
-		CucumberResultsOverview results = new CucumberResultsOverview();
-		results.setOutputDirectory("target");
-		results.setOutputName("cucumber-reportt");
-		results.setSourceFile("target/cucumber-report/cucumber.json");	
-		try {
-			results.execute();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		/*
+		 * CucumberResultsOverview results = new CucumberResultsOverview();
+		 * results.setOutputDirectory("target");
+		 * results.setOutputName("cucumber-reportt");
+		 * results.setSourceFile("target/cucumber-report/cucumber.json"); try {
+		 * results.execute(); } catch (Exception e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 */
 	
 
 		//CBEDriver.quit();

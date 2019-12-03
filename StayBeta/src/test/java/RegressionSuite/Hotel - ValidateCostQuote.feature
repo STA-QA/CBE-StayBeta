@@ -18,7 +18,8 @@ Scenario Outline: User Cost Quote a hotel through <Data Source>
 	And Exclude On Request Rooms 
 	And Click Search Button 
 	And Clicks on Add to cart on a hotel from search results 
-	And Check for Cancellation Condition <Condition> 
+	And Check for Cancellation Condition <Condition>
+	And Clicks on Add to cart on a hotel from search results 
 	And Verify if Quote is selected by default
 	And Add the screenshot of the Hotel Cancellation Conditions to Report 
 	And Clicks on Complete Booking 
@@ -40,4 +41,4 @@ Scenario Outline: User Cost Quote a hotel through <Data Source>
 	Examples: 
 	
 		| Country                            | CountrySearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
-		| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 10        | 6                | 1     | 2      | 0        | 0           | Outside    | 
+		| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 100        | 6                | 1     | 2      | 0        | 0           | Outside    | 
