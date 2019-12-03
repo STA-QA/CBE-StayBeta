@@ -291,6 +291,12 @@ public class TestCase616 extends BaseUtil {
 		Thread.sleep(5000);
 		Hotel.SelectBookRB();
 	}
+	
+	 @And("^Clicks Book rb during changing from quote to book$")
+	    public void clicks_book_rb_during_changing_from_quote_to_book() throws Throwable {
+		 Thread.sleep(5000);
+			Hotel.SelectBookRBDuringQuoteToBook();
+	    }
 
 	@And("^Provides the Person details$")
 	public void provides_the_person_details() throws Throwable {

@@ -2,8 +2,8 @@ Feature: Print Search loading time
 
 Scenario Outline: Check loading time
 
-	Given User launches the application 
-	And User enters Valid Credentials 
+	Given User launches the prod gb application 
+	And User enters Valid prod GB Credentials 
 	Then User logged into application 
 	And User Selects any agency 
 	Given User is in the Hotel Search Page 
@@ -19,29 +19,30 @@ Scenario Outline: Check loading time
 	Then User should be logged out and driver is closed
 	
 	Examples: 
-		|Country                     |CountrySearchString|DataSource         |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|
-	|Bangkok (BKK), Thailand (TH)|	BKK  |Expedia Affiliate - Package Rate |25      |3                |1    |1         |  2    | 4, 5| 
-	|Bangkok (BKK), Thailand (TH)|	BKK  |Expedia Rapid Hotel Only |25      |3                |1    |1         |  2    | 4, 5|
-	|Bangkok (BKK), Thailand (TH)|	BKK  |Expedia Rapid PKG |25      |3                |1    |1         |  2    | 4, 5|
-	|London (LON), United Kingdom (GB)|lon	|Expedia Affiliate - Package Rate |34		| 3               | 1	| 2        |	1 |4 |	
-    |London (LON), United Kingdom (GB)|lon	|Expedia Rapid Hotel Only |34		| 3               | 1	| 2        |	1 |4 |	
-	|London (LON), United Kingdom (GB)|lon	|Expedia Rapid PKG |34		| 3               | 1	| 2        |	1 |4 |	
-	|Bangkok (BKK), Thailand (TH)	 |bkk	|Expedia Affiliate - Package Rate |34		| 3               |1	| 2        |	 2| 4,5|
-    |Bangkok (BKK), Thailand (TH)	 |bkk	|Expedia Rapid Hotel Only |34		| 3               |1	| 2        |	 2| 4,5|
-    |Bangkok (BKK), Thailand (TH)	 |bkk	|Expedia Rapid PKG |34		| 3               |1	| 2        |	 2| 4,5|	
-	|Sydney (SYD), Australia (AU)	|syd	|Expedia Affiliate - Package Rate |34		| 3               |1	| 2        |	 0|0 |
-    |Sydney (SYD), Australia (AU)	|syd	|Expedia Rapid Hotel Only |34		| 3               |1	| 2        |	 0|0 |
-     |Sydney (SYD), Australia (AU)	|syd	|Expedia Rapid PKG  |34		| 3               |1	| 2        |	 0|0 |	
-	|New York (NYC), United States (US)|nyc	|Expedia Affiliate - Package Rate |34		| 3               |1	| 2        |	 0| 0|
-     |New York (NYC), United States (US)|nyc	|Expedia Rapid Hotel Only |34		| 3               |1	| 2        |	 0| 0|
-     |New York (NYC), United States (US)|nyc	|Expedia Rapid PKG |34		| 3               |1	| 2        |	 0| 0|	 
-	|Nadi (NAN), Fiji (FJ)|nan	|Expedia Affiliate - Package Rate              |34		| 3              |1	    | 2        |	0 |0 |
-    |Nadi (NAN), Fiji (FJ)|nan	|Expedia Rapid Hotel Only              |34		| 3              |1	    | 2        |	0 |0 |
-   |Nadi (NAN), Fiji (FJ)|nan	|Expedia Rapid PKG             |34		| 3              |1	    | 2        |	0 |0 |  
-	|Cape Town (CPT), South Africa (ZA)|cpt	|Expedia Affiliate - Package Rate |34	| 3                     |1	| 2        |	 0| 0|
-    |Cape Town (CPT), South Africa (ZA)|cpt	|Expedia Rapid Hotel Only |34	| 3                     |1	| 2        |	 0| 0|
-   |Cape Town (CPT), South Africa (ZA)|cpt	|Expedia Rapid PKG   |34	| 3                     |1	| 2        |	 0| 0|	
-	|Phuket (HKT), Thailand (TH)|hkt	|Expedia Affiliate - Package Rate |34	| 3               |1	| 2        |	 0|0 |
-    |Phuket (HKT), Thailand (TH)|hkt	|Expedia Rapid Hotel Only  |34	| 3               |1	| 2        |	 0|0 |
-    |Phuket (HKT), Thailand (TH)|hkt	|Expedia Rapid PKG  |34	| 3               |1	| 2        |	 0|0 |	
-	
+	|Country                     |CountrySearchString|DataSource         |Start Day|Duration Of Stay|Rooms|Adults   |Children|ChildrenAge|
+	|Bangkok (BKK), Thailand (TH)|	BKK  |Expedia Affiliate - Package Rate 		|25     | 1 | 1	| 2        | 0 | 0 |
+	|Bangkok (BKK), Thailand (TH)|	BKK  |Tourico								|25     | 1 | 1	| 2        | 0 | 0 |
+	|Bangkok (BKK), Thailand (TH)|	BKK  |JacTravel								|25     | 1 | 1	| 2        | 0 | 0 |
+	|Bangkok (BKK), Thailand (TH)|	BKK  |STAy									|25     | 1 | 1	| 2        | 0 | 0 |
+	#|Bangkok (BKK), Thailand (TH)|	BKK  |Expedia Rapid PKG 					|25     | 1 | 1	| 2        | 0 | 0 |
+	|London (LON), United Kingdom (GB)|lon	|Expedia Affiliate - Package Rate 	|25		| 1 | 1	| 2        | 0 | 0 |	
+    |London (LON), United Kingdom (GB)|lon	|Tourico				 			|25		| 1 | 1	| 2        | 0 | 0 |
+	|London (LON), United Kingdom (GB)|lon	|JacTravel				 			|25		| 1 | 1	| 2        | 0 | 0 |
+	|London (LON), United Kingdom (GB)|lon	|STAy					 			|25		| 1 | 1	| 2        | 0 | 0 |
+	#|London (LON), United Kingdom (GB)|lon	|Expedia Rapid PKG					|25		| 1 | 1	| 2        | 0 | 0 |	
+	|Sydney (SYD), Australia (AU)	|syd	|Expedia Affiliate - Package Rate 	|25		| 1 | 1	| 2        | 0 | 0 |
+    |Sydney (SYD), Australia (AU)	|syd	|Tourico				 			|25		| 1 | 1	| 2        | 0 | 0 |
+	|Sydney (SYD), Australia (AU)	|syd	|JacTravel				 			|25		| 1 | 1	| 2        | 0 | 0 |
+	|Sydney (SYD), Australia (AU)	|syd	|STAy					 			|25		| 1 | 1	| 2        | 0 | 0 |
+	|Sydney (SYD), Australia (AU)	|syd	|AOT AU					 			|25		| 1 | 1	| 2        | 0 | 0 |
+   # |Sydney (SYD), Australia (AU)	|syd	|Expedia Rapid PKG  				|25		| 1 | 1	| 2        | 0 | 0 |	
+	|New York (NYC), United States (US)|nyc	|Expedia Affiliate - Package Rate 	|25		| 1 | 1	| 2        | 0 | 0 |
+    |New York (NYC), United States (US)|nyc	|Tourico				 			|25		| 1 | 1	| 2        | 0 | 0 |
+	|New York (NYC), United States (US)|nyc	|JacTravel				 			|25		| 1 | 1	| 2        | 0 | 0 |
+	|New York (NYC), United States (US)|nyc	|STAy					 			|25		| 1 | 1	| 2        | 0 | 0 |
+ #   |New York (NYC), United States (US)|nyc	|Expedia Rapid PKG 					|25		| 1 | 1	| 2        | 0 | 0 |
+	|Paris (PAR), France (FR)		   |PAR |Expedia Affiliate - Package Rate 	|25		| 1 | 1	| 2        | 0 | 0 |	
+	|Paris (PAR), France (FR)		   |PAR |Tourico						 	|25		| 1 | 1	| 2        | 0 | 0 |
+	|Paris (PAR), France (FR)		   |PAR |JacTravel						 	|25		| 1 | 1	| 2        | 0 | 0 |
+	|Paris (PAR), France (FR)		   |PAR |STAy							 	|25		| 1 | 1	| 2        | 0 | 0 |
+	#|Paris (PAR), France (FR)		   |PAR |Expedia Rapid PKG				 	|25		| 1 | 1	| 2        | 0 | 0 | 

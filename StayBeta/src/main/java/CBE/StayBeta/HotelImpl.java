@@ -1,5 +1,7 @@
 package CBE.StayBeta;
 
+import static org.testng.Assert.assertFalse;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -58,6 +60,7 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String OLBAddToCartXpath = "//*[contains(@class,'btn-add-to-cart')]";
 	String BookRadioButton = "//div[contains(@id,'dtsPendingProcess')]/input[contains(.,Book)]";
 	//		"//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input";
+	
 	String QuoteId = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl01_rbnProcess";
 	String CompleteBookingCSS = "#m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1 > .link-center";
 	String AcceptTerms = "m_c_C000_m_c_cbxAcceptedConditions";
@@ -374,7 +377,25 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		// CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input")).click();
 
 	}
+	
+	
+	public void SelectBookRBDuringQuoteToBook() throws InterruptedException {
+		Thread.sleep(5000);
+	//	CBEDriver.findElements(By.xpath("//*[contains(@id,'uscItm_dtsPendingProcess')]/span[2]/label"));
+		List<WebElement> elementList = CBEDriver.findElements(By.xpath("//*[contains(@id,'_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl01_rbnProcess')]"));
+	//	m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl01_rbnProcess
+		//int count = 
+		for (WebElement we : elementList) {
+			Actions actions = new Actions(CBEDriver);
+			actions.moveToElement(we).click().perform();
+			Thread.sleep(5000);
+			
+			} 
 
+	}
+
+	
+	
 	@Override
 	public void EnterPersonDetails() {
 		CBEDriver.findElement(By.id(Title)).sendKeys("Mr");
