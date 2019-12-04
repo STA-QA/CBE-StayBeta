@@ -11,8 +11,8 @@ bat "mvn -f StayBeta/pom.xml test"
 }
 
 stage ('Publish Report'){
-publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/Reports/', reportFiles: '1SourceReleaseReport.html', reportName: '1SourceReleaseReport', reportTitles: ''])
-publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/target/', reportFiles: 'cucumber-results-feature-overview.html', reportName: 'CucumberHTML', reportTitles: ''])
+publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/Reports/', reportFiles: '1SourceReleaseReport.html', reportName: '1SourceReleaseReport', reportTitles: ''],
+[allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/target/', reportFiles: 'cucumber-results-feature-overview.html', reportName: 'CucumberHTML', reportTitles: ''])
 
 cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: 'cucumber.json', jsonReportDirectory: 'StayBeta/target/cucumber-reports/', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
 }
