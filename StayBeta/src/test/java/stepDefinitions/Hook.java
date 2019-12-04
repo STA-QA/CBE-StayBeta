@@ -10,7 +10,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import  com.vimalselvam.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
 import Base.funtions;
@@ -41,7 +41,6 @@ public class Hook extends BaseUtil {
 	@After
 	public void TearDownTest(Scenario scenario) throws IOException, InterruptedException {
 
-
 		if (scenario.getStatus().equals(Result.FAILED)) {
 
 			funtions commonfunctions = new funtions();
@@ -51,14 +50,10 @@ public class Hook extends BaseUtil {
 
 			CBEDriver.quit();
 
-
-
 		}
 
 		CBEDriver.quit();
 
-
 	}
-
 
 }
