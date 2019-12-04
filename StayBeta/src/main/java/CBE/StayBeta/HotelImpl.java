@@ -1,5 +1,7 @@
 package CBE.StayBeta;
 
+import static org.testng.Assert.assertFalse;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -56,7 +58,9 @@ public class HotelImpl extends BaseUtil implements Hotel {
 	String SuccessMsgXpath = "//span[contains(.,'Success')]";
 	String HotelNameSearchXpath = "//div[@id='dolphin-filters']/div[3]/div/div[2]/input";
 	String OLBAddToCartXpath = "//*[contains(@class,'btn-add-to-cart')]";
-	String BookRadioButton = "//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input";
+	String BookRadioButton = "//div[contains(@id,'dtsPendingProcess')]/input[contains(.,Book)]";
+	//		"//div[@id='m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input";
+	
 	String QuoteId = "m_c_T000_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl01_rbnProcess";
 	String CompleteBookingCSS = "#m_c_T000_uscItinSumm_itinSummDetails_btnContinue_btnContinue1 > .link-center";
 	String AcceptTerms = "m_c_C000_m_c_cbxAcceptedConditions";
@@ -172,12 +176,42 @@ public class HotelImpl extends BaseUtil implements Hotel {
 
 	@Override
 	public void DeselectAll() {
+			
 		Boolean a = CBEDriver.findElement(By.xpath("//input[@value='SelectAll']")).isSelected();
 		if (a == true) {
 			CBEDriver.findElement(By.id(SelectAllCheckbox)).click();
 		} else {
 			System.out.println("Select all is already deselected");
 		}
+		
+		
+		
+	}
+	
+	
+	public void DeselectAll_new() {
+		
+		
+		Boolean a = CBEDriver.findElement(By.xpath("//input[@value='SelectAll']")).isSelected();
+		CBEDriver.navigate().refresh();
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (a == true) {
+			WebElement element = CBEDriver.findElement(By.xpath("//label[contains(.,'Select all')]"));
+			Actions action = new Actions(CBEDriver);
+			action.moveToElement(element);
+			element.click();
+			//CBEDriver.findElement(By.xpath("//label[contains(.,'Select all')]")).click();
+		} else {
+			System.out.println("Select all is already deselected");
+		}
+		
+		
+		
 	}
 
 	@Override
@@ -343,7 +377,25 @@ public class HotelImpl extends BaseUtil implements Hotel {
 		// CBEDriver.findElement(By.xpath("//div[@id='m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess']/input")).click();
 
 	}
+	
+	
+	public void SelectBookRBDuringQuoteToBook() throws InterruptedException {
+		Thread.sleep(5000);
+	//	CBEDriver.findElements(By.xpath("//*[contains(@id,'uscItm_dtsPendingProcess')]/span[2]/label"));
+		List<WebElement> elementList = CBEDriver.findElements(By.xpath("//*[contains(@id,'_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl01_rbnProcess')]"));
+	//	m_c_C000_m_c_uscItinSumm_itinSummDetails_bclBkCrits_0_uscItm_dtsPendingProcess_rptAvailableProcesses_ctl01_rbnProcess
+		//int count = 
+		for (WebElement we : elementList) {
+			Actions actions = new Actions(CBEDriver);
+			actions.moveToElement(we).click().perform();
+			Thread.sleep(5000);
+			
+			} 
 
+	}
+
+	
+	
 	@Override
 	public void EnterPersonDetails() {
 		CBEDriver.findElement(By.id(Title)).sendKeys("Mr");
@@ -684,42 +736,8 @@ public class HotelImpl extends BaseUtil implements Hotel {
 			System.out.println("Quote is selected by default");
 		} else {
 			LogLog.error("Quote is not selected By default");
-		}
-
-
-
 
 	}
-
-	@Override
-	public void EnterAdultDetails(int Adults) throws InterruptedException {
-		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
-		String Title1 = "_paxItmUsc_namePrefixDdl";
-		String idFN1 = "_paxItmUsc_givenNameTbx";
-		String idLN1 = "_paxItmUsc_surnameTbx";
-		String idBD1 = "_paxItmUsc_birthDateBdbdays";
-		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
-		String idBY1 = "_paxItmUsc_birthDateBdbyears";
-		int i = Adults;
-		// for (int i = 0; i < Adults; i++) {
-		String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+", "");
-		String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+", "");
-		String Title = Common + i + Title1;
-		String FNpath = Common + i + idFN1;
-		String LNpath = Common + i + idLN1;
-		String BirthDay = Common + i + idBD1;
-		String BirthMonth = Common + i + idBM1;
-		String BirthYear = Common + i + idBY1;
-		CBEDriver.findElement(By.id(Title)).sendKeys("M");
-		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
-		CBEDriver.findElement(By.id(LNpath)).sendKeys("TestAutomation");
-		Thread.sleep(1000);
-		CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
-		Thread.sleep(1000);
-		CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
-		Thread.sleep(1000);
-
-		CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
 
 	}
 
@@ -856,6 +874,16 @@ public class HotelImpl extends BaseUtil implements Hotel {
 				By.xpath("//*[@id='m_cphHeader_T_CustToolbar_cbeNav_myAccount_btnRetrieveBooking']/span[1]"));
 		okayButton.click();
 	}
+	
+	@Test
+	public void eneterBookingrefthroughScenariooutline(String BookingRef) throws Exception {
+		WebElement Bookingrefxpath = CBEDriver.findElement(By.xpath("//div/input[@name='m$cphHeader$T_CustToolbar$cbeNav$myAccount$txtBookingNumber']"));
+		Bookingrefxpath.sendKeys(BookingRef);
+		System.out.println("Booking Ref entred is : " + BookingRef);
+		WebElement okayButton = CBEDriver.findElement(
+				By.xpath("//*[@id='m_cphHeader_T_CustToolbar_cbeNav_myAccount_btnRetrieveBooking']/span[1]"));
+		okayButton.click();
+	}
 
 
 
@@ -971,6 +999,51 @@ Thread.sleep(3000);
 		funtions commonfunctions = new funtions();
 		String screenShotPath = commonfunctions.screenshot(CBEDriver, System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(screenShotPath);
+	}
+
+	@Override
+	public void EnterAdultDetails(int Adults) throws InterruptedException {
+		String Common = "m_c_C000_m_c_paxItmsUsc_bclPax_";
+		String Title1 = "_paxItmUsc_namePrefixDdl";
+		String idFN1 = "_paxItmUsc_givenNameTbx";
+		String idLN1 = "_paxItmUsc_surnameTbx";
+		String idBD1 = "_paxItmUsc_birthDateBdbdays";
+		String idBM1 = "_paxItmUsc_birthDateBdbmonths";
+		String idBY1 = "_paxItmUsc_birthDateBdbyears";
+		int i = Adults;
+		// for (int i = 0; i < Adults; i++) {
+		String firstName = faker.name().firstName().replaceAll("[^a-zA-Z]+", "");
+		String lastName = faker.name().lastName().replaceAll("[^a-zA-Z]+", "");
+		String Title = Common + i + Title1;
+		String FNpath = Common + i + idFN1;
+		String LNpath = Common + i + idLN1;
+		String BirthDay = Common + i + idBD1;
+		String BirthMonth = Common + i + idBM1;
+		String BirthYear = Common + i + idBY1;
+		CBEDriver.findElement(By.id(Title)).sendKeys("M");
+		CBEDriver.findElement(By.id(FNpath)).sendKeys(firstName);
+		CBEDriver.findElement(By.id(LNpath)).sendKeys("TestAutomation");
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthDay)).sendKeys("10");
+		Thread.sleep(1000);
+		CBEDriver.findElement(By.id(BirthMonth)).sendKeys("MAR");
+		Thread.sleep(1000);
+
+		CBEDriver.findElement(By.id(BirthYear)).sendKeys("1990");
+
+		
+	}
+
+	@Override
+	public void ClickOnActions() throws Exception {
+		CBEDriver.findElement(By.xpath("//span[contains(.,'Actions')]")).click();	
+		Thread.sleep(3000);
+	}
+
+	@Override
+	public void SelectValidateQuote() throws Exception {		
+		CBEDriver.findElement(By.id("m_c_C000_m_c_uscItinSumm_uscManageBooking_btnValidateQuote")).click();
+		Thread.sleep(3000);
 	}
 
 }

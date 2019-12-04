@@ -64,6 +64,29 @@ public class LoginDefinitions extends BaseUtil {
 		 login.EnterLoginCredentials();
     }
 	
+
+    @Given("^User launches the prod au application$")
+    public void user_launches_the_prod_au_application() throws Throwable {
+       openProdUrl_AU();
+    }
+
+    @And("^User enters Valid prod AU Credentials$")
+    public void user_enters_valid_prod_au_credentials() throws Throwable {
+        login.EnterAUProdLoginCredentials();
+    }
+    
+    @Given("^User launches the prod gb application$")
+    public void user_launches_the_prod_gb_application() throws Throwable {
+       openProdUrl_GB();
+    }
+
+    @And("^User enters Valid prod GB Credentials$")
+    public void user_enters_valid_prod_gb_credentials() throws Throwable {
+        login.EnterGBProdLoginCredentials();
+    }
+
+	
+	
 	   @And("^User enters Valid AU Credentials$")
 	    public void user_enters_valid_au_credentials() throws Throwable {
 	        login.EnterAULoginCredentials();
