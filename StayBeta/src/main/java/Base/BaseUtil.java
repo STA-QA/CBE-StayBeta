@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -75,6 +74,7 @@ public class BaseUtil {
 
 	@AfterSuite
 	public void TeardownTest() {
+		System.out.println("I'm hereee");
 		BaseUtil.CBEDriver.quit();
 	}
 

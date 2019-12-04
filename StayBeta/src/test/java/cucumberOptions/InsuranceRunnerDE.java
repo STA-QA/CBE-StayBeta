@@ -5,12 +5,12 @@ import java.util.Calendar;
 import java.util.Date;
 
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.KlovReporter;
 import com.github.mkolisnyk.cucumber.reporting.CucumberResultsOverview;
+
 import com.vimalselvam.cucumber.listener.ExtentProperties;
 
 import Base.funtions;
@@ -30,8 +30,21 @@ public class InsuranceRunnerDE extends AbstractTestNGCucumberTests {
 		commonfunctions.reportfunction();
 	}
 	
+	@AfterSuite(alwaysRun=true)
+	public void setupp(){
+		System.out.println("In after suite method");
+	CucumberResultsOverview results = new CucumberResultsOverview();
+	results.setOutputDirectory("target");
+	results.setOutputName("cucumber-results");
+	results.setSourceFile("target/cucumber-reports/cucumber.json");
+	try {
+		results.execute();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	System.out.println("In after suite method2");
 	
-	
-
+	}
 
 }

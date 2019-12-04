@@ -12,6 +12,7 @@ bat "mvn -f StayBeta/pom.xml test"
 
 stage ('Publish Report'){
 publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/Reports/', reportFiles: '1SourceReleaseReport.html', reportName: '1SourceReleaseReport', reportTitles: ''])
+publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'StayBeta/target/', reportFiles: 'cucumber-results-feature-overview.html', reportName: 'CucumberHTML', reportTitles: ''])
 
 cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: 'cucumber.json', jsonReportDirectory: 'StayBeta/target/cucumber-reports/', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
 }
@@ -23,7 +24,7 @@ cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber:
                 echo "ZIP"
                zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
                echo "END - ZIP"
-               emailext attachmentsPattern: 'Reports.zip', body: '${SCRIPT, template="groovy-html.template"}', 
+               emailext attachmentsPattern: 'Reports.zip', body: '${FILE, "target/cucumber-results-feature-overview.html"}', 
                 subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
                     mimeType: 'text/html',to: "qateam@statravel.com"
            
