@@ -10,8 +10,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.github.mkolisnyk.cucumber.reporting.CucumberResultsOverview;
-import  com.vimalselvam.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
 import Base.funtions;
@@ -32,7 +31,7 @@ public class Hook extends BaseUtil {
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		options.addArguments("start-maximized");
-		options.addArguments("----headless");
+		//options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
 		CBEDriver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
@@ -41,8 +40,6 @@ public class Hook extends BaseUtil {
 
 	@After
 	public void TearDownTest(Scenario scenario) throws IOException, InterruptedException {
-		
-
 
 		if (scenario.getStatus().equals(Result.FAILED)) {
 
@@ -51,15 +48,9 @@ public class Hook extends BaseUtil {
 			Reporter.addScreenCaptureFromPath(screenShotPath);
 			System.out.println(scenario.getName());
 
-
-			CBEDriver.quit();
-
-
 		}
 		CBEDriver.quit();
 
-
 	}
-
 
 }

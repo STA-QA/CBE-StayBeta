@@ -12,6 +12,8 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -203,6 +205,19 @@ public class TestCase616 extends BaseUtil {
 
 	@And("^User Click Search Button on Hotel Searchpage (.+)$")
 	public void User_Click_Search_Button_on_Hotel_Searchpage(String DataSource) throws Throwable {
+		String path = System.getProperty("user.dir") + "\\Testdata\\perf.xlsx";
+		File excelfile = new File(path);
+
+		if (!excelfile.exists()) {
+			XSSFWorkbook workbook = new XSSFWorkbook();
+			XSSFSheet sheet = workbook.createSheet("Sheet1");
+			FileOutputStream fileOut = new FileOutputStream(
+					System.getProperty("user.dir") + "\\Testdata\\" + "perf.xlsx");
+			workbook.write(fileOut);
+
+		} else {
+			System.out.println("Excel file existing");
+		}
 
 		CBEDriver.findElement(By.id(Hotel.SearchButton)).click();
 		String currenttimeStamp = new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
@@ -218,9 +233,8 @@ public class TestCase616 extends BaseUtil {
 		int seconds = (int) ((totalTime / 1000) % 60);
 		Reporter.addStepLog("Total Time in Seconds to display Search Results:   " + seconds);
 
-		String path = System.getProperty("user.dir") + "\\Testdata\\perf.xlsx";
-
 		FileInputStream inputStream = new FileInputStream(new File(path));
+
 		Workbook workbook = WorkbookFactory.create(inputStream);
 
 		Sheet sheet = workbook.getSheetAt(0);
