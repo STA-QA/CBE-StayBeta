@@ -13,8 +13,9 @@ Scenario Outline: Login into Application
 	And Add Number of Adults <Adults> 
 	And Deselect SelectAll DataSources 
 	And Select DataSource <Data Source>
-	And Click Search Button 
-	And Click Check availability for any Random record 
+	And Click Search Button
+	And Select Any Random Insurance and Add to cart
+#	And Click Check availability for any Random record 
 	And Clicks On Book Radio Button for Transfers 
 	And Clicks on Complete Booking 
 	And Add the Details Of Guests <Adults> 
@@ -28,4 +29,4 @@ Scenario Outline: Login into Application
 	
 Examples: 
 	| Country                                      | CountrySearchString | minStartDate | Duration | Adults |Data Source|
-	| London (LON), United Kingdom (GB) | LON                 	| 60        			  |		 4        | 2      |STAy          | 
+	| London (LON), United Kingdom (GB) | LON                 	| 60        			  |		 2        | 1      |STAy          | 

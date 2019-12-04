@@ -13,7 +13,7 @@ Scenario Outline: User Book Insurance for GB
 	And From Date and To Date for Insurance <StartDay> and <NoOfDays> 
 	And Enter the Date Of Birth for Insurance <Age> for <Passengers> 
 	And Click On Insurance Search 
-	And Select Any Random Insurance and Add to cart 
+	And Select Any Random Insurance and Add to cart
 	And Select Book Radio Button for Insurance 
 	And Clicks on Complete Booking 
 	And Adds the Passenger <Passengers> Details for Insurance with their <Age> 

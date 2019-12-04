@@ -31,7 +31,7 @@ public class TransfersDefinitions {
 	
 	 @And("^Clicks On Book Radio Button for Transfers$")
 	    public void clicks_on_book_radio_button_for_transfers() throws Throwable {
-		 Thread.sleep(3000);
+		 Thread.sleep(8000);
 	       Transfers.ClickBookRB();
 	    }
 	

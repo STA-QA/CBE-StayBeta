@@ -66,11 +66,11 @@ public class BaseUtil {
 	}
 	
 	public void openProdUrl_GB() {
-		CBEDriver.navigate().to(applicationURL_gb_Prod);
+		//CBEDriver.navigate().to(applicationURL_gb_Prod);
 	}
 	
 	public void openProdUrl_AU() {
-		CBEDriver.navigate().to(applicationURL_au_Prod);
+		//CBEDriver.navigate().to(applicationURL_au_Prod);
 	}
 
 	@AfterSuite

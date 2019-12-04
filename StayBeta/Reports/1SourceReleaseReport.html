@@ -34,7 +34,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -49,10 +48,14 @@
 			<li>
                 <a href='#!'>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <span class='label suite-start-time blue darken-3'>Dec 2, 2019 01:21:31 PM</span>
 =======
                     <span class='label suite-start-time blue darken-3'>Dec 3, 2019 04:43:37 PM</span>
 >>>>>>> aa33faae1b478755df692888a1e71ec90cc17358
+=======
+                    <span class='label suite-start-time blue darken-3'>Dec 4, 2019 03:05:44 PM</span>
+>>>>>>> e4dc22022ecafaae7c6f9318cc837abb9aa166e5
 				</a>
 			</li>
 			<li>
@@ -78,8 +81,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -140,10 +141,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -155,10 +156,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -170,10 +171,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>8</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>12</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='25%'>3</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -187,7 +188,7 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 <<<<<<< HEAD
 						<span class='test-name'>Verify if User is able to book Insurance for Different Divisons</span>
@@ -199,19 +200,24 @@
 	<span class='duration right label'>0h 3m 22s+852ms</span>
 =======
 						<span class='test-name'>Hotel Cost Quoting for few data sources</span>
-						<span class='test-time'>Dec 3, 2019 04:43:38 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Dec 4, 2019 03:05:45 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
+<<<<<<< HEAD
 <div class='scenariooutline node' test-id='2' status='fail'>
 	<span class='duration right label'>0h 1m 25s+976ms</span>
 >>>>>>> aa33faae1b478755df692888a1e71ec90cc17358
+=======
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 1m 58s+785ms</span>
+>>>>>>> e4dc22022ecafaae7c6f9318cc837abb9aa166e5
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">User Cost Quote a hotel through <Data Source></span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario fail' status='fail'>
+		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
 				<span class='category label white-text'>@GB</span>
 			</div>
@@ -279,7 +285,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='9' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Through scenario outline User Enters the BookingRefnumber 1555813</span>
+						<span class="bdd-step-name">And Through scenario outline User Enters the BookingRefnumber 1555815</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='10' class='node and pass' status='pass'><b>And</b>
@@ -377,52 +383,33 @@
 						<span class="bdd-step-name">Given User clicks on Actions and selects validate Cost Quote</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='12' class='node and fail' status='fail'><b>And</b>
+					<li test-id='12' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And Clicks Book rb during changing from quote to book</span>
-							<div class='pre'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=78.0.3904.97)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55511}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 401808aef3998708efb6b38119762e0a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
-	at CBE.StayBeta.HotelImpl.SelectBookRBDuringQuoteToBook(HotelImpl.java:390)
-	at stepDefinitions.TestCase616.clicks_book_rb_during_changing_from_quote_to_book(TestCase616.java:298)
-	at ?.And Clicks Book rb during changing from quote to book(src/test/java/RegressionSuite/Hotel - ValidateCostQuote.feature:13)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='13' class='node and skip' status='skip'><b>And</b>
+					<li test-id='13' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And Accepts the Terms and Conditions</span>
-							<div class='pre'>skipped</div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='14' class='node and skip' status='skip'><b>And</b>
+					<li test-id='14' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And Click on Update button</span>
-							<div class='pre'>skipped</div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='15' class='node then skip' status='skip'><b>Then</b>
+					<li test-id='15' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then Booking has been done successfully and Booking reference Text is stored in a file</span>
 						<ul class='screenshots right'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 							<li><a data-featherlight="image" href="Screenshots_Fail/1575293094434.png"><i class='material-icons'>panorama</i></a></li>
 =======
 							<li><a data-featherlight="image" href="Screenshots_Fail/1575391504064.png"><i class='material-icons'>panorama</i></a></li>
 >>>>>>> aa33faae1b478755df692888a1e71ec90cc17358
+=======
+							<li><a data-featherlight="image" href="Screenshots_Fail/1575472063429.png"><i class='material-icons'>panorama</i></a></li>
+>>>>>>> e4dc22022ecafaae7c6f9318cc837abb9aa166e5
 						</ul>
-							<div class='pre'>skipped</div>
+							<div class='pre'>GB 1555815</div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
@@ -484,13 +471,13 @@ Session ID: 401808aef3998708efb6b38119762e0a
 					<div class='category-heading'>
 						<span class='category-name'>@GB</span>
 						<span class='category-status right'>
-							<span class='label fail'>1</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -506,6 +493,7 @@ Session ID: 401808aef3998708efb6b38119762e0a
 								<tbody>
 									<tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
 										<td>Dec 2, 2019 01:21:31 PM</td>
 										<td class='linked' test-id='7'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE</td>
 										<td><span class='test-status fail'>fail</span></td>
@@ -518,6 +506,11 @@ Session ID: 401808aef3998708efb6b38119762e0a
 										<td class='linked' test-id='3'>Hotel Cost Quoting for few data sources.User Cost Quote a hotel through <Data Source>.User Cost Quote a hotel through <Data Source></td>
 >>>>>>> aa33faae1b478755df692888a1e71ec90cc17358
 										<td><span class='test-status fail'>fail</span></td>
+=======
+										<td>Dec 4, 2019 03:05:45 PM</td>
+										<td class='linked' test-id='3'>Hotel Cost Quoting for few data sources.User Cost Quote a hotel through <Data Source>.User Cost Quote a hotel through <Data Source></td>
+										<td><span class='test-status pass'>pass</span></td>
+>>>>>>> e4dc22022ecafaae7c6f9318cc837abb9aa166e5
 									</tr>
 								</tbody>
 							</table>
@@ -536,6 +529,7 @@ Session ID: 401808aef3998708efb6b38119762e0a
 	</div>
 </div>
 <!-- category view -->
+<<<<<<< HEAD
 <div id='exception-view' class='view hide'>
 
     <section id='controls'>
@@ -641,6 +635,8 @@ Session ID: 401808aef3998708efb6b38119762e0a
         </div>
     </div>
 </div>
+=======
+>>>>>>> e4dc22022ecafaae7c6f9318cc837abb9aa166e5
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -669,30 +665,42 @@ Session ID: 401808aef3998708efb6b38119762e0a
 				<div class='card-panel r'>
 					Start
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<div class='panel-lead'>Dec 2, 2019 01:21:31 PM</div>
 =======
 					<div class='panel-lead'>Dec 3, 2019 04:43:37 PM</div>
 >>>>>>> aa33faae1b478755df692888a1e71ec90cc17358
+=======
+					<div class='panel-lead'>Dec 4, 2019 03:05:44 PM</div>
+>>>>>>> e4dc22022ecafaae7c6f9318cc837abb9aa166e5
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
 <<<<<<< HEAD
+<<<<<<< HEAD
 			 		<div class='panel-lead'>Dec 2, 2019 01:24:54 PM</div>
 =======
 			 		<div class='panel-lead'>Dec 3, 2019 04:45:04 PM</div>
 >>>>>>> aa33faae1b478755df692888a1e71ec90cc17358
+=======
+			 		<div class='panel-lead'>Dec 4, 2019 03:07:43 PM</div>
+>>>>>>> e4dc22022ecafaae7c6f9318cc837abb9aa166e5
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<div class='panel-lead'>0h 3m 23s+141ms</div>
 =======
 					<div class='panel-lead'>0h 1m 26s+579ms</div>
 >>>>>>> aa33faae1b478755df692888a1e71ec90cc17358
+=======
+					<div class='panel-lead'>0h 1m 58s+932ms</div>
+>>>>>>> e4dc22022ecafaae7c6f9318cc837abb9aa166e5
 				</div>
 			</div>
 			<div class='col s6'>
@@ -709,11 +717,11 @@ Session ID: 401808aef3998708efb6b38119762e0a
 						</tr>
 						<tr>
 							<td>@GB</td>
-							<td>0</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -729,31 +737,31 @@ Session ID: 401808aef3998708efb6b38119762e0a
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 0,
-				failChild: 1,
+				passChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 1,
+				exceptionsChild: 0,
 				
-				passGrandChild: 8,
-				failGrandChild: 1,
+				passGrandChild: 12,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 3,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 4,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		
