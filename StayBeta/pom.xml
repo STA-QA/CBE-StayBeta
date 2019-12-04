@@ -28,7 +28,7 @@
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
 						<suiteXmlFile>TestExecutionFiles/TestSuite5.xml</suiteXmlFile>
-						<suiteXmlFile>TestExecutionFiles/failedTest.xml</suiteXmlFile>
+					<!-- 	<suiteXmlFile>TestExecutionFiles/failedTest.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
