@@ -20,7 +20,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	public static String timeStamp = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
 	@BeforeSuite
 	public static void setup() {
-
 		funtions commonfunctions = new funtions();
 		commonfunctions.reportfunction();
 	}

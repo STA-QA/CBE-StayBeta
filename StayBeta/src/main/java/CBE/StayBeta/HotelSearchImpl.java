@@ -75,6 +75,7 @@ public class HotelSearchImpl extends BaseUtil implements HotelSearch {
 		List<WebElement> listing = CBEDriver.findElements(By.xpath(AddToCartXpath));
 		WebDriverWait wait = new WebDriverWait(CBEDriver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listing.get(randomValue)));
+		System.out.println("the random value is :"+randomValue);
 		listing.get(randomValue).click();
 
 	}
