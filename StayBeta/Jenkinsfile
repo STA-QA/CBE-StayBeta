@@ -24,7 +24,7 @@ cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber:
                 echo "ZIP"
                zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
                echo "END - ZIP"
-               emailext attachmentsPattern: 'Reports.zip', body: '${SCRIPT,template="StayBeta/allure-report.groovy"}', 
+               emailext attachmentsPattern: 'Reports.zip', body: '${FILE,path="StayBeta/target/cucumber-results-feature-overview.html"}', 
                 subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
                     mimeType: 'text/html',to: "qateam@statravel.com"
            

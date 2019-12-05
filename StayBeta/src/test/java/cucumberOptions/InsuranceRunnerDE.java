@@ -32,7 +32,7 @@ public class InsuranceRunnerDE extends AbstractTestNGCucumberTests {
 	
 	@AfterSuite(alwaysRun=true)
 	public void setupp(){
-		System.out.println("In after suite method");
+		
 	CucumberResultsOverview results = new CucumberResultsOverview();
 	results.setOutputDirectory("target");
 	results.setOutputName("cucumber-results");
@@ -43,7 +43,7 @@ public class InsuranceRunnerDE extends AbstractTestNGCucumberTests {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	System.out.println("In after suite method2");
+
 	
 	}
 
