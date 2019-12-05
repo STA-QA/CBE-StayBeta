@@ -32,7 +32,7 @@ Examples:
 
 
 @DE
-Scenario Outline: User Book Insurance for DE for Insuranct type <<Insurance Type> 
+Scenario Outline: User Book Insurance for DE for Insuranct type <Insurance Type> 
 	Given User launches the DE application 
 	And User enters Valid DE Credentials 
 	Then User logged into application 
