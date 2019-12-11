@@ -3,6 +3,16 @@ stage ('Git Checkout'){
 git "https://github.com/Kiranmaiadams/CBE-Automation"
 //sh script:"echo Checking code from", label: env.BRANCH_NAME
 }
+stage('Compile-Package'){
+def mvnHome = tool name: 'maven-3', type: 'maven'
+sh "${mavnHome}/bin/mvn package"
+}
+stage('SonarQube Analysis'){
+def mvnHome = tool name: 'maven-3', type: 'maven'
+withSonarQubeEnv('Sonar'){
+sh "${mavnHome}/bin/mvn sonar:sonar"
+}
+}
 stage ('Build Project'){
 bat "mvn -f StayBeta/pom.xml clean"
 }
