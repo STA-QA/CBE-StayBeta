@@ -27,7 +27,7 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>TestExecutionFiles/TestSuite5.xml</suiteXmlFile>
+						<suiteXmlFile>TestExecutionFiles/testng.xml</suiteXmlFile>
 					<!-- 	<suiteXmlFile>TestExecutionFiles/failedTest.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 				</configuration>
@@ -297,7 +297,7 @@
 <activeByDefault>true</activeByDefault>
 </activation>
 <properties>
-<!-- Optional URL to server. Default value is http://localhost:9000 -->
+
 <sonar.host.url>
 https://sonar.dev.sta.net/
 </sonar.host.url>

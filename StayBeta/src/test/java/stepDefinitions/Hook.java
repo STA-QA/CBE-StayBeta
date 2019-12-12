@@ -1,16 +1,20 @@
 package stepDefinitions;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.github.mkolisnyk.cucumber.reporting.CucumberResultsOverview;
 import com.vimalselvam.cucumber.listener.Reporter;
 
 import Base.BaseUtil;
@@ -25,8 +29,21 @@ public class Hook extends BaseUtil {
 	public static ExtentHtmlReporter htmlReporter;
 	public static ITestResult iTestResult;
 
+	String Dockerexecution="yes";
+
+
+
 	@Before
-	public void InitializeTest(Scenario scenario) {
+
+
+	public void InitializeTest(Scenario scenario) throws MalformedURLException {
+
+		if (Dockerexecution.equalsIgnoreCase("yes")) {
+			Capabilities chromeCapabilities = DesiredCapabilities.chrome();
+			RemoteWebDriver CBEDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeCapabilities);
+
+		}
+		else {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
@@ -35,8 +52,8 @@ public class Hook extends BaseUtil {
 		//options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
 		CBEDriver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-
 		// Reporter.log("After Method: " + iTestResult.getMethod().getMethodName());
+		}
 	}
 
 	@After
@@ -50,9 +67,9 @@ public class Hook extends BaseUtil {
 			System.out.println(scenario.getName());
 
 		}
-		
-		
-		
+
+
+
 		CBEDriver.quit();
 
 	}
