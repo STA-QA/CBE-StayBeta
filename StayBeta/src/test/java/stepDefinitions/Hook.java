@@ -39,6 +39,7 @@ public class Hook extends BaseUtil {
 	public void InitializeTest(Scenario scenario) throws MalformedURLException {
 
 		if (Dockerexecution.equalsIgnoreCase("yes")) {
+
 			Capabilities chromeCapabilities = DesiredCapabilities.chrome();
 			RemoteWebDriver CBEDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeCapabilities);
 
