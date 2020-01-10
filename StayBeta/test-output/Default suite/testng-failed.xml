@@ -3,11 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Base.funtions">
+      <class name="cucumberOptions.InsuranceRunnerDE">
         <methods>
-          <include name="pushdata"/>
+          <include name="setUpClass"/>
+          <include name="setup"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="setupp"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- Base.funtions -->
+      </class> <!-- cucumberOptions.InsuranceRunnerDE -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

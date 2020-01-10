@@ -33,9 +33,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
@@ -48,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Dec 4, 2019 04:44:34 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Dec 20, 2019 02:58:46 PM</span>
 				</a>
 			</li>
 			<li>
@@ -74,8 +72,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -83,16 +79,6 @@
 			<!-- test toggle -->
 
 			<!-- category toggle -->
-			<div class='chip transparent'>
-				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
-					<i class='material-icons'>local_offer</i> Category
-				</a>
-				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@DE</a></li>
-					<li class='divider'></li>
-					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
-				</ul>
-			</div>
 			<!-- category toggle -->
 
 			<!-- clear filters -->
@@ -136,10 +122,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -151,10 +137,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>22</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -166,10 +152,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='54.545%'><span class='strong'>24</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>330</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='4.545%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='40.909%'>18</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -183,243 +169,1711 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='5'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Verify if User is able to book Insurance for Different Divisons</span>
-						<span class='test-time'>Dec 4, 2019 04:44:34 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>Print Search loading time</span>
+						<span class='test-time'>Dec 20, 2019 02:58:46 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='6' status='fail'>
-	<span class='duration right label'>0h 3m 6s+451ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 9m 45s+874ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">User Book Insurance for DE</span>
+		<span class="desc-text">Check loading time</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='7' class='node scenario fail' status='fail'>
-			<div class='category-list'>
-				<span class='category label white-text'>@DE</span>
-			</div>
+		<li test-id='3' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">User Book Insurance for DE</span>
+			<span class="bdd-step-name">Check loading time</span>
 			
 				<ul class='steps'>
+					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='5' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='6' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='7' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
 					<li test-id='8' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User launches the DE application</span>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='9' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User enters Valid DE Credentials</span>
+						<span class="bdd-step-name">And Search for a Bangkok (BKK), Thailand (TH) with particular BKK</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='10' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then User logged into application</span>
-							<div class='pre'>User Logs in into Application</div>
+					<li test-id='10' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='11' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User Selects any agency</span>
-							<div class='pre'>User Selects Agency</div>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='12' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User is in the Insurance Page</span>
+					<li test-id='12' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='13' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="Screenshots_Fail/1575477900823.png"><i class='material-icons'>panorama</i></a></li>
-						</ul>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='14' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Selects the Region</span>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='15' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Select the Insurance Type Single trip</span>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='16' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Enter Number Of 1 for Insurance</span>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='17' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And From Date and To Date for Insurance 60 and 30</span>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   14:59:02</div>
+							<div class='pre'>User Can see Search page at time:    14:59:14</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   12</div>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='18' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Enter the Date Of Birth for Insurance 40 for 1</span>
+					<li test-id='18' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
 							<div class='pre'>passed</div>
-					</li>
-					<li test-id='19' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Click On Insurance Search</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='20' class='node and fail' status='fail'><b>And</b>
-						<span class="bdd-step-name">And Select Any Random Insurance and Add to cart</span>
-							<div class='pre'><pre>java.lang.IllegalArgumentException: bound must be positive
-	at java.util.Random.nextInt(Random.java:388)
-	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:216)
-	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:67)
-	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance - Bookings.feature:48)
-</pre></div>
-					</li>
-					<li test-id='21' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Select Book Radio Button for Insurance</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='22' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Clicks on Complete Booking</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='23' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Adds the Passenger 1 Details for Insurance with their 40</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='24' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Click On Insurance Details</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='25' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Add additional Details for Insurance</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='26' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Accepts the Terms and Conditions</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='27' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Click On Book Button</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='28' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='29' class='node then skip' status='skip'><b>Then</b>
-						<span class="bdd-step-name">Then Booking has been done successfully and Booking reference Text is stored in a file</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="Screenshots_Fail/1575477970200.png"><i class='material-icons'>panorama</i></a></li>
-						</ul>
-							<div class='pre'>skipped</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='30' class='node scenario fail' status='fail'>
-			<div class='category-list'>
-				<span class='category label white-text'>@DE</span>
-			</div>
+		<li test-id='19' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">User Book Insurance for DE</span>
+			<span class="bdd-step-name">Check loading time</span>
 			
 				<ul class='steps'>
-					<li test-id='31' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User launches the DE application</span>
+					<li test-id='20' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='32' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User enters Valid DE Credentials</span>
+					<li test-id='21' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='33' class='node then pass' status='pass'><b>Then</b>
+					<li test-id='22' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then User logged into application</span>
 							<div class='pre'>User Logs in into Application</div>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='34' class='node and pass' status='pass'><b>And</b>
+					<li test-id='23' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And User Selects any agency</span>
 							<div class='pre'>User Selects Agency</div>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='35' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User is in the Insurance Page</span>
+					<li test-id='24' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='36' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="Screenshots_Fail/1575477992598.png"><i class='material-icons'>panorama</i></a></li>
-						</ul>
+					<li test-id='25' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Bangkok (BKK), Thailand (TH) with particular BKK</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='26' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='27' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='28' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='29' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='30' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='31' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='32' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource STAy</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='33' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage STAy</span>
+							<div class='pre'>User CLicks on Search button at time:   14:59:34</div>
+							<div class='pre'>User Can see Search page at time:    14:59:37</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   3</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='34' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='35' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='36' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='37' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Selects the Region</span>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='38' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Select the Insurance Type Annual</span>
+					<li test-id='38' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='39' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Enter Number Of 1 for Insurance</span>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='40' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And From Date and To Date for Insurance 50 and 365</span>
+					<li test-id='40' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='41' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Enter the Date Of Birth for Insurance 58 for 1</span>
+						<span class="bdd-step-name">And Search for a Bangkok (BKK), Thailand (TH) with particular BKK</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='42' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Click On Insurance Search</span>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='43' class='node and fail' status='fail'><b>And</b>
-						<span class="bdd-step-name">And Select Any Random Insurance and Add to cart</span>
-							<div class='pre'><pre>java.lang.IllegalArgumentException: bound must be positive
-	at java.util.Random.nextInt(Random.java:388)
-	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:216)
-	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:67)
-	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance - Bookings.feature:48)
-</pre></div>
+					<li test-id='43' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='44' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Select Book Radio Button for Insurance</span>
-							<div class='pre'>skipped</div>
+					<li test-id='44' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='45' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Clicks on Complete Booking</span>
-							<div class='pre'>skipped</div>
+					<li test-id='45' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='46' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Adds the Passenger 1 Details for Insurance with their 58</span>
-							<div class='pre'>skipped</div>
+					<li test-id='46' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='47' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Click On Insurance Details</span>
-							<div class='pre'>skipped</div>
+					<li test-id='47' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='48' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Add additional Details for Insurance</span>
-							<div class='pre'>skipped</div>
+					<li test-id='48' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='49' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Accepts the Terms and Conditions</span>
-							<div class='pre'>skipped</div>
+					<li test-id='49' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   14:59:54</div>
+							<div class='pre'>User Can see Search page at time:    15:00:13</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   19</div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='50' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Click On Book Button</span>
-							<div class='pre'>skipped</div>
+					<li test-id='50' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='51' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Takes The Screenshot And Add to Report</span>
-							<div class='pre'>skipped</div>
+				</ul>
+		</li>
+		<li test-id='51' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='52' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='52' class='node then skip' status='skip'><b>Then</b>
-						<span class="bdd-step-name">Then Booking has been done successfully and Booking reference Text is stored in a file</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="Screenshots_Fail/1575478061316.png"><i class='material-icons'>panorama</i></a></li>
-						</ul>
-							<div class='pre'>skipped</div>
+					<li test-id='53' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='54' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='55' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='56' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='57' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a London (LON), United Kingdom (GB) with particular lon</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='58' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='59' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='60' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='61' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='62' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='63' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='64' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='65' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   15:00:31</div>
+							<div class='pre'>User Can see Search page at time:    15:00:47</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   15</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='66' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='67' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='68' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='69' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='70' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='71' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='72' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='73' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a London (LON), United Kingdom (GB) with particular lon</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='74' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='75' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='76' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='77' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='78' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='79' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='80' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource STAy</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='81' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage STAy</span>
+							<div class='pre'>User CLicks on Search button at time:   15:01:03</div>
+							<div class='pre'>User Can see Search page at time:    15:01:07</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   3</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='82' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='83' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='84' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='85' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='86' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='87' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='88' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='89' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a London (LON), United Kingdom (GB) with particular lon</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='90' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='91' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='92' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='93' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='94' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='95' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='96' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='97' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   15:01:25</div>
+							<div class='pre'>User Can see Search page at time:    15:01:45</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   19</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='98' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='99' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='100' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='101' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='102' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='103' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='104' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='105' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Sydney (SYD), Australia (AU) with particular syd</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='106' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='107' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='108' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='109' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='110' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='111' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='112' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='113' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   15:02:02</div>
+							<div class='pre'>User Can see Search page at time:    15:02:12</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   9</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='114' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='115' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='116' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='117' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='118' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='119' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='120' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='121' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Sydney (SYD), Australia (AU) with particular syd</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='122' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='123' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='124' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='125' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='126' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='127' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='128' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource STAy</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='129' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage STAy</span>
+							<div class='pre'>User CLicks on Search button at time:   15:02:29</div>
+							<div class='pre'>User Can see Search page at time:    15:02:32</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   3</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='130' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='131' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='132' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='133' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='134' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='135' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='136' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='137' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Sydney (SYD), Australia (AU) with particular syd</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='138' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='139' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='140' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='141' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='142' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='143' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='144' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='145' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   15:02:50</div>
+							<div class='pre'>User Can see Search page at time:    15:02:55</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   4</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='146' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='147' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='148' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='149' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='150' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='151' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='152' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='153' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a New York (NYC), United States (US) with particular nyc</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='154' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='155' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='156' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='157' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='158' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='159' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='160' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='161' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   15:03:14</div>
+							<div class='pre'>User Can see Search page at time:    15:03:26</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   12</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='162' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='163' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='164' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='165' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='166' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='167' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='168' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='169' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a New York (NYC), United States (US) with particular nyc</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='170' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='171' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='172' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='173' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='174' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='175' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='176' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource STAy</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='177' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage STAy</span>
+							<div class='pre'>User CLicks on Search button at time:   15:03:43</div>
+							<div class='pre'>User Can see Search page at time:    15:03:47</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   3</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='178' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='179' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='180' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='181' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='182' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='183' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='184' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='185' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a New York (NYC), United States (US) with particular nyc</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='186' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='187' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='188' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='189' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='190' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='191' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='192' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='193' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   15:04:06</div>
+							<div class='pre'>User Can see Search page at time:    15:04:09</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   3</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='194' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='195' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='196' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='197' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='198' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='199' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='200' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='201' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Paris (PAR), France (FR) with particular PAR</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='202' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='203' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='204' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='205' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='206' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='207' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='208' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='209' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   15:04:26</div>
+							<div class='pre'>User Can see Search page at time:    15:04:37</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   10</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='210' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='211' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='212' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='213' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='214' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='215' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='216' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='217' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Paris (PAR), France (FR) with particular PAR</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='218' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='219' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='220' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='221' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='222' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='223' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='224' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='225' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   15:04:53</div>
+							<div class='pre'>User Can see Search page at time:    15:05:14</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   21</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='226' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='227' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='228' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='229' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='230' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='231' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='232' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='233' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Leeds (LBA), United Kingdom (GB) with particular LBA</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='234' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='235' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='236' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='237' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='238' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='239' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='240' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='241' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   15:05:31</div>
+							<div class='pre'>User Can see Search page at time:    15:05:35</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   3</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='242' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='243' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='244' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='245' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='246' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='247' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='248' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='249' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Leeds (LBA), United Kingdom (GB) with particular LBA</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='250' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='251' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='252' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='253' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='254' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='255' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='256' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='257' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   15:05:51</div>
+							<div class='pre'>User Can see Search page at time:    15:05:56</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   4</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='258' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='259' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='260' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='261' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='262' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='263' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='264' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='265' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Ho Chi Minh (SGN), Vietnam (VN) with particular SGN</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='266' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='267' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='268' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='269' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='270' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='271' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='272' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='273' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   15:06:14</div>
+							<div class='pre'>User Can see Search page at time:    15:06:18</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   3</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='274' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='275' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='276' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='277' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='278' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='279' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='280' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='281' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Ho Chi Minh (SGN), Vietnam (VN) with particular SGN</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='282' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='283' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='284' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='285' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='286' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='287' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='288' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='289' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   15:06:37</div>
+							<div class='pre'>User Can see Search page at time:    15:06:50</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   13</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='290' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='291' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='292' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='293' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='294' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='295' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='296' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='297' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Warsaw (WAW), Poland (PL) with particular WAW</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='298' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='299' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='300' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='301' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='302' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='303' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='304' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='305' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   15:07:07</div>
+							<div class='pre'>User Can see Search page at time:    15:07:10</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   3</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='306' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='307' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='308' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='309' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='310' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='311' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='312' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='313' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Warsaw (WAW), Poland (PL) with particular WAW</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='314' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='315' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='316' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='317' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='318' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='319' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='320' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='321' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   15:07:29</div>
+							<div class='pre'>User Can see Search page at time:    15:07:36</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   7</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='322' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='323' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='324' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='325' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='326' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='327' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='328' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='329' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Cairns (CNS), Australia (AU) with particular CNS</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='330' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='331' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='332' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='333' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='334' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='335' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='336' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource JacTravel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='337' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage JacTravel</span>
+							<div class='pre'>User CLicks on Search button at time:   15:07:57</div>
+							<div class='pre'>User Can see Search page at time:    15:08:04</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   7</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='338' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='339' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check loading time</span>
+			
+				<ul class='steps'>
+					<li test-id='340' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User launches the application</span>
+							<div class='pre'>User Launches Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='341' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Valid Credentials</span>
+							<div class='pre'>User Name gbzq5</div>
+							<div class='pre'>User Password 1srzq5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='342' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User logged into application</span>
+							<div class='pre'>User Logs in into Application</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='343' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Selects any agency</span>
+							<div class='pre'>User Selects Agency</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='344' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is in the Hotel Search Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='345' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Search for a Cairns (CNS), Australia (AU) with particular CNS</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='346' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select the 25 and 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='347' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Rooms 1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='348' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Adult Guests 2 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='349' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select Number of Child Guests 0 into 1 in automatic order</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='350' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Enter the ChildrenAge 0</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='351' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Deselect SelectAll DataSources</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='352' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Select DataSource Expedia Rapid PKG</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='353' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Click Search Button on Hotel Searchpage Expedia Rapid PKG</span>
+							<div class='pre'>User CLicks on Search button at time:   15:08:24</div>
+							<div class='pre'>User Can see Search page at time:    15:08:29</div>
+							<div class='pre'>Total Time in Seconds to display Search Results:   5</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='354' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should be logged out and driver is closed</span>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
@@ -452,158 +1906,7 @@
 
 </div>
 <!-- test view -->
-<div id='category-view' class='view hide'>
-
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-					<i class='material-icons'>search</i> Search
-				</a>
-				
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-				
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-
-	<div class='subview-left left'>
-		
-		<div class='view-summary'>
-			<h5>Categories</h3>
-			<ul id='category-collection' class='category-collection'>
-				
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@DE</span>
-						<span class='category-status right'>
-							<span class='label fail'>2</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span class='label red lighten-1 white-text'>Failed: 2</span>
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Dec 4, 2019 04:44:34 PM</td>
-										<td class='linked' test-id='7'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2019 04:46:11 PM</td>
-										<td class='linked' test-id='30'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-
-			</ul>
-		</div>
-	</div>
-
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='category-name'></h5>
-		</div>
-	</div>
-</div>
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.IllegalArgumentException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Dec 4, 2019 04:45:20 PM</td>
-                                                        <td class='linked' test-id='20'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE.And Select Any Random Insurance and Add to cart</td>
-                                                        <td><pre><pre>java.lang.IllegalArgumentException: bound must be positive
-	at java.util.Random.nextInt(Random.java:388)
-	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:216)
-	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:67)
-	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance - Bookings.feature:48)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Dec 4, 2019 04:46:51 PM</td>
-                                                        <td class='linked' test-id='43'>Verify if User is able to book Insurance for Different Divisons.User Book Insurance for DE.User Book Insurance for DE.And Select Any Random Insurance and Add to cart</td>
-                                                        <td><pre><pre>java.lang.IllegalArgumentException: bound must be positive
-	at java.util.Random.nextInt(Random.java:388)
-	at CBE.StayBeta.InsuranceImpl.AddInsuranceToCart(InsuranceImpl.java:216)
-	at stepDefinitions.InsuranceDefinitions.select_any_random_insurance_and_add_to_cart(InsuranceDefinitions.java:67)
-	at ?.And Select Any Random Insurance and Add to cart(src/test/java/RegressionSuite/Insurance - Bookings.feature:48)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -619,55 +1922,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>22</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>44</div>
+					<div class='panel-lead'>330</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 4, 2019 04:44:34 PM</div>
+					<div class='panel-lead'>Dec 20, 2019 02:58:46 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 4, 2019 04:47:42 PM</div>
+			 		<div class='panel-lead'>Dec 20, 2019 03:08:32 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 3m 8s+14ms</div>
-				</div>
-			</div>
-			<div class='col s6'>
-				<div class='card-panel dashboard-categories'>
-					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
-					
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Passed</th>
-							<th>Failed</th>
-							<th>Others</th>
-							<th>Passed %</th>
-						</tr>
-						<tr>
-							<td>@DE</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-					</table>
+					<div class='panel-lead'>0h 9m 46s+620ms</div>
 				</div>
 			</div>
 		</div>
@@ -680,31 +1959,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 0,
-				failChild: 2,
+				passChild: 22,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 0,
 				
-				passGrandChild: 24,
-				failGrandChild: 2,
+				passGrandChild: 330,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 18,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 20,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		
