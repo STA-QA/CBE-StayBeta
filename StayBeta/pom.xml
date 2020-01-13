@@ -186,12 +186,12 @@
 			<version>1.0.2</version>
 		</dependency>
 		
-	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports 
 <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
     <version>3.1.5</version>
-</dependency>
+</dependency>-->
 
 		<dependency>
 			<groupId>io.codearte.jfairy</groupId>
