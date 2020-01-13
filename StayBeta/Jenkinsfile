@@ -25,7 +25,7 @@ cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber:
 
  stage('Email Notification') 
  {
-               // bat "del Reports.zip"
+                bat "del Reports.zip"
                 echo "ZIP"
                zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
                echo "END - ZIP"
