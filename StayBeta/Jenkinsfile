@@ -5,12 +5,12 @@ git "https://github.com/Kiranmaiadams/CBE-Automation"
 //sh script:"echo Checking code from", label: env.BRANCH_NAME
 }
 stage ('Build Project'){
-echo Cleaning
+echo "Cleaning"
 bat "mvn -f StayBeta/pom.xml clean"
-echo CleaningCompleted
+echo "CleaningCompleted"
 }
 stage ('Run Test'){
-echo tests
+echo "tests"
 bat "mvn test -Dsurefire.suiteXmlFiles=${TestsToRun}"
 }
 
