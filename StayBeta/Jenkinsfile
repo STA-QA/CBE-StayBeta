@@ -1,7 +1,7 @@
 node {
 properties([parameters([choice(choices: ['BonotelandAATests/AA_TestRun1.xml','BonotelandAATests/AA_TestRun2.xml', 'BonotelandAATests/AA_TestRun3.xml', 'BonotelandAATests/Bonotel_TestRun1.xml', 'BonotelandAATests/Bonotel_TestRun2.xml', 'BonotelandAATests/Bonotel_TestRun3.xml'], description: 'Select Which Test Suite You Want to Run', name: 'TestsToRun')])])
 stage ('Git Checkout'){
-git "https://github.com/Kiranmaiadams/CBE-Automation"
+git "https://github.com/STA-QA/CBE-StayBeta"
 //sh script:"echo Checking code from", label: env.BRANCH_NAME
 }
 stage ('Build Project'){
