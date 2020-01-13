@@ -18,7 +18,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = "src/test/java/perfTesting/checkSearchloadingTime.feature",  plugin = {
+@CucumberOptions(features = "src/test/java/arabianAdventures_TestRun1/Hotel - Amend - ChangeItinerary.feature",  plugin = {
 		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:","rerun:target/rerun.txt", "json:target/cucumber-reports/cucumber.json" }, glue = "stepDefinitions")
 public class InsuranceRunnerDE extends AbstractTestNGCucumberTests {
 
