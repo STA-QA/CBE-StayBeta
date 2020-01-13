@@ -1,4 +1,4 @@
-package com.runnerFiles;
+package runnerFiles;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -9,10 +9,10 @@ import Base.funtions;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@CucumberOptions(features = "TemporaryTests/bonotel_TestRun2", plugin = {
+@CucumberOptions(features = "TemporaryTests/bonotel_TestRun3", plugin = {
 		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:", "rerun:target/rerun.txt",
 		"json:target/cucumber-reports/cucumber.json" }, glue = "stepDefinitions")
-public class Bonotel_TestRun2 extends AbstractTestNGCucumberTests {
+public class Bonotel_TestRun3 extends AbstractTestNGCucumberTests {
 
 	public static String timeStamp = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss")
 			.format(Calendar.getInstance().getTime());

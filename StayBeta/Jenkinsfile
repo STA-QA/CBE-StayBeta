@@ -1,4 +1,6 @@
 node {
+properties([parameters([choice(choices: ['TemporaryTests/runnerFiles/AA_TestRun1.java','TemporaryTests/runnerFiles/AA_TestRun2.java', 'TemporaryTests/runnerFiles/AA_TestRun3.java', 'TemporaryTests/runnerFiles/Bonotel_TestRun1.java', 'TemporaryTests/runnerFiles/Bonotel_TestRun2.java', 'TemporaryTests/runnerFiles/Bonotel_TestRun3.java'], description: 'Select Which Test Suite You Want to Run', name: 'TestsToRun')])])
+TemporaryTests/runnerFiles/AA_TestRun1.java
 stage ('Git Checkout'){
 git "https://github.com/Kiranmaiadams/CBE-Automation"
 //sh script:"echo Checking code from", label: env.BRANCH_NAME
@@ -7,7 +9,7 @@ stage ('Build Project'){
 bat "mvn -f StayBeta/pom.xml clean"
 }
  stage ('Run Test'){
-bat "mvn -f StayBeta/pom.xml test"
+bat "mvn test -Dsurefire.suiteXmlFiles=${TestsToRun}"
 }
 
 stage ('Publish Report'){
@@ -20,7 +22,7 @@ cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber:
 
  stage('Email Notification') 
  {
-                bat "del Reports.zip"
+               // bat "del Reports.zip"
                 echo "ZIP"
                zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/CBE StayBeta Pipeline/StayBeta/Reports'
                echo "END - ZIP"
