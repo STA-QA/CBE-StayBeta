@@ -6,7 +6,7 @@
 	</listeners>
  <test name="Regression">
 	<classes>
-	 	<class name="BonotelandAATests.AA_TestRun1" />
+	 	<class name="cucumberOptions.TestRunner" />
 	</classes>
 </test>
 </suite>
