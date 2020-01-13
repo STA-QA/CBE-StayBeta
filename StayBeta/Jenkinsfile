@@ -11,7 +11,7 @@ echo "CleaningCompleted"
 }
 stage ('Run Test'){
 echo "tests"
-bat "mvn test -Dsurefire.suiteXmlFiles=${TestsToRun}"
+bat "mvn -f StayBeta/pom.xml test -Dsurefire.suiteXmlFiles=${TestsToRun}"
 }
 
 stage ('Publish Report'){
