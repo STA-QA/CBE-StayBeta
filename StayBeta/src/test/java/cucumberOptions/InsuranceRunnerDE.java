@@ -2,16 +2,15 @@ package cucumberOptions;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
+
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.KlovReporter;
+
 import com.github.mkolisnyk.cucumber.reporting.CucumberResultsOverview;
 
-import com.vimalselvam.cucumber.listener.ExtentProperties;
+
 
 import Base.funtions;
 import cucumber.api.CucumberOptions;

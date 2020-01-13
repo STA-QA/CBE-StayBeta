@@ -2,13 +2,10 @@ package cucumberOptions;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
-import com.github.mkolisnyk.cucumber.reporting.CucumberResultsOverview;
-import com.vimalselvam.cucumber.listener.ExtentProperties;
+
 
 import Base.funtions;
 import cucumber.api.CucumberOptions;
