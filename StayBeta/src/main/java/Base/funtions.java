@@ -222,22 +222,26 @@ public class funtions {
 	public void reportfunction() {
 		String timeStamp = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
 		if (Automationdashboard.contentEquals("Yes")) {
-			ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-
-			extentProperties.setKlovServerUrl("http://localhost");
-
-			extentProperties.setKlovProjectName("CBE-Automation-Dashboard");
-
-			extentProperties.setKlovReportName("Run    " + timeStamp);
-
-			extentProperties.setMongodbHost("localhost");
-			extentProperties.setMongodbPort(27017);
-			extentProperties.setMongodbDatabase("klov");
-			extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+			/*
+			 * ExtentProperties extentProperties = ExtentProperties.INSTANCE;
+			 * 
+			 * extentProperties.setKlovServerUrl("http://localhost");
+			 * 
+			 * extentProperties.setKlovProjectName("CBE-Automation-Dashboard");
+			 * 
+			 * extentProperties.setKlovReportName("Run    " + timeStamp);
+			 * 
+			 * extentProperties.setMongodbHost("localhost");
+			 * extentProperties.setMongodbPort(27017);
+			 * extentProperties.setMongodbDatabase("klov");
+			 * extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+			 */
 		} else {
 
-			ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-			extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+			/*
+			 * ExtentProperties extentProperties = ExtentProperties.INSTANCE;
+			 * extentProperties.setReportPath("Reports/1SourceReleaseReport.html");
+			 */
 
 		}
 
