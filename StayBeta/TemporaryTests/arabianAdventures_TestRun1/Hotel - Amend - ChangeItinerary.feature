@@ -1,8 +1,7 @@
-Feature: Hotel Amendment by changing the itinerary 
+Feature: Hotel Amendment by changing the itinerary
 
 @GB @Amend 
-Scenario Outline:
-User Book a hotel through <Data Source> and Change itinerary for GB 
+Scenario Outline: User Book a hotel through <Data Source> and Change itinerary through Amend Option for GB 
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
@@ -52,8 +51,7 @@ User Book a hotel through <Data Source> and Change itinerary for GB
       | Dubai (DXB), United Arab Emirates (AE) | DXB          | Arabian Adventures | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 30          | 2             | 
   
 @AU @Amend 
-Scenario Outline:
-User Book a hotel through <Data Source> and Change itinerary through Amend Option for AU 
+Scenario Outline: User Book a hotel through <Data Source> and Change itinerary through Amend Option for AU 
 Given User launches the au application 
 And User enters Valid AU Credentials 
 Then User logged into application 

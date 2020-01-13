@@ -1,8 +1,7 @@
-Feature: Hotel Cancellations for GB 
+Feature: Hotel Cancellations
 
 @GB @Cancellations 
-Scenario Outline:
-User Book a hotel through <Data Source> and Cancel with Cancellation Condition <Condition> 
+Scenario Outline: User Book a hotel through <Data Source> and Cancel with Cancellation Condition <Condition> in GB
 	Given User launches the application 
 	And User enters Valid Credentials 
 	Then User logged into application 
@@ -46,7 +45,7 @@ User Book a hotel through <Data Source> and Cancel with Cancellation Condition <
       | Dubai (DXB), United Arab Emirates (AE) | DXB          | Arabian Adventures | 10        | 2                | 1     | 2      | 0        | 0           | Outside   | 
   
 @AU @Cancellations 
-Scenario Outline: User Book a hotel through <Data Source> 
+Scenario Outline: User Book a hotel through <Data Source> and Cancel with Cancellation Condition <Condition> in AU
 Given User launches the au application 
 And User enters Valid AU Credentials 
 Then User logged into application 

@@ -8,7 +8,7 @@ git "https://github.com/Kiranmaiadams/CBE-Automation"
 stage ('Build Project'){
 bat "mvn -f StayBeta/pom.xml clean"
 }
- stage ('Run Test'){
+stage ('Run Test'){
 bat "mvn test -Dsurefire.suiteXmlFiles=${TestsToRun}"
 }
 
