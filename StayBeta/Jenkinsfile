@@ -1,5 +1,5 @@
 node {
-properties([parameters([choice(choices: ['TemporaryTests/runnerFiles/AA_TestRun1.java','TemporaryTests/runnerFiles/AA_TestRun2.java', 'TemporaryTests/runnerFiles/AA_TestRun3.java', 'TemporaryTests/runnerFiles/Bonotel_TestRun1.java', 'TemporaryTests/runnerFiles/Bonotel_TestRun2.java', 'TemporaryTests/runnerFiles/Bonotel_TestRun3.java'], description: 'Select Which Test Suite You Want to Run', name: 'TestsToRun')])])
+properties([parameters([choice(choices: ['BonotelandAATests/AA_TestRun1.java','BonotelandAATests/AA_TestRun2.java', 'BonotelandAATests/AA_TestRun3.java', 'BonotelandAATests/Bonotel_TestRun1.java', 'BonotelandAATests/Bonotel_TestRun2.java', 'BonotelandAATests/Bonotel_TestRun3.java'], description: 'Select Which Test Suite You Want to Run', name: 'TestsToRun')])])
 TemporaryTests/runnerFiles/AA_TestRun1.java
 stage ('Git Checkout'){
 git "https://github.com/Kiranmaiadams/CBE-Automation"
