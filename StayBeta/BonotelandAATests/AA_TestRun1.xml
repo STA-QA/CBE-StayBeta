@@ -5,10 +5,10 @@
 		<listener class-name="Base.staNGlistener" />
 	</listeners>
 	<test name="Regression">
-		<classes>			
+		<classes>		
 
 		
-			<class name="cucumberOptions.TestRunner" /> -->
+			<class name="cucumberOptions.TestRunner" /> 
 
 		</classes>
 	</test>
