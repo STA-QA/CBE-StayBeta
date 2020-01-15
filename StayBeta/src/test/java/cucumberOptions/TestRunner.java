@@ -10,7 +10,7 @@ import Base.funtions;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@CucumberOptions(features = "src/test/java/arabianAdventures_TestRun1", plugin = {
+@CucumberOptions(features = "src/test/java/bonotel_TestRun1", plugin = {
 		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:", "rerun:target/rerun.txt",
 		"json:target/cucumber-reports/cucumber.json" }, glue = "stepDefinitions")
 public class TestRunner extends AbstractTestNGCucumberTests {
