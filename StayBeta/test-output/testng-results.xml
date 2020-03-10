@@ -2,52 +2,50 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Amendments Cancellations - Other Data Sources" duration-ms="486875" started-at="2020-02-05T09:59:11Z" finished-at="2020-02-05T10:07:18Z">
+  <suite name="1Source-Automation" duration-ms="1842384" started-at="2020-03-10T13:54:40Z" finished-at="2020-03-10T14:25:22Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Regression" duration-ms="486875" started-at="2020-02-05T09:59:11Z" finished-at="2020-02-05T10:07:18Z">
+    <test name="Regression" duration-ms="1842384" started-at="2020-03-10T13:54:40Z" finished-at="2020-03-10T14:25:22Z">
       <class name="cucumberOptions.TestRunner">
-        <test-method status="PASS" signature="setup()[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="setup" is-config="true" duration-ms="94" started-at="2020-02-05T09:59:11Z" finished-at="2020-02-05T09:59:11Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="setup" is-config="true" duration-ms="103" started-at="2020-03-10T13:54:39Z" finished-at="2020-03-10T13:54:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="setUpClass" is-config="true" duration-ms="14287" started-at="2020-02-05T09:59:14Z" finished-at="2020-02-05T09:59:28Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="setUpClass" is-config="true" duration-ms="3396" started-at="2020-03-10T13:54:40Z" finished-at="2020-03-10T13:54:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="feature" duration-ms="463932" started-at="2020-02-05T09:59:30Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-02-05T10:07:14Z">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="feature" duration-ms="1822190" started-at="2020-03-10T13:54:44Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-10T14:25:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Hotel bookings for AA]]>
+                <![CDATA[Cancellations for GB]]>
               </value>
             </param>
           </params>
           <exception class="cucumber.runtime.CucumberException">
             <message>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']"}
-  (Session info: chrome=79.0.3945.130)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51236}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6de2dd5e3dd9c991b114b52a81cfc056
-*** Element info: {Using=xpath, value=//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58672}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 35a9e7e3790857bbc6b85545f05b5008]]>
             </message>
             <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']"}
-  (Session info: chrome=79.0.3945.130)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51236}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6de2dd5e3dd9c991b114b52a81cfc056
-*** Element info: {Using=xpath, value=//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58672}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 35a9e7e3790857bbc6b85545f05b5008
 at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -75,15 +73,14 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']"}
-  (Session info: chrome=79.0.3945.130)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51236}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6de2dd5e3dd9c991b114b52a81cfc056
-*** Element info: {Using=xpath, value=//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58672}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 35a9e7e3790857bbc6b85545f05b5008
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -94,28 +91,26 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at CBE.StayBeta.RandomDataGenerationImpl.storeBookingDetails(RandomDataGenerationImpl.java:33)
-at stepDefinitions.HotelBookingDefinitions.booking_has_been_done_successfully_and_booking_reference_text_is_stored_in_a_file(HotelBookingDefinitions.java:291)
-at ✽.Then Booking has been done successfully and Booking reference Text is stored in a file(src/test/java/arabianAdventures_TestRun1/Hotel - Bookings.feature:29)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+at CBE.StayBeta.HotelCancelImpl.VerifyBookingCancellation(HotelCancelImpl.java:106)
+at stepDefinitions.CancelBooking.booking_is_cancelled(CancelBooking.java:130)
+at ✽.Then Booking is Cancelled(src/test/java/RegressionSuite/GB - Cancellations.feature:16)
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="tearDownClass" is-config="true" duration-ms="3680" started-at="2020-02-05T10:07:14Z" finished-at="2020-02-05T10:07:18Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="tearDownClass" is-config="true" duration-ms="15526" started-at="2020-03-10T14:25:06Z" finished-at="2020-03-10T14:25:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="setupp()[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="setupp" is-config="true" duration-ms="1877" started-at="2020-02-05T10:07:18Z" finished-at="2020-02-05T10:07:20Z">
+        <test-method status="PASS" signature="setupp()[pri:0, instance:cucumberOptions.TestRunner@4e41089d]" name="setupp" is-config="true" duration-ms="7539" started-at="2020-03-10T14:25:22Z" finished-at="2020-03-10T14:25:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupp -->
       </class> <!-- cucumberOptions.TestRunner -->
     </test> <!-- Regression -->
-  </suite> <!-- Amendments Cancellations - Other Data Sources -->
+  </suite> <!-- 1Source-Automation -->
 </testng-results>

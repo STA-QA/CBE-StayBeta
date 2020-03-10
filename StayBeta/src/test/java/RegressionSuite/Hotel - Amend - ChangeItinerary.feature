@@ -4,8 +4,7 @@ Feature: Hotel Amendment by changing the itinerary
 Scenario Outline: User Book a hotel through <Data Source> and Change itinerary through Amend Option  <SC Name> for GB
 	Given User launches the application 
 	And User enters Valid Credentials 
-	Then User logged into application
-	Given user tetst <SC Name>
+	Then User logged into application	
 	And User Selects any agency 
 	Given User is in the Hotel Search Page 
 	And Search for a <Country> with particular <SearchString> 
@@ -47,9 +46,9 @@ Scenario Outline: User Book a hotel through <Data Source> and Change itinerary t
 	
 	Examples: 
 	|Country                                          |SearchString|DataSource           |StartDay|NoOfNights|Rooms|Adults|Children|ChildrenAge|Condition	     |NewStartDay|NewNoOfNights|SC name|
-	| Cape Town (CPT), South Africa (ZA) | CPT            | followme2AFRICA | 32        | 3              | 1      | 2       | 2         | 7,9            | Outside           | 31              |3                    |Amend NoOfNights|
+	| Cape Town (CPT), South Africa (ZA) | CPT            | followme2AFRICA | 32        | 3              | 1      | 2       | 2         |7,9            | Outside           | 31              |3                    |Amend NoOfNights|
 	| Cape Town (CPT), South Africa (ZA) | CPT            | followme2AFRICA | 32        | 2              | 1      | 2       | 0         |0        		 | Outside           | 1                |2                    |Amend StartDate|
-	| Cape Town (CPT), South Africa (ZA) | CPT            | followme2AFRICA | 32        | 2              | 1      | 2       | 0         |0        		 | Outside           | 1                |2                    |Amend Date|
+#	| Cape Town (CPT), South Africa (ZA) | CPT            | followme2AFRICA | 32        | 2              | 1      | 2       | 0         |0        		 | Outside           | 1                |2                    |Amend Date|
 			
 
 @AU @Amend

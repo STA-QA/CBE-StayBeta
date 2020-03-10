@@ -9,6 +9,7 @@
       <class name="cucumberOptions.TestRunner">
         <methods>
           <include name="setUpClass"/>
+          <include name="setupp"/>
           <include name="feature" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="tearDownClass"/>

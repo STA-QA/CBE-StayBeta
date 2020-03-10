@@ -34,8 +34,9 @@ Scenario Outline: User Cost Quote a hotel through <Data Source>
 	Examples: 
 	
 		| Country                            | CountrySearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
+		| London (LON), United Kingdom (GB) | LON                 | JacTravel/Totalstay | 12         | 2                | 1     | 1      | 0        | 0           |Ignore    | 
 		| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 10        | 6                | 1     | 2      | 0        | 0           | Ignore    | 
-		| New York (NYC), United States (US) | NYC                 | Tourico         | 15        | 5                | 1     | 2      | 0        | 0           | Outside   | 
+	#	| New York (NYC), United States (US) | NYC                 | Tourico         | 15        | 5                | 1     | 2      | 0        | 0           | Outside   | 
 		
 @AU  @SpiraTestId2
 Scenario Outline: User Book a hotel through <Data Source> for AU 

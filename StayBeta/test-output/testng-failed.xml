@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Amendments Cancellations - Other Data Sources]">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [1Source-Automation]">
   <listeners>
     <listener class-name="Base.staNGlistener"/>
   </listeners>
@@ -17,4 +17,4 @@
       </class> <!-- cucumberOptions.TestRunner -->
     </classes>
   </test> <!-- Regression(failed) -->
-</suite> <!-- Failed suite [Amendments Cancellations - Other Data Sources] -->
+</suite> <!-- Failed suite [1Source-Automation] -->

@@ -11,7 +11,7 @@ Scenario Outline: User Cost Quote a hotel through <Data Source>
 	And Clicks on Complete Booking
 	Given User clicks on Actions and selects validate Cost Quote
 	And Clicks Book rb during changing from quote to book
-		Then Verify if the quote has been validated successfully
+	#Then Verify if the quote has been validated successfully
 	And Accepts the Terms and Conditions 
 And Click on Update button  
  Then Booking has been done successfully and Booking reference Text is stored in a file 
@@ -19,7 +19,30 @@ And Click on Update button
 	
 	Examples: 
  |BookingRef|
-	|1555815|
+	|1556074|
+	
+	
+#	@AU 
+#Scenario Outline: User Cost Quote a hotel through <Data Source> 
+#	Given User launches the au application 
+#	And User enters Valid AU Credentials 
+#		Then User logged into application 
+#	And User Selects any agency
+#	Given User Clicks on My Bookings 
+#	And Through scenario outline User Enters the BookingRefnumber <BookingRef>
+#	And Clicks on Complete Booking
+#	Given User clicks on Actions and selects validate Cost Quote
+#	And Clicks Book rb during changing from quote to book
+#	#Then Verify if the quote has been validated successfully
+#	And Accepts the Terms and Conditions 
+#And Click on Update button  
+# Then Booking has been done successfully and Booking reference Text is stored in a file 
+#
+#	
+#	Examples: 
+# |BookingRef|
+#	|1556075|
+	
 	
 #		| Country                            | CountrySearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
 #		| Cape Town (CPT), South Africa (ZA) | CPT                 | followme2AFRICA | 100        | 6                | 1     | 2      | 0        | 0           | Outside    | 

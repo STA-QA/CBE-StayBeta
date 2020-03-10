@@ -46,7 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Feb 5, 2020 09:59:30 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Mar 10, 2020 01:54:44 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -75,8 +75,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@Cancellations</a></li>
 					<li><a href='#'>@GB</a></li>
-					<li><a href='#'>@HotelBooking</a></li>
+					<li><a href='#'>@AU</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -131,10 +132,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>12</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='20%'>3</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -145,10 +146,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='53.704%'><span class='strong'>29</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='93.75%'><span class='strong'>225</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='3.704%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='42.593%'>23</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1.25%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='5%'>12</span> others
                 </div>
             </div>
         </div>
@@ -168,8 +169,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Hotel bookings for AA</span>
-						<span class='test-time'>Feb 5, 2020 09:59:46 AM</span>
+						<span class='test-name'>Cancellations for GB</span>
+						<span class='test-time'>Mar 10, 2020 01:54:51 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -180,13 +181,13 @@
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='scenariooutline node' test-id='2' status='fail'>
-    <span class='duration right label'>0h 7m 27s+282ms</span>
+    <span class='duration right label'>0h 14m 45s+978ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> ScenarioOutline: User Book a hotel through <Data Source> for GB</div>
+        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> ScenarioOutline: User cancel a booking with Booking Reference Number GB <BookingRef></div>
     </div>
     <ul class='steps'>
-        <li test-id='3' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User Book a hotel through Arabian Adventures for GB</div>
+        <li test-id='3' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556060</div>
             <ul class='gc steps'>
                     <li test-id='4' class='gc given pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
@@ -210,173 +211,848 @@
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='8' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is in the Hotel Search Page</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='9' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Search for a Dubai (DXB), United Arab Emirates (AE) with particular DXB</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556060</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='10' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select the 3 and 2</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='11' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Rooms 1</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='12' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Adult Guests 2 into 1 in automatic order</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='13' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Number of Child Guests 0 into 1 in automatic order</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='14' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enter the ChildrenAge 0</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='15' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Deselect SelectAll DataSources</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='16' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select DataSource Arabian Adventures</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='17' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Exclude On Request Rooms</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='18' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click Search Button</h6>
-                            <div class="node-step">User CLicks on Search button at time:   10:00:01</div>
-                            <div class="node-step">User Can see Search page at time:    10:00:19</div>
-                            <div class="node-step">Total Time in Seconds to display Search Results:   18</div>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='19' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Add to cart on a hotel from search results</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='20' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Check for Cancellation Condition Inside</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='21' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Verify if Quote is selected by default</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='22' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Add the screenshot of the Hotel Cancellation Conditions to Report</h6>
-                        <ul class='screenshots right'>
-                            <li><a data-featherlight="image" href="Screenshots_Fail/1580897035047.png"><i class='material-icons'>panorama</i></a></li>
-                        </ul>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='23' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks On Book Radio Button</h6>
-                            <div class="node-step">passed</div>
-                    </li>
-                    <li test-id='24' class='gc and pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='25' class='gc and pass' status='pass'>
+                    <li test-id='11' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='12' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848539758.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='13' class='gc and pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='26' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Provides the Adults 2 Details and 0 details with 0</h6>
+                    <li test-id='14' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='27' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Book Button</h6>
+                    <li test-id='15' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='28' class='gc then fail' status='fail'>
-                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Booking has been done successfully and Booking reference Text is stored in a file</h6>
-                            <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']"}
-  (Session info: chrome=79.0.3945.130)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51236}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6de2dd5e3dd9c991b114b52a81cfc056
-*** Element info: {Using=xpath, value=//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at CBE.StayBeta.RandomDataGenerationImpl.storeBookingDetails(RandomDataGenerationImpl.java:33)
-	at stepDefinitions.HotelBookingDefinitions.booking_has_been_done_successfully_and_booking_reference_text_is_stored_in_a_file(HotelBookingDefinitions.java:291)
-	at ?.Then Booking has been done successfully and Booking reference Text is stored in a file(src/test/java/arabianAdventures_TestRun1/Hotel - Bookings.feature:29)
-</textarea>
-                                                </li>
-                    <li test-id='29' class='gc given skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given User clicks On Logout</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='30' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then User should be logged out and driver is closed</h6>
+                    <li test-id='16' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
                         <ul class='screenshots right'>
-                            <li><a data-featherlight="image" href="Screenshots_Fail/1580897160793.png"><i class='material-icons'>panorama</i></a></li>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848567960.png"><i class='material-icons'>panorama</i></a></li>
                         </ul>
-                            <div class="node-step">skipped</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='17' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848585600.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS GB 1556060.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='18' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848596314.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='19' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
                     </li>
             </ul>
         </li>
-        <li test-id='31' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User Book a hotel through Arabian Adventures for GB</div>
+        <li test-id='20' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556061</div>
             <ul class='gc steps'>
-                    <li test-id='32' class='gc given pass' status='pass'>
+                    <li test-id='21' class='gc given pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
                             <div class="node-step">User Launches Application</div>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='33' class='gc and pass' status='pass'>
+                    <li test-id='22' class='gc and pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
                             <div class="node-step">User Name gbzq5</div>
                             <div class="node-step">User Password 1srzq5</div>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='34' class='gc then pass' status='pass'>
+                    <li test-id='23' class='gc then pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
                             <div class="node-step">User Logs in into Application</div>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='35' class='gc and pass' status='pass'>
+                    <li test-id='24' class='gc and pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
                             <div class="node-step">User Selects Agency</div>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='36' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is in the Hotel Search Page</h6>
+                    <li test-id='25' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
                             <div class="node-step">passed</div>
                     </li>
-                    <li test-id='37' class='gc and fail' status='fail'>
-                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And Search for a Dubai (DXB), United Arab Emirates (AE) with particular DXB</h6>
-                            <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span/div/div[@class='asmMenuItem' and contains(.,'Dubai (DXB), United Arab Emirates (AE)')]"}
-  (Session info: chrome=79.0.3945.130)
+                    <li test-id='26' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556061</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='27' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='28' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='29' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848649877.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='30' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='31' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='32' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='33' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848678270.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='34' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848695882.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS GB 1556061.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='35' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848707123.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='36' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='37' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556064</div>
+            <ul class='gc steps'>
+                    <li test-id='38' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
+                            <div class="node-step">User Launches Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='39' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
+                            <div class="node-step">User Name gbzq5</div>
+                            <div class="node-step">User Password 1srzq5</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='40' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='41' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='42' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='43' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556064</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='44' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='45' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='46' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848759058.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='47' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='48' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='49' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='50' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848787318.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='51' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848804900.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS GB 1556064.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='52' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848815433.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='53' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='54' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556065</div>
+            <ul class='gc steps'>
+                    <li test-id='55' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
+                            <div class="node-step">User Launches Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='56' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
+                            <div class="node-step">User Name gbzq5</div>
+                            <div class="node-step">User Password 1srzq5</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='57' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='58' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='59' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='60' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556065</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='61' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='62' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='63' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848867669.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='64' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='65' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='66' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='67' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848895814.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='68' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848914027.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS GB 1556065.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='69' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848925784.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='70' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='71' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556068</div>
+            <ul class='gc steps'>
+                    <li test-id='72' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
+                            <div class="node-step">User Launches Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='73' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
+                            <div class="node-step">User Name gbzq5</div>
+                            <div class="node-step">User Password 1srzq5</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='74' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='75' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='76' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='77' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556068</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='78' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='79' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='80' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583848980248.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='81' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='82' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='83' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='84' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849009535.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='85' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849029022.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS GB 1556068.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='86' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849040070.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='87' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='88' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556069</div>
+            <ul class='gc steps'>
+                    <li test-id='89' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
+                            <div class="node-step">User Launches Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='90' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
+                            <div class="node-step">User Name gbzq5</div>
+                            <div class="node-step">User Password 1srzq5</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='91' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='92' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='93' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='94' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556069</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='95' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='96' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='97' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849101902.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='98' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='99' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='100' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='101' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849131147.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='102' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849151405.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS GB 1556069.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='103' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849163568.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='104' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='105' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556073</div>
+            <ul class='gc steps'>
+                    <li test-id='106' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
+                            <div class="node-step">User Launches Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='107' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
+                            <div class="node-step">User Name gbzq5</div>
+                            <div class="node-step">User Password 1srzq5</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='108' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='109' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='110' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='111' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556073</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='112' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='113' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='114' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849218144.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='115' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='116' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='117' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='118' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849251237.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='119' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849270602.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS GB 1556073.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='120' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849282118.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='121' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='122' class='node scenario fail' status='fail'>
+            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User cancel a booking with Booking Reference Number GB 1556074</div>
+            <ul class='gc steps'>
+                    <li test-id='123' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the application</h6>
+                            <div class="node-step">User Launches Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='124' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid Credentials</h6>
+                            <div class="node-step">User Name gbzq5</div>
+                            <div class="node-step">User Password 1srzq5</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='125' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='126' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='127' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='128' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556074</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='129' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='130' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='131' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849345533.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='132' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='133' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='134' class='gc then fail' status='fail'>
+                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Booking is Cancelled</h6>
+                            <textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58672}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 35a9e7e3790857bbc6b85545f05b5008
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+	at CBE.StayBeta.HotelCancelImpl.VerifyBookingCancellation(HotelCancelImpl.java:106)
+	at stepDefinitions.CancelBooking.booking_is_cancelled(CancelBooking.java:130)
+	at ?.Then Booking is Cancelled(src/test/java/RegressionSuite/GB - Cancellations.feature:16)
+</textarea>
+                                                </li>
+                    <li test-id='135' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Takes The Screenshot And Add to Report</h6>
+                            <div class="node-step">skipped</div>
+                    </li>
+                    <li test-id='136' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Get updated Booking Details</h6>
+                            <div class="node-step">skipped</div>
+                    </li>
+                    <li test-id='137' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Takes The Screenshot And Add to Report</h6>
+                            <div class="node-step">skipped</div>
+                    </li>
+                    <li test-id='138' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then User should be logged out and driver is closed</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849377153.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">skipped</div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class='scenariooutline node' test-id='139' status='fail'>
+    <span class='duration right label'>0h 15m 18s+823ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> ScenarioOutline: User cancel a booking with Booking Reference Number GB <BookingRef></div>
+    </div>
+    <ul class='steps'>
+        <li test-id='140' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556062</div>
+            <ul class='gc steps'>
+                    <li test-id='141' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the au application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='142' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid AU Credentials</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='143' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='144' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='145' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='146' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556062</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='147' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='148' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='149' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849436731.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='150' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='151' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='152' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='153' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849484369.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='154' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849504377.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS AU 1556062.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='155' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849517695.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='156' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='157' class='node scenario fail' status='fail'>
+            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User cancel a booking with Booking Reference Number GB 1556063</div>
+            <ul class='gc steps'>
+                    <li test-id='158' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the au application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='159' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid AU Credentials</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='160' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='161' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='162' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='163' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556063</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='164' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='165' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='166' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849576438.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='167' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='168' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='169' class='gc then fail' status='fail'>
+                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Booking is Cancelled</h6>
+                            <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[contains(text(),'Cancelled')]"}
+  (Session info: chrome=80.0.3987.122)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51463}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b4bddbb259d713603cd8f1e71fe01c62
-*** Element info: {Using=xpath, value=//span/div/div[@class='asmMenuItem' and contains(.,'Dubai (DXB), United Arab Emirates (AE)')]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59222}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d490b4c50bb8bdfbe7a95eadb591adf9
+*** Element info: {Using=xpath, value=//td[contains(text(),'Cancelled')]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -391,97 +1067,468 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at CBE.StayBeta.HotelImpl.SearchCountry(HotelImpl.java:98)
-	at stepDefinitions.TestCase616.search_for_a_with_particular(TestCase616.java:57)
-	at ?.And Search for a Dubai (DXB), United Arab Emirates (AE) with particular DXB(src/test/java/arabianAdventures_TestRun1/Hotel - Bookings.feature:10)
+	at CBE.StayBeta.HotelCancelImpl.VerifyBookingCancellation(HotelCancelImpl.java:106)
+	at stepDefinitions.CancelBooking.booking_is_cancelled(CancelBooking.java:130)
+	at ?.Then Booking is Cancelled(src/test/java/RegressionSuite/GB - Cancellations.feature:48)
 </textarea>
                                                 </li>
-                    <li test-id='38' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select the 40 and 2</h6>
+                    <li test-id='170' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Takes The Screenshot And Add to Report</h6>
                             <div class="node-step">skipped</div>
                     </li>
-                    <li test-id='39' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select Number of Rooms 1</h6>
+                    <li test-id='171' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Get updated Booking Details</h6>
                             <div class="node-step">skipped</div>
                     </li>
-                    <li test-id='40' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select Number of Adult Guests 2 into 1 in automatic order</h6>
+                    <li test-id='172' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Takes The Screenshot And Add to Report</h6>
                             <div class="node-step">skipped</div>
                     </li>
-                    <li test-id='41' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select Number of Child Guests 0 into 1 in automatic order</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='42' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Enter the ChildrenAge 0</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='43' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Deselect SelectAll DataSources</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='44' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select DataSource Arabian Adventures</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='45' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Exclude On Request Rooms</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='46' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click Search Button</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='47' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Clicks on Add to cart on a hotel from search results</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='48' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Check for Cancellation Condition Outside</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='49' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Verify if Quote is selected by default</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='50' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Add the screenshot of the Hotel Cancellation Conditions to Report</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='51' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Clicks On Book Radio Button</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='52' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Clicks on Complete Booking</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='53' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Accepts the Terms and Conditions</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='54' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Provides the Adults 2 Details and 0 details with 0</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='55' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click on Book Button</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='56' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Booking has been done successfully and Booking reference Text is stored in a file</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='57' class='gc given skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given User clicks On Logout</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='58' class='gc then skip' status='skip'>
+                    <li test-id='173' class='gc then skip' status='skip'>
                         <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then User should be logged out and driver is closed</h6>
                         <ul class='screenshots right'>
-                            <li><a data-featherlight="image" href="Screenshots_Fail/1580897233572.png"><i class='material-icons'>panorama</i></a></li>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849645900.png"><i class='material-icons'>panorama</i></a></li>
                         </ul>
                             <div class="node-step">skipped</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='174' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556066</div>
+            <ul class='gc steps'>
+                    <li test-id='175' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the au application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='176' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid AU Credentials</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='177' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='178' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='179' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='180' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556066</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='181' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='182' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='183' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849702044.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='184' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='185' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='186' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='187' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849735636.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='188' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849755982.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS AU 1556066.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='189' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849768209.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='190' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='191' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556067</div>
+            <ul class='gc steps'>
+                    <li test-id='192' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the au application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='193' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid AU Credentials</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='194' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='195' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='196' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='197' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556067</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='198' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='199' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='200' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849836899.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='201' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='202' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='203' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='204' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849866701.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='205' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849885251.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS AU 1556067.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='206' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849896319.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='207' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='208' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556071</div>
+            <ul class='gc steps'>
+                    <li test-id='209' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the au application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='210' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid AU Credentials</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='211' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='212' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='213' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='214' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556071</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='215' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='216' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='217' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583849951891.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='218' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='219' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='220' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='221' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850001267.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='222' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850021749.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS AU 1556071.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='223' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850038564.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='224' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='225' class='node scenario fail' status='fail'>
+            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User cancel a booking with Booking Reference Number GB 1556075</div>
+            <ul class='gc steps'>
+                    <li test-id='226' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the au application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='227' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid AU Credentials</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='228' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='229' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='230' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='231' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556075</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='232' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='233' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='234' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850116450.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='235' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='236' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='237' class='gc then fail' status='fail'>
+                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Booking is Cancelled</h6>
+                            <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[contains(text(),'Cancelled')]"}
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:60547}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ca2c3e4848297d1203e678853e71bd4e
+*** Element info: {Using=xpath, value=//td[contains(text(),'Cancelled')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at CBE.StayBeta.HotelCancelImpl.VerifyBookingCancellation(HotelCancelImpl.java:106)
+	at stepDefinitions.CancelBooking.booking_is_cancelled(CancelBooking.java:130)
+	at ?.Then Booking is Cancelled(src/test/java/RegressionSuite/GB - Cancellations.feature:48)
+</textarea>
+                                                </li>
+                    <li test-id='238' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Takes The Screenshot And Add to Report</h6>
+                            <div class="node-step">skipped</div>
+                    </li>
+                    <li test-id='239' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Get updated Booking Details</h6>
+                            <div class="node-step">skipped</div>
+                    </li>
+                    <li test-id='240' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Takes The Screenshot And Add to Report</h6>
+                            <div class="node-step">skipped</div>
+                    </li>
+                    <li test-id='241' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then User should be logged out and driver is closed</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850187587.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">skipped</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='242' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User cancel a booking with Booking Reference Number GB 1556077</div>
+            <ul class='gc steps'>
+                    <li test-id='243' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User launches the au application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='244' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User enters Valid AU Credentials</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='245' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User logged into application</h6>
+                            <div class="node-step">User Logs in into Application</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='246' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Selects any agency</h6>
+                            <div class="node-step">User Selects Agency</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='247' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User Clicks on My Bookings</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='248' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Through scenario outline User Enters the BookingRefnumber 1556077</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='249' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Complete Booking</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='250' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects cancel item</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='251' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850240724.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='252' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Accepts the Terms and Conditions</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='253' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Update button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='254' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Booking is Cancelled</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='255' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850272528.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='256' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Get updated Booking Details</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850291481.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">UPDATE WAS SUCCESSFUL .YOUR REFERENCE IS AU 1556077.</div>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='257' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Takes The Screenshot And Add to Report</h6>
+                        <ul class='screenshots right'>
+                            <li><a data-featherlight="image" href="Screenshots_Fail/1583850302483.png"><i class='material-icons'>panorama</i></a></li>
+                        </ul>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='258' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged out and driver is closed</h6>
+                            <div class="node-step">passed</div>
                     </li>
             </ul>
         </li>
@@ -529,15 +1576,16 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@GB</span>
+						<span class='category-name'>@Cancellations</span>
 						<span class='category-status right'>
-						<span class='label fail'>2</span>
+						<span class='label pass'>12</span>
+						<span class='label fail'>3</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 12</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -551,13 +1599,147 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 5, 2020 09:59:46 AM</td>
-										<td class='linked' test-id='3'>Hotel bookings for AA.User Book a hotel through <Data Source> for GB.User Book a hotel through Arabian Adventures for GB</td>
+										<td>Mar 10, 2020 01:54:51 PM</td>
+										<td class='linked' test-id='3'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556060</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 01:56:42 PM</td>
+										<td class='linked' test-id='20'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556061</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 01:58:32 PM</td>
+										<td class='linked' test-id='37'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556064</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:00:21 PM</td>
+										<td class='linked' test-id='54'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556065</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:02:13 PM</td>
+										<td class='linked' test-id='71'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556068</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:04:09 PM</td>
+										<td class='linked' test-id='88'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556069</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:06:10 PM</td>
+										<td class='linked' test-id='105'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556073</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:08:11 PM</td>
+										<td class='linked' test-id='122'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556074</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Feb 5, 2020 10:06:12 AM</td>
-										<td class='linked' test-id='31'>Hotel bookings for AA.User Book a hotel through <Data Source> for GB.User Book a hotel through Arabian Adventures for GB</td>
+										<td>Mar 10, 2020 02:09:47 PM</td>
+										<td class='linked' test-id='140'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556062</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:12:07 PM</td>
+										<td class='linked' test-id='157'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556063</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:14:14 PM</td>
+										<td class='linked' test-id='174'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556066</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:16:25 PM</td>
+										<td class='linked' test-id='191'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556067</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:18:23 PM</td>
+										<td class='linked' test-id='208'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556071</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:20:58 PM</td>
+										<td class='linked' test-id='225'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556075</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:23:13 PM</td>
+										<td class='linked' test-id='242'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556077</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GB</span>
+						<span class='category-status right'>
+						<span class='label pass'>7</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 10, 2020 01:54:51 PM</td>
+										<td class='linked' test-id='3'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556060</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 01:56:42 PM</td>
+										<td class='linked' test-id='20'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556061</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 01:58:32 PM</td>
+										<td class='linked' test-id='37'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556064</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:00:21 PM</td>
+										<td class='linked' test-id='54'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556065</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:02:13 PM</td>
+										<td class='linked' test-id='71'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556068</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:04:09 PM</td>
+										<td class='linked' test-id='88'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556069</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:06:10 PM</td>
+										<td class='linked' test-id='105'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556073</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:08:11 PM</td>
+										<td class='linked' test-id='122'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556074</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -567,14 +1749,15 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@HotelBooking</span>
+						<span class='category-name'>@AU</span>
 						<span class='category-status right'>
+						<span class='label pass'>5</span>
 						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 5</span>
 							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
@@ -589,14 +1772,39 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 5, 2020 09:59:46 AM</td>
-										<td class='linked' test-id='3'>Hotel bookings for AA.User Book a hotel through <Data Source> for GB.User Book a hotel through Arabian Adventures for GB</td>
+										<td>Mar 10, 2020 02:09:47 PM</td>
+										<td class='linked' test-id='140'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556062</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:12:07 PM</td>
+										<td class='linked' test-id='157'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556063</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Feb 5, 2020 10:06:12 AM</td>
-										<td class='linked' test-id='31'>Hotel bookings for AA.User Book a hotel through <Data Source> for GB.User Book a hotel through Arabian Adventures for GB</td>
+										<td>Mar 10, 2020 02:14:14 PM</td>
+										<td class='linked' test-id='174'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556066</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:16:25 PM</td>
+										<td class='linked' test-id='191'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556067</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:18:23 PM</td>
+										<td class='linked' test-id='208'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556071</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:20:58 PM</td>
+										<td class='linked' test-id='225'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556075</td>
 										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2020 02:23:13 PM</td>
+										<td class='linked' test-id='242'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556077</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -632,6 +1840,57 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 			<ul id='exception-collection' class='exception-collection'>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.StaleElementReferenceException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 10, 2020 02:09:31 PM</td>
+										<td class='linked' test-id='134'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556074.Then Booking is Cancelled</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58672}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 35a9e7e3790857bbc6b85545f05b5008
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+	at CBE.StayBeta.HotelCancelImpl.VerifyBookingCancellation(HotelCancelImpl.java:106)
+	at stepDefinitions.CancelBooking.booking_is_cancelled(CancelBooking.java:130)
+	at ?.Then Booking is Cancelled(src/test/java/RegressionSuite/GB - Cancellations.feature:16)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
 						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
 						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
 					</div>
@@ -647,18 +1906,18 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 5, 2020 10:05:10 AM</td>
-										<td class='linked' test-id='28'>Hotel bookings for AA.User Book a hotel through <Data Source> for GB.User Book a hotel through Arabian Adventures for GB.Then Booking has been done successfully and Booking reference Text is stored in a file</td>
+										<td>Mar 10, 2020 02:13:12 PM</td>
+										<td class='linked' test-id='169'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556063.Then Booking is Cancelled</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']"}
-  (Session info: chrome=79.0.3945.130)
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[contains(text(),'Cancelled')]"}
+  (Session info: chrome=80.0.3987.122)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51236}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6de2dd5e3dd9c991b114b52a81cfc056
-*** Element info: {Using=xpath, value=//div[@id='m_c_C000_m_c_ctl14_ctl01_ctl01_bclBkCrits_0_bntItemDetails_0_uscItm_divTotalFare']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59222}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d490b4c50bb8bdfbe7a95eadb591adf9
+*** Element info: {Using=xpath, value=//td[contains(text(),'Cancelled')]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -673,25 +1932,25 @@ Session ID: 6de2dd5e3dd9c991b114b52a81cfc056
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at CBE.StayBeta.RandomDataGenerationImpl.storeBookingDetails(RandomDataGenerationImpl.java:33)
-	at stepDefinitions.HotelBookingDefinitions.booking_has_been_done_successfully_and_booking_reference_text_is_stored_in_a_file(HotelBookingDefinitions.java:291)
-	at ?.Then Booking has been done successfully and Booking reference Text is stored in a file(src/test/java/arabianAdventures_TestRun1/Hotel - Bookings.feature:29)
+	at CBE.StayBeta.HotelCancelImpl.VerifyBookingCancellation(HotelCancelImpl.java:106)
+	at stepDefinitions.CancelBooking.booking_is_cancelled(CancelBooking.java:130)
+	at ?.Then Booking is Cancelled(src/test/java/RegressionSuite/GB - Cancellations.feature:48)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Feb 5, 2020 10:06:23 AM</td>
-										<td class='linked' test-id='37'>Hotel bookings for AA.User Book a hotel through <Data Source> for GB.User Book a hotel through Arabian Adventures for GB.And Search for a Dubai (DXB), United Arab Emirates (AE) with particular DXB</td>
+										<td>Mar 10, 2020 02:22:14 PM</td>
+										<td class='linked' test-id='237'>Cancellations for GB.User cancel a booking with Booking Reference Number GB <BookingRef>.User cancel a booking with Booking Reference Number GB 1556075.Then Booking is Cancelled</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span/div/div[@class='asmMenuItem' and contains(.,'Dubai (DXB), United Arab Emirates (AE)')]"}
-  (Session info: chrome=79.0.3945.130)
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[contains(text(),'Cancelled')]"}
+  (Session info: chrome=80.0.3987.122)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'UKLF3GWKC2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51463}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b4bddbb259d713603cd8f1e71fe01c62
-*** Element info: {Using=xpath, value=//span/div/div[@class='asmMenuItem' and contains(.,'Dubai (DXB), United Arab Emirates (AE)')]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:60547}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ca2c3e4848297d1203e678853e71bd4e
+*** Element info: {Using=xpath, value=//td[contains(text(),'Cancelled')]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -706,9 +1965,9 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at CBE.StayBeta.HotelImpl.SearchCountry(HotelImpl.java:98)
-	at stepDefinitions.TestCase616.search_for_a_with_particular(TestCase616.java:57)
-	at ?.And Search for a Dubai (DXB), United Arab Emirates (AE) with particular DXB(src/test/java/arabianAdventures_TestRun1/Hotel - Bookings.feature:10)
+	at CBE.StayBeta.HotelCancelImpl.VerifyBookingCancellation(HotelCancelImpl.java:106)
+	at stepDefinitions.CancelBooking.booking_is_cancelled(CancelBooking.java:130)
+	at ?.Then Booking is Cancelled(src/test/java/RegressionSuite/GB - Cancellations.feature:48)
 </textarea>
 										</td>
 									</tr>
@@ -740,31 +1999,31 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>15</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>54</div>
+					<div class='panel-lead'>240</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 5, 2020 09:59:30 AM</div>
+					<div class='panel-lead'>Mar 10, 2020 01:54:44 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 5, 2020 10:07:14 AM</div>
+			 		<div class='panel-lead'>Mar 10, 2020 02:25:06 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 7m 43s+916ms</div>
+					<div class='panel-lead'>0h 30m 22s+316ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -780,21 +2039,30 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@GB</td>
-							<td>0</td>
-							<td>2</td>
+							<td>@Cancellations</td>
+							<td>12</td>
+							<td>3</td>
 							<td>0</td>
 							<td>
-									0%
+									80%
 							</td>
 						</tr>
 						<tr>
-							<td>@HotelBooking</td>
+							<td>@GB</td>
+							<td>7</td>
+							<td>1</td>
 							<td>0</td>
+							<td>
+									87.5%
+							</td>
+						</tr>
+						<tr>
+							<td>@AU</td>
+							<td>5</td>
 							<td>2</td>
 							<td>0</td>
 							<td>
-									0%
+									71.429%
 							</td>
 						</tr>
 					</table>
@@ -816,31 +2084,31 @@ Session ID: b4bddbb259d713603cd8f1e71fe01c62
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 1,
-				childCount: 2,
-				passChild: 0,
-				failChild: 2,
+				childCount: 15,
+				passChild: 12,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 2,
-				grandChildCount: 54,
-				passGrandChild: 29,
-				failGrandChild: 2,
+				exceptionsChild: 3,
+				grandChildCount: 240,
+				passGrandChild: 225,
+				failGrandChild: 3,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 23,
+				skipGrandChild: 12,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 25,
+				exceptionsGrandChild: 15,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Hotel bookings for AA":447.282
+			        "Cancellations for GB":1814.947
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
