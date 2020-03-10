@@ -33,7 +33,7 @@ Scenario Outline: User Book a hotel through <Data Source> for GB
     Examples: 
       | Country                                | SearchString | Data Source        | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
       | Dubai (DXB), United Arab Emirates (AE) | DXB          | Arabian Adventures | 3         | 2                | 1     | 2      | 0        | 0           | Inside    | 
-      | Dubai (DXB), United Arab Emirates (AE) | DXB          | Arabian Adventures | 40        | 2                | 1     | 2      | 0        | 0           | Outside   | 
+    | Dubai (DXB), United Arab Emirates (AE) | DXB          | Arabian Adventures | 40        | 2                | 1     | 2      | 0        | 0           | Outside   | 
   
 @AU @HotelBooking 
 Scenario Outline: User Book a hotel through <Data Source> for AU 

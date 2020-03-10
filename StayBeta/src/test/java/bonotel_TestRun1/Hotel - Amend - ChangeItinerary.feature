@@ -16,8 +16,9 @@ Scenario Outline: User Book a hotel through <Data Source> and Change itinerary f
 	And Deselect SelectAll DataSources 
 	And Select DataSource <DataSource> 
 	And Exclude On Request Rooms 
-	And Click Search Button 
-	And Clicks on Add to cart on a hotel from search results 
+	And Click Search Button
+    And User Search For a Particular Hotel <Hotel>
+    And Clicks on Add to cart
 	And Check for Cancellation Condition <Condition> 
 	And Verify if Quote is selected by default 
 	And Add the screenshot of the Hotel Cancellation Conditions to Report 
@@ -45,10 +46,19 @@ Scenario Outline: User Book a hotel through <Data Source> and Change itinerary f
 	Then Get updated Booking Details 
   
     Examples: 
-      | Country                           | SearchString | DataSource | StartDay | NoOfNights | Rooms | Adults | Children | ChildrenAge | Condition | NewStartDay | NewNoOfNights |  
-      | London (LON), United Kingdom (GB) | LON          | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 31          | 3             |  
-      | London (LON), United Kingdom (GB) | LON          | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 2           | 2             |  
-      | London (LON), United Kingdom (GB) | LON          | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 30          | 2             |
+      | Country                           | SearchString | DataSource | StartDay | NoOfNights | Rooms | Adults | Children | ChildrenAge | Condition | NewStartDay | NewNoOfNights |Hotel |
+      | London (LON), United Kingdom (GB) | LON          | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 31          | 3             |Westgate Flamingo Bay Resort|
+      |Las Vegas (LAS), United States (US)|LAS | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 31          | 3             |Westgate Flamingo Bay Resort|
+      |New York (NYC), United States (US)|NYC | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 31          | 3             |Westgate Flamingo Bay Resort|
+      |Bangalore (BLR), India (IN)|BLR | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 31          | 3             |Westgate Flamingo Bay Resort|
+     | Kuala Lumpur (KUL), Malaysia (MY)|KUL | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 31          | 3             |Westgate Flamingo Bay Resort|
+      |Koh Samui (USM), Thailand (TH)|USM | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 31          | 3             |Westgate Flamingo Bay Resort|
+      
+      
+      
+      
+    #  | London (LON), United Kingdom (GB) | LON          | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 2           | 2             |Westgate Flamingo Bay Resort|
+   #   | London (LON), United Kingdom (GB) | LON          | Bonotel    | 32       | 2          | 1     | 2      | 0        | 0           | Outside   | 30          | 2             |Westgate Flamingo Bay Resort|
 
 @AU @Amend 
 Scenario Outline: User Book a hotel through <Data Source> and Change itinerary through Amend Option for AU 

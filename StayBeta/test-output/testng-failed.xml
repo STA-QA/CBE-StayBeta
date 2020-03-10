@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Amendments Cancellations - Other Data Sources]">
+  <listeners>
+    <listener class-name="Base.staNGlistener"/>
+  </listeners>
+  <test thread-count="5" verbose="2" name="Regression(failed)">
     <classes>
-      <class name="cucumberOptions.InsuranceRunnerDE">
+      <class name="cucumberOptions.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="setup"/>
-          <include name="feature" invocation-numbers="0"/>
           <include name="setupp"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="setup"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- cucumberOptions.InsuranceRunnerDE -->
+      </class> <!-- cucumberOptions.TestRunner -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [Amendments Cancellations - Other Data Sources] -->

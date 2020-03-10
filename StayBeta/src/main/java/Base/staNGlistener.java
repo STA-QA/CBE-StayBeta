@@ -52,7 +52,7 @@ public class staNGlistener implements ITestListener {
     public void onStart(ITestContext iTestContext) {
         System.out.println("On start");
         extentReportUtil.ExtentReport();
-        features = extentReportUtil.extent.createTest(Feature.class, "Registration Feature");
+       
        
     }
 

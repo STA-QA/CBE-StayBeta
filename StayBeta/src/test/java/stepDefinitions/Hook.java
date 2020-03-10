@@ -25,7 +25,7 @@ public class Hook extends BaseUtil {
 	public static ITestResult iTestResult;
 
 	@Before
-	public void InitializeTest(Scenario scenario) {
+	public static void InitializeTest(Scenario scenario) {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/WebDrivers/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);

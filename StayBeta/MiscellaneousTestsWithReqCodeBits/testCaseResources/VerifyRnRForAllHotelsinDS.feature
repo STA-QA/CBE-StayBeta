@@ -27,4 +27,5 @@ Scenario Outline: User Book a hotel through <Data Source>
 	Examples: 
 		|Country                                         |CountrySearchString|Start Day|Duration Of Stay|Rooms|Data Source|
 		|Buenos Aires (BUE), Argentina (AR)|	BUE                        |2            |1                      |1        |Tourico        |
-		
+	
+	
