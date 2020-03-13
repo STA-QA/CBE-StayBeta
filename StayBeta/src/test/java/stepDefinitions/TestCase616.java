@@ -203,8 +203,8 @@ public class TestCase616 extends BaseUtil {
 		System.out.println("Wait is Done!!");
 	}
 
-	@And("^User Click Search Button on Hotel Searchpage (.+)$")
-	public void User_Click_Search_Button_on_Hotel_Searchpage(String DataSource) throws Throwable {
+	@And("^User Click Search Button on Hotel Searchpage (.+) and (.+)$")
+    public void user_click_search_button_on_hotel_searchpage_and(String DataSource, String Country) throws Throwable {
 		String path = System.getProperty("user.dir") + "\\Testdata\\perf.xlsx";
 		File excelfile = new File(path);
 
@@ -239,7 +239,7 @@ public class TestCase616 extends BaseUtil {
 
 		Sheet sheet = workbook.getSheetAt(0);
 
-		Object[][] bookData = { { DataSource, seconds },
+		Object[][] bookData = { { DataSource, Country, seconds },
 
 		};
 

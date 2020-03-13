@@ -1,5 +1,5 @@
 node {
-properties([parameters([choice(choices: ['TestExecutionFiles/testng.xml'], description: 'Select Which Test Suite You Want to Run', name: 'TestsToRun')])])
+properties([parameters([choice(choices: ['TestExecutionFiles/HotelBookQuote.xml', 'TestExecutionFiles/HotelAmendments.xml', 'TestExecutionFiles/InsuranceBookAndCancel.xml', , 'TestExecutionFiles/TransfersBookandCancel.xml'], description: 'Select Which Test Suite You Want to Run', name: 'TestsToRun')])])
 stage ('Git Checkout'){
 git "https://github.com/STA-QA/CBE-StayBeta"
 //sh script:"echo Checking code from", label: env.BRANCH_NAME

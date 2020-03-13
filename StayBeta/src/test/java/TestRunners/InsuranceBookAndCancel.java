@@ -1,5 +1,4 @@
-package cucumberOptions;
-
+package TestRunners;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -10,10 +9,10 @@ import Base.funtions;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@CucumberOptions(features = "src/test/java/perfTesting/checkSearchloadingTime.feature",plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/Insurance - Cancellations.feature", tags= {"@GB"}, plugin = {
 		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:", "rerun:target/rerun.txt",
 		"json:target/cucumber-reports/cucumber.json" }, glue = "stepDefinitions")
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class InsuranceBookAndCancel extends AbstractTestNGCucumberTests {
 
 	public static String timeStamp = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss")
 			.format(Calendar.getInstance().getTime());
