@@ -33,7 +33,7 @@ public class Hook extends BaseUtil {
 		options.addArguments("start-maximized");
 		//options.addArguments("----headless");
 		CBEDriver = new ChromeDriver(options);
-		CBEDriver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		CBEDriver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 
 		// Reporter.log("After Method: " + iTestResult.getMethod().getMethodName());
 	}

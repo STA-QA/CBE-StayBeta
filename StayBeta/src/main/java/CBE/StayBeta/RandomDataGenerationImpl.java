@@ -29,7 +29,7 @@ public class RandomDataGenerationImpl extends BaseUtil implements RandomDataGene
 
 	@Override
 	public void storeBookingDetails() throws IOException {
-
+		
 		CBEDriver.findElement(By.xpath(Price)).click();
 		String bookingrefnumber = CBEDriver.findElement(By.xpath(Bookingref)).getAttribute("innerHTML");
 
