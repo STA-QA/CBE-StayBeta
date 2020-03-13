@@ -22,16 +22,5 @@ cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber:
 }
 
 
- stage('Email Notification') 
- {
-                bat del "StayBeta/Reports.zip"
-                echo "ZIP"
-               zip zipFile: 'Reports.zip', archive: false, dir: 'C:/Program Files (x86)/Jenkins/workspace/new pipeline/StayBeta/Reports'
-               echo "END - ZIP"
-               emailext attachmentsPattern: 'Reports.zip', body: '${FILE,path="StayBeta/target/cucumber-results-feature-overview.html"}', 
-                subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
-                    mimeType: 'text/html',to: "qateam@statravel.com"
-           
-        }
-    }
+ }
    
