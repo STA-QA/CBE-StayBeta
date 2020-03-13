@@ -74,6 +74,7 @@ public class InsuranceDefinitions extends BaseUtil {
 
 	@And("^Select Book Radio Button for Insurance$")
 	public void select_book_radio_button_for_insurance() throws Throwable {
+		Thread.sleep(10000);
 		Insurance.SelectBookRB();
 	}
 
