@@ -2,57 +2,62 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Transfers and Insurance Booking and Cancellations" duration-ms="1122396" started-at="2020-03-13T15:36:31Z" finished-at="2020-03-13T15:55:14Z">
+  <suite name="Amendments Cancellations - Other Data Sources" duration-ms="4621860" started-at="2020-03-13T18:22:15Z" finished-at="2020-03-13T19:39:16Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.InsuranceBookAndCancel@33cb5951]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.TransfersBookAndCancel@32a068d1]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.HotelAmendChangeItinerary@32a068d1]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.HotelAmendNoOfPassengers@33cb5951]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Regression" duration-ms="1122396" started-at="2020-03-13T15:36:31Z" finished-at="2020-03-13T15:55:14Z">
-      <class name="TestRunners.InsuranceBookAndCancel">
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestRunners.InsuranceBookAndCancel@33cb5951]" name="setup" is-config="true" duration-ms="1578" started-at="2020-03-13T15:36:30Z" finished-at="2020-03-13T15:36:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestRunners.TransfersBookAndCancel@32a068d1]" name="setup" is-config="true" duration-ms="0" started-at="2020-03-13T15:36:31Z" finished-at="2020-03-13T15:36:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.InsuranceBookAndCancel@33cb5951]" name="setUpClass" is-config="true" duration-ms="449" started-at="2020-03-13T15:48:38Z" finished-at="2020-03-13T15:48:38Z">
+    <test name="Regression" duration-ms="4621860" started-at="2020-03-13T18:22:15Z" finished-at="2020-03-13T19:39:16Z">
+      <class name="TestRunners.HotelAmendNoOfPassengers">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.HotelAmendNoOfPassengers@33cb5951]" name="setUpClass" is-config="true" duration-ms="390" started-at="2020-03-13T19:03:11Z" finished-at="2020-03-13T19:03:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.InsuranceBookAndCancel@33cb5951]" name="feature" duration-ms="391462" started-at="2020-03-13T15:48:39Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-13T15:55:10Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.HotelAmendNoOfPassengers@33cb5951]" name="feature" duration-ms="2162323" started-at="2020-03-13T19:03:12Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-13T19:39:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Verify if User is able to book Insurance for Different Divisons]]>
+                <![CDATA[Hotel Amendment by Adding/removing Passengers to the booking]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.HotelAmendNoOfPassengers@33cb5951]" name="tearDownClass" is-config="true" duration-ms="2188" started-at="2020-03-13T19:39:14Z" finished-at="2020-03-13T19:39:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- TestRunners.HotelAmendNoOfPassengers -->
+      <class name="TestRunners.HotelAmendChangeItinerary">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestRunners.HotelAmendChangeItinerary@32a068d1]" name="setup" is-config="true" duration-ms="1271" started-at="2020-03-13T18:22:13Z" finished-at="2020-03-13T18:22:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestRunners.HotelAmendNoOfPassengers@33cb5951]" name="setup" is-config="true" duration-ms="12" started-at="2020-03-13T18:22:15Z" finished-at="2020-03-13T18:22:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.HotelAmendChangeItinerary@32a068d1]" name="setUpClass" is-config="true" duration-ms="44633" started-at="2020-03-13T18:22:25Z" finished-at="2020-03-13T18:23:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.HotelAmendChangeItinerary@32a068d1]" name="feature" duration-ms="2372548" started-at="2020-03-13T18:23:16Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-13T19:02:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hotel Amendment by changing the itinerary]]>
               </value>
             </param>
           </params>
           <exception class="cucumber.runtime.CucumberException">
             <message>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Book']"}
-  (Session info: chrome=80.0.3987.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'UKLF3GWKC2', ip: '10.250.250.149', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51885}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c419682b9f0728e2322e6e706120dce2
-*** Element info: {Using=xpath, value=//span[text()='Book']}]]>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='search-results-table'] (tried for 60 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Book']"}
-  (Session info: chrome=80.0.3987.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'UKLF3GWKC2', ip: '10.250.250.149', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51885}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c419682b9f0728e2322e6e706120dce2
-*** Element info: {Using=xpath, value=//span[text()='Book']}
+              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='search-results-table'] (tried for 60 second(s) with 500 milliseconds interval)
 at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -80,15 +85,21 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Book']"}
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='search-results-table'] (tried for 60 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at CBE.StayBeta.HotelImpl.ClickSearch(HotelImpl.java:243)
+at stepDefinitions.TestCase616.Click_Search_Button(TestCase616.java:200)
+at ✽.And Click Search Button(src/test/java/RegressionSuite/Hotel - Amend - ChangeItinerary.feature:37)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='search-results-table']"}
   (Session info: chrome=80.0.3987.132)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'UKLF3GWKC2', ip: '10.250.250.149', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51885}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c419682b9f0728e2322e6e706120dce2
-*** Element info: {Using=xpath, value=//span[text()='Book']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\KIRANM~1.ADA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59911}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 128f2e649b104625e6341bbf4455d3a7
+*** Element info: {Using=xpath, value=//div[@class='search-results-table']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -103,49 +114,72 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at CBE.StayBeta.ActAndDayTripsSearchImpl.ClickOnBookButton(ActAndDayTripsSearchImpl.java:93)
-at stepDefinitions.ActivitiesDayTripsDefinitions.click_on_book_button(ActivitiesDayTripsDefinitions.java:86)
-at ✽.And Click On Book Button(src/test/java/RegressionSuite/Insurance - Cancellations.feature:23)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at CBE.StayBeta.HotelImpl.ClickSearch(HotelImpl.java:243)
+at stepDefinitions.TestCase616.Click_Search_Button(TestCase616.java:200)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at cucumber.runtime.Utils$1.call(Utils.java:40)
+at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+at cucumber.runtime.Utils.invoke(Utils.java:34)
+at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
+at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.InsuranceBookAndCancel@33cb5951]" name="tearDownClass" is-config="true" duration-ms="3262" started-at="2020-03-13T15:55:10Z" finished-at="2020-03-13T15:55:14Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.HotelAmendChangeItinerary@32a068d1]" name="tearDownClass" is-config="true" duration-ms="22605" started-at="2020-03-13T19:02:49Z" finished-at="2020-03-13T19:03:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="setupp()[pri:0, instance:TestRunners.InsuranceBookAndCancel@33cb5951]" name="setupp" is-config="true" duration-ms="11656" started-at="2020-03-13T15:55:15Z" finished-at="2020-03-13T15:55:27Z">
+        <test-method status="PASS" signature="setupp()[pri:0, instance:TestRunners.HotelAmendChangeItinerary@32a068d1]" name="setupp" is-config="true" duration-ms="7038" started-at="2020-03-13T19:39:18Z" finished-at="2020-03-13T19:39:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupp -->
-        <test-method status="PASS" signature="setupp()[pri:0, instance:TestRunners.TransfersBookAndCancel@32a068d1]" name="setupp" is-config="true" duration-ms="716" started-at="2020-03-13T15:55:27Z" finished-at="2020-03-13T15:55:28Z">
+        <test-method status="PASS" signature="setupp()[pri:0, instance:TestRunners.HotelAmendNoOfPassengers@33cb5951]" name="setupp" is-config="true" duration-ms="400" started-at="2020-03-13T19:39:25Z" finished-at="2020-03-13T19:39:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupp -->
-      </class> <!-- TestRunners.InsuranceBookAndCancel -->
-      <class name="TestRunners.TransfersBookAndCancel">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.TransfersBookAndCancel@32a068d1]" name="setUpClass" is-config="true" duration-ms="58823" started-at="2020-03-13T15:36:45Z" finished-at="2020-03-13T15:37:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.TransfersBookAndCancel@32a068d1]" name="feature" duration-ms="621695" started-at="2020-03-13T15:37:52Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-13T15:48:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Verify if User is able to book and cancel Transfers]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.TransfersBookAndCancel@32a068d1]" name="tearDownClass" is-config="true" duration-ms="23333" started-at="2020-03-13T15:48:14Z" finished-at="2020-03-13T15:48:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- TestRunners.TransfersBookAndCancel -->
+      </class> <!-- TestRunners.HotelAmendChangeItinerary -->
     </test> <!-- Regression -->
-  </suite> <!-- Transfers and Insurance Booking and Cancellations -->
+  </suite> <!-- Amendments Cancellations - Other Data Sources -->
 </testng-results>

@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" verbose="2" name="Regression(failed)">
     <classes>
-      <class name="cucumberOptions.TestRunner">
+      <class name="TestRunners.HotelAmendChangeItinerary">
         <methods>
-          <include name="setUpClass"/>
-          <include name="setupp"/>
-          <include name="feature" invocation-numbers="0"/>
           <include name="setup"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="setupp"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- cucumberOptions.TestRunner -->
+      </class> <!-- TestRunners.HotelAmendChangeItinerary -->
     </classes>
   </test> <!-- Regression(failed) -->
 </suite> <!-- Failed suite [Amendments Cancellations - Other Data Sources] -->

@@ -9,7 +9,7 @@ import Base.funtions;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@CucumberOptions(features = "src/test/java/RegressionSuite/Hotel - CostQuote.feature",plugin = {
+@CucumberOptions(features = "src/test/java/RegressionSuite/Hotel - ValidateCostQuote.feature",plugin = {
 		"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:", "rerun:target/rerun.txt",
 		"json:target/cucumber-reports/cucumber.json" }, glue = "stepDefinitions")
 public class HotelCostQuote extends AbstractTestNGCucumberTests {
