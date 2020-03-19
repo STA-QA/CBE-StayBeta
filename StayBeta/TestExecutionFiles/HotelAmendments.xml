@@ -8,7 +8,7 @@
 		<classes>			
 
 			<class name="TestRunners.HotelAmendChangeItinerary" />
-			<!-- <class name="TestRunners.HotelAmendNoOfPassengers" /> -->
+			<class name="TestRunners.HotelAmendNoOfPassengers" />
 			
 		</classes>
 	</test>

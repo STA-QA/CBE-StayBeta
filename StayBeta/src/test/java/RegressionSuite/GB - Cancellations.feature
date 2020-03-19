@@ -21,14 +21,13 @@ Scenario Outline: User cancel a booking with Booking Reference Number GB <Bookin
 
     Examples: 
 		|BookingRef|
-		|1556060|
-		|1556061|
-		|1556064|
-		|1556065|
-		|1556068|
-		|1556069|
-		|1556073|
-		|1556074|
+		|1556125|
+		|1556131|
+	    |1556133|
+	    |1556132|
+	    |1556134|
+	    |1556163|
+	    |1556164|
 		
 
 
@@ -53,12 +52,7 @@ Scenario Outline: User cancel a booking with Booking Reference Number GB <Bookin
 
     Examples: 
 		|BookingRef|
-		|1556062|
-		|1556063|
-		|1556066|
-		|1556067|
-		|1556071|
-		|1556075|
-		|1556077|
-		
+	    |1556138|
+	    |1556165|
+	    |1556166|		
 		
