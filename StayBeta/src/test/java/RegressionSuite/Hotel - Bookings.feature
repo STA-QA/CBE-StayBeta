@@ -33,10 +33,9 @@
     Examples:   
    | Country                                       |SearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
    | Cape Town (CPT), South Africa (ZA)            | CPT         | followme2AFRICA | 10        | 6                | 1     | 2      | 2        | 7,9         | Ignore    |   
-   | London (LON), United Kingdom (GB)   | LON            | JacTravel/Totalstay      | 3          | 2                       | 1         | 1     	 | 0           | 0         		  |Ignore    |
-  
-
-
+   | London (LON), United Kingdom (GB)   		   | LON         | JacTravel/Totalstay      | 3          | 2                       | 1         | 1     	 | 0           | 0         		  |Ignore    |
+   | Bangkok (BKK), Thailand (TH)				   | BKK		 | STAy			   | 25		|2					  | 1	  | 1	   | 0		  | 0			| Ignore	|					
+   |Singapore (SIN), Singapore (SG)         	   | SIN         | Qantas Holidays CSG  | 40         | 2                       | 1         | 2     	 | 0           | 0          		  | Outside   |
 
 @AU @SpiraTestId1 @HotelBooking
 Scenario Outline: User Book a hotel through <Data Source> for AU
@@ -74,8 +73,8 @@ Scenario Outline: User Book a hotel through <Data Source> for AU
 	| Country                          				     |SearchString | Data Source             | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
 	| Sydney (SYD), Australia (AU)            | SYD             | Sunlover Australia     | 16          | 3                       | 1         | 2     	 | 0           | 0                 | Outside   |
 	| Melbourne (MEL), Australia (AU)        | MEL             | AOT AU                     | 7           | 2                       | 1         | 2    	 | 0           | 0          		 | Outside   |
-#	| London (LON), United Kingdom (GB)   | LON            | JacTravel/Totalstay      | 3          | 2                       | 1         | 1     	 | 0           | 0         		  |Ignore    | 
-#	|Singapore (SIN), Singapore (SG)         | SIN             | Qantas Holidays CSG  | 40         | 2                       | 1         | 2     	 | 0           | 0          		  | Outside   |
+	| London (LON), United Kingdom (GB)   | LON            | JacTravel/Totalstay      | 3          | 2                       | 1         | 1     	 | 0           | 0         		  |Ignore    | 
+	|Singapore (SIN), Singapore (SG)         | SIN             | Qantas Holidays CSG  | 40         | 2                       | 1         | 2     	 | 0           | 0          		  | Outside   |
 		
 		
 		

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Costquotes - Other Data Sources" verbose="2" parallel="false">
+<suite name="Bookings - Other Data Sources" verbose="2" parallel="false">
 	<listeners>
 		<listener class-name="Base.staNGlistener" />
 	</listeners>
@@ -8,7 +8,7 @@
 		<classes>			
 
 			
-			<class name="TestRunners.HotelCostQuote" />	
+			<class name="TestRunners.HotelBookingRunner" />	
 			
 
 		</classes>
