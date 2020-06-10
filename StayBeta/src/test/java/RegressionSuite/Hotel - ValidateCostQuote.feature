@@ -1,7 +1,7 @@
 Feature: Hotel Cost Quoting for few data sources 
 
 @GB 
-Scenario Outline: User Cost Quote a hotel through <Data Source> 
+Scenario Outline: User validated Cost Quote and booked it for ref no GB <BookingRef>
 	Given User launches the application 
 	And User enters Valid Credentials 
 		Then User logged into application 
@@ -19,11 +19,11 @@ And Click on Update button
 	
 	Examples: 
  |BookingRef|
-	|1556132|
-	|1556134|
+	|1556219|
+	|1556222|
 	
 	@AU 
-Scenario Outline: User Cost Quote a hotel through <Data Source> 
+Scenario Outline: User validated Cost Quote and booked it for ref no AU <BookingRef>
 	Given User launches the au application 
 	And User enters Valid AU Credentials 
 		Then User logged into application 
@@ -40,8 +40,9 @@ And Click on Update button
 
 	
 	Examples: 
- |BookingRef|
-	|1556138|
+    |BookingRef|
+	|1556224|
+	|1556226|
 	
 	
 	
