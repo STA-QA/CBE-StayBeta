@@ -32,10 +32,10 @@
   
     Examples:   
    | Country                                       |SearchString | Data Source     | Start Day | Duration Of Stay | Rooms | Adults | Children | ChildrenAge | Condition | 
-   | Cape Town (CPT), South Africa (ZA)            | CPT         | followme2AFRICA | 10        | 6                | 1     | 2      | 2        | 7,9         | Ignore    |   
-   | London (LON), United Kingdom (GB)   		   | LON         | JacTravel/Totalstay      | 3          | 2                       | 1         | 1     	 | 0           | 0         		  |Ignore    |
+   | Cape Town (CPT), South Africa (ZA)            | CPT         | followme2AFRICA | 20        | 2                | 1     | 2      | 0        | 0         | Ignore    |   
+   | London (LON), United Kingdom (GB)   		   | LON         | JacTravel/Totalstay  | 3    | 2               | 1      | 1     	 | 0           | 0         		  |Ignore    |
    | Bangkok (BKK), Thailand (TH)				   | BKK		 | STAy			   | 25		|2					  | 1	  | 1	   | 0		  | 0			| Ignore	|					
-   |Singapore (SIN), Singapore (SG)         	   | SIN         | Qantas Holidays CSG  | 40         | 2                       | 1         | 2     	 | 0           | 0          		  | Outside   |
+   |Singapore (SIN), Singapore (SG)         	   | SIN         | Qantas Holidays CSG  | 30         | 2                       | 1         | 2     	 | 0           | 0          		  | Outside   |
 
 @AU @SpiraTestId1 @HotelBooking
 Scenario Outline: User Book a hotel through <Data Source> for AU
